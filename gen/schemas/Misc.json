@@ -1,0 +1,441 @@
+{
+  "enums": [
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "CommentAdded",
+          "description": "On comment added"
+        },
+        {
+          "number": 2,
+          "name": "ReviewCreated",
+          "description": "On review created"
+        },
+        {
+          "number": 3,
+          "name": "ReviewParticipantCompleted",
+          "description": "On review accepted or concern raised"
+        },
+        {
+          "number": 4,
+          "name": "NewReviewParticipant",
+          "description": "On new review participant"
+        },
+        {
+          "number": 5,
+          "name": "RevisionAddedToReview",
+          "description": "On revision added to review"
+        },
+        {
+          "number": 6,
+          "name": "NewRevision",
+          "description": "On new revision"
+        },
+        {
+          "number": 7,
+          "name": "ReviewStateChanged",
+          "description": "On review closed or reopened"
+        },
+        {
+          "number": 8,
+          "name": "ReviewParticipantRemoved",
+          "description": "On review participant removed"
+        },
+        {
+          "number": 9,
+          "name": "MergedToDefaultBranch",
+          "description": "On merge to the default branch"
+        },
+        {
+          "number": 10,
+          "name": "NewBranch",
+          "description": "On new branch"
+        },
+        {
+          "number": 11,
+          "name": "ReviewRemoved",
+          "description": "On review removed"
+        },
+        {
+          "number": 12,
+          "name": "BranchRemoved",
+          "description": "On branch removed"
+        },
+        {
+          "number": 13,
+          "name": "ReactionToggled",
+          "description": "On reaction added or removed"
+        },
+        {
+          "number": 14,
+          "name": "CommentEdited",
+          "description": "On comment edited"
+        },
+        {
+          "number": 15,
+          "name": "CommentRemoved",
+          "description": "On comment removed"
+        },
+        {
+          "number": 16,
+          "name": "ReviewLabelChanged",
+          "description": "On review label added or removed"
+        }
+      ],
+      "name": "WebhookEventEnum"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "OK"
+        },
+        {
+          "number": 2,
+          "name": "LoginFailed"
+        },
+        {
+          "number": 3,
+          "name": "ConnectionFailed"
+        }
+      ],
+      "name": "TestPOP3MailboxStatusEnum",
+      "description": "Describes connection status"
+    }
+  ],
+  "messages": [
+    {
+      "name": "UserAgreementTextDTO",
+      "description": "Text of the end user agreement",
+      "fields": [{
+        "name": "text",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "ExportDataResponseDTO",
+      "fields": [{
+        "name": "serverPath",
+        "description": "A full path to the server",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "CheckCanCreateProjectRequestDTO",
+      "fields": [{
+        "name": "hubProjectId",
+        "description": "Hub project ID",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "CheckCanCreateProjectResponseDTO",
+      "fields": [
+        {
+          "name": "isAllowed",
+          "description": "Whether the user has the right to create projects",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "message",
+          "description": "Optional text message",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSettingRequestDTO",
+      "fields": [{
+        "name": "key",
+        "description": "Setting key",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "GetProjectSettingRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "request",
+          "description": "See GetSettingRequestDTO parameters",
+          "label": "required",
+          "type": "GetSettingRequestDTO"
+        }
+      ]
+    },
+    {
+      "name": "GetSettingResponseDTO",
+      "fields": [{
+        "name": "value",
+        "description": "User setting value",
+        "label": "optional",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "SetSettingRequestDTO",
+      "fields": [
+        {
+          "name": "key",
+          "description": "Setting key",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "Setting value",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "SetProjectSettingRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "request",
+          "description": "See SetSettingRequestDTO parameters",
+          "label": "required",
+          "type": "SetSettingRequestDTO"
+        }
+      ]
+    },
+    {
+      "name": "SetProjectWebhooksRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "triggers",
+          "description": "List of webhook triggers",
+          "label": "repeated",
+          "type": "ProjectWebhookTriggerDTO"
+        }
+      ]
+    },
+    {
+      "name": "ProjectWebhookTriggerDTO",
+      "fields": [
+        {
+          "name": "events",
+          "description": "Events to be notified of",
+          "label": "repeated",
+          "type": "WebhookEventEnum"
+        },
+        {
+          "name": "urls",
+          "description": "URL targets for webhook requests",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "TestPOP3MailboxRequestDTO",
+      "fields": [
+        {
+          "name": "protocol",
+          "description": "Protocol type (\"POP3\", \"POP3+SSL\", \"POP3+TLS\")",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "host",
+          "description": "Email service host name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "port",
+          "description": "Email server port number",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "login",
+          "description": "Email login",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "description": "Email password",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "TestPOP3MailboxResponseDTO",
+      "fields": [
+        {
+          "name": "status",
+          "description": "Mailbox status. OK (1); LoginFailed (2); ConnectionFailed (3);",
+          "label": "required",
+          "type": "TestPOP3MailboxStatusEnum"
+        },
+        {
+          "name": "message",
+          "description": "Optional text message",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReadOnlyModeDTO",
+      "fields": [
+        {
+          "name": "isReadOnly",
+          "description": "Whether the server is in read-only mode",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "description",
+          "description": "Describes the reason for enabling read-only mode (if any)",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "EmailBouncesResponseDTO",
+      "fields": [{
+        "name": "emails",
+        "description": "Emails with either a \"soft bounce\" or a \"hard bounce\" status",
+        "label": "repeated",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "UpdateUserTimezoneDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "User ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "timezoneOffset",
+          "description": "Timezone offset",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UserActionNotificationDTO",
+      "fields": [{
+        "name": "userId",
+        "description": "User ID in Upsource",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "AchievementDTO",
+      "fields": [
+        {
+          "name": "id",
+          "description": "Achievement ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Achievement title",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "shortDescription",
+          "description": "Short description of the achievement",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "description",
+          "description": "Longer description of the achievement",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "date",
+          "description": "Unix timestamp of the unlocking event",
+          "label": "optional",
+          "type": "Int64"
+        },
+        {
+          "name": "isUnread",
+          "description": "Whether the user saw a notification about the unlocking",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "isUnlocked",
+          "description": "Whether the achievement is unlocked by the user",
+          "label": "optional",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "AchievementsListDTO",
+      "fields": [{
+        "name": "items",
+        "label": "repeated",
+        "type": "AchievementDTO"
+      }]
+    },
+    {
+      "name": "UserAchievementsRequestDTO",
+      "fields": [{
+        "name": "userId",
+        "description": "User ID in Upsource",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "UserAchievementsCountDTO",
+      "fields": [{
+        "name": "count",
+        "label": "required",
+        "type": "Int32"
+      }]
+    },
+    {
+      "name": "SetMottoRequestDTO",
+      "fields": [{
+        "name": "motto",
+        "description": "Server motto text (leave empty to remove an existing one)",
+        "label": "optional",
+        "type": "String"
+      }]
+    }
+  ]
+}

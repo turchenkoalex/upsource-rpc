@@ -1,0 +1,18 @@
+package com.ecwid.upsource.rpc.projects
+
+data class LabelDTO(
+	/**
+	 * Discussion label ID (optional)
+	 */
+	val id: String?,
+
+	/**
+	 * Discussion label name (e.g. bug, code style, enhancement, help wanted) (required)
+	 */
+	val name: String,
+
+	/**
+	 * Discussion label color (optional)
+	 */
+	val colorId: String?
+)

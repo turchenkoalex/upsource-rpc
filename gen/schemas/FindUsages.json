@@ -1,0 +1,630 @@
+{"messages": [
+  {
+    "name": "StubIdDTO",
+    "fields": [
+      {
+        "name": "fileId",
+        "description": "See FileInRevisionDTO parameters",
+        "label": "required",
+        "type": "FileInRevisionDTO"
+      },
+      {
+        "name": "stubIndex",
+        "description": "Stub index ID",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  },
+  {
+    "name": "PsiElementIdDTO",
+    "fields": [
+      {
+        "name": "fileId",
+        "description": "See FileInRevisionDTO parameters",
+        "label": "required",
+        "type": "FileInRevisionDTO"
+      },
+      {
+        "name": "range",
+        "description": "Text range of the given PSI element",
+        "label": "required",
+        "type": "RangeDTO"
+      },
+      {
+        "name": "localIndex",
+        "description": "Copy of the localIndex from 'ReferenceCodeMarkupItemDTO' to identify the exact PSI element",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  },
+  {
+    "name": "FilePathToRootDTO",
+    "fields": [
+      {
+        "name": "fileName",
+        "description": "A full path to the file starting with a slash (e.g. /directory/file.txt)",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "pathToRoot",
+        "description": "See ProjectItemsListDTO parameters",
+        "label": "required",
+        "type": "ProjectItemsListDTO"
+      }
+    ]
+  },
+  {
+    "name": "FindUsagesResponseDTO",
+    "fields": [
+      {
+        "name": "filePathToRoot",
+        "description": "See FilePathToRootDTO parameters",
+        "label": "repeated",
+        "type": "FilePathToRootDTO"
+      },
+      {
+        "name": "item",
+        "description": "See FindUsagesItemDTO parameters",
+        "label": "repeated",
+        "type": "FindUsagesItemDTO"
+      }
+    ]
+  },
+  {
+    "name": "FindHierarchyResultDTO",
+    "fields": [
+      {
+        "name": "ancestors",
+        "description": "The list of element's ancestors",
+        "label": "repeated",
+        "type": "NavigationTargetItemDTO"
+      },
+      {
+        "name": "inheritors",
+        "description": "The list of element's inheritors",
+        "label": "repeated",
+        "type": "NavigationTargetItemDTO"
+      }
+    ]
+  },
+  {
+    "name": "FindUsagesItemDTO",
+    "fields": [
+      {
+        "name": "navigationTarget",
+        "description": "See NavigationTargetItemDTO parameters",
+        "label": "required",
+        "type": "NavigationTargetItemDTO"
+      },
+      {
+        "name": "previewText",
+        "description": "Preview text",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "startOffsetInPreview",
+        "description": "Start offset",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "endOffsetInPreview",
+        "description": "End offset",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "lineNumber",
+        "description": "Line number",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "isImportant",
+        "description": "Identifies if this usage is semantic-sensitive or not",
+        "label": "required",
+        "type": "Bool"
+      }
+    ]
+  },
+  {
+    "name": "NavigationTargetItemDTO",
+    "fields": [
+      {
+        "name": "fileId",
+        "description": "See FileInRevisionDTO parameters",
+        "label": "required",
+        "type": "FileInRevisionDTO"
+      },
+      {
+        "name": "startOffset",
+        "description": "Start offset",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "endOffset",
+        "description": "End offset",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "stubIndex",
+        "description": "Stub index ID",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "targetDescription",
+        "description": "See TargetDescriptionDTO parameters",
+        "label": "optional",
+        "type": "TargetDescriptionDTO"
+      }
+    ]
+  },
+  {
+    "name": "TargetDescriptionDTO",
+    "fields": [
+      {
+        "name": "imageName",
+        "description": "ID of the element's image (if 'image' is none)",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "image",
+        "description": "Base62-encoded image (if 'imageName' is none)",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "targetPresentation",
+        "description": "Text representation of the given element",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "locationPresentation",
+        "description": "Text surrounding the element",
+        "label": "optional",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "TextSearchRequestDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "query",
+        "description": "The search query",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "filenameFilter",
+        "description": "File name filter",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "ignoreDeleted",
+        "description": "Ignore matches in deleted files",
+        "label": "required",
+        "type": "Bool"
+      },
+      {
+        "name": "ignoreArchived",
+        "description": "Whether to search in archived projects",
+        "label": "required",
+        "type": "Bool"
+      }
+    ]
+  },
+  {
+    "name": "TextSearchProjectDetails",
+    "fields": [{
+      "name": "projectName",
+      "description": "Holds the project name",
+      "label": "required",
+      "type": "String"
+    }]
+  },
+  {
+    "name": "TextSearchSnippet",
+    "fields": [
+      {
+        "name": "text",
+        "description": "Snippet text",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "startLineNumber",
+        "description": "Start line number",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "rangeInSnippet",
+        "description": "Matching range in the snippet",
+        "label": "required",
+        "type": "RangeDTO"
+      },
+      {
+        "name": "rangeInFile",
+        "description": "Matching range in the file",
+        "label": "required",
+        "type": "RangeDTO"
+      }
+    ]
+  },
+  {
+    "name": "TextSearchItem",
+    "fields": [
+      {
+        "name": "file",
+        "description": "The file in a particular project and revision",
+        "label": "required",
+        "type": "FileInRevisionDTO"
+      },
+      {
+        "name": "revisionInfo",
+        "description": "See RevisionInfoDTO parameters",
+        "label": "required",
+        "type": "RevisionInfoDTO"
+      },
+      {
+        "name": "contentType",
+        "description": "File content type",
+        "label": "required",
+        "type": "FileContentTypeDTO"
+      },
+      {
+        "name": "isDeleted",
+        "description": "Whether this file is deleted",
+        "label": "required",
+        "type": "Bool"
+      },
+      {
+        "name": "projectDetails",
+        "description": "Project details",
+        "label": "required",
+        "type": "TextSearchProjectDetails"
+      },
+      {
+        "name": "snippets",
+        "description": "Code snippets",
+        "label": "repeated",
+        "type": "TextSearchSnippet"
+      },
+      {
+        "name": "totalMatches",
+        "description": "Total number of matches in the file",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  },
+  {
+    "name": "TextSearchResponseDTO",
+    "fields": [{
+      "name": "items",
+      "description": "The items that match the search query",
+      "label": "repeated",
+      "type": "TextSearchItem"
+    }]
+  },
+  {
+    "name": "GotoFileRequestDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "revisionId",
+        "description": "ID of the revision (search in heads if not provided)",
+        "label": "optional",
+        "type": "String"
+      },
+      {
+        "name": "reviewId",
+        "description": "See ReviewIdDTO parameters",
+        "label": "optional",
+        "type": "ReviewIdDTO"
+      },
+      {
+        "name": "pattern",
+        "description": "Search query, e.g. part of the name",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "limit",
+        "description": "Number of results to return",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  },
+  {
+    "name": "GotoFileItemDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "revisionId",
+        "description": "ID of the revision",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "fileName",
+        "description": "A full path to the file starting with a slash (e.g. /directory/file.txt)",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "isDeleted",
+        "description": "Whether the file is deleted",
+        "label": "required",
+        "type": "Bool"
+      },
+      {
+        "name": "lastModified",
+        "description": "Unix timestamp of the last modification",
+        "label": "optional",
+        "type": "Int64"
+      },
+      {
+        "name": "branch",
+        "description": "Branch name",
+        "label": "optional",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "GotoFileResponseDTO",
+    "fields": [
+      {
+        "name": "items",
+        "description": "See GotoFileItemDTO parameters",
+        "label": "repeated",
+        "type": "GotoFileItemDTO"
+      },
+      {
+        "name": "hasMore",
+        "description": "Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request",
+        "label": "required",
+        "type": "Bool"
+      }
+    ]
+  },
+  {
+    "name": "FindBranchRequestDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "pattern",
+        "description": "Search query, e.g. part of the branch name",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "limit",
+        "description": "Max number of results to return",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  },
+  {
+    "name": "FindBranchResponseDTO",
+    "fields": [
+      {
+        "name": "branches",
+        "description": "The list of matched branches",
+        "label": "repeated",
+        "type": "String"
+      },
+      {
+        "name": "hasMore",
+        "description": "Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request",
+        "label": "required",
+        "type": "Bool"
+      }
+    ]
+  },
+  {
+    "name": "ElementDocumentationDTO",
+    "fields": [{
+      "name": "docString",
+      "description": "Text of the element documentation",
+      "label": "optional",
+      "type": "String"
+    }]
+  },
+  {
+    "name": "UsagesDiffFullRequestDTO",
+    "fields": [
+      {
+        "name": "oldElement",
+        "description": "Old element. See PsiElementIdDTO parameters",
+        "label": "required",
+        "type": "PsiElementIdDTO"
+      },
+      {
+        "name": "newElement",
+        "description": "New element. See PsiElementIdDTO parameters",
+        "label": "required",
+        "type": "PsiElementIdDTO"
+      }
+    ]
+  },
+  {
+    "name": "UsagesDiffByAnotherRevisionRequestDTO",
+    "fields": [
+      {
+        "name": "originElement",
+        "description": "Original element. See PsiElementIdDTO parameters",
+        "label": "required",
+        "type": "PsiElementIdDTO"
+      },
+      {
+        "name": "anotherRevisionId",
+        "description": "ID of the other revision",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "isAnotherOld",
+        "description": "Whether the other revision is older",
+        "label": "required",
+        "type": "Bool"
+      }
+    ]
+  },
+  {
+    "name": "UsagesDiffByBoundaryRevisionsRequestDTO",
+    "fields": [
+      {
+        "name": "originElement",
+        "description": "Original element. See PsiElementIdDTO parameters",
+        "label": "required",
+        "type": "PsiElementIdDTO"
+      },
+      {
+        "name": "newRevisionId",
+        "description": "ID of the new revision",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "boundaryRevisionId",
+        "description": "ID of the boundary revision",
+        "label": "required",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "UsagesDiffRequestDTO",
+    "fields": [
+      {
+        "name": "fullRequest",
+        "description": "See UsagesDiffFullRequestDTO parameters",
+        "label": "optional",
+        "type": "UsagesDiffFullRequestDTO"
+      },
+      {
+        "name": "requestByAnotherRevision",
+        "description": "See UsagesDiffByAnotherRevisionRequestDTO parameters",
+        "label": "optional",
+        "type": "UsagesDiffByAnotherRevisionRequestDTO"
+      },
+      {
+        "name": "requestByBoundaryRevisions",
+        "description": "See UsagesDiffByBoundaryRevisionsRequestDTO parameters",
+        "label": "optional",
+        "type": "UsagesDiffByBoundaryRevisionsRequestDTO"
+      }
+    ]
+  },
+  {
+    "name": "SameUsagesDTO",
+    "fields": [
+      {
+        "name": "oldUsage",
+        "description": "Old usage of the element. See FindUsagesItemDTO parameters",
+        "label": "required",
+        "type": "FindUsagesItemDTO"
+      },
+      {
+        "name": "newUsage",
+        "description": "New usage of the element. See FindUsagesItemDTO parameters",
+        "label": "required",
+        "type": "FindUsagesItemDTO"
+      }
+    ]
+  },
+  {
+    "name": "UsagesDiffDTO",
+    "fields": [
+      {
+        "name": "oldFilePathToRoot",
+        "description": "See FilePathToRootDTO parameters",
+        "label": "optional",
+        "type": "FilePathToRootDTO"
+      },
+      {
+        "name": "newFilePathToRoot",
+        "description": "See FilePathToRootDTO parameters",
+        "label": "optional",
+        "type": "FilePathToRootDTO"
+      },
+      {
+        "name": "removedUsage",
+        "description": "See FindUsagesItemDTO parameters",
+        "label": "repeated",
+        "type": "FindUsagesItemDTO"
+      },
+      {
+        "name": "sameUsage",
+        "description": "See SameUsagesDTO parameters",
+        "label": "repeated",
+        "type": "SameUsagesDTO"
+      },
+      {
+        "name": "addedUsage",
+        "description": "See FindUsagesItemDTO parameters",
+        "label": "repeated",
+        "type": "FindUsagesItemDTO"
+      }
+    ]
+  },
+  {
+    "name": "UsagesDiffResponseDTO",
+    "fields": [
+      {
+        "name": "oldRevisionId",
+        "description": "ID of the old revision",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "newRevisionId",
+        "description": "ID of the new revision",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "usages",
+        "description": "See UsagesDiffDTO parameters",
+        "label": "repeated",
+        "type": "UsagesDiffDTO"
+      }
+    ]
+  }
+]}

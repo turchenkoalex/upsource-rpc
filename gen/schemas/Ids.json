@@ -1,0 +1,112 @@
+{"messages": [
+  {
+    "name": "VoidMessage",
+    "fields": [{
+      "name": "voidField",
+      "description": "No value required/returned",
+      "label": "optional",
+      "type": "Int32"
+    }]
+  },
+  {
+    "name": "ProjectIdDTO",
+    "fields": [{
+      "name": "projectId",
+      "description": "Project ID in Upsource",
+      "label": "required",
+      "type": "String"
+    }]
+  },
+  {
+    "name": "ProjectIdListDTO",
+    "fields": [{
+      "name": "projectId",
+      "description": "Project ID in Upsource",
+      "label": "repeated",
+      "type": "String"
+    }]
+  },
+  {
+    "name": "RevisionIdDTO",
+    "fields": [{
+      "name": "revisionId",
+      "description": "VCS revision ID",
+      "label": "required",
+      "type": "String"
+    }]
+  },
+  {
+    "name": "FileInRevisionDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "revisionId",
+        "description": "VCS revision ID",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "fileName",
+        "description": "A full path to the file starting with a slash (e.g. /directory/file.txt)",
+        "label": "required",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "RevisionInProjectDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "revisionId",
+        "description": "VCS revision ID",
+        "label": "required",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "ReviewIdDTO",
+    "fields": [
+      {
+        "name": "projectId",
+        "description": "Project ID in Upsource",
+        "label": "required",
+        "type": "String"
+      },
+      {
+        "name": "reviewId",
+        "description": "Review ID assigned to it when it's created",
+        "label": "required",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "RangeDTO",
+    "fields": [
+      {
+        "name": "startOffset",
+        "description": "Start offset of the text range",
+        "label": "required",
+        "type": "Int32"
+      },
+      {
+        "name": "endOffset",
+        "description": "End offset of the text range",
+        "label": "required",
+        "type": "Int32"
+      }
+    ]
+  }
+]}

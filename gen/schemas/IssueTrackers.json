@@ -1,0 +1,341 @@
+{
+  "enums": [{
+    "values": [
+      {
+        "number": 1,
+        "name": "Text"
+      },
+      {
+        "number": 2,
+        "name": "Date"
+      },
+      {
+        "number": 3,
+        "name": "Value"
+      },
+      {
+        "number": 4,
+        "name": "Array"
+      }
+    ],
+    "name": "IssueRequiredFieldTypeEnum"
+  }],
+  "messages": [
+    {
+      "name": "IssueTrackerProviderSettingDTO",
+      "fields": [
+        {
+          "name": "name",
+          "description": "Setting key",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "Setting value",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "IssueTrackerProviderSettingsDTO",
+      "fields": [
+        {
+          "name": "providerKey",
+          "description": "Issue tracker provider key (\"YouTrack\", \"JIRA\")",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "settings",
+          "description": "Settings used to set up the integration (e.g server URL, login credentials, project ID in the issue tracker)",
+          "label": "repeated",
+          "type": "IssueTrackerProviderSettingDTO"
+        }
+      ]
+    },
+    {
+      "name": "IssueTrackerProjectDetailsDTO",
+      "fields": [
+        {
+          "name": "providerKey",
+          "description": "Issue tracker provider key (\"YouTrack\", \"JIRA\")",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "projectUrl",
+          "description": "Issue tracker project URL",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "field",
+          "description": "See IssueFieldDTO parameters",
+          "label": "repeated",
+          "type": "IssueFieldDTO"
+        },
+        {
+          "name": "canCreateIssue",
+          "description": "Whether an issue can be created",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "requiredField",
+          "description": "See IssueRequiredFieldDTO parameters",
+          "label": "repeated",
+          "type": "IssueRequiredFieldDTO"
+        }
+      ]
+    },
+    {
+      "name": "IssueFieldDTO",
+      "description": "Supported fields: Issue Type, Priority",
+      "fields": [
+        {
+          "name": "id",
+          "description": "Field ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Field name. The following fields are recognized for JIRA: url, linkUrl, projectId, login, password, pkcs12cert, pkcs12pass, enableCreateIssue, enableReviewComment, wfc_reviewCreated, wfc_reviewAccepted, wfc_reviewRejected, wfc_reviewClosed. YouTrack configuration in Upsource is delegated to Hub.",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "defaultValueId",
+          "description": "Default value",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "See IssueFieldValueDTO parameters",
+          "label": "repeated",
+          "type": "IssueFieldValueDTO"
+        }
+      ]
+    },
+    {
+      "name": "IssueFieldValueDTO",
+      "description": "Allowed values for \"Issue Type\": Normal, Minor, Critical, etc. Allowed values for \"Priority\": Bug, Task, Feature, etc.",
+      "fields": [
+        {
+          "name": "valueId",
+          "description": "Value ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Value title",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "html",
+          "description": "HTML presentation of the value, e.g. a <span> with some inline styles",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "IssueRequiredFieldDTO",
+      "fields": [
+        {
+          "name": "issueTypeId",
+          "description": "Issue type ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "field",
+          "description": "See IssueFieldDTO parameters",
+          "label": "required",
+          "type": "IssueFieldDTO"
+        },
+        {
+          "name": "fieldType",
+          "description": "Field type",
+          "label": "required",
+          "type": "IssueRequiredFieldTypeEnum"
+        }
+      ]
+    },
+    {
+      "name": "IssueFieldValueIdDTO",
+      "fields": [
+        {
+          "name": "fieldId",
+          "description": "Field ID (see IssueFieldDTO)",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "valueId",
+          "description": "Value ID (see IssueFieldValueDTO)",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CreateIssueFromDiscussionRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "discussionId",
+          "description": "ID of the discussion",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fieldValue",
+          "description": "See IssueFieldValueIdDTO parameters",
+          "label": "repeated",
+          "type": "IssueFieldValueIdDTO"
+        }
+      ]
+    },
+    {
+      "name": "CreateIssueFromReviewRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "reviewKey",
+          "description": "Review ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fieldValue",
+          "description": "See IssueFieldValueIdDTO parameters",
+          "label": "repeated",
+          "type": "IssueFieldValueIdDTO"
+        }
+      ]
+    },
+    {
+      "name": "IssueIdDTO",
+      "fields": [
+        {
+          "name": "issueId",
+          "description": "Issue ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "issueLink",
+          "description": "Issue link",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "isCreatedFromUpsource",
+          "description": "Whether the issue has been created from Upsource",
+          "label": "optional",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "IssueInfoRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "issueId",
+          "description": "Issue ID",
+          "label": "required",
+          "type": "IssueIdDTO"
+        }
+      ]
+    },
+    {
+      "name": "IssueInfoDTO",
+      "fields": [
+        {
+          "name": "issueId",
+          "description": "Issue ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "issueLink",
+          "description": "Issue URL",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "summary",
+          "description": "Issue summary",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "isResolved",
+          "description": "Whether the issue has been resolved",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "field",
+          "description": "HTML presentation of issue fields (Issue Type, Priority, State)",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "IssueTrackerProviderDTO",
+      "fields": [
+        {
+          "name": "providerKey",
+          "description": "Issue tracker project key (JIRA, YouTrack)",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "scriptText",
+          "description": "Text of the issue tracker configuration script (must be a React component)",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "isAutoSetup",
+          "description": "Whether issue tracker integration can be set up automatically",
+          "label": "required",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "IssueTrackerProvidersListDTO",
+      "fields": [{
+        "name": "providers",
+        "description": "See IssueTrackerProviderDTO parameters",
+        "label": "repeated",
+        "type": "IssueTrackerProviderDTO"
+      }]
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "enums": [
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "Author"
+        },
+        {
+          "number": 2,
+          "name": "Reviewer"
+        },
+        {
+          "number": 3,
+          "name": "Watcher"
+        }
+      ],
+      "name": "RoleInReviewEnum",
+      "description": "Describes roles in a review"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "OK"
+        },
+        {
+          "number": 2,
+          "name": "NotVerified"
+        },
+        {
+          "number": 3,
+          "name": "NotSpecified"
+        },
+        {
+          "number": 4,
+          "name": "HardBounce"
+        }
+      ],
+      "name": "EmailStatusEnum",
+      "description": "Describes status of an email address"
+    }
+  ],
+  "messages": [
+    {
+      "name": "UsersForMentionRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "reviewId",
+          "description": "ID of the Upsource review",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "revisionId",
+          "description": "ID of the revision",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "fileName",
+          "description": "A full path to the file starting with a slash (e.g. /directory/file.txt)",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "query",
+          "description": "Search query, e.g. part of the name",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "limit",
+          "description": "Number of results to return",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UsersForReviewRequestDTO",
+      "fields": [
+        {
+          "name": "reviewId",
+          "description": "See ReviewIdDTO parameters",
+          "label": "required",
+          "type": "ReviewIdDTO"
+        },
+        {
+          "name": "role",
+          "description": "See RoleInReviewEnum parameters",
+          "label": "required",
+          "type": "RoleInReviewEnum"
+        },
+        {
+          "name": "query",
+          "description": "Search query, e.g. part of the name",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "limit",
+          "description": "Number of results to return",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "timeout",
+          "description": "Timeout(ms) to calculate smart users suggestion, by default - 1 minute",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "UsersListDTO",
+      "fields": [
+        {
+          "name": "me",
+          "description": "User ID of the logged-in user",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "suggestedUsers",
+          "description": "User IDs of suggested users",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "suggestedUserRelevance",
+          "description": "Users' relevance [0..100] as a reviewer",
+          "label": "repeated",
+          "type": "Int32"
+        },
+        {
+          "name": "suggestedUserOpenedReviews",
+          "description": "The number of open reviews the user has",
+          "label": "repeated",
+          "type": "Int32"
+        },
+        {
+          "name": "committers",
+          "description": "User IDs of suggested committers",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "others",
+          "description": "User IDs of other suggested participants",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "hasMore",
+          "description": "Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request",
+          "label": "required",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "ProjectUserGroupsRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "query",
+          "description": "Search query, i.e. starting part of the name",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "limit",
+          "description": "Maximum number of results to return",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UserGroupsIdsListDTO",
+      "fields": [{
+        "name": "ids",
+        "description": "IDs of user groups",
+        "label": "repeated",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "UserGroupDTO",
+      "fields": [
+        {
+          "name": "id",
+          "description": "Group ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Group name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "usersCount",
+          "description": "Number of users participating in this group",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UserGroupsListDTO",
+      "fields": [
+        {
+          "name": "groups",
+          "description": "List of user groups",
+          "label": "repeated",
+          "type": "UserGroupDTO"
+        },
+        {
+          "name": "hasMore",
+          "description": "Whether there are more groups by the request beyond the limit specified",
+          "label": "required",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "UserInfoRequestDTO",
+      "fields": [{
+        "name": "ids",
+        "description": "A list of user IDs to request the full user info for",
+        "label": "repeated",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "UserInfoResponseDTO",
+      "fields": [{
+        "name": "infos",
+        "description": "See FullUserInfoDTO parameters",
+        "label": "repeated",
+        "type": "FullUserInfoDTO"
+      }]
+    },
+    {
+      "name": "FullUserInfoDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Upsource user name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "isResolved",
+          "description": "Whether the user has an account in Hub",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isMe",
+          "description": "Flags the currently logged-in user",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isOnline",
+          "description": "Whether the user is online",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "avatarUrl",
+          "description": "URL of the userpic",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "profileUrl",
+          "description": "URL of the Hub user profile",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "description": "Email address",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "login",
+          "description": "Login",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "absentUntil",
+          "description": "Absence end date, if the user is currently on leave",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "UsersPresenceInfoResponseDTO",
+      "fields": [{
+        "name": "presences",
+        "description": "See UserPresenceInfoDTO parameters",
+        "label": "repeated",
+        "type": "UserPresenceInfoDTO"
+      }]
+    },
+    {
+      "name": "UserPresenceInfoDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "isOnline",
+          "description": "Whether the user is online",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "absentUntil",
+          "description": "Absence end date, if the user is currently on leave",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "CurrentUserResponseDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "login",
+          "description": "Upsource login",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "Visible name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "isServerAdmin",
+          "description": "The user is a server admin",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isGuestUser",
+          "description": "The user is a guest user",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isTestUser",
+          "description": "The user is a test user",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "canCreateProjects",
+          "description": "The user has the right to create projects",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "emailStatus",
+          "description": "See EmailStatusEnum parameters",
+          "label": "required",
+          "type": "EmailStatusEnum"
+        },
+        {
+          "name": "adminPermissionsInProjects",
+          "description": "The list of projects where the user has admin permissions",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "reviewEditPermissionsInProjects",
+          "description": "The list of projects where the user has permission to edit reviews",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "reviewViewPermissionsInProjects",
+          "description": "The list of projects where the user has permission to view reviews",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "codeContributePermissionsInProjects",
+          "description": "The list of projects where the user has permission to create/merge pull requests",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "isEULAAccepted",
+          "description": "Checks if EULA is accepted by the current user. Returns 'null' if EULA is not set up in Hub",
+          "label": "optional",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "BindVcsUsernameRequestDTO",
+      "fields": [{
+        "name": "userId",
+        "description": "User ID to register as an alias of the currently logged-in user",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "UserProjectsRequestDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "commitTimestampFilter",
+          "description": "Project update timestamp to limit the returned projects by",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "UserProjectInfoDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "lastCommitTime",
+          "description": "Unix timestamp of the last commit",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "UserProjectsResponseDTO",
+      "fields": [{
+        "name": "projects",
+        "description": "See UserProjectInfoDTO parameters",
+        "label": "repeated",
+        "type": "UserProjectInfoDTO"
+      }]
+    },
+    {
+      "name": "UserAbsenceRequestDTO",
+      "fields": [
+        {
+          "name": "absentUntil",
+          "description": "Absence end date",
+          "label": "optional",
+          "type": "Int64"
+        },
+        {
+          "name": "userId",
+          "description": "User ID in Upsource (\"null\" denotes current user)",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "FindUsersRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "pattern",
+          "description": "Search query, e.g. part of the name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "limit",
+          "description": "Number of results to return",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UsersForReviewDTO",
+      "fields": [
+        {
+          "name": "result",
+          "description": "Suggested reviewers for a given review",
+          "label": "required",
+          "type": "UsersListDTO"
+        },
+        {
+          "name": "relevantUser",
+          "description": "All relevant users",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "userRelevance",
+          "description": "Users' relevance [0..100]",
+          "label": "repeated",
+          "type": "Int32"
+        }
+      ]
+    }
+  ]
+}

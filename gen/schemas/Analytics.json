@@ -1,0 +1,1092 @@
+{
+  "enums": [
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "HOUR"
+        },
+        {
+          "number": 2,
+          "name": "DAY"
+        },
+        {
+          "number": 3,
+          "name": "WEEK"
+        },
+        {
+          "number": 4,
+          "name": "MONTH"
+        },
+        {
+          "number": 5,
+          "name": "QUARTER"
+        },
+        {
+          "number": 6,
+          "name": "YEAR"
+        }
+      ],
+      "name": "TimeUnitEnum"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "CLOSED"
+        },
+        {
+          "number": 2,
+          "name": "OPEN"
+        },
+        {
+          "number": 3,
+          "name": "ALL"
+        }
+      ],
+      "name": "ReviewCoverageStateEnum"
+    }
+  ],
+  "messages": [
+    {
+      "name": "AnalyzerStats",
+      "fields": [
+        {
+          "name": "minCommitTime",
+          "description": "Unix timestamp of the earliest commit",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "maxCommitTime",
+          "description": "Unix timestamp of the latest commit",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "totalCommits",
+          "description": "Total number of commits",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "minIndexedCommitTime",
+          "description": "Unix timestamp of the earliest indexed commit",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "maxIndexedCommitTime",
+          "description": "Unix timestamp of the latest indexed commit",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "totalIndexedCommits",
+          "description": "Total number of indexed commits",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "isProjectModelKnown",
+          "description": "Whether project model is known",
+          "label": "required",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "TimeValue",
+      "description": "A time-value pair",
+      "fields": [
+        {
+          "name": "time",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "value",
+          "description": "The value associated with the timestamp",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "CommitterUserInfo",
+      "fields": [
+        {
+          "name": "committer",
+          "description": "VCS committer name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "userId",
+          "description": "User ID of the committer",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ProjectActivityRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "module",
+          "description": "Name of the project module",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "referenceTime",
+          "description": "Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ProjectActivityDTO",
+      "fields": [
+        {
+          "name": "items",
+          "description": "See TimeValue parameters",
+          "label": "repeated",
+          "type": "TimeValue"
+        },
+        {
+          "name": "modules",
+          "description": "Names of project modules",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "stats",
+          "description": "See AnalyzerStats parameters",
+          "label": "required",
+          "type": "AnalyzerStats"
+        }
+      ]
+    },
+    {
+      "name": "ContributorsDistributionRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "module",
+          "description": "Name of the project module",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution (Unix timestamps)",
+          "label": "repeated",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "CommitterTimeValue",
+      "fields": [
+        {
+          "name": "committer",
+          "description": "User ID of the committer",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "items",
+          "description": "See TimeValue parameters",
+          "label": "repeated",
+          "type": "TimeValue"
+        }
+      ]
+    },
+    {
+      "name": "ContributorsDistributionDTO",
+      "fields": [
+        {
+          "name": "items",
+          "description": "See CommitterTimeValue parameters",
+          "label": "repeated",
+          "type": "CommitterTimeValue"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution",
+          "label": "repeated",
+          "type": "Int64"
+        },
+        {
+          "name": "users",
+          "description": "See CommitterUserInfo parameters",
+          "label": "repeated",
+          "type": "CommitterUserInfo"
+        }
+      ]
+    },
+    {
+      "name": "ResponsibilityDistributionRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ModuleValue",
+      "fields": [
+        {
+          "name": "module",
+          "description": "Name of the project module",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "The value associated with the module",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "CommitterModuleValue",
+      "fields": [
+        {
+          "name": "committer",
+          "description": "User ID of the committer",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "items",
+          "description": "See ModuleValue parameters",
+          "label": "repeated",
+          "type": "ModuleValue"
+        }
+      ]
+    },
+    {
+      "name": "ResponsibilityDistributionDTO",
+      "fields": [
+        {
+          "name": "items",
+          "description": "See CommitterModuleValue parameters",
+          "label": "repeated",
+          "type": "CommitterModuleValue"
+        },
+        {
+          "name": "users",
+          "description": "See CommitterUserInfo parameters",
+          "label": "repeated",
+          "type": "CommitterUserInfo"
+        },
+        {
+          "name": "modules",
+          "description": "Names of the project modules",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "stats",
+          "description": "See AnalyzerStats parameters",
+          "label": "required",
+          "type": "AnalyzerStats"
+        }
+      ]
+    },
+    {
+      "name": "ProjectCommittersDTO",
+      "fields": [{
+        "name": "users",
+        "description": "See CommitterUserInfo parameters",
+        "label": "repeated",
+        "type": "CommitterUserInfo"
+      }]
+    },
+    {
+      "name": "UserActivityRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "period",
+          "description": "User activity period. See TimeUnitEnum parameters",
+          "label": "required",
+          "type": "TimeUnitEnum"
+        },
+        {
+          "name": "referenceTime",
+          "description": "Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "committers",
+          "description": "User IDs of committers",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "UserActivityDTO",
+      "fields": [
+        {
+          "name": "items",
+          "description": "See TimeValue parameters",
+          "label": "repeated",
+          "type": "TimeValue"
+        },
+        {
+          "name": "stats",
+          "description": "See AnalyzerStats parameters",
+          "label": "required",
+          "type": "AnalyzerStats"
+        }
+      ]
+    },
+    {
+      "name": "ModulesDistributionRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "committers",
+          "description": "User IDs of committers",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution (Unix timestamps)",
+          "label": "repeated",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ModuleTimeValue",
+      "fields": [
+        {
+          "name": "module",
+          "description": "Name of the project module",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "items",
+          "description": "See TimeValue parameters",
+          "label": "repeated",
+          "type": "TimeValue"
+        }
+      ]
+    },
+    {
+      "name": "ModulesDistributionDTO",
+      "fields": [
+        {
+          "name": "items",
+          "description": "See ModuleTimeValue parameters",
+          "label": "repeated",
+          "type": "ModuleTimeValue"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution (Unix timestamps)",
+          "label": "repeated",
+          "type": "Int64"
+        },
+        {
+          "name": "modules",
+          "description": "Names of the project modules",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CommitsSummaryRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "committers",
+          "description": "User IDs of committers",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CommitsSummaryDTO",
+      "fields": [
+        {
+          "name": "totalCommits",
+          "description": "Total number of commits",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "offsiteCommits",
+          "description": "Number of commits that didn't affect any module",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "modulesTouched",
+          "description": "Number of modules affected",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "CommitsDetailsRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "committers",
+          "description": "User IDs of committers",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "module",
+          "description": "Name of the project module",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CommitInfo",
+      "fields": [
+        {
+          "name": "revisionId",
+          "description": "Revision ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "description",
+          "description": "Commit message",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "time",
+          "description": "Unix timestamp of commit time",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "shortRevisionId",
+          "description": "Short revision ID",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CommitsDetailsDTO",
+      "fields": [{
+        "name": "commits",
+        "description": "See CommitInfo parameters",
+        "label": "repeated",
+        "type": "CommitInfo"
+      }]
+    },
+    {
+      "name": "UserValue",
+      "description": "A user-value pair",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "The value associated with the user ID",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "LabelStats",
+      "fields": [
+        {
+          "name": "label",
+          "description": "Discussion label. See LabelDTO parameters",
+          "label": "required",
+          "type": "LabelDTO"
+        },
+        {
+          "name": "countsPerUser",
+          "description": "See UserValue parameters",
+          "label": "repeated",
+          "type": "UserValue"
+        }
+      ]
+    },
+    {
+      "name": "CommentsStatisticsDTO",
+      "fields": [
+        {
+          "name": "reviewComments",
+          "description": "Number of review comments",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "totalComments",
+          "description": "Total number of comments",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "totalCounts",
+          "description": "See UserValue parameters",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "unlabeledCounts",
+          "description": "See UserValue parameters",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "statsPerLabel",
+          "description": "See LabelStats parameters",
+          "label": "repeated",
+          "type": "LabelStats"
+        }
+      ]
+    },
+    {
+      "name": "ReviewStatisticsRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "optional",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ReviewStatisticsDTO",
+      "fields": [
+        {
+          "name": "openReviews",
+          "description": "Number of open reviews",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "closedReviews",
+          "description": "Number of closed reviews",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "allRevisions",
+          "description": "Number of revisions covered by reviews",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "revisionsCoveredByOpenReviews",
+          "description": "Number of revisions covered by open reviews",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "revisionsCoveredByClosedReviews",
+          "description": "Number of revisions covered by closed reviews",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "authorStatsByReviews",
+          "description": "Review counts per author",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "reviewerStatsByReviews",
+          "description": "Review counts per reviewer",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "authorStatsByRevisions",
+          "description": "Review revisions counts per author",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "reviewerStatsByRevisions",
+          "description": "Review revisions counts per reviewer",
+          "label": "repeated",
+          "type": "UserValue"
+        },
+        {
+          "name": "commentsStats",
+          "description": "Discussion comments statistics. See CommentsStatisticsDTO parameters",
+          "label": "required",
+          "type": "CommentsStatisticsDTO"
+        }
+      ]
+    },
+    {
+      "name": "ReviewCoverageRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "period",
+          "description": "See TimeUnitEnum parameters",
+          "label": "required",
+          "type": "TimeUnitEnum"
+        },
+        {
+          "name": "referenceTime",
+          "description": "Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ReviewCoverageDTO",
+      "fields": [
+        {
+          "name": "allRevisions",
+          "description": "Number of revisions covered by reviews",
+          "label": "repeated",
+          "type": "TimeValue"
+        },
+        {
+          "name": "revisionsCoveredByOpen",
+          "description": "Number of revisions covered by open reviews",
+          "label": "repeated",
+          "type": "TimeValue"
+        },
+        {
+          "name": "revisionsCoveredByClosed",
+          "description": "Number of revisions covered by closed reviews",
+          "label": "repeated",
+          "type": "TimeValue"
+        }
+      ]
+    },
+    {
+      "name": "FileHistoryChartRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "framesCount",
+          "description": "Number of frames",
+          "label": "optional",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "FileHistoryFrameDTO",
+      "fields": [
+        {
+          "name": "timestamp",
+          "description": "Unix timestamp of the frame",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "deltas",
+          "description": "Counts of file edits since the previous frame",
+          "label": "repeated",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "FileHistoryChartDTO",
+      "fields": [
+        {
+          "name": "maxAge",
+          "description": "Age of the oldest file on the chart (Unix timestamp)",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "maxEdits",
+          "description": "Number of edits for the most edited file on the chart",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "paths",
+          "description": "Full paths to the files starting with a slash (e.g. /directory/file.txt)",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "firstEdits",
+          "description": "Unix timestamps of first edits",
+          "label": "repeated",
+          "type": "Int64"
+        },
+        {
+          "name": "frames",
+          "description": "See FileHistoryFrameDTO parameters",
+          "label": "repeated",
+          "type": "FileHistoryFrameDTO"
+        }
+      ]
+    },
+    {
+      "name": "ProjectTreeMapRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "revisionId",
+          "description": "Revision ID",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ProjectTreeMapEntryDTO",
+      "fields": [
+        {
+          "name": "path",
+          "description": "File path",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "size",
+          "description": "File size",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "modificationsCount",
+          "description": "Number of modifications",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "isBinary",
+          "description": "Whether a file is binary",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "timeSinceLastChange",
+          "description": "Time elapsed since last change (milliseconds)",
+          "label": "required",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ProjectTreeMapDTO",
+      "fields": [{
+        "name": "entries",
+        "description": "See ProjectTreeMapEntryDTO parameters",
+        "label": "repeated",
+        "type": "ProjectTreeMapEntryDTO"
+      }]
+    },
+    {
+      "name": "ProjectPulseRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution (Unix timestamps)",
+          "label": "repeated",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "PulseResponseDTO",
+      "fields": [
+        {
+          "name": "userValues",
+          "description": "Pulse values (number of commits in a week) for the current authenticated user",
+          "label": "repeated",
+          "type": "Int32"
+        },
+        {
+          "name": "allValues",
+          "description": "Pulse values for all users in a project",
+          "label": "repeated",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "UserPulseRequestDTO",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "Upsource user ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "toTime",
+          "description": "Unix timestamp",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "timePoints",
+          "description": "The specific time intervals that define the distribution (Unix timestamps)",
+          "label": "repeated",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ReviewTimeStatisticsRequestDTO",
+      "fields": [{
+        "name": "userId",
+        "description": "Upsource user ID",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "ReviewTimeStatisticsDTO",
+      "fields": [{
+        "name": "distribution",
+        "description": "Durations of review iterations, sorted in ascending order",
+        "label": "repeated",
+        "type": "Int64"
+      }]
+    },
+    {
+      "name": "ReviewersGraphRequestDTO",
+      "fields": [
+        {
+          "name": "projectId",
+          "description": "Project ID in Upsource",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "fromTime",
+          "description": "Unix timestamp, only reviews that were updated later are considered",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "ReviewersGraphLinkDTO",
+      "fields": [
+        {
+          "name": "from",
+          "description": "Index of link source user",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "to",
+          "description": "Index of link target user",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "strength",
+          "description": "Link strength",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "totalReviewsCount",
+          "description": "Total reviews count",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "recentReviewsCount",
+          "description": "Recent reviews count",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "ReviewersGraphDTO",
+      "fields": [
+        {
+          "name": "userIds",
+          "description": "User IDs of graph nodes",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "links",
+          "description": "Graph links",
+          "label": "repeated",
+          "type": "ReviewersGraphLinkDTO"
+        }
+      ]
+    }
+  ]
+}
