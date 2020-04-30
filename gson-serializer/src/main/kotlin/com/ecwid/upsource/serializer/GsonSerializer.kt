@@ -1,9 +1,9 @@
 package com.ecwid.upsource.serializer
 
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 import java.util.concurrent.ConcurrentHashMap
 
@@ -33,6 +33,10 @@ class GsonSerializer : Serializer {
 			return@computeIfAbsent gson to typeToken
 		}
 
-		return gson.fromJson(response.content, typeToken)
+		return try {
+			gson.fromJson(response.content, typeToken)
+		} catch (e: Exception) {
+			RpcResponse.Error(code = 0, message = e.message ?: "Json Parse Error")
+		}
 	}
 }
