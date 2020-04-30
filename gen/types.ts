@@ -1,53 +1,55 @@
-export interface UpsourceSchema {
+export interface UpsourceData {
     subpackage: string,
-    package: string,
+    pkg: string,
     fileName: string,
-    content: UpsourceSchema
+    schema: UpsourceSchema
 }
 
-declare module Upsource {
+export interface Dirs {
+    clientDir: string,
+    gsonDir: string
+}
 
-    export interface Value {
-        number: number;
-        name: string;
-        description: string;
-    }
+export interface UpsourceEnumValue {
+    number: number;
+    name: string;
+    description: string;
+}
 
-    export interface Enum {
-        values: Value[];
-        name: string;
-        description: string;
-    }
+export interface UpsourceEnum {
+    values: UpsourceEnumValue[];
+    name: string;
+    description: string;
+}
 
-    export interface Field {
-        name: string;
-        description: string;
-        label: string;
-        type: string;
-    }
+export interface UpsourceField {
+    name: string;
+    description: string;
+    label: string;
+    type: string;
+}
 
-    export interface Message {
-        name: string;
-        fields: Field[];
-    }
+export interface UpsourceMessage {
+    name: string;
+    fields: UpsourceField[];
+}
 
-    export interface Method {
-        name: string;
-        argumentType: string;
-        description: string;
-        returnType: string;
-    }
+export interface UpsourceMethod {
+    name: string;
+    argumentType: string;
+    description: string;
+    returnType: string;
+}
 
-    export interface Service {
-        methods: Method[];
-        name: string;
-        description: string;
-    }
+export interface UpsourceService {
+    methods: UpsourceMethod[];
+    name: string;
+    description: string;
+}
 
-    export interface UpsourceSchema {
-        enums: Enum[] | undefined;
-        messages: Message[] | undefined;
-        services: Service[] | undefined;
-    }
+export interface UpsourceSchema {
+    enums: UpsourceEnum[] | undefined;
+    messages: UpsourceMessage[] | undefined;
+    services: UpsourceService[] | undefined;
 }
 

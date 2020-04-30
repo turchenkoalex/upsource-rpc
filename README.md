@@ -31,5 +31,6 @@ when (revisionList) {
 ```
 UPSOURCE_URL=https://upsource.example.com ./gen/schemas/update-schemas.sh
 cd ./gen
-node ./generator.js
+tsc client-generator.ts
+node ./client-generator.js
 ```
