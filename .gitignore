@@ -1,6 +1,21 @@
-.DS_Store
+# IDEA based project
 .idea
+
+# File-based project format
+*.iws
+
+# IntelliJ
 out/
-.gradle/
 build/
-node_modules/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# Gradle
+.gradle
+
+# macOS .DS_Store
+.DS_Store
+
+# npm modules
+node_modules

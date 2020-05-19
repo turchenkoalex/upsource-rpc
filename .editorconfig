@@ -1,4 +1,4 @@
-[*.kt]
+[{*.kt,*.kts,*.gradle}]
 insert_final_newline = true
 charset = utf-8
 indent_style = tab

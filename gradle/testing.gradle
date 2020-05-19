@@ -1,0 +1,12 @@
+dependencies {
+	// junit
+	testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+
+	// assertj
+	testImplementation "org.assertj:assertj-core:$assertjVersion"
+}
+
+tasks.test {
+	useJUnitPlatform()
+}

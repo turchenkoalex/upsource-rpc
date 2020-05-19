@@ -1,11 +1,11 @@
 package com.ecwid.upsource.serializer
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
 import com.ecwid.upsource.rpc.projects.ReviewStateEnum
 import com.ecwid.upsource.rpc.projects.RevisionReviewInfoListDTO
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
 import java.io.File
 
 internal class GsonSerializerTest {

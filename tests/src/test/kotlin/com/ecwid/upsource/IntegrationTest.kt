@@ -8,7 +8,9 @@ import com.ecwid.upsource.transport.ApacheHttpRpcTransport
 import com.ecwid.upsource.transport.HttpRpcTransport
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.UpsourceConnection
+import org.junit.jupiter.api.Disabled
 
+@Disabled
 internal class IntegrationTest {
 	private val upsourceConnection = UpsourceConnection(
 		serverUrl = System.getenv("UPSOURCE_URL"),

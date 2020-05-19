@@ -1,0 +1,4 @@
+dependencies {
+	api project(":client")
+	api "org.apache.httpcomponents:httpclient:$apacheHttpClientVersion"
+}
