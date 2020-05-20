@@ -1,12 +1,9 @@
 package com.ecwid.upsource.rpc.projects
 
-/**
- * undefined
- */
-enum class RevisionReachabilityEnum(val value: Byte) {
-	Reachable(1),
-	Unknown(2),
-	NotReachable(3);
+enum class RevisionReachabilityEnum(val value: Byte, val originalName: String) {
+	REACHABLE(value = 1, originalName = "Reachable"),
+	UNKNOWN(value = 2, originalName = "Unknown"),
+	NOT_REACHABLE(value = 3, originalName = "NotReachable");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

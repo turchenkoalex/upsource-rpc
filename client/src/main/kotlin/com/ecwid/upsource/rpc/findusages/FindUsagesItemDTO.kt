@@ -30,4 +30,13 @@ data class FindUsagesItemDTO(
 	 * Identifies if this usage is semantic-sensitive or not (required)
 	 */
 	val isImportant: Boolean
-)
+) {
+	internal constructor() : this(
+		navigationTarget = NavigationTargetItemDTO(),
+		previewText = "",
+		startOffsetInPreview = 0,
+		endOffsetInPreview = 0,
+		lineNumber = 0,
+		isImportant = false
+	)
+}

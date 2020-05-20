@@ -4,5 +4,5 @@ data class CommitsDetailsDTO(
 	/**
 	 * See CommitInfo parameters (repeated)
 	 */
-	val commits: List<CommitInfo>
+	val commits: List<CommitInfo> = emptyList()
 )

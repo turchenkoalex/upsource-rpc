@@ -4,5 +4,5 @@ data class RevisionDiscussionCountersListDTO(
 	/**
 	 * A discussion counter for a revision (number of discussions) (repeated)
 	 */
-	val counter: List<SimpleDiscussionCounterDTO>
+	val counter: List<SimpleDiscussionCounterDTO> = emptyList()
 )

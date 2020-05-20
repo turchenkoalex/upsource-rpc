@@ -14,7 +14,7 @@ data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * See IssueFieldDTO parameters (repeated)
 	 */
-	val field: List<IssueFieldDTO>,
+	val field: List<IssueFieldDTO> = emptyList(),
 
 	/**
 	 * Whether an issue can be created (required)
@@ -24,5 +24,13 @@ data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * See IssueRequiredFieldDTO parameters (repeated)
 	 */
-	val requiredField: List<IssueRequiredFieldDTO>
-)
+	val requiredField: List<IssueRequiredFieldDTO> = emptyList()
+) {
+	internal constructor() : this(
+		providerKey = "",
+		projectUrl = "",
+		field = emptyList(),
+		canCreateIssue = false,
+		requiredField = emptyList()
+	)
+}

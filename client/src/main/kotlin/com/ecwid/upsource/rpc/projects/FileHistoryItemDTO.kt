@@ -15,4 +15,10 @@ data class FileHistoryItemDTO(
 	 * A full path of the file starting with a slash (e.g. /folder/subfolder/file.txt ) (required)
 	 */
 	val fileName: String
-)
+) {
+	internal constructor() : this(
+		diffType = DiffTypeEnum.ADDED,
+		revision = RevisionInfoDTO(),
+		fileName = ""
+	)
+}

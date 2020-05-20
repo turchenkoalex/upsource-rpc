@@ -10,4 +10,9 @@ data class IssueFieldValueIdDTO(
 	 * Value ID (see IssueFieldValueDTO) (required)
 	 */
 	val valueId: String
-)
+) {
+	internal constructor() : this(
+		fieldId = "",
+		valueId = ""
+	)
+}

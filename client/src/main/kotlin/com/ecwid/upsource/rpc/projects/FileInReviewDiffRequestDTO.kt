@@ -14,15 +14,23 @@ data class FileInReviewDiffRequestDTO(
 	/**
 	 * See RevisionsSetDTO parameters (optional)
 	 */
-	val revisions: RevisionsSetDTO?,
+	val revisions: RevisionsSetDTO? = null,
 
 	/**
 	 * Whether to show the changes that were filtered out in the review diff. 'false' by default. (optional)
 	 */
-	val showUnrelatedChanges: Boolean?,
+	val showUnrelatedChanges: Boolean? = null,
 
 	/**
 	 * Number of context lines around the modified fragment (optional)
 	 */
-	val contextLines: Int?
-)
+	val contextLines: Int? = null
+) {
+	internal constructor() : this(
+		file = FileInReviewDTO(),
+		ignoreWhitespace = false,
+		revisions = null,
+		showUnrelatedChanges = null,
+		contextLines = null
+	)
+}

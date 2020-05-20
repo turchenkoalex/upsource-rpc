@@ -14,10 +14,17 @@ data class RevisionsListUpdateRequestDTO(
 	/**
 	 * Current head revision ID (optional)
 	 */
-	val hash: String?,
+	val hash: String? = null,
 
 	/**
 	 * Additional filter by message (applied as AND) (repeated)
 	 */
-	val messageSubstring: List<String>
-)
+	val messageSubstring: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		limit = 0,
+		hash = null,
+		messageSubstring = emptyList()
+	)
+}

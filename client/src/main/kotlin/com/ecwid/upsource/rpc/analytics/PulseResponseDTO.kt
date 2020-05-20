@@ -4,10 +4,10 @@ data class PulseResponseDTO(
 	/**
 	 * Pulse values (number of commits in a week) for the current authenticated user (repeated)
 	 */
-	val userValues: List<Int>,
+	val userValues: List<Int> = emptyList(),
 
 	/**
 	 * Pulse values for all users in a project (repeated)
 	 */
-	val allValues: List<Int>
+	val allValues: List<Int> = emptyList()
 )

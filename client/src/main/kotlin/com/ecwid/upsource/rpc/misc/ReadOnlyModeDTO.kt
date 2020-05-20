@@ -9,5 +9,10 @@ data class ReadOnlyModeDTO(
 	/**
 	 * Describes the reason for enabling read-only mode (if any) (optional)
 	 */
-	val description: String?
-)
+	val description: String? = null
+) {
+	internal constructor() : this(
+		isReadOnly = false,
+		description = null
+	)
+}

@@ -4,10 +4,10 @@ data class ReviewSuggestDTO(
 	/**
 	 * See ShortReviewInfoDTO parameter (optional)
 	 */
-	val reviewInfo: ShortReviewInfoDTO?,
+	val reviewInfo: ShortReviewInfoDTO? = null,
 
 	/**
 	 * The confidence score (optional)
 	 */
-	val score: Float?
+	val score: Double? = null
 )

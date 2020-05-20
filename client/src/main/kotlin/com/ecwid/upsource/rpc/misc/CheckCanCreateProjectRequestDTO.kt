@@ -5,4 +5,8 @@ data class CheckCanCreateProjectRequestDTO(
 	 * Hub project ID (required)
 	 */
 	val hubProjectId: String
-)
+) {
+	internal constructor() : this(
+		hubProjectId = ""
+	)
+}

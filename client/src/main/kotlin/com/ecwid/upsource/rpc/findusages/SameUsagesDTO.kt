@@ -10,4 +10,9 @@ data class SameUsagesDTO(
 	 * New usage of the element. See FindUsagesItemDTO parameters (required)
 	 */
 	val newUsage: FindUsagesItemDTO
-)
+) {
+	internal constructor() : this(
+		oldUsage = FindUsagesItemDTO(),
+		newUsage = FindUsagesItemDTO()
+	)
+}

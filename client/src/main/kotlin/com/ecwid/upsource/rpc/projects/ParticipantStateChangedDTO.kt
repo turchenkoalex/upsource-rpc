@@ -15,4 +15,10 @@ data class ParticipantStateChangedDTO(
 	 * See ParticipantStateEnum parameters (required)
 	 */
 	val newState: ParticipantStateEnum
-)
+) {
+	internal constructor() : this(
+		participant = "",
+		oldState = ParticipantStateEnum.UNREAD,
+		newState = ParticipantStateEnum.UNREAD
+	)
+}

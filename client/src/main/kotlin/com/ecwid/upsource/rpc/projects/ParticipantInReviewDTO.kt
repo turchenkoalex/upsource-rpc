@@ -14,5 +14,11 @@ data class ParticipantInReviewDTO(
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (optional)
 	 */
-	val state: ParticipantStateEnum?
-)
+	val state: ParticipantStateEnum? = null
+) {
+	internal constructor() : this(
+		userId = "",
+		role = com.ecwid.upsource.rpc.users.RoleInReviewEnum.AUTHOR,
+		state = null
+	)
+}

@@ -15,4 +15,10 @@ data class UpdateDiscussionLabelRequestDTO(
 	 * Discussion label being added or removed. See LabelDTO parameters (required)
 	 */
 	val label: LabelDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		label = LabelDTO()
+	)
+}

@@ -4,5 +4,5 @@ data class EmailBouncesResponseDTO(
 	/**
 	 * Emails with either a "soft bounce" or a "hard bounce" status (repeated)
 	 */
-	val emails: List<String>
+	val emails: List<String> = emptyList()
 )

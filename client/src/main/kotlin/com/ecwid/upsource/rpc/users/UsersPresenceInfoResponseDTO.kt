@@ -4,5 +4,5 @@ data class UsersPresenceInfoResponseDTO(
 	/**
 	 * See UserPresenceInfoDTO parameters (repeated)
 	 */
-	val presences: List<UserPresenceInfoDTO>
+	val presences: List<UserPresenceInfoDTO> = emptyList()
 )

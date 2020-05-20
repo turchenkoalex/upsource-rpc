@@ -4,7 +4,7 @@ data class FileFragmentAuthorsRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 */
-	val file: com.ecwid.upsource.rpc.FileInRevisionDTO,
+	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * Line number the fragment starts with (required)
@@ -15,4 +15,10 @@ data class FileFragmentAuthorsRequestDTO(
 	 * Line number the fragment ends with (required)
 	 */
 	val endLine: Int
-)
+) {
+	internal constructor() : this(
+		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
+		startLine = 0,
+		endLine = 0
+	)
+}

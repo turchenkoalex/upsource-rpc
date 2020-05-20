@@ -14,5 +14,11 @@ data class UsagesDiffResponseDTO(
 	/**
 	 * See UsagesDiffDTO parameters (repeated)
 	 */
-	val usages: List<UsagesDiffDTO>
-)
+	val usages: List<UsagesDiffDTO> = emptyList()
+) {
+	internal constructor() : this(
+		oldRevisionId = "",
+		newRevisionId = "",
+		usages = emptyList()
+	)
+}

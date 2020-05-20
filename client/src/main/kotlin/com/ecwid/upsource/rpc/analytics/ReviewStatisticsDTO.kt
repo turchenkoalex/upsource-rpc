@@ -29,25 +29,38 @@ data class ReviewStatisticsDTO(
 	/**
 	 * Review counts per author (repeated)
 	 */
-	val authorStatsByReviews: List<UserValue>,
+	val authorStatsByReviews: List<UserValue> = emptyList(),
 
 	/**
 	 * Review counts per reviewer (repeated)
 	 */
-	val reviewerStatsByReviews: List<UserValue>,
+	val reviewerStatsByReviews: List<UserValue> = emptyList(),
 
 	/**
 	 * Review revisions counts per author (repeated)
 	 */
-	val authorStatsByRevisions: List<UserValue>,
+	val authorStatsByRevisions: List<UserValue> = emptyList(),
 
 	/**
 	 * Review revisions counts per reviewer (repeated)
 	 */
-	val reviewerStatsByRevisions: List<UserValue>,
+	val reviewerStatsByRevisions: List<UserValue> = emptyList(),
 
 	/**
 	 * Discussion comments statistics. See CommentsStatisticsDTO parameters (required)
 	 */
 	val commentsStats: CommentsStatisticsDTO
-)
+) {
+	internal constructor() : this(
+		openReviews = 0,
+		closedReviews = 0,
+		allRevisions = 0,
+		revisionsCoveredByOpenReviews = 0,
+		revisionsCoveredByClosedReviews = 0,
+		authorStatsByReviews = emptyList(),
+		reviewerStatsByReviews = emptyList(),
+		authorStatsByRevisions = emptyList(),
+		reviewerStatsByRevisions = emptyList(),
+		commentsStats = CommentsStatisticsDTO()
+	)
+}

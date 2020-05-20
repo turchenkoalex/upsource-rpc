@@ -4,10 +4,10 @@ data class UserAbsenceRequestDTO(
 	/**
 	 * Absence end date (optional)
 	 */
-	val absentUntil: Long?,
+	val absentUntil: Long? = null,
 
 	/**
 	 * User ID in Upsource ("null" denotes current user) (optional)
 	 */
-	val userId: String?
+	val userId: String? = null
 )

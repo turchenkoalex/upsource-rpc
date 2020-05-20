@@ -24,10 +24,19 @@ data class GotoFileItemDTO(
 	/**
 	 * Unix timestamp of the last modification (optional)
 	 */
-	val lastModified: Long?,
+	val lastModified: Long? = null,
 
 	/**
 	 * Branch name (optional)
 	 */
-	val branch: String?
-)
+	val branch: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = "",
+		fileName = "",
+		isDeleted = false,
+		lastModified = null,
+		branch = null
+	)
+}

@@ -9,5 +9,10 @@ data class VcsRepoDTO(
 	/**
 	 * Repository URL (repeated)
 	 */
-	val url: List<String>
-)
+	val url: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		id = "",
+		url = emptyList()
+	)
+}

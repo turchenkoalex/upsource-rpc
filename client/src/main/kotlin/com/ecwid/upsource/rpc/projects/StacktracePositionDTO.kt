@@ -14,10 +14,17 @@ data class StacktracePositionDTO(
 	/**
 	 * Revision ID (optional)
 	 */
-	val vcsCommitId: String?,
+	val vcsCommitId: String? = null,
 
 	/**
 	 * See RangeDTO parameters (optional)
 	 */
-	val interpolatedRange: com.ecwid.upsource.rpc.RangeDTO?
-)
+	val interpolatedRange: com.ecwid.upsource.rpc.ids.RangeDTO? = null
+) {
+	internal constructor() : this(
+		lineNumber = 0,
+		fullPath = "",
+		vcsCommitId = null,
+		interpolatedRange = null
+	)
+}

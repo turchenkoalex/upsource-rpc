@@ -14,5 +14,11 @@ data class RevisionBuildStatusDTO(
 	/**
 	 * A unique build identifier (e.g. PROJECT-VERSION-1234) (repeated)
 	 */
-	val keys: List<RevisionBuildStatusKeyDTO>
-)
+	val keys: List<RevisionBuildStatusKeyDTO> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = "",
+		keys = emptyList()
+	)
+}

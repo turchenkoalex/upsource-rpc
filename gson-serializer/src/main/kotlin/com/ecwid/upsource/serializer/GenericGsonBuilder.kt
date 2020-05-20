@@ -17,8 +17,8 @@ internal fun genericGsonBuiler(): GsonBuilder {
 			com.ecwid.upsource.rpc.projects.BuildStatusEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.files.CapabilityFlagsEnum::class.java,
-			com.ecwid.upsource.rpc.files.CapabilityFlagsEnumTypeAdapter()
+			com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnum::class.java,
+			com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
 			com.ecwid.upsource.rpc.projects.ConflictTypeEnum::class.java,
@@ -37,16 +37,16 @@ internal fun genericGsonBuiler(): GsonBuilder {
 			com.ecwid.upsource.rpc.projects.FeedTypeEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.files.FileWarningLevelEnum::class.java,
-			com.ecwid.upsource.rpc.files.FileWarningLevelEnumTypeAdapter()
+			com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnum::class.java,
+			com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.files.GutterMarkEnum::class.java,
-			com.ecwid.upsource.rpc.files.GutterMarkEnumTypeAdapter()
+			com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnum::class.java,
+			com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.files.InspectionSeverityEnum::class.java,
-			com.ecwid.upsource.rpc.files.InspectionSeverityEnumTypeAdapter()
+			com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum::class.java,
+			com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnumTypeAdapter()
 		)
 		.registerTypeAdapter(
 			com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldTypeEnum::class.java,

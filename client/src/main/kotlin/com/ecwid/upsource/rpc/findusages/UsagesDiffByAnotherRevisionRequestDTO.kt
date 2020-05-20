@@ -15,4 +15,10 @@ data class UsagesDiffByAnotherRevisionRequestDTO(
 	 * Whether the other revision is older (required)
 	 */
 	val isAnotherOld: Boolean
-)
+) {
+	internal constructor() : this(
+		originElement = PsiElementIdDTO(),
+		anotherRevisionId = "",
+		isAnotherOld = false
+	)
+}

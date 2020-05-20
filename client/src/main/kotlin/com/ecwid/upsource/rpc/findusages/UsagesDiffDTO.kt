@@ -4,25 +4,25 @@ data class UsagesDiffDTO(
 	/**
 	 * See FilePathToRootDTO parameters (optional)
 	 */
-	val oldFilePathToRoot: FilePathToRootDTO?,
+	val oldFilePathToRoot: FilePathToRootDTO? = null,
 
 	/**
 	 * See FilePathToRootDTO parameters (optional)
 	 */
-	val newFilePathToRoot: FilePathToRootDTO?,
+	val newFilePathToRoot: FilePathToRootDTO? = null,
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
 	 */
-	val removedUsage: List<FindUsagesItemDTO>,
+	val removedUsage: List<FindUsagesItemDTO> = emptyList(),
 
 	/**
 	 * See SameUsagesDTO parameters (repeated)
 	 */
-	val sameUsage: List<SameUsagesDTO>,
+	val sameUsage: List<SameUsagesDTO> = emptyList(),
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
 	 */
-	val addedUsage: List<FindUsagesItemDTO>
+	val addedUsage: List<FindUsagesItemDTO> = emptyList()
 )

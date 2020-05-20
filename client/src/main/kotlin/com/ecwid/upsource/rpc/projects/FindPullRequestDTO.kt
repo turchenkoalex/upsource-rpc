@@ -10,4 +10,9 @@ data class FindPullRequestDTO(
 	 * Branch name (required)
 	 */
 	val branch: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		branch = ""
+	)
+}

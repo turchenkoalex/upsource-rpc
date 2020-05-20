@@ -30,4 +30,13 @@ data class ProjectTreeItemDTO(
 	 * Whether an item has children and can be expanded (required)
 	 */
 	val hasChildren: Boolean
-)
+) {
+	internal constructor() : this(
+		displayName = "",
+		displayType = "",
+		isDirectory = false,
+		isModule = false,
+		fileId = "",
+		hasChildren = false
+	)
+}

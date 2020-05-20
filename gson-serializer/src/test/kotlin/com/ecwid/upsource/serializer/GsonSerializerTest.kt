@@ -24,7 +24,7 @@ internal class GsonSerializerTest {
 		assertThat(reviewInfo.reviewId.reviewId).isEqualTo("REVIEW-ID-1")
 		assertThat(reviewInfo.reviewId.projectId).isEqualTo("project")
 		assertThat(reviewInfo.branch).isEqualTo(listOf("my-branch"))
-		assertThat(reviewInfo.state).isEqualTo(ReviewStateEnum.Open)
+		assertThat(reviewInfo.state).isEqualTo(ReviewStateEnum.OPEN)
 	}
 
 	@Test

@@ -19,20 +19,30 @@ data class AchievementDTO(
 	/**
 	 * Longer description of the achievement (optional)
 	 */
-	val description: String?,
+	val description: String? = null,
 
 	/**
 	 * Unix timestamp of the unlocking event (optional)
 	 */
-	val date: Long?,
+	val date: Long? = null,
 
 	/**
 	 * Whether the user saw a notification about the unlocking (optional)
 	 */
-	val isUnread: Boolean?,
+	val isUnread: Boolean? = null,
 
 	/**
 	 * Whether the achievement is unlocked by the user (optional)
 	 */
-	val isUnlocked: Boolean?
-)
+	val isUnlocked: Boolean? = null
+) {
+	internal constructor() : this(
+		id = "",
+		name = "",
+		shortDescription = "",
+		description = null,
+		date = null,
+		isUnread = null,
+		isUnlocked = null
+	)
+}

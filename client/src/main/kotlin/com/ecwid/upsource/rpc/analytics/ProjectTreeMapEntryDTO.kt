@@ -25,4 +25,12 @@ data class ProjectTreeMapEntryDTO(
 	 * Time elapsed since last change (milliseconds) (required)
 	 */
 	val timeSinceLastChange: Long
-)
+) {
+	internal constructor() : this(
+		path = "",
+		size = 0,
+		modificationsCount = 0,
+		isBinary = false,
+		timeSinceLastChange = 0L
+	)
+}

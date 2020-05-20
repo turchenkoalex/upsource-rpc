@@ -1,5 +1,7 @@
 package com.ecwid.upsource.rpc
 
+import com.ecwid.upsource.ClientBuilderImpl
+import com.ecwid.upsource.EmptyClientBuilder
 import com.ecwid.upsource.transport.RpcResponse
 
 /**
@@ -10,17 +12,17 @@ interface UpsourceRPC {
 	/**
 	 * Accepts the end user agreement for a given user
 	 */
-	fun acceptUserAgreement(request: VoidMessage): RpcResponse<VoidMessage>
+	fun acceptUserAgreement(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the text of the end user agreement
 	 */
-	fun getUserAgreementText(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.UserAgreementTextDTO>
+	fun getUserAgreementText(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.UserAgreementTextDTO>
 
 	/**
 	 * In the case of an empty request, returns the list of all short project infos. Otherwise returns the list of project infos for a given set of project IDs. In any case only the projects the user has access to are returned.
 	 */
-	fun getAllProjects(request: ProjectIdListDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ShortProjectInfoListDTO>
+	fun getAllProjects(request: com.ecwid.upsource.rpc.ids.ProjectIdListDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ShortProjectInfoListDTO>
 
 	/**
 	 * Returns the list of projects  matching a given search criteria
@@ -30,27 +32,27 @@ interface UpsourceRPC {
 	/**
 	 * Returns basic information about the project - name, project model, latest revision, etc.
 	 */
-	fun getProjectInfo(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectInfoDTO>
+	fun getProjectInfo(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectInfoDTO>
 
 	/**
 	 * Returns VCS repository URL(s) for a given project
 	 */
-	fun getProjectVcsLinks(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.VcsRepoListDTO>
+	fun getProjectVcsLinks(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.VcsRepoListDTO>
 
 	/**
 	 * Returns README (README.md) contents from the latest revision
 	 */
-	fun getProjectReadme(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectReadmeResponseDTO>
+	fun getProjectReadme(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectReadmeResponseDTO>
 
 	/**
 	 * Returns all registered code review patterns across all projects
 	 */
-	fun getCodeReviewPatterns(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.CodeReviewPatternsDTO>
+	fun getCodeReviewPatterns(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.CodeReviewPatternsDTO>
 
 	/**
 	 * Returns the revision descriptor for the latest revision - ID, date, commit message, authors, parent revisions, etc.
 	 */
-	fun getHeadRevision(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionInfoDTO>
+	fun getHeadRevision(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionInfoDTO>
 
 	/**
 	 * Returns the list of revisions in a given project (optionally with revision graph)
@@ -75,7 +77,7 @@ interface UpsourceRPC {
 	/**
 	 * Returns the revision descriptor - ID, date, commit message, authors, parent revisions, etc.
 	 */
-	fun getRevisionInfo(request: RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionInfoDTO>
+	fun getRevisionInfo(request: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionInfoDTO>
 
 	/**
 	 * Returns the list of changes (files that were added, removed, or modified) in a revision
@@ -85,27 +87,27 @@ interface UpsourceRPC {
 	/**
 	 * Returns the list of branches a revision is part of
 	 */
-	fun getRevisionBranches(request: RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionBranchesResponseDTO>
+	fun getRevisionBranches(request: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionBranchesResponseDTO>
 
 	/**
 	 * Returns the project structure tree starting from the given file
 	 */
-	fun getProjectSubtree(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectItemsListDTO>
+	fun getProjectSubtree(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectItemsListDTO>
 
 	/**
 	 * Returns meta information about a file (is deleted, is latest revision, etc.)
 	 */
-	fun getFileMeta(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.FileMetaResponseDTO>
+	fun getFileMeta(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.FileMetaResponseDTO>
 
 	/**
 	 * Returns the line-by-line file annotation
 	 */
-	fun getFileAnnotation(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.FileAnnotationResponseDTO>
+	fun getFileAnnotation(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.FileAnnotationResponseDTO>
 
 	/**
 	 * Returns the file contributors
 	 */
-	fun getFileContributors(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.files.FileContributorsResponseDTO>
+	fun getFileContributors(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.fileordirectorycontent.FileContributorsResponseDTO>
 
 	/**
 	 * Returns the authors of the given file fragment
@@ -135,12 +137,12 @@ interface UpsourceRPC {
 	/**
 	 * Returns the contents of the given file
 	 */
-	fun getFileContent(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.files.FileContentResponseDTO>
+	fun getFileContent(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.fileordirectorycontent.FileContentResponseDTO>
 
 	/**
 	 * Returns the semantic markup of the given file
 	 */
-	fun getFilePsi(request: com.ecwid.upsource.rpc.files.FilePsiRequestDTO): RpcResponse<com.ecwid.upsource.rpc.files.FilePsiResponseDTO>
+	fun getFilePsi(request: com.ecwid.upsource.rpc.fileordirectorycontent.FilePsiRequestDTO): RpcResponse<com.ecwid.upsource.rpc.fileordirectorycontent.FilePsiResponseDTO>
 
 	/**
 	 * Returns the text range of the given PSI element
@@ -235,12 +237,12 @@ interface UpsourceRPC {
 	/**
 	 * Returns the discussions in the given file
 	 */
-	fun getFileDiscussions(request: FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInFileDTO>
+	fun getFileDiscussions(request: com.ecwid.upsource.rpc.ids.FileInRevisionDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInFileDTO>
 
 	/**
 	 * Returns the discussions in the given revision
 	 */
-	fun getInlineDiscussionsInRevision(request: RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInFilesDTO>
+	fun getInlineDiscussionsInRevision(request: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInFilesDTO>
 
 	/**
 	 * Creates a new discussion
@@ -250,12 +252,12 @@ interface UpsourceRPC {
 	/**
 	 * Updates a discussion
 	 */
-	fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<VoidMessage>
+	fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Checks if current user can resolve the given discussion
 	 */
-	fun getCurrentUserCanResolveDiscussion(request: com.ecwid.upsource.rpc.projects.DiscussionIdDTO): RpcResponse<VoidMessage>
+	fun getCurrentUserCanResolveDiscussion(request: com.ecwid.upsource.rpc.projects.DiscussionIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Adds a label to a discussion
@@ -270,7 +272,7 @@ interface UpsourceRPC {
 	/**
 	 * Removes a label from a discussion
 	 */
-	fun removeDiscussionLabel(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionLabelRequestDTO): RpcResponse<VoidMessage>
+	fun removeDiscussionLabel(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionLabelRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Removes a label from a review
@@ -280,12 +282,12 @@ interface UpsourceRPC {
 	/**
 	 * Stars a discussion
 	 */
-	fun starDiscussion(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionFlagRequestDTO): RpcResponse<VoidMessage>
+	fun starDiscussion(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionFlagRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Toggles the read/unread state of a discussion
 	 */
-	fun readDiscussion(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionFlagRequestDTO): RpcResponse<VoidMessage>
+	fun readDiscussion(request: com.ecwid.upsource.rpc.projects.UpdateDiscussionFlagRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Adds a comment to the discussion
@@ -310,7 +312,7 @@ interface UpsourceRPC {
 	/**
 	 * Adds or removes a reaction to a specified target
 	 */
-	fun toggleReaction(request: com.ecwid.upsource.rpc.projects.ToggleReactionRequestDTO): RpcResponse<VoidMessage>
+	fun toggleReaction(request: com.ecwid.upsource.rpc.projects.ToggleReactionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the news feed
@@ -320,7 +322,7 @@ interface UpsourceRPC {
 	/**
 	 * Returns the discussions in the given revision
 	 */
-	fun getRevisionDiscussions(request: RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInRevisionDTO>
+	fun getRevisionDiscussions(request: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO): RpcResponse<com.ecwid.upsource.rpc.projects.DiscussionsInRevisionDTO>
 
 	/**
 	 * Returns short review information for a set of revisions
@@ -415,67 +417,67 @@ interface UpsourceRPC {
 	/**
 	 * Sets review description
 	 */
-	fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<VoidMessage>
+	fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns review details
 	 */
-	fun getReviewDetails(request: ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewDescriptorDTO>
+	fun getReviewDetails(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewDescriptorDTO>
 
 	/**
 	 * Returns the code ownership summary for a given review
 	 */
-	fun getReviewOwnershipSummary(request: ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewOwnershipSummaryDTO>
+	fun getReviewOwnershipSummary(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewOwnershipSummaryDTO>
 
 	/**
 	 * Returns participants' progress in a given review
 	 */
-	fun getReviewProgress(request: ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewProgressDTO>
+	fun getReviewProgress(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ReviewProgressDTO>
 
 	/**
 	 * Returns the diff of inspections between two revisions
 	 */
-	fun getReviewInspectionsDiff(request: com.ecwid.upsource.rpc.projects.ReviewInspectionsDiffRequestDTO): RpcResponse<com.ecwid.upsource.rpc.files.InspectionsDiffDTO>
+	fun getReviewInspectionsDiff(request: com.ecwid.upsource.rpc.projects.ReviewInspectionsDiffRequestDTO): RpcResponse<com.ecwid.upsource.rpc.fileordirectorycontent.InspectionsDiffDTO>
 
 	/**
 	 * Attaches a revision to a review
 	 */
-	fun addRevisionToReview(request: com.ecwid.upsource.rpc.projects.RevisionsInReviewDTO): RpcResponse<VoidMessage>
+	fun addRevisionToReview(request: com.ecwid.upsource.rpc.projects.RevisionsInReviewDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Initiates branch tracking for a given review
 	 */
-	fun startBranchTracking(request: com.ecwid.upsource.rpc.projects.StartBranchTrackingRequestDTO): RpcResponse<VoidMessage>
+	fun startBranchTracking(request: com.ecwid.upsource.rpc.projects.StartBranchTrackingRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Stops branch tracking for a given review
 	 */
-	fun stopBranchTracking(request: com.ecwid.upsource.rpc.projects.StopBranchTrackingRequestDTO): RpcResponse<VoidMessage>
+	fun stopBranchTracking(request: com.ecwid.upsource.rpc.projects.StopBranchTrackingRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Rebase the review to a single squashed revision
 	 */
-	fun squashReviewRevisions(request: ReviewIdDTO): RpcResponse<VoidMessage>
+	fun squashReviewRevisions(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Removes a revision from a review
 	 */
-	fun removeRevisionFromReview(request: com.ecwid.upsource.rpc.projects.RevisionsInReviewDTO): RpcResponse<VoidMessage>
+	fun removeRevisionFromReview(request: com.ecwid.upsource.rpc.projects.RevisionsInReviewDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the list of revisions in a review
 	 */
-	fun getRevisionsInReview(request: ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionsInReviewResponseDTO>
+	fun getRevisionsInReview(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.RevisionsInReviewResponseDTO>
 
 	/**
 	 * Returns the list of suggested revisions for a particular review
 	 */
-	fun getSuggestedRevisionsForReview(request: ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.SuggestedRevisionListDTO>
+	fun getSuggestedRevisionsForReview(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.SuggestedRevisionListDTO>
 
 	/**
 	 * Adds a participant (reviewer or watcher) to a review
 	 */
-	fun addParticipantToReview(request: com.ecwid.upsource.rpc.projects.ParticipantInReviewRequestDTO): RpcResponse<VoidMessage>
+	fun addParticipantToReview(request: com.ecwid.upsource.rpc.projects.ParticipantInReviewRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Adds a group of participants (reviewers or watchers) to a review
@@ -490,22 +492,22 @@ interface UpsourceRPC {
 	/**
 	 * Removes a participant from a review
 	 */
-	fun removeParticipantFromReview(request: com.ecwid.upsource.rpc.projects.ParticipantInReviewRequestDTO): RpcResponse<VoidMessage>
+	fun removeParticipantFromReview(request: com.ecwid.upsource.rpc.projects.ParticipantInReviewRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Mutes activities taking place in a certain review or cancels muting that was previously set
 	 */
-	fun toggleReviewMuted(request: com.ecwid.upsource.rpc.projects.ToggleReviewMutedRequestDTO): RpcResponse<VoidMessage>
+	fun toggleReviewMuted(request: com.ecwid.upsource.rpc.projects.ToggleReviewMutedRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Sets/clears review due date
 	 */
-	fun setReviewDeadline(request: com.ecwid.upsource.rpc.projects.ReviewDeadlineRequestDTO): RpcResponse<VoidMessage>
+	fun setReviewDeadline(request: com.ecwid.upsource.rpc.projects.ReviewDeadlineRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Merge review: sets target branch
 	 */
-	fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<VoidMessage>
+	fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the list of changes (sum of all revisions) in a review
@@ -525,7 +527,7 @@ interface UpsourceRPC {
 	/**
 	 * Track file read status
 	 */
-	fun setFileInReviewReadStatus(request: com.ecwid.upsource.rpc.projects.FileInReviewReadStatusRequestDTO): RpcResponse<VoidMessage>
+	fun setFileInReviewReadStatus(request: com.ecwid.upsource.rpc.projects.FileInReviewReadStatusRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the review discussions
@@ -535,7 +537,7 @@ interface UpsourceRPC {
 	/**
 	 * Removes the review
 	 */
-	fun removeReview(request: ReviewIdDTO): RpcResponse<VoidMessage>
+	fun removeReview(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns matching revisions for stacktrace
@@ -550,17 +552,17 @@ interface UpsourceRPC {
 	/**
 	 * Returns the user info for a currently logged-in user
 	 */
-	fun getCurrentUser(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.users.CurrentUserResponseDTO>
+	fun getCurrentUser(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.users.CurrentUserResponseDTO>
 
 	/**
 	 * Checks if current user can close given review
 	 */
-	fun getCurrentUserCanCloseReview(request: ReviewIdDTO): RpcResponse<VoidMessage>
+	fun getCurrentUserCanCloseReview(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Checks if current user can delete given review
 	 */
-	fun getCurrentUserCanDeleteReview(request: ReviewIdDTO): RpcResponse<VoidMessage>
+	fun getCurrentUserCanDeleteReview(request: com.ecwid.upsource.rpc.ids.ReviewIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns user info for given users
@@ -575,7 +577,7 @@ interface UpsourceRPC {
 	/**
 	 * Maps a VCS username/email to a Hub account
 	 */
-	fun bindVcsUsername(request: com.ecwid.upsource.rpc.users.BindVcsUsernameRequestDTO): RpcResponse<VoidMessage>
+	fun bindVcsUsername(request: com.ecwid.upsource.rpc.users.BindVcsUsernameRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the list of projects the specified user contributed to
@@ -585,7 +587,7 @@ interface UpsourceRPC {
 	/**
 	 * Sets or clears a user absence
 	 */
-	fun setUserAbsence(request: com.ecwid.upsource.rpc.users.UserAbsenceRequestDTO): RpcResponse<VoidMessage>
+	fun setUserAbsence(request: com.ecwid.upsource.rpc.users.UserAbsenceRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the value of a user setting by name
@@ -595,7 +597,7 @@ interface UpsourceRPC {
 	/**
 	 * Updates the value of a user setting by name
 	 */
-	fun setUserSetting(request: com.ecwid.upsource.rpc.misc.SetSettingRequestDTO): RpcResponse<VoidMessage>
+	fun setUserSetting(request: com.ecwid.upsource.rpc.misc.SetSettingRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the value of a cluster-wide setting by name
@@ -605,12 +607,12 @@ interface UpsourceRPC {
 	/**
 	 * Updates the value of a cluster-wide setting by name
 	 */
-	fun setClusterSetting(request: com.ecwid.upsource.rpc.misc.SetSettingRequestDTO): RpcResponse<VoidMessage>
+	fun setClusterSetting(request: com.ecwid.upsource.rpc.misc.SetSettingRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Sets the server motto
 	 */
-	fun setMotto(request: com.ecwid.upsource.rpc.misc.SetMottoRequestDTO): RpcResponse<VoidMessage>
+	fun setMotto(request: com.ecwid.upsource.rpc.misc.SetMottoRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the value of a project setting by name
@@ -620,42 +622,42 @@ interface UpsourceRPC {
 	/**
 	 * Updates the value of a project setting by name
 	 */
-	fun setProjectSetting(request: com.ecwid.upsource.rpc.misc.SetProjectSettingRequestDTO): RpcResponse<VoidMessage>
+	fun setProjectSetting(request: com.ecwid.upsource.rpc.misc.SetProjectSettingRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Updates the set of webhooks in a project
 	 */
-	fun setProjectWebhooks(request: com.ecwid.upsource.rpc.misc.SetProjectWebhooksRequestDTO): RpcResponse<VoidMessage>
+	fun setProjectWebhooks(request: com.ecwid.upsource.rpc.misc.SetProjectWebhooksRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Creates a project
 	 */
-	fun createProject(request: com.ecwid.upsource.rpc.projects.CreateProjectRequestDTO): RpcResponse<VoidMessage>
+	fun createProject(request: com.ecwid.upsource.rpc.projects.CreateProjectRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Loads project settings
 	 */
-	fun loadProject(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectSettingsDTO>
+	fun loadProject(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectSettingsDTO>
 
 	/**
 	 * Updates project settings
 	 */
-	fun editProject(request: com.ecwid.upsource.rpc.projects.EditProjectRequestDTO): RpcResponse<VoidMessage>
+	fun editProject(request: com.ecwid.upsource.rpc.projects.EditProjectRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Deletes a project
 	 */
-	fun deleteProject(request: ProjectIdDTO): RpcResponse<VoidMessage>
+	fun deleteProject(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Completely reset a project
 	 */
-	fun resetProject(request: ProjectIdDTO): RpcResponse<VoidMessage>
+	fun resetProject(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Loads project settings
 	 */
-	fun getProjectConfigurationParameters(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectConfigurationResponseDTO>
+	fun getProjectConfigurationParameters(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.ProjectConfigurationResponseDTO>
 
 	/**
 	 * Loads VCS Hosting services
@@ -675,22 +677,22 @@ interface UpsourceRPC {
 	/**
 	 * Hides predefined discussion labels in a project
 	 */
-	fun hidePredefinedLabels(request: com.ecwid.upsource.rpc.projects.HidePredefinedLabelsRequestDTO): RpcResponse<VoidMessage>
+	fun hidePredefinedLabels(request: com.ecwid.upsource.rpc.projects.HidePredefinedLabelsRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Hides predefined review labels in a project
 	 */
-	fun hidePredefinedReviewLabels(request: com.ecwid.upsource.rpc.projects.HidePredefinedLabelsRequestDTO): RpcResponse<VoidMessage>
+	fun hidePredefinedReviewLabels(request: com.ecwid.upsource.rpc.projects.HidePredefinedLabelsRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Deletes a discussion label from a project
 	 */
-	fun deleteLabel(request: com.ecwid.upsource.rpc.projects.EditLabelRequestDTO): RpcResponse<VoidMessage>
+	fun deleteLabel(request: com.ecwid.upsource.rpc.projects.EditLabelRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Deletes a review label from a project
 	 */
-	fun deleteReviewLabel(request: com.ecwid.upsource.rpc.projects.EditLabelRequestDTO): RpcResponse<VoidMessage>
+	fun deleteReviewLabel(request: com.ecwid.upsource.rpc.projects.EditLabelRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Merges two or more discussion labels into one
@@ -710,27 +712,21 @@ interface UpsourceRPC {
 	/**
 	 * Checks if server is in read-only mode
 	 */
-	fun getReadOnlyMode(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.ReadOnlyModeDTO>
+	fun getReadOnlyMode(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.ReadOnlyModeDTO>
 
 	/**
 	 * Enables/disables the read-only mode
 	 */
-	fun setReadOnlyMode(request: com.ecwid.upsource.rpc.misc.ReadOnlyModeDTO): RpcResponse<VoidMessage>
+	fun setReadOnlyMode(request: com.ecwid.upsource.rpc.misc.ReadOnlyModeDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
-	/**
-	 * undefined
-	 */
-	fun getEmailBounces(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.EmailBouncesResponseDTO>
+	fun getEmailBounces(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.EmailBouncesResponseDTO>
 
-	/**
-	 * undefined
-	 */
-	fun resetEmailBounces(request: VoidMessage): RpcResponse<VoidMessage>
+	fun resetEmailBounces(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns all roles available in Hub
 	 */
-	fun getAllRoles(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.AllRolesResponseDTO>
+	fun getAllRoles(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.projects.AllRolesResponseDTO>
 
 	/**
 	 * Returns users that have any access to the project and role keys associated with each user
@@ -740,12 +736,12 @@ interface UpsourceRPC {
 	/**
 	 * Adds a user role
 	 */
-	fun addUserRole(request: com.ecwid.upsource.rpc.projects.AddRoleRequestDTO): RpcResponse<VoidMessage>
+	fun addUserRole(request: com.ecwid.upsource.rpc.projects.AddRoleRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Deletes a user role (not the role itself, but the association)
 	 */
-	fun deleteUserRole(request: com.ecwid.upsource.rpc.projects.DeleteRoleRequestDTO): RpcResponse<VoidMessage>
+	fun deleteUserRole(request: com.ecwid.upsource.rpc.projects.DeleteRoleRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Searches for user in Hub by an email, and sends an invitation if not found
@@ -755,7 +751,7 @@ interface UpsourceRPC {
 	/**
 	 * Exports user-generated data - reviews, discussions, settings
 	 */
-	fun exportData(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.ExportDataResponseDTO>
+	fun exportData(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.ExportDataResponseDTO>
 
 	/**
 	 * Returns project activity distribution over time, i.e. the number of commits per time period
@@ -775,7 +771,7 @@ interface UpsourceRPC {
 	/**
 	 * Returns all committers throughout the project history
 	 */
-	fun getProjectCommitters(request: ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.analytics.ProjectCommittersDTO>
+	fun getProjectCommitters(request: com.ecwid.upsource.rpc.ids.ProjectIdDTO): RpcResponse<com.ecwid.upsource.rpc.analytics.ProjectCommittersDTO>
 
 	/**
 	 * Returns project activity distribution over time, i.e. the number of commits per time period for a specified set of committers
@@ -840,12 +836,12 @@ interface UpsourceRPC {
 	/**
 	 * Updates user timezone
 	 */
-	fun updateUserTimezone(request: com.ecwid.upsource.rpc.misc.UpdateUserTimezoneDTO): RpcResponse<VoidMessage>
+	fun updateUserTimezone(request: com.ecwid.upsource.rpc.misc.UpdateUserTimezoneDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Updates the time when the user last saw the list of his/her achievements
 	 */
-	fun updateAchievementsLastSeen(request: com.ecwid.upsource.rpc.misc.UserActionNotificationDTO): RpcResponse<VoidMessage>
+	fun updateAchievementsLastSeen(request: com.ecwid.upsource.rpc.misc.UserActionNotificationDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
 
 	/**
 	 * Returns the list of achievements the user has unlocked
@@ -855,7 +851,7 @@ interface UpsourceRPC {
 	/**
 	 * Returns a count of unread achievements the user has unlocked
 	 */
-	fun getUnreadUnlockedUserAchievementsCount(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.UserAchievementsCountDTO>
+	fun getUnreadUnlockedUserAchievementsCount(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.misc.UserAchievementsCountDTO>
 
 	/**
 	 * Returns the list of all achievements with information about whether the achievement was unlocked by the user or not
@@ -865,7 +861,7 @@ interface UpsourceRPC {
 	/**
 	 * Returns the list of available issue trackers
 	 */
-	fun getAvailableIssueTrackerProviders(request: VoidMessage): RpcResponse<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProvidersListDTO>
+	fun getAvailableIssueTrackerProviders(request: com.ecwid.upsource.rpc.ids.VoidMessage): RpcResponse<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProvidersListDTO>
 
 	/**
 	 * Returns detailed issue information
@@ -881,4 +877,13 @@ interface UpsourceRPC {
 	 * Creates an issue from the review in a given issue tracker
 	 */
 	fun createIssueFromReview(request: com.ecwid.upsource.rpc.issuetrackers.CreateIssueFromReviewRequestDTO): RpcResponse<com.ecwid.upsource.rpc.issuetrackers.IssueIdDTO>
+
+	companion object {
+		fun newBuilder(): EmptyClientBuilder<UpsourceRPC> {
+			return ClientBuilderImpl.newClientBuilder { transport, serializer ->
+				com.ecwid.upsource.rpc.impl.UpsourceRPCImpl(transport, serializer)
+			}
+		}
+	}
+
 }

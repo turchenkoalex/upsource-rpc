@@ -24,5 +24,13 @@ data class UpdateCommentRequestDTO(
 	/**
 	 * Currently not in use (optional)
 	 */
-	val markupType: String?
-)
+	val markupType: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		commentId = "",
+		text = "",
+		markupType = null
+	)
+}

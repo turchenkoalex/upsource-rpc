@@ -34,5 +34,15 @@ data class BranchDTO(
 	/**
 	 * ID of the branch review, if one exists (optional)
 	 */
-	val reviewId: com.ecwid.upsource.rpc.ReviewIdDTO?
-)
+	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		name = "",
+		lastRevision = RevisionInfoDTO(),
+		isDefault = false,
+		stats = BranchStatsDTO(),
+		isHosted = false,
+		reviewId = null
+	)
+}

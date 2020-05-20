@@ -4,15 +4,15 @@ data class DiscussionsInProjectDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)
 	 */
-	val discussions: List<DiscussionInFileDTO>,
+	val discussions: List<DiscussionInFileDTO> = emptyList(),
 
 	/**
 	 * Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request (optional)
 	 */
-	val hasMore: Boolean?,
+	val hasMore: Boolean? = null,
 
 	/**
 	 * Total number of discussions matching query (optional)
 	 */
-	val totalCount: Int?
+	val totalCount: Int? = null
 )

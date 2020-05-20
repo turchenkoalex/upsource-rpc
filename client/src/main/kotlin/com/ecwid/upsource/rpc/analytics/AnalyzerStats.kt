@@ -35,4 +35,14 @@ data class AnalyzerStats(
 	 * Whether project model is known (required)
 	 */
 	val isProjectModelKnown: Boolean
-)
+) {
+	internal constructor() : this(
+		minCommitTime = 0L,
+		maxCommitTime = 0L,
+		totalCommits = 0,
+		minIndexedCommitTime = 0L,
+		maxIndexedCommitTime = 0L,
+		totalIndexedCommits = 0,
+		isProjectModelKnown = false
+	)
+}

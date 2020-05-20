@@ -10,4 +10,9 @@ data class EditProjectRequestDTO(
 	 * See ProjectSettingsDTO parameters (required)
 	 */
 	val settings: ProjectSettingsDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		settings = ProjectSettingsDTO()
+	)
+}

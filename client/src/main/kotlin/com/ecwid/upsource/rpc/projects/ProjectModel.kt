@@ -9,10 +9,16 @@ data class ProjectModel(
 	/**
 	 * Path to project model (optional)
 	 */
-	val pathToModel: String?,
+	val pathToModel: String? = null,
 
 	/**
 	 * Default project JDK (optional)
 	 */
-	val defaultJdkId: String?
-)
+	val defaultJdkId: String? = null
+) {
+	internal constructor() : this(
+		type = "",
+		pathToModel = null,
+		defaultJdkId = null
+	)
+}

@@ -4,7 +4,7 @@ data class CompareGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 */
-	val revisions: List<RevisionInfoDTO>,
+	val revisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (required)
@@ -30,4 +30,13 @@ data class CompareGraphDTO(
 	 * The actual length of the path from the branching revision to the second revision (required)
 	 */
 	val fullPathToSecondLength: Int
-)
+) {
+	internal constructor() : this(
+		revisions = emptyList(),
+		graph = RevisionListGraphDTO(),
+		pathToBaseLength = 0,
+		fullPathToBaseLength = 0,
+		pathToSecondLength = 0,
+		fullPathToSecondLength = 0
+	)
+}

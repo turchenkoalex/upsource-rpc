@@ -4,20 +4,20 @@ data class RevisionDescriptorListDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 */
-	val revision: List<RevisionInfoDTO>,
+	val revision: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
 	 */
-	val graph: RevisionListGraphDTO?,
+	val graph: RevisionListGraphDTO? = null,
 
 	/**
 	 * Head revision ID (optional)
 	 */
-	val headHash: String?,
+	val headHash: String? = null,
 
 	/**
 	 * Search query (optional)
 	 */
-	val query: String?
+	val query: String? = null
 )

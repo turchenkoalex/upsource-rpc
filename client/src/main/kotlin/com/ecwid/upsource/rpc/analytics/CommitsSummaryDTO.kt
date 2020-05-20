@@ -15,4 +15,10 @@ data class CommitsSummaryDTO(
 	 * Number of modules affected (required)
 	 */
 	val modulesTouched: Int
-)
+) {
+	internal constructor() : this(
+		totalCommits = 0,
+		offsiteCommits = 0,
+		modulesTouched = 0
+	)
+}

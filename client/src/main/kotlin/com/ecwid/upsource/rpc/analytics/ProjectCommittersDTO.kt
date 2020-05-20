@@ -4,5 +4,5 @@ data class ProjectCommittersDTO(
 	/**
 	 * See CommitterUserInfo parameters (repeated)
 	 */
-	val users: List<CommitterUserInfo>
+	val users: List<CommitterUserInfo> = emptyList()
 )

@@ -14,15 +14,23 @@ data class CommentsStatisticsDTO(
 	/**
 	 * See UserValue parameters (repeated)
 	 */
-	val totalCounts: List<UserValue>,
+	val totalCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See UserValue parameters (repeated)
 	 */
-	val unlabeledCounts: List<UserValue>,
+	val unlabeledCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See LabelStats parameters (repeated)
 	 */
-	val statsPerLabel: List<LabelStats>
-)
+	val statsPerLabel: List<LabelStats> = emptyList()
+) {
+	internal constructor() : this(
+		reviewComments = 0,
+		totalComments = 0,
+		totalCounts = emptyList(),
+		unlabeledCounts = emptyList(),
+		statsPerLabel = emptyList()
+	)
+}

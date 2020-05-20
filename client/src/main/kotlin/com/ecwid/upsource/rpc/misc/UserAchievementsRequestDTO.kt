@@ -5,4 +5,8 @@ data class UserAchievementsRequestDTO(
 	 * User ID in Upsource (required)
 	 */
 	val userId: String
-)
+) {
+	internal constructor() : this(
+		userId = ""
+	)
+}

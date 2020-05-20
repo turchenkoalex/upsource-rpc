@@ -15,4 +15,10 @@ data class CompletionRateDTO(
 	 * Whether someone has raised a concern about the changes (required)
 	 */
 	val hasConcern: Boolean
-)
+) {
+	internal constructor() : this(
+		completedCount = 0,
+		reviewersCount = 0,
+		hasConcern = false
+	)
+}

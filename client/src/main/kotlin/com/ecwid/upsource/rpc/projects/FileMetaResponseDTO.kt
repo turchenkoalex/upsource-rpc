@@ -29,20 +29,32 @@ data class FileMetaResponseDTO(
 	/**
 	 * See RevisionInfoDTO parameters (optional)
 	 */
-	val deletedInRevision: RevisionInfoDTO?,
+	val deletedInRevision: RevisionInfoDTO? = null,
 
 	/**
 	 * Holds the branch in which the current file is deleted (optional)
 	 */
-	val deletedInBranch: String?,
+	val deletedInBranch: String? = null,
 
 	/**
 	 * See RevisionInBranchDTO parameters (repeated)
 	 */
-	val modifiedInParallelBranches: List<RevisionInBranchDTO>,
+	val modifiedInParallelBranches: List<RevisionInBranchDTO> = emptyList(),
 
 	/**
 	 * The default branch (null if not set) (optional)
 	 */
-	val defaultBranch: String?
-)
+	val defaultBranch: String? = null
+) {
+	internal constructor() : this(
+		isUpToDate = false,
+		isDeleted = false,
+		isMerged = false,
+		lastModifiedRevision = RevisionInfoDTO(),
+		isLastModifiedRevisionMerged = false,
+		deletedInRevision = null,
+		deletedInBranch = null,
+		modifiedInParallelBranches = emptyList(),
+		defaultBranch = null
+	)
+}

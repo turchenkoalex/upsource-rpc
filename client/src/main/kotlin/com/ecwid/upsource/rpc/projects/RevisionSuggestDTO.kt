@@ -9,5 +9,10 @@ data class RevisionSuggestDTO(
 	/**
 	 * The confidence score (required)
 	 */
-	val score: Float
-)
+	val score: Double
+) {
+	internal constructor() : this(
+		revisionId = "",
+		score = 0.0
+	)
+}

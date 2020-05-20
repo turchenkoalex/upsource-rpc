@@ -4,5 +4,5 @@ data class ShortProjectInfoListDTO(
 	/**
 	 * See ShortProjectInfoDTO parameters (repeated)
 	 */
-	val project: List<ShortProjectInfoDTO>
+	val project: List<ShortProjectInfoDTO> = emptyList()
 )

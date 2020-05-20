@@ -4,12 +4,12 @@ data class RevisionChangesRequestDTO(
 	/**
 	 * See RevisionInProjectDTO parameters (required)
 	 */
-	val revision: com.ecwid.upsource.rpc.RevisionInProjectDTO,
+	val revision: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO,
 
 	/**
 	 * ID of the revision to compare with (optional)
 	 */
-	val compareToRevisionId: String?,
+	val compareToRevisionId: String? = null,
 
 	/**
 	 * How many files to return (required)
@@ -19,5 +19,12 @@ data class RevisionChangesRequestDTO(
 	/**
 	 * Number of files to skip from the top (for pagination) (optional)
 	 */
-	val skip: Int?
-)
+	val skip: Int? = null
+) {
+	internal constructor() : this(
+		revision = com.ecwid.upsource.rpc.ids.RevisionInProjectDTO(),
+		compareToRevisionId = null,
+		limit = 0,
+		skip = null
+	)
+}

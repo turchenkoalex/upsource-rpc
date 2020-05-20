@@ -10,4 +10,9 @@ data class CodeReviewPattern(
 	 * Code review ID pattern (required)
 	 */
 	val pattern: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		pattern = ""
+	)
+}

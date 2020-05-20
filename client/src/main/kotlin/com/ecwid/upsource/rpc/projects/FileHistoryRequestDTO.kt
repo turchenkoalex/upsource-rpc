@@ -4,7 +4,7 @@ data class FileHistoryRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 */
-	val file: com.ecwid.upsource.rpc.FileInRevisionDTO,
+	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * History size limit (required)
@@ -14,5 +14,11 @@ data class FileHistoryRequestDTO(
 	/**
 	 * Number of history entries (file revisions) to skip from the top (for pagination) (optional)
 	 */
-	val skip: Int?
-)
+	val skip: Int? = null
+) {
+	internal constructor() : this(
+		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
+		limit = 0,
+		skip = null
+	)
+}

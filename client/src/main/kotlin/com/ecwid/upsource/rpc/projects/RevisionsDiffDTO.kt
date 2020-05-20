@@ -4,5 +4,5 @@ data class RevisionsDiffDTO(
 	/**
 	 * See RevisionDiffItemDTO parameters (repeated)
 	 */
-	val diff: List<RevisionDiffItemDTO>
+	val diff: List<RevisionDiffItemDTO> = emptyList()
 )

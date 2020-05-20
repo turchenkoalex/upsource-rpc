@@ -15,4 +15,10 @@ data class UpdateDiscussionFlagRequestDTO(
 	 * Whether the discussion is flagged (starred) (required)
 	 */
 	val isFlagged: Boolean
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		isFlagged = false
+	)
+}

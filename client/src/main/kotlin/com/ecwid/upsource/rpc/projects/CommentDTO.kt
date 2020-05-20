@@ -29,7 +29,7 @@ data class CommentDTO(
 	/**
 	 * ID of the parent comment (optional)
 	 */
-	val parentId: String?,
+	val parentId: String? = null,
 
 	/**
 	 * Whether the comment can be edited (required)
@@ -39,7 +39,7 @@ data class CommentDTO(
 	/**
 	 * Currently not in use (optional)
 	 */
-	val markupType: String?,
+	val markupType: String? = null,
 
 	/**
 	 * Whether the discussion is in sync with GitHub (required)
@@ -49,7 +49,7 @@ data class CommentDTO(
 	/**
 	 * GitHub sync result. see SyncResultEnum parameters (optional)
 	 */
-	val syncResult: SyncResultEnum?,
+	val syncResult: SyncResultEnum? = null,
 
 	/**
 	 * Whether the comment has been read by the requester (required)
@@ -59,5 +59,20 @@ data class CommentDTO(
 	/**
 	 * Reactions added to the comment (repeated)
 	 */
-	val reactions: List<ReactionDTO>
-)
+	val reactions: List<ReactionDTO> = emptyList()
+) {
+	internal constructor() : this(
+		discussionId = "",
+		commentId = "",
+		text = "",
+		authorId = "",
+		date = 0L,
+		parentId = null,
+		isEditable = false,
+		markupType = null,
+		isSynchronized = false,
+		syncResult = null,
+		isRead = false,
+		reactions = emptyList()
+	)
+}

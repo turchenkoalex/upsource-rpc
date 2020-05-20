@@ -9,5 +9,10 @@ data class FileHistoryChartRequestDTO(
 	/**
 	 * Number of frames (optional)
 	 */
-	val framesCount: Int?
-)
+	val framesCount: Int? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		framesCount = null
+	)
+}

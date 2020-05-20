@@ -9,10 +9,16 @@ data class LabelsListDTO(
 	/**
 	 * Predefined discussion labels. See LabelDTO parameters (repeated)
 	 */
-	val predefinedLabels: List<LabelDTO>,
+	val predefinedLabels: List<LabelDTO> = emptyList(),
 
 	/**
 	 * Custom discussion labels. See LabelDTO parameters (repeated)
 	 */
-	val customLabels: List<LabelDTO>
-)
+	val customLabels: List<LabelDTO> = emptyList()
+) {
+	internal constructor() : this(
+		hidePredefinedLabels = false,
+		predefinedLabels = emptyList(),
+		customLabels = emptyList()
+	)
+}

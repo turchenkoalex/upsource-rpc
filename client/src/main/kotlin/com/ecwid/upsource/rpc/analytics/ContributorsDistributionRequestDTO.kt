@@ -9,7 +9,7 @@ data class ContributorsDistributionRequestDTO(
 	/**
 	 * Name of the project module (optional)
 	 */
-	val module: String?,
+	val module: String? = null,
 
 	/**
 	 * Unix timestamp (required)
@@ -24,5 +24,13 @@ data class ContributorsDistributionRequestDTO(
 	/**
 	 * The specific time intervals that define the distribution (Unix timestamps) (repeated)
 	 */
-	val timePoints: List<Long>
-)
+	val timePoints: List<Long> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		module = null,
+		fromTime = 0L,
+		toTime = 0L,
+		timePoints = emptyList()
+	)
+}

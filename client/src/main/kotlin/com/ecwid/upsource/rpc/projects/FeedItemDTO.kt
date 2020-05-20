@@ -14,67 +14,64 @@ data class FeedItemDTO(
 	/**
 	 * See DiscussionInFeedDTO parameters (optional)
 	 */
-	val discussion: DiscussionInFeedDTO?,
+	val discussion: DiscussionInFeedDTO? = null,
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 */
-	val addedRevisions: List<RevisionInfoDTO>,
+	val addedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 */
-	val removedRevisions: List<RevisionInfoDTO>,
+	val removedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See ParticipantInReviewDTO parameters (optional)
 	 */
-	val newParticipantInReview: ParticipantInReviewDTO?,
+	val newParticipantInReview: ParticipantInReviewDTO? = null,
 
 	/**
 	 * Show removed participants (optional)
 	 */
-	val removedParticipantFromReview: String?,
+	val removedParticipantFromReview: String? = null,
 
 	/**
 	 * See ParticipantStateChangedDTO parameters (optional)
 	 */
-	val participantStateChanged: ParticipantStateChangedDTO?,
+	val participantStateChanged: ParticipantStateChangedDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 */
-	val createdReview: ShortReviewInfoDTO?,
+	val createdReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 */
-	val modifiedReview: ShortReviewInfoDTO?,
+	val modifiedReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
 	 */
-	val removedReview: com.ecwid.upsource.rpc.ReviewIdDTO?,
+	val removedReview: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * See ReviewStateChangedDTO parameters (optional)
 	 */
-	val reviewStateChanged: ReviewStateChangedDTO?,
+	val reviewStateChanged: ReviewStateChangedDTO? = null,
 
 	/**
 	 * The branch name for the "Review stopped branch tracking" feed event (optional)
 	 */
-	val branchTrackingStopped: String?,
+	val branchTrackingStopped: String? = null,
 
-	/**
-	 * undefined (optional)
-	 */
-	val updatedDeadline: Long?,
+	val updatedDeadline: Long? = null,
 
 	/**
 	 * Whether the feed item relates to the pull request action (optional)
 	 */
-	val pullRequest: String?,
+	val pullRequest: String? = null,
 
 	/**
 	 * Unix timestamp (required)
@@ -89,10 +86,32 @@ data class FeedItemDTO(
 	/**
 	 * Indicates that a review was squashed to a single revision (optional)
 	 */
-	val squashedToRevision: RevisionInfoDTO?,
+	val squashedToRevision: RevisionInfoDTO? = null,
 
 	/**
 	 * Indicates that a discussion was removed (optional)
 	 */
-	val removedDiscussionId: String?
-)
+	val removedDiscussionId: String? = null
+) {
+	internal constructor() : this(
+		feedItemId = "",
+		projectId = "",
+		discussion = null,
+		addedRevisions = emptyList(),
+		removedRevisions = emptyList(),
+		newParticipantInReview = null,
+		removedParticipantFromReview = null,
+		participantStateChanged = null,
+		createdReview = null,
+		modifiedReview = null,
+		removedReview = null,
+		reviewStateChanged = null,
+		branchTrackingStopped = null,
+		updatedDeadline = null,
+		pullRequest = null,
+		date = 0L,
+		actorId = "",
+		squashedToRevision = null,
+		removedDiscussionId = null
+	)
+}

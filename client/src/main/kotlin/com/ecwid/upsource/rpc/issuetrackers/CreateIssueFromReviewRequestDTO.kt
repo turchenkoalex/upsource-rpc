@@ -14,5 +14,11 @@ data class CreateIssueFromReviewRequestDTO(
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
 	 */
-	val fieldValue: List<IssueFieldValueIdDTO>
-)
+	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		reviewKey = "",
+		fieldValue = emptyList()
+	)
+}

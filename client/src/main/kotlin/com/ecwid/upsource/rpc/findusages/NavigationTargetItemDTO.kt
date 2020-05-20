@@ -4,7 +4,7 @@ data class NavigationTargetItemDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 */
-	val fileId: com.ecwid.upsource.rpc.FileInRevisionDTO,
+	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * Start offset (required)
@@ -24,5 +24,13 @@ data class NavigationTargetItemDTO(
 	/**
 	 * See TargetDescriptionDTO parameters (optional)
 	 */
-	val targetDescription: TargetDescriptionDTO?
-)
+	val targetDescription: TargetDescriptionDTO? = null
+) {
+	internal constructor() : this(
+		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
+		startOffset = 0,
+		endOffset = 0,
+		stubIndex = 0,
+		targetDescription = null
+	)
+}

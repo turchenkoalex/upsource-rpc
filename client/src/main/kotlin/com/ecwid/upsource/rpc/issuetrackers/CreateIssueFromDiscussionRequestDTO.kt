@@ -14,5 +14,11 @@ data class CreateIssueFromDiscussionRequestDTO(
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
 	 */
-	val fieldValue: List<IssueFieldValueIdDTO>
-)
+	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		fieldValue = emptyList()
+	)
+}

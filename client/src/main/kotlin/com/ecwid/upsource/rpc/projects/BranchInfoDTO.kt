@@ -24,7 +24,7 @@ data class BranchInfoDTO(
 	/**
 	 * See ReviewDescriptorDTO parameters (optional)
 	 */
-	val reviewInfo: ReviewDescriptorDTO?,
+	val reviewInfo: ReviewDescriptorDTO? = null,
 
 	/**
 	 * A branch review can be created. See CanCreateBranchReviewDTO parameters. (required)
@@ -45,4 +45,16 @@ data class BranchInfoDTO(
 	 * Whether the branch is a pull request (required)
 	 */
 	val isPullRequest: Boolean
-)
+) {
+	internal constructor() : this(
+		commitsCount = 0,
+		filesCount = 0,
+		branchingRevision = "",
+		headRevision = RevisionInfoDTO(),
+		reviewInfo = null,
+		canCreateReview = CanCreateBranchReviewDTO(),
+		stats = BranchStatsDTO(),
+		mergeInfo = BranchMergeInfoDTO(),
+		isPullRequest = false
+	)
+}

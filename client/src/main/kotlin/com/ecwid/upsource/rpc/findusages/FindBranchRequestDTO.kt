@@ -15,4 +15,10 @@ data class FindBranchRequestDTO(
 	 * Max number of results to return (required)
 	 */
 	val limit: Int
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		pattern = "",
+		limit = 0
+	)
+}

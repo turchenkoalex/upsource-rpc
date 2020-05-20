@@ -4,10 +4,10 @@ data class ProjectWebhookTriggerDTO(
 	/**
 	 * Events to be notified of (repeated)
 	 */
-	val events: List<WebhookEventEnum>,
+	val events: List<WebhookEventEnum> = emptyList(),
 
 	/**
 	 * URL targets for webhook requests (repeated)
 	 */
-	val urls: List<String>
+	val urls: List<String> = emptyList()
 )

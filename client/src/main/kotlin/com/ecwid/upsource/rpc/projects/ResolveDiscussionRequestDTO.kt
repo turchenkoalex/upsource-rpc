@@ -19,5 +19,12 @@ data class ResolveDiscussionRequestDTO(
 	/**
 	 * ID of the revision the discussion is linked to (optional)
 	 */
-	val revision: String?
-)
+	val revision: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		isResolved = false,
+		revision = null
+	)
+}

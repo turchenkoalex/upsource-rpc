@@ -15,4 +15,10 @@ data class AddRoleRequestDTO(
 	 * Role key (required)
 	 */
 	val roleKey: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		userId = "",
+		roleKey = ""
+	)
+}

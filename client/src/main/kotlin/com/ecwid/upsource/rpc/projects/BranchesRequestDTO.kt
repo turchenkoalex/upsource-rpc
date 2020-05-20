@@ -19,5 +19,12 @@ data class BranchesRequestDTO(
 	/**
 	 * Sort by: last updated ("updated", default), branch name ("name") (optional)
 	 */
-	val sortBy: String?
-)
+	val sortBy: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		query = "",
+		limit = 0,
+		sortBy = null
+	)
+}

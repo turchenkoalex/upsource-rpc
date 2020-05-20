@@ -14,10 +14,17 @@ data class IssueFieldDTO(
 	/**
 	 * Default value (optional)
 	 */
-	val defaultValueId: String?,
+	val defaultValueId: String? = null,
 
 	/**
 	 * See IssueFieldValueDTO parameters (repeated)
 	 */
-	val value: List<IssueFieldValueDTO>
-)
+	val value: List<IssueFieldValueDTO> = emptyList()
+) {
+	internal constructor() : this(
+		id = "",
+		name = "",
+		defaultValueId = null,
+		value = emptyList()
+	)
+}

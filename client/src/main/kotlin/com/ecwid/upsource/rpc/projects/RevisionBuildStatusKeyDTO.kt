@@ -9,15 +9,22 @@ data class RevisionBuildStatusKeyDTO(
 	/**
 	 * Build name (e.g. "#1.0.1000") (optional)
 	 */
-	val name: String?,
+	val name: String? = null,
 
 	/**
 	 * Build URL (e.g. "http://teamcity-server/build-url") (optional)
 	 */
-	val url: String?,
+	val url: String? = null,
 
 	/**
 	 * Build description (e.g. "120 of 1500 tests failed") (optional)
 	 */
-	val description: String?
-)
+	val description: String? = null
+) {
+	internal constructor() : this(
+		status = BuildStatusEnum.SUCCESS,
+		name = null,
+		url = null,
+		description = null
+	)
+}

@@ -9,5 +9,10 @@ data class RevisionListDTO(
 	/**
 	 * IDs of the requested revisions (repeated)
 	 */
-	val revisionId: List<String>
-)
+	val revisionId: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = emptyList()
+	)
+}

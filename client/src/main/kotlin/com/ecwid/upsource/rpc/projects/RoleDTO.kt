@@ -15,4 +15,10 @@ data class RoleDTO(
 	 * Whether the role is assigned to a group (required)
 	 */
 	val isGroup: Boolean
-)
+) {
+	internal constructor() : this(
+		key = "",
+		isGlobal = false,
+		isGroup = false
+	)
+}

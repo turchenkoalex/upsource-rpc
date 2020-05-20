@@ -25,4 +25,12 @@ data class TestPOP3MailboxRequestDTO(
 	 * Email password (required)
 	 */
 	val password: String
-)
+) {
+	internal constructor() : this(
+		protocol = "",
+		host = "",
+		port = 0,
+		login = "",
+		password = ""
+	)
+}

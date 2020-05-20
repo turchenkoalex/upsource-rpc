@@ -4,10 +4,10 @@ data class RevisionsSetDTO(
 	/**
 	 * IDs of the requested revisions (repeated)
 	 */
-	val revisions: List<String>,
+	val revisions: List<String> = emptyList(),
 
 	/**
 	 * Set this to "true" to request all revisions without enumerating them (optional)
 	 */
-	val selectAll: Boolean?
+	val selectAll: Boolean? = null
 )

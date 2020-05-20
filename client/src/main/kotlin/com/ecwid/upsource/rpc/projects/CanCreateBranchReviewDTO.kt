@@ -9,5 +9,10 @@ data class CanCreateBranchReviewDTO(
 	/**
 	 * A message explaining the reason why a review can't be created (optional)
 	 */
-	val message: String?
-)
+	val message: String? = null
+) {
+	internal constructor() : this(
+		isAllowed = false,
+		message = null
+	)
+}

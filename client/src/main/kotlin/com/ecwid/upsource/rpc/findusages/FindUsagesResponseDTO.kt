@@ -4,10 +4,10 @@ data class FindUsagesResponseDTO(
 	/**
 	 * See FilePathToRootDTO parameters (repeated)
 	 */
-	val filePathToRoot: List<FilePathToRootDTO>,
+	val filePathToRoot: List<FilePathToRootDTO> = emptyList(),
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
 	 */
-	val item: List<FindUsagesItemDTO>
+	val item: List<FindUsagesItemDTO> = emptyList()
 )

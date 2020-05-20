@@ -14,7 +14,7 @@ data class ShortProjectInfoDTO(
 	/**
 	 * Head revision ID (optional)
 	 */
-	val headHash: String?,
+	val headHash: String? = null,
 
 	/**
 	 * Whether project initialization is completed (required)
@@ -24,45 +24,61 @@ data class ShortProjectInfoDTO(
 	/**
 	 * Unix timestamp of the last commit (optional)
 	 */
-	val lastCommitDate: Long?,
+	val lastCommitDate: Long? = null,
 
 	/**
 	 * User ID of the last commit's author (optional)
 	 */
-	val lastCommitAuthorName: String?,
+	val lastCommitAuthorName: String? = null,
 
 	/**
 	 * URL of the project icon (optional)
 	 */
-	val iconUrl: String?,
+	val iconUrl: String? = null,
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
 	 */
-	val group: ProjectGroupDTO?,
+	val group: ProjectGroupDTO? = null,
 
 	/**
 	 * Who and when created the project (optional)
 	 */
-	val founder: ProjectFounderDTO?,
+	val founder: ProjectFounderDTO? = null,
 
 	/**
 	 * Number of commits made in the last 24 hours (optional)
 	 */
-	val lastDayCommits: Int?,
+	val lastDayCommits: Int? = null,
 
 	/**
 	 * Number of commits made in the last 30 days (optional)
 	 */
-	val lastMonthCommits: Int?,
+	val lastMonthCommits: Int? = null,
 
 	/**
 	 * Total number of commits in the project (optional)
 	 */
-	val totalCommits: Int?,
+	val totalCommits: Int? = null,
 
 	/**
 	 * Whether the project is archived (optional)
 	 */
-	val isArchived: Boolean?
-)
+	val isArchived: Boolean? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		projectName = "",
+		headHash = null,
+		isReady = false,
+		lastCommitDate = null,
+		lastCommitAuthorName = null,
+		iconUrl = null,
+		group = null,
+		founder = null,
+		lastDayCommits = null,
+		lastMonthCommits = null,
+		totalCommits = null,
+		isArchived = null
+	)
+}

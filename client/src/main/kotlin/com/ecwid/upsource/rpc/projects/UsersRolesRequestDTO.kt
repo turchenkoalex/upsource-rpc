@@ -19,5 +19,12 @@ data class UsersRolesRequestDTO(
 	/**
 	 * Search query (optional)
 	 */
-	val query: String?
-)
+	val query: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		offset = 0,
+		pageSize = 0,
+		query = null
+	)
+}

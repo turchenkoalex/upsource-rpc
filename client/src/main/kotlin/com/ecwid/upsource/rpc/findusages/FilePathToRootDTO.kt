@@ -10,4 +10,9 @@ data class FilePathToRootDTO(
 	 * See ProjectItemsListDTO parameters (required)
 	 */
 	val pathToRoot: com.ecwid.upsource.rpc.projects.ProjectItemsListDTO
-)
+) {
+	internal constructor() : this(
+		fileName = "",
+		pathToRoot = com.ecwid.upsource.rpc.projects.ProjectItemsListDTO()
+	)
+}

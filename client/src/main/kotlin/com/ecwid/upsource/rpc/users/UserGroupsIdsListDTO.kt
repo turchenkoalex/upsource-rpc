@@ -4,5 +4,5 @@ data class UserGroupsIdsListDTO(
 	/**
 	 * IDs of user groups (repeated)
 	 */
-	val ids: List<String>
+	val ids: List<String> = emptyList()
 )

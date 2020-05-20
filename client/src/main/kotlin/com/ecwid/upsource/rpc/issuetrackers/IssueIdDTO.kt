@@ -9,10 +9,16 @@ data class IssueIdDTO(
 	/**
 	 * Issue link (optional)
 	 */
-	val issueLink: String?,
+	val issueLink: String? = null,
 
 	/**
 	 * Whether the issue has been created from Upsource (optional)
 	 */
-	val isCreatedFromUpsource: Boolean?
-)
+	val isCreatedFromUpsource: Boolean? = null
+) {
+	internal constructor() : this(
+		issueId = "",
+		issueLink = null,
+		isCreatedFromUpsource = null
+	)
+}

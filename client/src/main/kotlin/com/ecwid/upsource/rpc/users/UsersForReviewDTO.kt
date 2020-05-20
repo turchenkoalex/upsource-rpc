@@ -9,10 +9,16 @@ data class UsersForReviewDTO(
 	/**
 	 * All relevant users (repeated)
 	 */
-	val relevantUser: List<String>,
+	val relevantUser: List<String> = emptyList(),
 
 	/**
 	 * Users' relevance [0..100] (repeated)
 	 */
-	val userRelevance: List<Int>
-)
+	val userRelevance: List<Int> = emptyList()
+) {
+	internal constructor() : this(
+		result = UsersListDTO(),
+		relevantUser = emptyList(),
+		userRelevance = emptyList()
+	)
+}

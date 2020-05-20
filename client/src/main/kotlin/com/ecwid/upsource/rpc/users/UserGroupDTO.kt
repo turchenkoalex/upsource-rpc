@@ -15,4 +15,10 @@ data class UserGroupDTO(
 	 * Number of users participating in this group (required)
 	 */
 	val usersCount: Int
-)
+) {
+	internal constructor() : this(
+		id = "",
+		name = "",
+		usersCount = 0
+	)
+}

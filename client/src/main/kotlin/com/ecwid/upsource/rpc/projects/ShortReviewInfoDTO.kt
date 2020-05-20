@@ -4,7 +4,7 @@ data class ShortReviewInfoDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
 	 */
-	val reviewId: com.ecwid.upsource.rpc.ReviewIdDTO,
+	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * Review title (required)
@@ -19,15 +19,24 @@ data class ShortReviewInfoDTO(
 	/**
 	 * Names of tracked branches (repeated)
 	 */
-	val branch: List<String>,
+	val branch: List<String> = emptyList(),
 
 	/**
 	 * See CompletionRateDTO parameters (optional)
 	 */
-	val completionRate: CompletionRateDTO?,
+	val completionRate: CompletionRateDTO? = null,
 
 	/**
 	 * Review labels (repeated)
 	 */
-	val labels: List<LabelDTO>
-)
+	val labels: List<LabelDTO> = emptyList()
+) {
+	internal constructor() : this(
+		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
+		title = "",
+		state = ReviewStateEnum.OPEN,
+		branch = emptyList(),
+		completionRate = null,
+		labels = emptyList()
+	)
+}

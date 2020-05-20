@@ -4,5 +4,5 @@ data class CodeReviewPatternsDTO(
 	/**
 	 * See CodeReviewPattern (repeated)
 	 */
-	val patterns: List<CodeReviewPattern>
+	val patterns: List<CodeReviewPattern> = emptyList()
 )

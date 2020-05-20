@@ -9,5 +9,10 @@ data class SetProjectWebhooksRequestDTO(
 	/**
 	 * List of webhook triggers (repeated)
 	 */
-	val triggers: List<ProjectWebhookTriggerDTO>
-)
+	val triggers: List<ProjectWebhookTriggerDTO> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		triggers = emptyList()
+	)
+}

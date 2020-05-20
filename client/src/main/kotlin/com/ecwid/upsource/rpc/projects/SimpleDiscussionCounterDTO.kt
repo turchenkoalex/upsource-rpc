@@ -20,4 +20,11 @@ data class SimpleDiscussionCounterDTO(
 	 * Number of resolved discussions (required)
 	 */
 	val resolvedCount: Int
-)
+) {
+	internal constructor() : this(
+		count = 0,
+		hasUnresolved = false,
+		unresolvedCount = 0,
+		resolvedCount = 0
+	)
+}

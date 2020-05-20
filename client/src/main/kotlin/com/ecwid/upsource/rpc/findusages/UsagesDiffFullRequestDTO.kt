@@ -10,4 +10,9 @@ data class UsagesDiffFullRequestDTO(
 	 * New element. See PsiElementIdDTO parameters (required)
 	 */
 	val newElement: PsiElementIdDTO
-)
+) {
+	internal constructor() : this(
+		oldElement = PsiElementIdDTO(),
+		newElement = PsiElementIdDTO()
+	)
+}

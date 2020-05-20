@@ -9,5 +9,10 @@ data class ReviewersGraphRequestDTO(
 	/**
 	 * Unix timestamp, only reviews that were updated later are considered (optional)
 	 */
-	val fromTime: Long?
-)
+	val fromTime: Long? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = null
+	)
+}

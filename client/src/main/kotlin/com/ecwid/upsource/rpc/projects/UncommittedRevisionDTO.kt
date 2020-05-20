@@ -14,5 +14,11 @@ data class UncommittedRevisionDTO(
 	/**
 	 * List of modified files (added, deleted, updated) (repeated)
 	 */
-	val files: List<String>
-)
+	val files: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		parentRevisionId = "",
+		files = emptyList()
+	)
+}

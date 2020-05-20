@@ -4,5 +4,5 @@ data class RevisionBranchesResponseDTO(
 	/**
 	 * Branches containing the given revision (repeated)
 	 */
-	val branchName: List<String>
+	val branchName: List<String> = emptyList()
 )

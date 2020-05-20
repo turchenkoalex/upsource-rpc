@@ -4,5 +4,5 @@ data class DiscussionsInRevisionDTO(
 	/**
 	 * See DiscussionsGroupDTO parameters (repeated)
 	 */
-	val groups: List<DiscussionsGroupDTO>
+	val groups: List<DiscussionsGroupDTO> = emptyList()
 )

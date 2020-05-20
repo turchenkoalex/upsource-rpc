@@ -44,25 +44,41 @@ data class CurrentUserResponseDTO(
 	/**
 	 * The list of projects where the user has admin permissions (repeated)
 	 */
-	val adminPermissionsInProjects: List<String>,
+	val adminPermissionsInProjects: List<String> = emptyList(),
 
 	/**
 	 * The list of projects where the user has permission to edit reviews (repeated)
 	 */
-	val reviewEditPermissionsInProjects: List<String>,
+	val reviewEditPermissionsInProjects: List<String> = emptyList(),
 
 	/**
 	 * The list of projects where the user has permission to view reviews (repeated)
 	 */
-	val reviewViewPermissionsInProjects: List<String>,
+	val reviewViewPermissionsInProjects: List<String> = emptyList(),
 
 	/**
 	 * The list of projects where the user has permission to create/merge pull requests (repeated)
 	 */
-	val codeContributePermissionsInProjects: List<String>,
+	val codeContributePermissionsInProjects: List<String> = emptyList(),
 
 	/**
 	 * Checks if EULA is accepted by the current user. Returns 'null' if EULA is not set up in Hub (optional)
 	 */
-	val isEULAAccepted: Boolean?
-)
+	val isEULAAccepted: Boolean? = null
+) {
+	internal constructor() : this(
+		userId = "",
+		login = "",
+		name = "",
+		isServerAdmin = false,
+		isGuestUser = false,
+		isTestUser = false,
+		canCreateProjects = false,
+		emailStatus = EmailStatusEnum.OK,
+		adminPermissionsInProjects = emptyList(),
+		reviewEditPermissionsInProjects = emptyList(),
+		reviewViewPermissionsInProjects = emptyList(),
+		codeContributePermissionsInProjects = emptyList(),
+		isEULAAccepted = null
+	)
+}

@@ -15,4 +15,10 @@ data class ParticipantProgressDTO(
 	 * Unix timestamp of the last viewing (required)
 	 */
 	val lastSeenTimestamp: Long
-)
+) {
+	internal constructor() : this(
+		userId = "",
+		readFilesCount = 0,
+		lastSeenTimestamp = 0L
+	)
+}

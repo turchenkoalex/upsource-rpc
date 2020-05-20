@@ -9,5 +9,10 @@ data class TestConnectionResponseDTO(
 	/**
 	 * Response message (optional)
 	 */
-	val message: String?
-)
+	val message: String? = null
+) {
+	internal constructor() : this(
+		status = TestConnectionStatusEnum.SUCCESS,
+		message = null
+	)
+}

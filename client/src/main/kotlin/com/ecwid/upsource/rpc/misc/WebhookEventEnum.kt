@@ -1,25 +1,22 @@
 package com.ecwid.upsource.rpc.misc
 
-/**
- * undefined
- */
-enum class WebhookEventEnum(val value: Byte) {
-	CommentAdded(1),
-	ReviewCreated(2),
-	ReviewParticipantCompleted(3),
-	NewReviewParticipant(4),
-	RevisionAddedToReview(5),
-	NewRevision(6),
-	ReviewStateChanged(7),
-	ReviewParticipantRemoved(8),
-	MergedToDefaultBranch(9),
-	NewBranch(10),
-	ReviewRemoved(11),
-	BranchRemoved(12),
-	ReactionToggled(13),
-	CommentEdited(14),
-	CommentRemoved(15),
-	ReviewLabelChanged(16);
+enum class WebhookEventEnum(val value: Byte, val originalName: String) {
+	COMMENT_ADDED(value = 1, originalName = "CommentAdded"),
+	REVIEW_CREATED(value = 2, originalName = "ReviewCreated"),
+	REVIEW_PARTICIPANT_COMPLETED(value = 3, originalName = "ReviewParticipantCompleted"),
+	NEW_REVIEW_PARTICIPANT(value = 4, originalName = "NewReviewParticipant"),
+	REVISION_ADDED_TO_REVIEW(value = 5, originalName = "RevisionAddedToReview"),
+	NEW_REVISION(value = 6, originalName = "NewRevision"),
+	REVIEW_STATE_CHANGED(value = 7, originalName = "ReviewStateChanged"),
+	REVIEW_PARTICIPANT_REMOVED(value = 8, originalName = "ReviewParticipantRemoved"),
+	MERGED_TO_DEFAULT_BRANCH(value = 9, originalName = "MergedToDefaultBranch"),
+	NEW_BRANCH(value = 10, originalName = "NewBranch"),
+	REVIEW_REMOVED(value = 11, originalName = "ReviewRemoved"),
+	BRANCH_REMOVED(value = 12, originalName = "BranchRemoved"),
+	REACTION_TOGGLED(value = 13, originalName = "ReactionToggled"),
+	COMMENT_EDITED(value = 14, originalName = "CommentEdited"),
+	COMMENT_REMOVED(value = 15, originalName = "CommentRemoved"),
+	REVIEW_LABEL_CHANGED(value = 16, originalName = "ReviewLabelChanged");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

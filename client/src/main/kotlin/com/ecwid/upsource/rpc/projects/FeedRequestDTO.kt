@@ -14,20 +14,29 @@ data class FeedRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
 	 */
-	val projectId: String?,
+	val projectId: String? = null,
 
 	/**
 	 * Review ID (optional)
 	 */
-	val reviewId: String?,
+	val reviewId: String? = null,
 
 	/**
 	 * Search query. Use '#my' to request the personal feed, or leave empty for the full feed (optional)
 	 */
-	val searchQuery: String?,
+	val searchQuery: String? = null,
 
 	/**
 	 * Review feed sorting ('Natural' by default) (optional)
 	 */
-	val reviewFeedSort: ReviewFeedSortEnum?
-)
+	val reviewFeedSort: ReviewFeedSortEnum? = null
+) {
+	internal constructor() : this(
+		limit = 0,
+		type = FeedTypeEnum.FEED,
+		projectId = null,
+		reviewId = null,
+		searchQuery = null,
+		reviewFeedSort = null
+	)
+}

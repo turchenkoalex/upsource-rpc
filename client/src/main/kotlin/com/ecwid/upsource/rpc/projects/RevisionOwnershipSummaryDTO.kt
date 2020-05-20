@@ -10,4 +10,9 @@ data class RevisionOwnershipSummaryDTO(
 	 * Upsource user ID (required)
 	 */
 	val userId: String
-)
+) {
+	internal constructor() : this(
+		revisionId = "",
+		userId = ""
+	)
+}

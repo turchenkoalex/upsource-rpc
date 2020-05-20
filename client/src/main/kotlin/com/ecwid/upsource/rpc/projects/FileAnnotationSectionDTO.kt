@@ -24,5 +24,13 @@ data class FileAnnotationSectionDTO(
 	/**
 	 * A reference to the prior revision of this section (only revision and file, but not the line number / line count) (optional)
 	 */
-	val priorChangeAnnotation: FileAnnotationSectionDTO?
-)
+	val priorChangeAnnotation: FileAnnotationSectionDTO? = null
+) {
+	internal constructor() : this(
+		startLine = 0,
+		lineCount = 0,
+		revision = RevisionInfoDTO(),
+		filePath = "",
+		priorChangeAnnotation = null
+	)
+}

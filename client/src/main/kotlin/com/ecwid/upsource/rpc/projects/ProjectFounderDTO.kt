@@ -10,4 +10,9 @@ data class ProjectFounderDTO(
 	 * Unix timestamp of project creation (required)
 	 */
 	val date: Long
-)
+) {
+	internal constructor() : this(
+		userId = "",
+		date = 0L
+	)
+}

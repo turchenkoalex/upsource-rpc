@@ -3,10 +3,10 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes analyzer problem severity
  */
-enum class AnalyzerProblemSeverityEnum(val value: Byte) {
-	Info(1),
-	Warning(2),
-	Error(3);
+enum class AnalyzerProblemSeverityEnum(val value: Byte, val originalName: String) {
+	INFO(value = 1, originalName = "Info"),
+	WARNING(value = 2, originalName = "Warning"),
+	ERROR(value = 3, originalName = "Error");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

@@ -10,4 +10,9 @@ data class IssueTrackerProviderSettingDTO(
 	 * Setting value (required)
 	 */
 	val value: String
-)
+) {
+	internal constructor() : this(
+		name = "",
+		value = ""
+	)
+}

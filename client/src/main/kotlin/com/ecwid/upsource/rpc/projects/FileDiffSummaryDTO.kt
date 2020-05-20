@@ -4,7 +4,7 @@ data class FileDiffSummaryDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 */
-	val file: com.ecwid.upsource.rpc.FileInRevisionDTO,
+	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * How many lines were added (required)
@@ -15,4 +15,10 @@ data class FileDiffSummaryDTO(
 	 * How many lines were deleted (required)
 	 */
 	val removedLines: Int
-)
+) {
+	internal constructor() : this(
+		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
+		addedLines = 0,
+		removedLines = 0
+	)
+}

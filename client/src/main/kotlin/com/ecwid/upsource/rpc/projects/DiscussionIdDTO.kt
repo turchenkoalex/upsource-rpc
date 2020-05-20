@@ -10,4 +10,9 @@ data class DiscussionIdDTO(
 	 * ID of the discussion (required)
 	 */
 	val discussionId: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = ""
+	)
+}

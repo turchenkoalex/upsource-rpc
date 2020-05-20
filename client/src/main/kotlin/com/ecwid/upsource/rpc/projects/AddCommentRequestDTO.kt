@@ -19,10 +19,18 @@ data class AddCommentRequestDTO(
 	/**
 	 * An ID of the comment you are replying to (optional)
 	 */
-	val parentId: String?,
+	val parentId: String? = null,
 
 	/**
 	 * Currently not in use (optional)
 	 */
-	val markupType: String?
-)
+	val markupType: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		text = "",
+		parentId = null,
+		markupType = null
+	)
+}

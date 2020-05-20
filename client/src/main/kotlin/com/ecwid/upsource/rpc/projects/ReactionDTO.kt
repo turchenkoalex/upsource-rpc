@@ -9,5 +9,10 @@ data class ReactionDTO(
 	/**
 	 * List of Upsource user IDs (repeated)
 	 */
-	val usersIds: List<String>
-)
+	val usersIds: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		id = "",
+		usersIds = emptyList()
+	)
+}

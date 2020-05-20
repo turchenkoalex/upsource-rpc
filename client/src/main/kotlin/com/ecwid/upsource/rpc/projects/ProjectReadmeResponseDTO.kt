@@ -15,4 +15,10 @@ data class ProjectReadmeResponseDTO(
 	 * Revision ID (required)
 	 */
 	val revisionId: String
-)
+) {
+	internal constructor() : this(
+		text = "",
+		fileName = "",
+		revisionId = ""
+	)
+}

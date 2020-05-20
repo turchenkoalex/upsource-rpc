@@ -9,5 +9,10 @@ data class CommitterModuleValue(
 	/**
 	 * See ModuleValue parameters (repeated)
 	 */
-	val items: List<ModuleValue>
-)
+	val items: List<ModuleValue> = emptyList()
+) {
+	internal constructor() : this(
+		committer = "",
+		items = emptyList()
+	)
+}

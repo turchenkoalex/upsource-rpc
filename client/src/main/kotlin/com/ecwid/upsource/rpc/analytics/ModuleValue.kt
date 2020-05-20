@@ -10,4 +10,9 @@ data class ModuleValue(
 	 * The value associated with the module (required)
 	 */
 	val value: Int
-)
+) {
+	internal constructor() : this(
+		module = "",
+		value = 0
+	)
+}

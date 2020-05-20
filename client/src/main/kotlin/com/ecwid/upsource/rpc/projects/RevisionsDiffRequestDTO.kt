@@ -15,4 +15,10 @@ data class RevisionsDiffRequestDTO(
 	 * ID of the revision that should be compared to the base revision (required)
 	 */
 	val secondRevision: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		baseRevision = "",
+		secondRevision = ""
+	)
+}

@@ -10,4 +10,9 @@ data class UpdateUserTimezoneDTO(
 	 * Timezone offset (required)
 	 */
 	val timezoneOffset: Int
-)
+) {
+	internal constructor() : this(
+		userId = "",
+		timezoneOffset = 0
+	)
+}

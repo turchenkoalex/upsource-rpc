@@ -15,4 +15,10 @@ data class IssueFieldValueDTO(
 	 * HTML presentation of the value, e.g. a <span> with some inline styles (required)
 	 */
 	val html: String
-)
+) {
+	internal constructor() : this(
+		valueId = "",
+		name = "",
+		html = ""
+	)
+}

@@ -29,10 +29,20 @@ data class FileDiffFragmentDTO(
 	/**
 	 * Ranges of text that were added (repeated)
 	 */
-	val addedRanges: List<com.ecwid.upsource.rpc.RangeDTO>,
+	val addedRanges: List<com.ecwid.upsource.rpc.ids.RangeDTO> = emptyList(),
 
 	/**
 	 * Ranges of text that were deleted (repeated)
 	 */
-	val deletedRanges: List<com.ecwid.upsource.rpc.RangeDTO>
-)
+	val deletedRanges: List<com.ecwid.upsource.rpc.ids.RangeDTO> = emptyList()
+) {
+	internal constructor() : this(
+		leftFileStartLine = 0,
+		leftFileLineCount = 0,
+		rightFileStartLine = 0,
+		rightFileLineCount = 0,
+		isUnchanged = false,
+		addedRanges = emptyList(),
+		deletedRanges = emptyList()
+	)
+}

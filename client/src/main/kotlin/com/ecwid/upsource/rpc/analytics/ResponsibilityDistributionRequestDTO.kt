@@ -15,4 +15,10 @@ data class ResponsibilityDistributionRequestDTO(
 	 * Unix timestamp (required)
 	 */
 	val toTime: Long
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = 0L,
+		toTime = 0L
+	)
+}

@@ -9,5 +9,10 @@ data class UserRolesDTO(
 	/**
 	 * See RoleDTO parameters (repeated)
 	 */
-	val roles: List<RoleDTO>
-)
+	val roles: List<RoleDTO> = emptyList()
+) {
+	internal constructor() : this(
+		userId = "",
+		roles = emptyList()
+	)
+}

@@ -10,4 +10,9 @@ data class SanitizeHTMLRequestDTO(
 	 * "true" allows only basic HTML markup (text formatting, images, links), "false" additionally allows block-level HTML elements and tables (required)
 	 */
 	val isBasicMarkup: Boolean
-)
+) {
+	internal constructor() : this(
+		html = "",
+		isBasicMarkup = false
+	)
+}

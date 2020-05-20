@@ -10,4 +10,9 @@ data class HidePredefinedLabelsRequestDTO(
 	 * Whether to show or hide predefined labels (required)
 	 */
 	val doHide: Boolean
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		doHide = false
+	)
+}

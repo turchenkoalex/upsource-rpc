@@ -4,5 +4,5 @@ data class UserProjectsResponseDTO(
 	/**
 	 * See UserProjectInfoDTO parameters (repeated)
 	 */
-	val projects: List<UserProjectInfoDTO>
+	val projects: List<UserProjectInfoDTO> = emptyList()
 )

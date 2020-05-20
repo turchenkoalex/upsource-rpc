@@ -3,11 +3,11 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes project status
  */
-enum class ProjectStateEnum(val value: Byte) {
-	NotStarted(1),
-	Initializing(2),
-	Success(3),
-	Failure(4);
+enum class ProjectStateEnum(val value: Byte, val originalName: String) {
+	NOT_STARTED(value = 1, originalName = "NotStarted"),
+	INITIALIZING(value = 2, originalName = "Initializing"),
+	SUCCESS(value = 3, originalName = "Success"),
+	FAILURE(value = 4, originalName = "Failure");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

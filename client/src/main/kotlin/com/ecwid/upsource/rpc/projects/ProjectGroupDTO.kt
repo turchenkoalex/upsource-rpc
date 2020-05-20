@@ -10,4 +10,9 @@ data class ProjectGroupDTO(
 	 * Description of the Hub group (required)
 	 */
 	val description: String
-)
+) {
+	internal constructor() : this(
+		name = "",
+		description = ""
+	)
+}

@@ -4,5 +4,5 @@ data class RevisionsOwnershipSummaryDTO(
 	/**
 	 * See RevisionOwnershipSummaryDTO (repeated)
 	 */
-	val revisionOwner: List<RevisionOwnershipSummaryDTO>
+	val revisionOwner: List<RevisionOwnershipSummaryDTO> = emptyList()
 )

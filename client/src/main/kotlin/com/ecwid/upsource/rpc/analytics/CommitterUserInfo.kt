@@ -10,4 +10,9 @@ data class CommitterUserInfo(
 	 * User ID of the committer (required)
 	 */
 	val userId: String
-)
+) {
+	internal constructor() : this(
+		committer = "",
+		userId = ""
+	)
+}

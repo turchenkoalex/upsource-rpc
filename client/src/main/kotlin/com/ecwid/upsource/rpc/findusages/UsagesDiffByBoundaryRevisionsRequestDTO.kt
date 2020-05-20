@@ -15,4 +15,10 @@ data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	 * ID of the boundary revision (required)
 	 */
 	val boundaryRevisionId: String
-)
+) {
+	internal constructor() : this(
+		originElement = PsiElementIdDTO(),
+		newRevisionId = "",
+		boundaryRevisionId = ""
+	)
+}

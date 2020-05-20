@@ -19,5 +19,12 @@ data class DiscussionsInProjectRequestDTO(
 	/**
 	 * Number of discussions to skip from the top (for pagination) (optional)
 	 */
-	val skip: Int?
-)
+	val skip: Int? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		query = "",
+		limit = 0,
+		skip = null
+	)
+}

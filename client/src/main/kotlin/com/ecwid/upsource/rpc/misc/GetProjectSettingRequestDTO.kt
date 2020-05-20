@@ -10,4 +10,9 @@ data class GetProjectSettingRequestDTO(
 	 * See GetSettingRequestDTO parameters (required)
 	 */
 	val request: GetSettingRequestDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		request = GetSettingRequestDTO()
+	)
+}

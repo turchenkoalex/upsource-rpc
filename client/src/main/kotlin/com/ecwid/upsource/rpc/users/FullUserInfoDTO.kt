@@ -24,30 +24,43 @@ data class FullUserInfoDTO(
 	/**
 	 * Whether the user is online (optional)
 	 */
-	val isOnline: Boolean?,
+	val isOnline: Boolean? = null,
 
 	/**
 	 * URL of the userpic (optional)
 	 */
-	val avatarUrl: String?,
+	val avatarUrl: String? = null,
 
 	/**
 	 * URL of the Hub user profile (optional)
 	 */
-	val profileUrl: String?,
+	val profileUrl: String? = null,
 
 	/**
 	 * Email address (optional)
 	 */
-	val email: String?,
+	val email: String? = null,
 
 	/**
 	 * Login (optional)
 	 */
-	val login: String?,
+	val login: String? = null,
 
 	/**
 	 * Absence end date, if the user is currently on leave (optional)
 	 */
-	val absentUntil: Long?
-)
+	val absentUntil: Long? = null
+) {
+	internal constructor() : this(
+		userId = "",
+		name = "",
+		isResolved = false,
+		isMe = false,
+		isOnline = null,
+		avatarUrl = null,
+		profileUrl = null,
+		email = null,
+		login = null,
+		absentUntil = null
+	)
+}

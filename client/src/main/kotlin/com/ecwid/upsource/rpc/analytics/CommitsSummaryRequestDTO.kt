@@ -19,5 +19,12 @@ data class CommitsSummaryRequestDTO(
 	/**
 	 * User IDs of committers (repeated)
 	 */
-	val committers: List<String>
-)
+	val committers: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = 0L,
+		toTime = 0L,
+		committers = emptyList()
+	)
+}

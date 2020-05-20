@@ -14,7 +14,7 @@ data class CompareInfoDTO(
 	/**
 	 * The list of project head names for completion (repeated)
 	 */
-	val heads: List<String>,
+	val heads: List<String> = emptyList(),
 
 	/**
 	 * Number of commits that took place between the revisions (required)
@@ -29,10 +29,20 @@ data class CompareInfoDTO(
 	/**
 	 * See ExampleComparison parameters (repeated)
 	 */
-	val examples: List<ExampleComparison>,
+	val examples: List<ExampleComparison> = emptyList(),
 
 	/**
 	 * See BranchingRevisionSuggestion parameters (optional)
 	 */
-	val suggestion: BranchingRevisionSuggestion?
-)
+	val suggestion: BranchingRevisionSuggestion? = null
+) {
+	internal constructor() : this(
+		leftRevisionId = "",
+		rightRevisionId = "",
+		heads = emptyList(),
+		commitsCount = 0,
+		filesCount = 0,
+		examples = emptyList(),
+		suggestion = null
+	)
+}

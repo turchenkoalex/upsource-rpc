@@ -4,5 +4,5 @@ data class ReviewOwnershipSummaryDTO(
 	/**
 	 * See FileOwnershipSummaryDTO parameters (repeated)
 	 */
-	val files: List<FileOwnershipSummaryDTO>
+	val files: List<FileOwnershipSummaryDTO> = emptyList()
 )

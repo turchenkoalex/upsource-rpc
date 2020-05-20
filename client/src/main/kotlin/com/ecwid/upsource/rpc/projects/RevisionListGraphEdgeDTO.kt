@@ -30,4 +30,13 @@ data class RevisionListGraphEdgeDTO(
 	 * Edge color (required)
 	 */
 	val color: Int
-)
+) {
+	internal constructor() : this(
+		position = 0,
+		toPosition = 0,
+		isUp = false,
+		isSolid = false,
+		hasArrow = false,
+		color = 0
+	)
+}

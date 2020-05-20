@@ -19,5 +19,12 @@ data class RoleDetailsDTO(
 	/**
 	 * Role description (optional)
 	 */
-	val description: String?
-)
+	val description: String? = null
+) {
+	internal constructor() : this(
+		id = "",
+		key = "",
+		name = "",
+		description = null
+	)
+}

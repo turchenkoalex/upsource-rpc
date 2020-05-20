@@ -9,5 +9,10 @@ data class CheckCanCreateProjectResponseDTO(
 	/**
 	 * Optional text message (optional)
 	 */
-	val message: String?
-)
+	val message: String? = null
+) {
+	internal constructor() : this(
+		isAllowed = false,
+		message = null
+	)
+}

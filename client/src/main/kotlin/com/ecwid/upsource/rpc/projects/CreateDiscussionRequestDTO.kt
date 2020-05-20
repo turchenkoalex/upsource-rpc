@@ -9,7 +9,7 @@ data class CreateDiscussionRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (optional)
 	 */
-	val reviewId: com.ecwid.upsource.rpc.ReviewIdDTO?,
+	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * Text of the discussion (required)
@@ -24,10 +24,19 @@ data class CreateDiscussionRequestDTO(
 	/**
 	 * Currently not in use (optional)
 	 */
-	val markupType: String?,
+	val markupType: String? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
 	 */
-	val labels: List<LabelDTO>
-)
+	val labels: List<LabelDTO> = emptyList()
+) {
+	internal constructor() : this(
+		anchor = AnchorDTO(),
+		reviewId = null,
+		text = "",
+		projectId = "",
+		markupType = null,
+		labels = emptyList()
+	)
+}

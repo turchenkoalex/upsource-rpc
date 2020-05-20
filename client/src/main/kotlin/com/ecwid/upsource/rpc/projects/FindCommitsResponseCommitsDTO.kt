@@ -4,5 +4,5 @@ data class FindCommitsResponseCommitsDTO(
 	/**
 	 * See FindCommitsResponseCommitDTO parameters (repeated)
 	 */
-	val commits: List<FindCommitsResponseCommitDTO>
+	val commits: List<FindCommitsResponseCommitDTO> = emptyList()
 )

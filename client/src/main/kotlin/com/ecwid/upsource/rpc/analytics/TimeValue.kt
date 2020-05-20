@@ -10,4 +10,9 @@ data class TimeValue(
 	 * The value associated with the timestamp (required)
 	 */
 	val value: Int
-)
+) {
+	internal constructor() : this(
+		time = 0L,
+		value = 0
+	)
+}

@@ -4,7 +4,7 @@ data class LabelDTO(
 	/**
 	 * Discussion label ID (optional)
 	 */
-	val id: String?,
+	val id: String? = null,
 
 	/**
 	 * Discussion label name (e.g. bug, code style, enhancement, help wanted) (required)
@@ -14,5 +14,11 @@ data class LabelDTO(
 	/**
 	 * Discussion label color (optional)
 	 */
-	val colorId: String?
-)
+	val colorId: String? = null
+) {
+	internal constructor() : this(
+		id = null,
+		name = "",
+		colorId = null
+	)
+}

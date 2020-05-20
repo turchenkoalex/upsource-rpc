@@ -9,5 +9,10 @@ data class CommitterTimeValue(
 	/**
 	 * See TimeValue parameters (repeated)
 	 */
-	val items: List<TimeValue>
-)
+	val items: List<TimeValue> = emptyList()
+) {
+	internal constructor() : this(
+		committer = "",
+		items = emptyList()
+	)
+}

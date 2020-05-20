@@ -5,4 +5,8 @@ data class AddGroupToReviewResponseDTO(
 	 * How many users from the specified group were added (required)
 	 */
 	val addedUsersCount: Int
-)
+) {
+	internal constructor() : this(
+		addedUsersCount = 0
+	)
+}

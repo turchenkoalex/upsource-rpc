@@ -9,10 +9,16 @@ data class ProjectUserGroupsRequestDTO(
 	/**
 	 * Search query, i.e. starting part of the name (optional)
 	 */
-	val query: String?,
+	val query: String? = null,
 
 	/**
 	 * Maximum number of results to return (required)
 	 */
 	val limit: Int
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		query = null,
+		limit = 0
+	)
+}

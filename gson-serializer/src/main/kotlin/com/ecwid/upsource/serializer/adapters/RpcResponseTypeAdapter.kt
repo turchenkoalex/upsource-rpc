@@ -1,9 +1,9 @@
 package com.ecwid.upsource.serializer.adapters
 
-import com.google.gson.JsonDeserializationContext
-import com.google.gson.JsonElement
 import com.ecwid.upsource.serializer.ErrorMessage
 import com.ecwid.upsource.transport.RpcResponse
+import com.google.gson.JsonDeserializationContext
+import com.google.gson.JsonElement
 import java.lang.reflect.Type
 
 class RpcResponseTypeAdapter<T>(private val clazz: Class<T>) : com.google.gson.JsonDeserializer<RpcResponse<T>> {

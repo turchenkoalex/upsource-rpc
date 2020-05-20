@@ -19,10 +19,18 @@ data class ExternalInspectionDTO(
 	/**
 	 * Inspection severity (required)
 	 */
-	val severity: com.ecwid.upsource.rpc.files.InspectionSeverityEnum,
+	val severity: com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum,
 
 	/**
 	 * Inspection message (required)
 	 */
 	val message: String
-)
+) {
+	internal constructor() : this(
+		revisionId = "",
+		fileName = "",
+		line = 0,
+		severity = com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum.INFORMATION,
+		message = ""
+	)
+}

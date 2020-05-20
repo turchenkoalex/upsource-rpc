@@ -15,4 +15,10 @@ data class BranchingRevisionSuggestion(
 	 * The number of revisions to the right locator (required)
 	 */
 	val pathToRightSize: Int
-)
+) {
+	internal constructor() : this(
+		revisionId = "",
+		pathToLeftSize = 0,
+		pathToRightSize = 0
+	)
+}

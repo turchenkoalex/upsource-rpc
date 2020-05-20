@@ -10,4 +10,9 @@ data class SetSettingRequestDTO(
 	 * Setting value (required)
 	 */
 	val value: String
-)
+) {
+	internal constructor() : this(
+		key = "",
+		value = ""
+	)
+}

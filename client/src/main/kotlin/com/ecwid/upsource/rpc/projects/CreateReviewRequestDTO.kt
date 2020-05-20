@@ -9,25 +9,34 @@ data class CreateReviewRequestDTO(
 	/**
 	 * Review title (unused, left for compatibility with older clients) (optional)
 	 */
-	val title: String?,
+	val title: String? = null,
 
 	/**
 	 * Revisions to attach (repeated)
 	 */
-	val revisions: List<String>,
+	val revisions: List<String> = emptyList(),
 
 	/**
 	 * Branch name for branch review (optional)
 	 */
-	val branch: String?,
+	val branch: String? = null,
 
 	/**
 	 * Merge review: branch to merge from (optional)
 	 */
-	val mergeFromBranch: String?,
+	val mergeFromBranch: String? = null,
 
 	/**
 	 * Merge review: branch to merge into (optional)
 	 */
-	val mergeToBranch: String?
-)
+	val mergeToBranch: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		title = null,
+		revisions = emptyList(),
+		branch = null,
+		mergeFromBranch = null,
+		mergeToBranch = null
+	)
+}

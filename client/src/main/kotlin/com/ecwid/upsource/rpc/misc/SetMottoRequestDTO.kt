@@ -4,5 +4,5 @@ data class SetMottoRequestDTO(
 	/**
 	 * Server motto text (leave empty to remove an existing one) (optional)
 	 */
-	val motto: String?
+	val motto: String? = null
 )

@@ -9,5 +9,10 @@ data class LabelStats(
 	/**
 	 * See UserValue parameters (repeated)
 	 */
-	val countsPerUser: List<UserValue>
-)
+	val countsPerUser: List<UserValue> = emptyList()
+) {
+	internal constructor() : this(
+		label = com.ecwid.upsource.rpc.projects.LabelDTO(),
+		countsPerUser = emptyList()
+	)
+}

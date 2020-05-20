@@ -9,10 +9,16 @@ data class FileExternalInspectionsDiffResponseDTO(
 	/**
 	 * Count of introduced problems (optional)
 	 */
-	val introduced: InspectionsCountDTO?,
+	val introduced: InspectionsCountDTO? = null,
 
 	/**
 	 * Count of fixed problems (optional)
 	 */
-	val fixed: InspectionsCountDTO?
-)
+	val fixed: InspectionsCountDTO? = null
+) {
+	internal constructor() : this(
+		fileId = "",
+		introduced = null,
+		fixed = null
+	)
+}

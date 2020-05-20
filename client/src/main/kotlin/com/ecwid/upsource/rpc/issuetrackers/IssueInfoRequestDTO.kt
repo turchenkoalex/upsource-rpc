@@ -10,4 +10,9 @@ data class IssueInfoRequestDTO(
 	 * Issue ID (required)
 	 */
 	val issueId: IssueIdDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		issueId = IssueIdDTO()
+	)
+}

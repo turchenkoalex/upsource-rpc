@@ -14,5 +14,11 @@ data class CreateProjectRequestDTO(
 	/**
 	 * Optional custom settings (repeated)
 	 */
-	val custom: List<com.ecwid.upsource.rpc.misc.SetSettingRequestDTO>
-)
+	val custom: List<com.ecwid.upsource.rpc.misc.SetSettingRequestDTO> = emptyList()
+) {
+	internal constructor() : this(
+		newProjectId = "",
+		settings = ProjectSettingsDTO(),
+		custom = emptyList()
+	)
+}

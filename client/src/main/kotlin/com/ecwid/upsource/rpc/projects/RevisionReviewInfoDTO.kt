@@ -4,5 +4,5 @@ data class RevisionReviewInfoDTO(
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 */
-	val reviewInfo: ShortReviewInfoDTO?
+	val reviewInfo: ShortReviewInfoDTO? = null
 )

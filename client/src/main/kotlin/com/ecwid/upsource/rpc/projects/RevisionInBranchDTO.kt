@@ -9,5 +9,10 @@ data class RevisionInBranchDTO(
 	/**
 	 * Branch name (optional)
 	 */
-	val branch: String?
-)
+	val branch: String? = null
+) {
+	internal constructor() : this(
+		revision = RevisionInfoDTO(),
+		branch = null
+	)
+}

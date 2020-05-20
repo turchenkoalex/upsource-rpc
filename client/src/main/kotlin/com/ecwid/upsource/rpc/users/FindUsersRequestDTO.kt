@@ -4,7 +4,7 @@ data class FindUsersRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
 	 */
-	val projectId: String?,
+	val projectId: String? = null,
 
 	/**
 	 * Search query, e.g. part of the name (required)
@@ -15,4 +15,10 @@ data class FindUsersRequestDTO(
 	 * Number of results to return (required)
 	 */
 	val limit: Int
-)
+) {
+	internal constructor() : this(
+		projectId = null,
+		pattern = "",
+		limit = 0
+	)
+}

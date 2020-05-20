@@ -10,4 +10,9 @@ data class BranchRequestDTO(
 	 * Branch name (required)
 	 */
 	val branch: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		branch = ""
+	)
+}

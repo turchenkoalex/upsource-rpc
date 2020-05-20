@@ -4,7 +4,7 @@ data class ReviewListDTO(
 	/**
 	 * See ReviewDescriptorDTO parameters (repeated)
 	 */
-	val reviews: List<ReviewDescriptorDTO>,
+	val reviews: List<ReviewDescriptorDTO> = emptyList(),
 
 	/**
 	 * Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request (required)
@@ -15,4 +15,10 @@ data class ReviewListDTO(
 	 * Total number of reviews (required)
 	 */
 	val totalCount: Int
-)
+) {
+	internal constructor() : this(
+		reviews = emptyList(),
+		hasMore = false,
+		totalCount = 0
+	)
+}

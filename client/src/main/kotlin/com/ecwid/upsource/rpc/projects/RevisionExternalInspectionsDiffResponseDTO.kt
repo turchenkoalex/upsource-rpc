@@ -14,5 +14,11 @@ data class RevisionExternalInspectionsDiffResponseDTO(
 	/**
 	 * Files that contain differing inspections (repeated)
 	 */
-	val files: List<FileExternalInspectionsDiffResponseDTO>
-)
+	val files: List<FileExternalInspectionsDiffResponseDTO> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = "",
+		files = emptyList()
+	)
+}

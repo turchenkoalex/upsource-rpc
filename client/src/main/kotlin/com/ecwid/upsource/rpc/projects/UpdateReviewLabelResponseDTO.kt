@@ -9,5 +9,10 @@ data class UpdateReviewLabelResponseDTO(
 	/**
 	 * GitHub sync result. see SyncResultEnum parameters (optional)
 	 */
-	val syncResult: SyncResultEnum?
-)
+	val syncResult: SyncResultEnum? = null
+) {
+	internal constructor() : this(
+		label = LabelDTO(),
+		syncResult = null
+	)
+}

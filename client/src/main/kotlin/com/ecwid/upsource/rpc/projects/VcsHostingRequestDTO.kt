@@ -4,5 +4,5 @@ data class VcsHostingRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
 	 */
-	val projectId: String?
+	val projectId: String? = null
 )

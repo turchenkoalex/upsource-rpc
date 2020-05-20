@@ -24,12 +24,12 @@ data class ProjectInfoDTO(
 	/**
 	 * External links. See ExternalLinkDTO parameters (repeated)
 	 */
-	val externalLinks: List<ExternalLinkDTO>,
+	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
 	/**
 	 * Configured issue tracker links (repeated)
 	 */
-	val issueTrackerConnections: List<ExternalLinkDTO>,
+	val issueTrackerConnections: List<ExternalLinkDTO> = emptyList(),
 
 	/**
 	 * Build system type ("none" to disable code intelligence, "maven" for Maven, "gradle" for Gradle, "idea" for IntelliJ IDEA) (required)
@@ -44,12 +44,12 @@ data class ProjectInfoDTO(
 	/**
 	 * Default branch (optional)
 	 */
-	val defaultBranch: String?,
+	val defaultBranch: String? = null,
 
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (optional)
 	 */
-	val issueTrackerDetails: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO?,
+	val issueTrackerDetails: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO? = null,
 
 	/**
 	 * Whether the project is connected to GitHub (required)
@@ -64,15 +64,30 @@ data class ProjectInfoDTO(
 	/**
 	 * URL of the project icon (optional)
 	 */
-	val iconUrl: String?,
+	val iconUrl: String? = null,
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
 	 */
-	val group: ProjectGroupDTO?,
+	val group: ProjectGroupDTO? = null,
 
-	/**
-	 * undefined (optional)
-	 */
-	val isArchived: Boolean?
-)
+	val isArchived: Boolean? = null
+) {
+	internal constructor() : this(
+		projectName = "",
+		projectId = "",
+		headHash = "",
+		codeReviewIdPattern = "",
+		externalLinks = emptyList(),
+		issueTrackerConnections = emptyList(),
+		projectModelType = "",
+		defaultEffectiveCharset = "",
+		defaultBranch = null,
+		issueTrackerDetails = null,
+		isConnectedToGithub = false,
+		isConnectedToGitlab = false,
+		iconUrl = null,
+		group = null,
+		isArchived = null
+	)
+}

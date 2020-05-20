@@ -10,4 +10,9 @@ data class EditLabelRequestDTO(
 	 * See LabelDTO parameters (required)
 	 */
 	val label: LabelDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		label = LabelDTO()
+	)
+}

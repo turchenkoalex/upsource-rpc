@@ -9,5 +9,10 @@ data class FileHistoryFrameDTO(
 	/**
 	 * Counts of file edits since the previous frame (repeated)
 	 */
-	val deltas: List<Int>
-)
+	val deltas: List<Int> = emptyList()
+) {
+	internal constructor() : this(
+		timestamp = 0L,
+		deltas = emptyList()
+	)
+}

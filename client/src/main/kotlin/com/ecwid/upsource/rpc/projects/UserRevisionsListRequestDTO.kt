@@ -14,5 +14,11 @@ data class UserRevisionsListRequestDTO(
 	/**
 	 * Search query (e.g. "branch: master") and/or part of the commit message (optional)
 	 */
-	val query: String?
-)
+	val query: String? = null
+) {
+	internal constructor() : this(
+		userId = "",
+		limit = 0,
+		query = null
+	)
+}

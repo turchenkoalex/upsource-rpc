@@ -4,5 +4,5 @@ data class DiscussionsInFilesDTO(
 	/**
 	 * See DiscussionInFileWithFileDTO parameters (repeated)
 	 */
-	val discussions: List<DiscussionInFileWithFileDTO>
+	val discussions: List<DiscussionInFileWithFileDTO> = emptyList()
 )

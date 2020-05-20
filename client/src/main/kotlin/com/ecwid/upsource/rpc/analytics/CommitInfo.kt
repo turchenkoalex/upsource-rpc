@@ -20,4 +20,11 @@ data class CommitInfo(
 	 * Short revision ID (required)
 	 */
 	val shortRevisionId: String
-)
+) {
+	internal constructor() : this(
+		revisionId = "",
+		description = "",
+		time = 0L,
+		shortRevisionId = ""
+	)
+}

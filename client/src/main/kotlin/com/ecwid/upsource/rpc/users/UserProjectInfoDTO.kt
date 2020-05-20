@@ -10,4 +10,9 @@ data class UserProjectInfoDTO(
 	 * Unix timestamp of the last commit (required)
 	 */
 	val lastCommitTime: Long
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		lastCommitTime = 0L
+	)
+}

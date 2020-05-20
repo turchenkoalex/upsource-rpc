@@ -15,4 +15,10 @@ data class IssueTrackerProviderDTO(
 	 * Whether issue tracker integration can be set up automatically (required)
 	 */
 	val isAutoSetup: Boolean
-)
+) {
+	internal constructor() : this(
+		providerKey = "",
+		scriptText = "",
+		isAutoSetup = false
+	)
+}

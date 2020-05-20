@@ -1,13 +1,10 @@
 package com.ecwid.upsource.rpc.issuetrackers
 
-/**
- * undefined
- */
-enum class IssueRequiredFieldTypeEnum(val value: Byte) {
-	Text(1),
-	Date(2),
-	Value(3),
-	Array(4);
+enum class IssueRequiredFieldTypeEnum(val value: Byte, val originalName: String) {
+	TEXT(value = 1, originalName = "Text"),
+	DATE(value = 2, originalName = "Date"),
+	VALUE(value = 3, originalName = "Value"),
+	ARRAY(value = 4, originalName = "Array");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

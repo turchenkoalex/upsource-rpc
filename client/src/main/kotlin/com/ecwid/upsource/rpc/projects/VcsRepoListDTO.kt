@@ -4,5 +4,5 @@ data class VcsRepoListDTO(
 	/**
 	 * See VcsRepoDTO parameters (repeated)
 	 */
-	val repo: List<VcsRepoDTO>
+	val repo: List<VcsRepoDTO> = emptyList()
 )

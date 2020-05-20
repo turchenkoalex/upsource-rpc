@@ -25,4 +25,12 @@ data class ReviewersGraphLinkDTO(
 	 * Recent reviews count (required)
 	 */
 	val recentReviewsCount: Int
-)
+) {
+	internal constructor() : this(
+		from = 0,
+		to = 0,
+		strength = 0L,
+		totalReviewsCount = 0,
+		recentReviewsCount = 0
+	)
+}

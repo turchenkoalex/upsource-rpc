@@ -4,5 +4,5 @@ data class RevisionBuildStatusListDTO(
 	/**
 	 * Build status: Success(1), Failed(2), InProgress(3) (repeated)
 	 */
-	val buildStatus: List<RevisionBuildStatusDTO>
+	val buildStatus: List<RevisionBuildStatusDTO> = emptyList()
 )

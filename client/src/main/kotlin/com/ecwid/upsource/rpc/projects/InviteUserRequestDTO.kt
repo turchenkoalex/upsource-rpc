@@ -10,4 +10,9 @@ data class InviteUserRequestDTO(
 	 * Email address of the Upsource user (required)
 	 */
 	val email: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		email = ""
+	)
+}

@@ -4,5 +4,5 @@ data class AllRolesResponseDTO(
 	/**
 	 * See RoleDetailsDTO parameters (repeated)
 	 */
-	val roleDetails: List<RoleDetailsDTO>
+	val roleDetails: List<RoleDetailsDTO> = emptyList()
 )

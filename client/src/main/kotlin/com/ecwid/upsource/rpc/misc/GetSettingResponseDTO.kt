@@ -4,5 +4,5 @@ data class GetSettingResponseDTO(
 	/**
 	 * User setting value (optional)
 	 */
-	val value: String?
+	val value: String? = null
 )

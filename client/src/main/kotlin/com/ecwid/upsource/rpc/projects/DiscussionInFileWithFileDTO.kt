@@ -4,7 +4,7 @@ data class DiscussionInFileWithFileDTO(
 	/**
 	 * VCS revision ID (optional)
 	 */
-	val revisionId: String?,
+	val revisionId: String? = null,
 
 	/**
 	 * A full path of the file starting with a slash (e.g. /folder/subfolder/file.txt ) (required)
@@ -15,4 +15,10 @@ data class DiscussionInFileWithFileDTO(
 	 * See DiscussionInFileDTO parameters (required)
 	 */
 	val discussionInFile: DiscussionInFileDTO
-)
+) {
+	internal constructor() : this(
+		revisionId = null,
+		fileName = "",
+		discussionInFile = DiscussionInFileDTO()
+	)
+}

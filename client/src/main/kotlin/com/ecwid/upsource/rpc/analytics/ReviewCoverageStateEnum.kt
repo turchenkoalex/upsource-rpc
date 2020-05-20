@@ -1,12 +1,9 @@
 package com.ecwid.upsource.rpc.analytics
 
-/**
- * undefined
- */
-enum class ReviewCoverageStateEnum(val value: Byte) {
-	CLOSED(1),
-	OPEN(2),
-	ALL(3);
+enum class ReviewCoverageStateEnum(val value: Byte, val originalName: String) {
+	CLOSED(value = 1, originalName = "CLOSED"),
+	OPEN(value = 2, originalName = "OPEN"),
+	ALL(value = 3, originalName = "ALL");
 
 	companion object {
 		private val MAP_BY_VALUES = values().associateBy { it.value }

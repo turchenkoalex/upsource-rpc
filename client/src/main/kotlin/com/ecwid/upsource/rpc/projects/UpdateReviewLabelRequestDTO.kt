@@ -9,10 +9,16 @@ data class UpdateReviewLabelRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (optional)
 	 */
-	val reviewId: com.ecwid.upsource.rpc.ReviewIdDTO?,
+	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * Review label being added or removed. See LabelDTO parameters (required)
 	 */
 	val label: LabelDTO
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		reviewId = null,
+		label = LabelDTO()
+	)
+}

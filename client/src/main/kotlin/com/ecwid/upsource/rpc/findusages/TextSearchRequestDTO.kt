@@ -4,7 +4,7 @@ data class TextSearchRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
 	 */
-	val projectId: String?,
+	val projectId: String? = null,
 
 	/**
 	 * The search query (required)
@@ -14,7 +14,7 @@ data class TextSearchRequestDTO(
 	/**
 	 * File name filter (optional)
 	 */
-	val filenameFilter: String?,
+	val filenameFilter: String? = null,
 
 	/**
 	 * Ignore matches in deleted files (required)
@@ -25,4 +25,12 @@ data class TextSearchRequestDTO(
 	 * Whether to search in archived projects (required)
 	 */
 	val ignoreArchived: Boolean
-)
+) {
+	internal constructor() : this(
+		projectId = null,
+		query = "",
+		filenameFilter = null,
+		ignoreDeleted = false,
+		ignoreArchived = false
+	)
+}

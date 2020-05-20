@@ -14,10 +14,17 @@ data class VcsHostingServiceDTO(
 	/**
 	 * IDs of the VCS repositories (repeated)
 	 */
-	val repoIds: List<String>,
+	val repoIds: List<String> = emptyList(),
 
 	/**
 	 * Whether the requester has permission to create repositories in the VCS service (required)
 	 */
 	val canCreateRepository: Boolean
-)
+) {
+	internal constructor() : this(
+		serviceId = "",
+		serviceUrl = "",
+		repoIds = emptyList(),
+		canCreateRepository = false
+	)
+}

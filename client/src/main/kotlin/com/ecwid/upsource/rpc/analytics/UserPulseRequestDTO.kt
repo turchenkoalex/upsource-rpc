@@ -19,5 +19,12 @@ data class UserPulseRequestDTO(
 	/**
 	 * The specific time intervals that define the distribution (Unix timestamps) (repeated)
 	 */
-	val timePoints: List<Long>
-)
+	val timePoints: List<Long> = emptyList()
+) {
+	internal constructor() : this(
+		userId = "",
+		fromTime = 0L,
+		toTime = 0L,
+		timePoints = emptyList()
+	)
+}

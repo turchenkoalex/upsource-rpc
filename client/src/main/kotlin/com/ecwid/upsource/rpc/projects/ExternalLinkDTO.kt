@@ -10,4 +10,9 @@ data class ExternalLinkDTO(
 	 * External link prefix (required)
 	 */
 	val prefix: String
-)
+) {
+	internal constructor() : this(
+		url = "",
+		prefix = ""
+	)
+}

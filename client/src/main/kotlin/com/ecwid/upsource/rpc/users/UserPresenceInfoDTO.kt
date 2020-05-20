@@ -14,5 +14,11 @@ data class UserPresenceInfoDTO(
 	/**
 	 * Absence end date, if the user is currently on leave (optional)
 	 */
-	val absentUntil: Long?
-)
+	val absentUntil: Long? = null
+) {
+	internal constructor() : this(
+		userId = "",
+		isOnline = false,
+		absentUntil = null
+	)
+}

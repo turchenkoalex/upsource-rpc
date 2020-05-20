@@ -10,4 +10,9 @@ data class UserValue(
 	 * The value associated with the user ID (required)
 	 */
 	val value: Int
-)
+) {
+	internal constructor() : this(
+		userId = "",
+		value = 0
+	)
+}

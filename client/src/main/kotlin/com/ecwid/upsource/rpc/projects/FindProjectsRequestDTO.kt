@@ -14,5 +14,11 @@ data class FindProjectsRequestDTO(
 	/**
 	 * Whether to search for the exact match (optional)
 	 */
-	val isExact: Boolean?
-)
+	val isExact: Boolean? = null
+) {
+	internal constructor() : this(
+		pattern = "",
+		limit = 0,
+		isExact = null
+	)
+}

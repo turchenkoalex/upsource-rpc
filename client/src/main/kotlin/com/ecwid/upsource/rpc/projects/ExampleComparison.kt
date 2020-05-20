@@ -15,4 +15,10 @@ data class ExampleComparison(
 	 * The last commit time (required)
 	 */
 	val lastCommitTime: Long
-)
+) {
+	internal constructor() : this(
+		leftLocator = "",
+		rightLocator = "",
+		lastCommitTime = 0L
+	)
+}

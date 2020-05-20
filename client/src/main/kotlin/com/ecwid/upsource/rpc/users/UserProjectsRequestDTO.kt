@@ -10,4 +10,9 @@ data class UserProjectsRequestDTO(
 	 * Project update timestamp to limit the returned projects by (required)
 	 */
 	val commitTimestampFilter: Long
-)
+) {
+	internal constructor() : this(
+		userId = "",
+		commitTimestampFilter = 0L
+	)
+}

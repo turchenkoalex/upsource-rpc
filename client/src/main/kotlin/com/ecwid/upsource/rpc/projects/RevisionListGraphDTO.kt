@@ -9,5 +9,10 @@ data class RevisionListGraphDTO(
 	/**
 	 * See RevisionListGraphRowDTO parameters (repeated)
 	 */
-	val rows: List<RevisionListGraphRowDTO>
-)
+	val rows: List<RevisionListGraphRowDTO> = emptyList()
+) {
+	internal constructor() : this(
+		width = 0,
+		rows = emptyList()
+	)
+}

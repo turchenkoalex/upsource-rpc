@@ -14,5 +14,11 @@ data class FileOwnershipSummaryDTO(
 	/**
 	 * Upsource user ID (optional)
 	 */
-	val userId: String?
-)
+	val userId: String? = null
+) {
+	internal constructor() : this(
+		filePath = "",
+		state = OwnershipSummaryEnum.OK,
+		userId = null
+	)
+}

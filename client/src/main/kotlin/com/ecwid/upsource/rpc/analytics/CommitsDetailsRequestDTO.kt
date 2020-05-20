@@ -19,10 +19,18 @@ data class CommitsDetailsRequestDTO(
 	/**
 	 * User IDs of committers (repeated)
 	 */
-	val committers: List<String>,
+	val committers: List<String> = emptyList(),
 
 	/**
 	 * Name of the project module (optional)
 	 */
-	val module: String?
-)
+	val module: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = 0L,
+		toTime = 0L,
+		committers = emptyList(),
+		module = null
+	)
+}

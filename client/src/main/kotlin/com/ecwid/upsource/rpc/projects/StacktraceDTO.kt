@@ -14,5 +14,11 @@ data class StacktraceDTO(
 	/**
 	 * VCS revision ID (optional)
 	 */
-	val revisionId: String?
-)
+	val revisionId: String? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		stacktrace = "",
+		revisionId = null
+	)
+}

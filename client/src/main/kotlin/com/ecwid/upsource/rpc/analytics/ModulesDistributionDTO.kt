@@ -4,15 +4,15 @@ data class ModulesDistributionDTO(
 	/**
 	 * See ModuleTimeValue parameters (repeated)
 	 */
-	val items: List<ModuleTimeValue>,
+	val items: List<ModuleTimeValue> = emptyList(),
 
 	/**
 	 * The specific time intervals that define the distribution (Unix timestamps) (repeated)
 	 */
-	val timePoints: List<Long>,
+	val timePoints: List<Long> = emptyList(),
 
 	/**
 	 * Names of the project modules (repeated)
 	 */
-	val modules: List<String>
+	val modules: List<String> = emptyList()
 )

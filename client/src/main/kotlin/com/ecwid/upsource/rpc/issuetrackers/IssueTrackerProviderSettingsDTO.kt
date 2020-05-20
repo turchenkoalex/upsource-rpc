@@ -9,5 +9,10 @@ data class IssueTrackerProviderSettingsDTO(
 	/**
 	 * Settings used to set up the integration (e.g server URL, login credentials, project ID in the issue tracker) (repeated)
 	 */
-	val settings: List<IssueTrackerProviderSettingDTO>
-)
+	val settings: List<IssueTrackerProviderSettingDTO> = emptyList()
+) {
+	internal constructor() : this(
+		providerKey = "",
+		settings = emptyList()
+	)
+}

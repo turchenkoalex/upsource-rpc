@@ -5,4 +5,8 @@ data class SanitizeHTMLResponseDTO(
 	 * Sanitized HTML string (required)
 	 */
 	val sanitizedHTML: String
-)
+) {
+	internal constructor() : this(
+		sanitizedHTML = ""
+	)
+}

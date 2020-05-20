@@ -9,10 +9,16 @@ data class ReviewStatisticsRequestDTO(
 	/**
 	 * Unix timestamp (optional)
 	 */
-	val fromTime: Long?,
+	val fromTime: Long? = null,
 
 	/**
 	 * Unix timestamp (optional)
 	 */
-	val toTime: Long?
-)
+	val toTime: Long? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = null,
+		toTime = null
+	)
+}

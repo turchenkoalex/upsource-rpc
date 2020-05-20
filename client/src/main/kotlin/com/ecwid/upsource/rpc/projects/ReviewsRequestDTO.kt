@@ -9,20 +9,28 @@ data class ReviewsRequestDTO(
 	/**
 	 * Search query (e.g. "state: open") and/or phrase appearing in review title or discussion (optional)
 	 */
-	val query: String?,
+	val query: String? = null,
 
 	/**
 	 * Sort by: last updated ("updated", default), review ID ("id,asc", "id,desc"), title ("title"), due date ("deadline,asc", "deadline,desc") (optional)
 	 */
-	val sortBy: String?,
+	val sortBy: String? = null,
 
 	/**
 	 * Project ID in Upsource (optional)
 	 */
-	val projectId: String?,
+	val projectId: String? = null,
 
 	/**
 	 * Number of reviews to skip from the top (for pagination) (optional)
 	 */
-	val skip: Int?
-)
+	val skip: Int? = null
+) {
+	internal constructor() : this(
+		limit = 0,
+		query = null,
+		sortBy = null,
+		projectId = null,
+		skip = null
+	)
+}

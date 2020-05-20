@@ -15,4 +15,10 @@ data class RemoveCommentRequestDTO(
 	 * An ID of the comment being removed (required)
 	 */
 	val commentId: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		commentId = ""
+	)
+}

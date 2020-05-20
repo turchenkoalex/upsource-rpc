@@ -15,4 +15,10 @@ data class IssueRequiredFieldDTO(
 	 * Field type (required)
 	 */
 	val fieldType: IssueRequiredFieldTypeEnum
-)
+) {
+	internal constructor() : this(
+		issueTypeId = "",
+		field = IssueFieldDTO(),
+		fieldType = IssueRequiredFieldTypeEnum.TEXT
+	)
+}

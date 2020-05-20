@@ -10,4 +10,9 @@ data class ProjectTreeMapRequestDTO(
 	 * Revision ID (required)
 	 */
 	val revisionId: String
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = ""
+	)
+}

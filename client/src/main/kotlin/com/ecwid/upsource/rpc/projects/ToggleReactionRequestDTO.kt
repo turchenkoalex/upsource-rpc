@@ -15,4 +15,10 @@ data class ToggleReactionRequestDTO(
 	 * Whether to add or remove the reaction (required)
 	 */
 	val doAdd: Boolean
-)
+) {
+	internal constructor() : this(
+		target = ReactionTargetDTO(),
+		reactionId = "",
+		doAdd = false
+	)
+}

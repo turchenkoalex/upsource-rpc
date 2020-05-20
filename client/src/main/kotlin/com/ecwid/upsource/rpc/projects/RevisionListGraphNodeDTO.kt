@@ -10,4 +10,9 @@ data class RevisionListGraphNodeDTO(
 	 * Node color (required)
 	 */
 	val color: Int
-)
+) {
+	internal constructor() : this(
+		position = 0,
+		color = 0
+	)
+}

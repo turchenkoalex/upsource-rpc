@@ -54,15 +54,31 @@ data class RevisionInfoDTO(
 	/**
 	 * Revision tags, if any (repeated)
 	 */
-	val tags: List<String>,
+	val tags: List<String> = emptyList(),
 
 	/**
 	 * Branch head labels, if any (repeated)
 	 */
-	val branchHeadLabel: List<String>,
+	val branchHeadLabel: List<String> = emptyList(),
 
 	/**
 	 * List of parent revisions IDs (repeated)
 	 */
-	val parentRevisionIds: List<String>
-)
+	val parentRevisionIds: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		revisionId = "",
+		revisionDate = 0L,
+		effectiveRevisionDate = 0L,
+		revisionCommitMessage = "",
+		state = RevisionStateEnum.NONE,
+		vcsRevisionId = "",
+		shortRevisionId = "",
+		authorId = "",
+		reachability = RevisionReachabilityEnum.REACHABLE,
+		tags = emptyList(),
+		branchHeadLabel = emptyList(),
+		parentRevisionIds = emptyList()
+	)
+}

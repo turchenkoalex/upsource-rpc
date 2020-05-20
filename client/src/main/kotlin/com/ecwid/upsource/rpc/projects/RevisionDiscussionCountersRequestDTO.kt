@@ -9,5 +9,10 @@ data class RevisionDiscussionCountersRequestDTO(
 	/**
 	 * Additional revisions filter (optional)
 	 */
-	val fileNameFilter: String?
-)
+	val fileNameFilter: String? = null
+) {
+	internal constructor() : this(
+		revisions = RevisionListDTO(),
+		fileNameFilter = null
+	)
+}

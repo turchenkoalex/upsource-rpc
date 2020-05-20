@@ -9,5 +9,10 @@ data class EditLabelsRequestDTO(
 	/**
 	 * Discussion labels IDs (repeated)
 	 */
-	val labelId: List<String>
-)
+	val labelId: List<String> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		labelId = emptyList()
+	)
+}

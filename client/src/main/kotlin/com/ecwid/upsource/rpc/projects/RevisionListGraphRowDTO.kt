@@ -4,10 +4,10 @@ data class RevisionListGraphRowDTO(
 	/**
 	 * See RevisionListGraphNodeDTO parameters (repeated)
 	 */
-	val nodes: List<RevisionListGraphNodeDTO>,
+	val nodes: List<RevisionListGraphNodeDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphEdgeDTO parameters (repeated)
 	 */
-	val edges: List<RevisionListGraphEdgeDTO>
+	val edges: List<RevisionListGraphEdgeDTO> = emptyList()
 )

@@ -24,15 +24,25 @@ data class RevisionsInReviewResponseDTO(
 	/**
 	 * An optional field denoting that all revisions in a review are on a same branch (optional)
 	 */
-	val branchHint: String?,
+	val branchHint: String? = null,
 
 	/**
 	 * An optional field denoting that review can be converted to branch review (optional)
 	 */
-	val canTrackBranch: Boolean?,
+	val canTrackBranch: Boolean? = null,
 
 	/**
 	 * Internal (optional)
 	 */
-	val canCherryPickWithTeamCity: Boolean?
-)
+	val canCherryPickWithTeamCity: Boolean? = null
+) {
+	internal constructor() : this(
+		allRevisions = RevisionDescriptorListDTO(),
+		newRevisions = RevisionsSetDTO(),
+		hasMissingRevisions = false,
+		canSquash = false,
+		branchHint = null,
+		canTrackBranch = null,
+		canCherryPickWithTeamCity = null
+	)
+}

@@ -19,5 +19,12 @@ data class FindCommitsResponseCommitDTO(
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
 	 */
-	val changes: RevisionsDiffDTO?
-)
+	val changes: RevisionsDiffDTO? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		projectName = "",
+		revision = RevisionInfoDTO(),
+		changes = null
+	)
+}

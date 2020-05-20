@@ -14,10 +14,17 @@ data class RevisionsListRequestDTO(
 	/**
 	 * Number of revisions to skip from the top (for pagination) (optional)
 	 */
-	val skip: Int?,
+	val skip: Int? = null,
 
 	/**
 	 * Whether revision graph should be returned (optional)
 	 */
-	val requestGraph: Boolean?
-)
+	val requestGraph: Boolean? = null
+) {
+	internal constructor() : this(
+		projectId = "",
+		limit = 0,
+		skip = null,
+		requestGraph = null
+	)
+}

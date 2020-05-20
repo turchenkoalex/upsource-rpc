@@ -19,10 +19,18 @@ data class ModulesDistributionRequestDTO(
 	/**
 	 * User IDs of committers (repeated)
 	 */
-	val committers: List<String>,
+	val committers: List<String> = emptyList(),
 
 	/**
 	 * The specific time intervals that define the distribution (Unix timestamps) (repeated)
 	 */
-	val timePoints: List<Long>
-)
+	val timePoints: List<Long> = emptyList()
+) {
+	internal constructor() : this(
+		projectId = "",
+		fromTime = 0L,
+		toTime = 0L,
+		committers = emptyList(),
+		timePoints = emptyList()
+	)
+}

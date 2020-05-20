@@ -25,4 +25,12 @@ data class UpdateTaskListRequestDTO(
 	 * New value of the task list item being updated (required)
 	 */
 	val itemValue: Boolean
-)
+) {
+	internal constructor() : this(
+		projectId = "",
+		discussionId = "",
+		commentId = "",
+		itemIndex = 0,
+		itemValue = false
+	)
+}

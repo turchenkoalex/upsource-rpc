@@ -4,5 +4,5 @@ data class VcsHostingResponseDTO(
 	/**
 	 * See VcsHostingServiceDTO parameters (repeated)
 	 */
-	val service: List<VcsHostingServiceDTO>
+	val service: List<VcsHostingServiceDTO> = emptyList()
 )

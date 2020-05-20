@@ -4,5 +4,5 @@ data class ProjectTreeMapDTO(
 	/**
 	 * See ProjectTreeMapEntryDTO parameters (repeated)
 	 */
-	val entries: List<ProjectTreeMapEntryDTO>
+	val entries: List<ProjectTreeMapEntryDTO> = emptyList()
 )

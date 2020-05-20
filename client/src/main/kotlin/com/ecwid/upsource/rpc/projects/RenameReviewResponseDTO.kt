@@ -4,5 +4,5 @@ data class RenameReviewResponseDTO(
 	/**
 	 * GitHub sync result. see SyncResultEnum parameters (optional)
 	 */
-	val syncResult: SyncResultEnum?
+	val syncResult: SyncResultEnum? = null
 )

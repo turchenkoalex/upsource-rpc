@@ -9,5 +9,10 @@ data class TestPOP3MailboxResponseDTO(
 	/**
 	 * Optional text message (optional)
 	 */
-	val message: String?
-)
+	val message: String? = null
+) {
+	internal constructor() : this(
+		status = TestPOP3MailboxStatusEnum.OK,
+		message = null
+	)
+}

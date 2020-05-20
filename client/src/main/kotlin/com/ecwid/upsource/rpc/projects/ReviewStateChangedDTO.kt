@@ -10,4 +10,9 @@ data class ReviewStateChangedDTO(
 	 * See ReviewStateEnum parameters (required)
 	 */
 	val newState: ReviewStateEnum
-)
+) {
+	internal constructor() : this(
+		oldState = ReviewStateEnum.OPEN,
+		newState = ReviewStateEnum.OPEN
+	)
+}
