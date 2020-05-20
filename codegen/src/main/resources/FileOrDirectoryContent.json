@@ -1,0 +1,635 @@
+{
+  "enums": [
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "canGotoDeclaration"
+        },
+        {
+          "number": 2,
+          "name": "canFindUsages"
+        },
+        {
+          "number": 4,
+          "name": "canViewHierarchy"
+        },
+        {
+          "number": 8,
+          "name": "canHaveDocumentation"
+        },
+        {
+          "number": 16,
+          "name": "isDeclaration"
+        },
+        {
+          "number": 32,
+          "name": "isWriteAccess"
+        }
+      ],
+      "name": "CapabilityFlagsEnum",
+      "description": "Describes \"capabilities\" of a PSI element"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "hasSuperElements"
+        },
+        {
+          "number": 2,
+          "name": "hasDerivedElements"
+        }
+      ],
+      "name": "GutterMarkEnum",
+      "description": "Describes the properties of a gutter marker"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "none"
+        },
+        {
+          "number": 2,
+          "name": "ok"
+        },
+        {
+          "number": 3,
+          "name": "warning"
+        },
+        {
+          "number": 4,
+          "name": "error"
+        }
+      ],
+      "name": "FileWarningLevelEnum",
+      "description": "Describes PSI inspections level"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "information"
+        },
+        {
+          "number": 2,
+          "name": "weak_warning"
+        },
+        {
+          "number": 3,
+          "name": "warning"
+        },
+        {
+          "number": 4,
+          "name": "error"
+        }
+      ],
+      "name": "InspectionSeverityEnum",
+      "description": "Describes severity of an inspection result"
+    }
+  ],
+  "messages": [
+    {
+      "name": "FoldingInfoDTO",
+      "fields": [
+        {
+          "name": "fromOffset",
+          "description": "Start offset of the foldable range",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "toOffset",
+          "description": "End offset of the foldable range",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "isInitialCollapsed",
+          "description": "Whether the range is initially collapsed",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "collapsedText",
+          "description": "Text to be displayed in place of the folded range",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "TextMarkupDTO",
+      "fields": [
+        {
+          "name": "range",
+          "description": "Text range",
+          "label": "required",
+          "type": "RangeDTO"
+        },
+        {
+          "name": "textAttribute",
+          "description": "See TextAttributeDTO parameters",
+          "label": "required",
+          "type": "TextAttributeDTO"
+        }
+      ]
+    },
+    {
+      "name": "TextAttributeDTO",
+      "fields": [
+        {
+          "name": "fgColor",
+          "description": "Foreground color",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "bgColor",
+          "description": "Background color",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "fontStyle",
+          "description": "Font style (italic, bold)",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "effectStyle",
+          "description": "Text effect (underline, wave underline, strikeout, etc.)",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "effectColor",
+          "description": "Effect color",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "errorStripeColor",
+          "description": "Error stripe color",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "FileTextMarkupDTO",
+      "fields": [{
+        "name": "markup",
+        "description": "See TextMarkupDTO parameters",
+        "label": "repeated",
+        "type": "TextMarkupDTO"
+      }]
+    },
+    {
+      "name": "FileReferenceCodeMarkupDTO",
+      "fields": [
+        {
+          "name": "markup",
+          "description": "See ReferenceCodeMarkupItemDTO parameters",
+          "label": "repeated",
+          "type": "ReferenceCodeMarkupItemDTO"
+        },
+        {
+          "name": "navigationPointsTable",
+          "description": "See MarkupNavigationPointDTO parameters",
+          "label": "repeated",
+          "type": "MarkupNavigationPointDTO"
+        },
+        {
+          "name": "fileNameTable",
+          "description": "See FileInRevisionDTO parameters",
+          "label": "repeated",
+          "type": "FileInRevisionDTO"
+        },
+        {
+          "name": "localDeclarationRanges",
+          "description": "See LocalDeclarationRangeDTO parameters",
+          "label": "repeated",
+          "type": "LocalDeclarationRangeDTO"
+        }
+      ]
+    },
+    {
+      "name": "LocalDeclarationRangeDTO",
+      "fields": [
+        {
+          "name": "targetId",
+          "description": "ID of the target element",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "startOffset",
+          "description": "Start offset",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "endOffset",
+          "description": "End offset",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "MarkupNavigationPointDTO",
+      "fields": [
+        {
+          "name": "targetId",
+          "description": "ID of the target element",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "fileId",
+          "description": "Index of the file name as stored in the 'fileNameTable' table of the Upsource database",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "startOffset",
+          "description": "Start offset",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "endOffset",
+          "description": "End offset",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "stubIndex",
+          "description": "Stub index ID",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "ReferenceCodeMarkupItemDTO",
+      "fields": [
+        {
+          "name": "range",
+          "description": "See RangeDTO parameters",
+          "label": "required",
+          "type": "RangeDTO"
+        },
+        {
+          "name": "markupId",
+          "description": "ID of the markup element",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "targetId",
+          "description": "ID of the target element",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "capabilityFlags",
+          "description": "Bit mask of the 'CapabilityFlagsEnum' enum",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "localIndex",
+          "description": "Used to identify the exact reference when references overlap",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "hash",
+          "description": "Hash of the PSI element (if any), used to test PSI elements for equality",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "FileContentDTO",
+      "fields": [
+        {
+          "name": "text",
+          "description": "File text",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "foldings",
+          "description": "See FoldingInfoDTO parameters",
+          "label": "repeated",
+          "type": "FoldingInfoDTO"
+        },
+        {
+          "name": "isSyntaxSupported",
+          "description": "Whether syntax markup is available for this file type",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "syntax",
+          "description": "See TextMarkupDTO parameters",
+          "label": "repeated",
+          "type": "TextMarkupDTO"
+        }
+      ]
+    },
+    {
+      "name": "FileContentResponseDTO",
+      "fields": [
+        {
+          "name": "contentType",
+          "description": "See FileContentTypeDTO parameters",
+          "label": "required",
+          "type": "FileContentTypeDTO"
+        },
+        {
+          "name": "fileContent",
+          "description": "See FileContentDTO parameters",
+          "label": "optional",
+          "type": "FileContentDTO"
+        }
+      ]
+    },
+    {
+      "name": "FilePsiRequestDTO",
+      "fields": [
+        {
+          "name": "file",
+          "description": "See FileInRevisionDTO parameters",
+          "label": "required",
+          "type": "FileInRevisionDTO"
+        },
+        {
+          "name": "requestReferences",
+          "description": "Whether to request references",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "requestGutterMarks",
+          "description": "Whether to request gutter marks",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "requestInspections",
+          "description": "Whether to request inspections",
+          "label": "optional",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "FilePsiResponseDTO",
+      "fields": [
+        {
+          "name": "hasPsi",
+          "description": "Whether the code model is available for a file",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "psiStatusMessage",
+          "description": "PSI status message, e.g. a failure to provide code intelligence or another message regarding the file in general",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "referenceMarkup",
+          "description": "See FileReferenceCodeMarkupDTO parameters",
+          "label": "optional",
+          "type": "FileReferenceCodeMarkupDTO"
+        },
+        {
+          "name": "textMarkup",
+          "description": "See FileTextMarkupDTO parameters",
+          "label": "optional",
+          "type": "FileTextMarkupDTO"
+        },
+        {
+          "name": "gutterMarks",
+          "description": "See GutterCodeMarkupsDTO parameters",
+          "label": "optional",
+          "type": "GutterCodeMarkupsDTO"
+        },
+        {
+          "name": "inspections",
+          "description": "See CodeInspectionsDTO parameters",
+          "label": "optional",
+          "type": "CodeInspectionsDTO"
+        },
+        {
+          "name": "externalInspections",
+          "description": "External inspections",
+          "label": "repeated",
+          "type": "InspectionCodeMarkupItemDTO"
+        }
+      ]
+    },
+    {
+      "name": "FileContentTypeDTO",
+      "fields": [
+        {
+          "name": "isText",
+          "description": "Whether the file is presentable as text",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isDirectory",
+          "description": "Whether the file is a directory",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "isGenerated",
+          "description": "Whether file contents are generated",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "canDownload",
+          "description": "Whether the file can be downloaded",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "fileType",
+          "description": "File extension",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "CodeInspectionsDTO",
+      "fields": [
+        {
+          "name": "inspections",
+          "description": "See InspectionCodeMarkupItemDTO parameters",
+          "label": "repeated",
+          "type": "InspectionCodeMarkupItemDTO"
+        },
+        {
+          "name": "fileLevel",
+          "description": "See FileWarningLevelEnum parameters",
+          "label": "required",
+          "type": "FileWarningLevelEnum"
+        }
+      ]
+    },
+    {
+      "name": "InspectionsDiffDTO",
+      "fields": [{
+        "name": "diffForFile",
+        "description": "See InspectionsDiffForFileDTO parameters",
+        "label": "repeated",
+        "type": "InspectionsDiffForFileDTO"
+      }]
+    },
+    {
+      "name": "GutterCodeMarkupsDTO",
+      "fields": [{
+        "name": "items",
+        "description": "See GutterCodeMarkupItemDTO parameters",
+        "label": "repeated",
+        "type": "GutterCodeMarkupItemDTO"
+      }]
+    },
+    {
+      "name": "GutterCodeMarkupItemDTO",
+      "fields": [
+        {
+          "name": "range",
+          "description": "See RangeDTO parameters",
+          "label": "required",
+          "type": "RangeDTO"
+        },
+        {
+          "name": "gutterMark",
+          "description": "See GutterMarkEnum parameters",
+          "label": "repeated",
+          "type": "GutterMarkEnum"
+        },
+        {
+          "name": "relatedSemanticMarkup",
+          "description": "Index in 'referenceMarkup' list this gutter mark corresponds to",
+          "label": "required",
+          "type": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "InspectionCodeMarkupItemDTO",
+      "fields": [
+        {
+          "name": "range",
+          "description": "See RangeDTO parameters",
+          "label": "required",
+          "type": "RangeDTO"
+        },
+        {
+          "name": "textAttribute",
+          "description": "See TextAttributeDTO parameters",
+          "label": "required",
+          "type": "TextAttributeDTO"
+        },
+        {
+          "name": "message",
+          "description": "Inspection message",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "severity",
+          "description": "See InspectionSeverityEnum parameters",
+          "label": "required",
+          "type": "InspectionSeverityEnum"
+        },
+        {
+          "name": "textAttributesKey",
+          "description": "Name (if any) of this markup key, given by IntelliJ IDEA",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "InspectionsDiffForFileDTO",
+      "fields": [
+        {
+          "name": "path",
+          "description": "A full path to the file starting with a slash (e.g. /directory/file.txt)",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "introduced",
+          "description": "Introduced problems. See InspectionCodeMarkupItemDTO parameters",
+          "label": "repeated",
+          "type": "InspectionCodeMarkupItemDTO"
+        },
+        {
+          "name": "fixed",
+          "description": "Fixed problems. See InspectionCodeMarkupItemDTO parameters",
+          "label": "repeated",
+          "type": "InspectionCodeMarkupItemDTO"
+        },
+        {
+          "name": "fixedOriginalRanges",
+          "description": "A list of ranges pointing to fixed problems in the original revision",
+          "label": "repeated",
+          "type": "RangeDTO"
+        }
+      ]
+    },
+    {
+      "name": "FileContentRawResponseDTO",
+      "fields": [{
+        "name": "base64",
+        "description": "Base64-encoded contents of a file",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "FileContributorsResponseDTO",
+      "fields": [
+        {
+          "name": "authorIds",
+          "description": "User IDs of the contributors",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "authoredChangesCounts",
+          "description": "Number of changes made to the file",
+          "label": "repeated",
+          "type": "Int32"
+        },
+        {
+          "name": "reviewedChangesCounts",
+          "description": "Number of reviews performed on the file",
+          "label": "repeated",
+          "type": "Int32"
+        },
+        {
+          "name": "majorContributorUserId",
+          "description": "The major contributor to the file, if there is one",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

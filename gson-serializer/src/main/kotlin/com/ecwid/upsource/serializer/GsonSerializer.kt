@@ -6,6 +6,10 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 import java.util.concurrent.ConcurrentHashMap
+import java.util.logging.Level
+import java.util.logging.Logger
+
+private val log = Logger.getLogger(GsonSerializer::class.qualifiedName)
 
 class GsonSerializer : Serializer {
 	private val gsonMap = ConcurrentHashMap<Class<*>, Pair<Gson, Type>>()
@@ -23,6 +27,7 @@ class GsonSerializer : Serializer {
 					return wrappedErrorMessage.error.toRpcResponse()
 				}
 			} catch (e: Exception) {
+				// nothing to do
 			}
 		}
 
@@ -36,6 +41,7 @@ class GsonSerializer : Serializer {
 		return try {
 			gson.fromJson(response.content, typeToken)
 		} catch (e: Exception) {
+			log.log(Level.WARNING, "Error while deserialize json response", e)
 			RpcResponse.Error(code = 0, message = e.message ?: "Json Parse Error")
 		}
 	}

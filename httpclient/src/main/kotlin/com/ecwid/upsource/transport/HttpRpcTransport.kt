@@ -6,6 +6,10 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.Duration
 import java.util.*
+import java.util.logging.Level
+import java.util.logging.Logger
+
+private val log = Logger.getLogger(HttpRpcTransport::class.qualifiedName)
 
 class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) : RpcTransport {
 	private val client = HttpClient.newBuilder()
@@ -27,9 +31,12 @@ class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) : Rpc
 
 		val httpResponse = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
 
+		val body = httpResponse.body()
+		log.log(Level.FINE, "Http response ${httpResponse.statusCode()}: $body")
+
 		return RpcTransportResponse(
 			statusCode = httpResponse.statusCode(),
-			content = httpResponse.body()
+			content = body
 		)
 	}
 }
