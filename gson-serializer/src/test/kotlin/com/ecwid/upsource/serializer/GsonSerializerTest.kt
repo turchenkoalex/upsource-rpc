@@ -1,5 +1,6 @@
 package com.ecwid.upsource.serializer
 
+import com.ecwid.upsource.rpc.projects.ReviewListDTO
 import com.ecwid.upsource.rpc.projects.ReviewStateEnum
 import com.ecwid.upsource.rpc.projects.RevisionReviewInfoListDTO
 import com.ecwid.upsource.transport.RpcResponse
@@ -24,6 +25,21 @@ internal class GsonSerializerTest {
 		assertThat(reviewInfo.reviewId.projectId).isEqualTo("project")
 		assertThat(reviewInfo.branch).isEqualTo(listOf("my-branch"))
 		assertThat(reviewInfo.state).isEqualTo(ReviewStateEnum.Open)
+	}
+
+	@Test
+	fun `Empty ReviewListDTO deserialize test`() {
+		val serializer = GsonSerializer()
+		val transportResponse = readTransportResponse("reviewList.json")
+		val response = serializer.deserialize(transportResponse, ReviewListDTO::class.java)
+
+		require(response is RpcResponse.Ok)
+
+		val reviewList = response.result
+
+		assertThat(reviewList.hasMore).isEqualTo(true)
+		assertThat(reviewList.totalCount).isEqualTo(101)
+		assertThat(reviewList.reviews).isEmpty()
 	}
 
 	private fun readTransportResponse(fileName: String): RpcTransportResponse {
