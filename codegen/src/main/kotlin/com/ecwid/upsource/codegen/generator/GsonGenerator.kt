@@ -1,20 +1,21 @@
 package com.ecwid.upsource.codegen.generator
 
-import com.ecwid.upsource.codegen.*
+import com.ecwid.upsource.codegen.Config
+import com.ecwid.upsource.codegen.SERIALIZER_PACKAGE
+import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.EnumType
 import com.ecwid.upsource.codegen.schema.UpsourceFile
 import com.ecwid.upsource.codegen.templates.Template
 import com.ecwid.upsource.codegen.templates.Templates
 
-class GsonTypeAdapterGenerator(
+class GsonGenerator(
 	private val config: Config,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
 	override fun processFiles(files: List<UpsourceFile>, typeMapping: TypeMapping) {
 		super.processFiles(files, typeMapping)
-
 		createGenericGsonBuilder(files, typeMapping)
 	}
 
@@ -41,7 +42,7 @@ class GsonTypeAdapterGenerator(
 			emptyList()
 		}
 
-		val template = Template.EnumGsonTypeAdapterTemplate(
+		val template = Template.GsonEnumTypeAdapterTemplate(
 			filePackage = filePackage,
 			imports = imports,
 			enum = enum
@@ -61,7 +62,7 @@ class GsonTypeAdapterGenerator(
 			return
 		}
 
-		val filePackage = SERIALIZER_PACKAGE
+		val filePackage = "$SERIALIZER_PACKAGE.gson"
 		val filename = "GenericGsonBuilder.kt"
 		val content = buildGenericGsonBuilder(
 			filePackage = filePackage,
@@ -82,13 +83,12 @@ class GsonTypeAdapterGenerator(
 			"$typePackage.${it.name}"
 		}
 
-		val template = Template.GenericGsonBuilderTemplate(
+		val template = Template.GsonGenericBuilderTemplate(
 			filePackage = filePackage,
 			types = types
 		)
 
 		return templates.render(template)
 	}
-
 
 }

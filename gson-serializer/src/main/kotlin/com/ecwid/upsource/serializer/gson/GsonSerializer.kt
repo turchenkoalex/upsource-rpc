@@ -1,5 +1,6 @@
-package com.ecwid.upsource.serializer
+package com.ecwid.upsource.serializer.gson
 
+import com.ecwid.upsource.serializer.Serializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
 import com.google.gson.Gson
@@ -20,29 +21,32 @@ class GsonSerializer : Serializer {
 	}
 
 	override fun <T> deserialize(response: RpcTransportResponse, clazz: Class<T>): RpcResponse<T> {
-		if (response.statusCode != 200) {
+		if (response.statusCode == 200) {
 			try {
-				val wrappedErrorMessage = genericGson.fromJson(response.content, WrappedErrorMessage::class.java)
-				if (wrappedErrorMessage?.error != null) {
-					return wrappedErrorMessage.error.toRpcResponse()
+				val (gson, typeToken) = gsonMap.computeIfAbsent(clazz) {
+					val gson = typedGsonBuilder(it).create()
+					val typeToken = object : TypeToken<RpcResponse<T>>() {}.type
+
+					return@computeIfAbsent gson to typeToken
 				}
+
+				return gson.fromJson(response.content, typeToken)
 			} catch (e: Exception) {
-				// nothing to do
+				log.log(Level.WARNING, "Error while deserialize json response", e)
 			}
 		}
 
-		val (gson, typeToken) = gsonMap.computeIfAbsent(clazz) {
-			val gson = typedGsonBuilder(it).create()
-			val typeToken = object : TypeToken<RpcResponse<T>>() {}.type
 
-			return@computeIfAbsent gson to typeToken
-		}
-
-		return try {
-			gson.fromJson(response.content, typeToken)
+		try {
+			val wrappedErrorMessage = genericGson.fromJson(response.content, WrappedErrorMessage::class.java)
+			if (wrappedErrorMessage?.error != null) {
+				return wrappedErrorMessage.error.toRpcResponse()
+			}
 		} catch (e: Exception) {
-			log.log(Level.WARNING, "Error while deserialize json response", e)
-			RpcResponse.Error(code = 0, message = e.message ?: "Json Parse Error")
+			// nothing to do
 		}
+
+		// Fallback
+		return RpcResponse.Error(code = response.statusCode, message = response.content)
 	}
 }

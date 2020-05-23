@@ -1,4 +1,4 @@
-package com.ecwid.upsource.serializer
+package com.ecwid.upsource.serializer.gson
 
 import com.ecwid.upsource.transport.RpcResponse
 

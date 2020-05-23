@@ -1,6 +1,6 @@
-package com.ecwid.upsource.serializer
+package com.ecwid.upsource.serializer.gson
 
-import com.ecwid.upsource.serializer.adapters.RpcResponseTypeAdapter
+import com.ecwid.upsource.serializer.gson.adapters.RpcResponseTypeAdapter
 import com.ecwid.upsource.transport.RpcResponse
 import com.google.gson.GsonBuilder
 

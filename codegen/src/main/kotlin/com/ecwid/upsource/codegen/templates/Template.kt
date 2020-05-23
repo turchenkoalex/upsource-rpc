@@ -29,16 +29,16 @@ sealed class Template(val filename: String) {
 		val service: Service
 	) : Template("service-impl.ftl")
 
-	class EnumGsonTypeAdapterTemplate(
+	class GsonEnumTypeAdapterTemplate(
 		val filePackage: String,
 		val imports: List<String>,
 		val enum: EnumType
-	) : Template("enum-gson-typeadapter.ftl")
+	) : Template("gson-enum-typeadapter.ftl")
 
-	class GenericGsonBuilderTemplate(
+	class GsonGenericBuilderTemplate(
 		val filePackage: String,
 		val types: List<String>
-	) : Template("generic-gson-builder.ftl")
+	) : Template("gson-generic-builder.ftl")
 
 	class ClientFactoryTemplate(
 		val filePackage: String,

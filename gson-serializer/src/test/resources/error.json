@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": 103,
+    "message": "User guest doesn't have read access to project MyProject"
+  }
+}

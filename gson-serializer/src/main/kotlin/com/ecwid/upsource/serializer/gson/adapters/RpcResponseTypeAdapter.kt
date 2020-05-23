@@ -1,6 +1,6 @@
-package com.ecwid.upsource.serializer.adapters
+package com.ecwid.upsource.serializer.gson.adapters
 
-import com.ecwid.upsource.serializer.ErrorMessage
+import com.ecwid.upsource.serializer.gson.ErrorMessage
 import com.ecwid.upsource.transport.RpcResponse
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonElement

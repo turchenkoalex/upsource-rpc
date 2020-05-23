@@ -3,6 +3,7 @@ package com.ecwid.upsource.serializer
 import com.ecwid.upsource.rpc.projects.ReviewListDTO
 import com.ecwid.upsource.rpc.projects.ReviewStateEnum
 import com.ecwid.upsource.rpc.projects.RevisionReviewInfoListDTO
+import com.ecwid.upsource.serializer.gson.GsonSerializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
 import org.assertj.core.api.Assertions.assertThat
@@ -10,9 +11,10 @@ import org.junit.jupiter.api.Test
 import java.io.File
 
 internal class GsonSerializerTest {
+	private val serializer = GsonSerializer()
+
 	@Test
 	fun `RevisionReviewInfoListDTO deserialize test`() {
-		val serializer = GsonSerializer()
 		val transportResponse = readTransportResponse("reviewInfo.json")
 		val response = serializer.deserialize(transportResponse, RevisionReviewInfoListDTO::class.java)
 
@@ -29,7 +31,6 @@ internal class GsonSerializerTest {
 
 	@Test
 	fun `Empty ReviewListDTO deserialize test`() {
-		val serializer = GsonSerializer()
 		val transportResponse = readTransportResponse("reviewList.json")
 		val response = serializer.deserialize(transportResponse, ReviewListDTO::class.java)
 
@@ -40,6 +41,17 @@ internal class GsonSerializerTest {
 		assertThat(reviewList.hasMore).isEqualTo(true)
 		assertThat(reviewList.totalCount).isEqualTo(101)
 		assertThat(reviewList.reviews).isEmpty()
+	}
+
+	@Test
+	fun `Error test`() {
+		val transportResponse = readTransportResponse("error.json")
+		val response = serializer.deserialize(transportResponse, ReviewListDTO::class.java)
+
+		require(response is RpcResponse.Error)
+
+		assertThat(response.code).isEqualTo(103)
+		assertThat(response.message).isEqualTo("User guest doesn't have read access to project MyProject")
 	}
 
 	private fun readTransportResponse(fileName: String): RpcTransportResponse {
