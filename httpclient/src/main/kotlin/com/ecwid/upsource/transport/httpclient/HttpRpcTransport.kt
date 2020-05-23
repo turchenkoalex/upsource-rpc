@@ -1,5 +1,8 @@
-package com.ecwid.upsource.transport
+package com.ecwid.upsource.transport.httpclient
 
+import com.ecwid.upsource.transport.RpcTransport
+import com.ecwid.upsource.transport.RpcTransportResponse
+import com.ecwid.upsource.transport.UpsourceConnection
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -11,7 +14,8 @@ import java.util.logging.Logger
 
 private val log = Logger.getLogger(HttpRpcTransport::class.qualifiedName)
 
-class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) : RpcTransport {
+class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) :
+	RpcTransport {
 	private val client = HttpClient.newBuilder()
 		.connectTimeout(Duration.ofSeconds(10))
 		.build()
