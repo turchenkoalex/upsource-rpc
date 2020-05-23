@@ -1,5 +1,8 @@
-package com.ecwid.upsource.transport
+package com.ecwid.upsource.transport.apache
 
+import com.ecwid.upsource.transport.RpcTransport
+import com.ecwid.upsource.transport.RpcTransportResponse
+import com.ecwid.upsource.transport.UpsourceConnection
 import org.apache.http.HttpHeaders
 import org.apache.http.client.config.RequestConfig
 import org.apache.http.client.methods.RequestBuilder
@@ -10,12 +13,12 @@ import org.apache.http.util.EntityUtils
 import java.time.Duration
 import java.util.*
 
-
 private val CONNECTION_TIMEOUT = Duration.ofSeconds(10).toMillis().toInt()
 private val READ_TIMEOUT = Duration.ofSeconds(5).toMillis().toInt()
 private const val MAX_CONNECTIONS = 10
 
-class ApacheHttpRpcTransport(private val upsourceConnection: UpsourceConnection) : RpcTransport {
+class ApacheHttpRpcTransport(private val upsourceConnection: UpsourceConnection) :
+	RpcTransport {
 	private val httpClient: org.apache.http.client.HttpClient
 
 	init {
@@ -42,7 +45,10 @@ class ApacheHttpRpcTransport(private val upsourceConnection: UpsourceConnection)
 			.setEntity(StringEntity(request, Charsets.UTF_8))
 			.setHeader(
 				HttpHeaders.AUTHORIZATION,
-				basicAuthorizationHeader(username = upsourceConnection.username, password = upsourceConnection.password)
+				basicAuthorizationHeader(
+					username = upsourceConnection.username,
+					password = upsourceConnection.password
+				)
 			)
 			.build()
 
