@@ -40,6 +40,17 @@ sealed class Template(val filename: String) {
 		val types: List<String>
 	) : Template("gson-generic-builder.ftl")
 
+	class JaksonEnumTemplate(
+		val filePackage: String,
+		val enum: EnumType
+	) : Template("jakson-enum.ftl")
+
+	class JaksonModuleTemplate(
+		val filePackage: String,
+		val enums: List<String>,
+		val imports: List<String>
+	) : Template("jakson-module.ftl")
+
 	class ClientFactoryTemplate(
 		val filePackage: String,
 		val rpcPackage: String,

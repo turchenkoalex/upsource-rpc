@@ -1,6 +1,6 @@
-package com.ecwid.upsource.serializer
+package com.ecwid.upsource.serializer.jakson
 
 import com.ecwid.upsource.ClientBuilderWithTransport
 
 fun <T> ClientBuilderWithTransport<T>.withJaksonSerializer() =
-	this.withSerializer(JaksonSerializer())
+	withSerializer(JaksonSerializer())

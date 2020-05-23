@@ -5,9 +5,6 @@ import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.UpsourceFile
 import com.ecwid.upsource.codegen.templates.Templates
-import java.util.logging.Logger
-
-private val log = Logger.getLogger(CodeGenerator::class.qualifiedName)
 
 class CodeGenerator(
 	config: Config,
@@ -18,7 +15,8 @@ class CodeGenerator(
 		EnumsGenerator(config, fileWriter, templates),
 		MessagesGenerator(config, fileWriter, templates),
 		ServicesGenerator(config, fileWriter, templates),
-		GsonTypeAdapterGenerator(config, fileWriter, templates)
+		GsonGenerator(config, fileWriter, templates),
+		JaksonGenerator(config, fileWriter, templates)
 	)
 
 	fun generate(files: List<UpsourceFile>) {

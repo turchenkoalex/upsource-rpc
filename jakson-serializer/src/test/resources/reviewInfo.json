@@ -1,0 +1,24 @@
+{
+  "result": {
+    "reviewInfo": [
+      {
+        "reviewInfo": {
+          "reviewId": {
+            "projectId": "project",
+            "reviewId": "REVIEW-ID-1"
+          },
+          "title": "Review of my branch",
+          "state": 1,
+          "branch": [
+            "my-branch"
+          ],
+          "completionRate": {
+            "completedCount": 0,
+            "reviewersCount": 2,
+            "hasConcern": true
+          }
+        }
+      }
+    ]
+  }
+}

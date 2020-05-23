@@ -80,7 +80,13 @@ class MessagesGenerator(
 		return message.copy(fields = normalizedFields)
 	}
 
-	private fun buildDefaultValue(label: String, filePackage: String, type: String, normalizedType: String, typeMapping: TypeMapping): String {
+	private fun buildDefaultValue(
+		label: String,
+		filePackage: String,
+		type: String,
+		normalizedType: String,
+		typeMapping: TypeMapping
+	): String {
 		return when (label) {
 			"optional" -> "null"
 			"repeated" -> "emptyList()"
