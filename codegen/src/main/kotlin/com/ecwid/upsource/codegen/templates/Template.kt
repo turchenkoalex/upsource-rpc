@@ -56,4 +56,16 @@ sealed class Template(val filename: String) {
 		val rpcPackage: String,
 		val services: List<Service>
 	) : Template("client-factory.ftl")
+
+	class WebhookTemplate(
+		val filePackage: String,
+		val types: List<String>,
+		val imports: List<String>
+	) : Template("webhook.ftl")
+
+	class JaksonWebhookParserTemplate(
+		val filePackage: String,
+		val types: List<String>,
+		val imports: List<String>
+	) : Template("jakson-webhook-parser.ftl")
 }

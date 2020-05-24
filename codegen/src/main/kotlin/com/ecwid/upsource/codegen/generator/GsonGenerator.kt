@@ -1,6 +1,5 @@
 package com.ecwid.upsource.codegen.generator
 
-import com.ecwid.upsource.codegen.Config
 import com.ecwid.upsource.codegen.SERIALIZER_PACKAGE
 import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
@@ -10,7 +9,7 @@ import com.ecwid.upsource.codegen.templates.Template
 import com.ecwid.upsource.codegen.templates.Templates
 
 class GsonGenerator(
-	private val config: Config,
+	private val libraryDir: String,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
@@ -26,7 +25,7 @@ class GsonGenerator(
 			val fileName = "${enum.name}TypeAdapter.kt"
 			val content = buildContent(filePackage, enum, typeMapping)
 			fileWriter.writeFile(
-				dir = config.gsonLibraryDir,
+				dir = libraryDir,
 				filePackage = filePackage,
 				filename = fileName,
 				content = content
@@ -70,7 +69,7 @@ class GsonGenerator(
 			typeMapping = typeMapping
 		)
 		fileWriter.writeFile(
-			dir = config.gsonLibraryDir,
+			dir = libraryDir,
 			filePackage = filePackage,
 			filename = filename,
 			content = content

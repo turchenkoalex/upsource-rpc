@@ -4,6 +4,7 @@ data class Config(
 	val clientDir: String,
 	val gsonLibraryDir: String,
 	val jaksonLibraryDir: String,
+	val webhooksDir: String,
 	val dryRun: Boolean
 )
 

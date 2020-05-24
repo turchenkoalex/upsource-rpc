@@ -9,3 +9,4 @@ curl -o "$DIR"/Misc.json "${UPSOURCE_URL}"/~api_doc/json/Misc.json
 curl -o "$DIR"/Analytics.json "${UPSOURCE_URL}"/~api_doc/json/Analytics.json
 curl -o "$DIR"/FindUsages.json "${UPSOURCE_URL}"/~api_doc/json/FindUsages.json
 curl -o "$DIR"/FileOrDirectoryContent.json "${UPSOURCE_URL}"/~api_doc/json/FileOrDirectoryContent.json
+curl -o "$DIR"/Events.json "${UPSOURCE_URL}"/~api_doc/json/Events.json

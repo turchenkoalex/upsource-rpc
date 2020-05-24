@@ -30,7 +30,8 @@ fun main(args: Array<String>) {
 		fileWriter = fileWriter
 	)
 
-	val filenames = listOf(
+	val upsourceFileLoader = UpsourceFileLoader(Resources())
+	val clientFiles = listOf(
 		"Ids.json",
 		"Projects.json",
 		"Users.json",
@@ -40,12 +41,14 @@ fun main(args: Array<String>) {
 		"FindUsages.json",
 		"FileOrDirectoryContent.json",
 		"Service.json"
-	)
+	).map(upsourceFileLoader::loadUpsourceFile)
 
-	val upsourceFileLoader = UpsourceFileLoader(Resources())
-	val files = filenames.map(upsourceFileLoader::loadUpsourceFile)
+	val webhooksFiles = listOf(
+		"Events.json"
+	).map(upsourceFileLoader::loadUpsourceFile)
 
-	codeGenerator.generate(files)
+	codeGenerator.generateClient(clientFiles)
+	codeGenerator.generateWebhook(webhooksFiles)
 
 	if (!config.dryRun) {
 		log.info("All files generated")

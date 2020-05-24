@@ -11,18 +11,32 @@ class CodeGenerator(
 	templates: Templates,
 	fileWriter: FileWriter
 ) {
-	private val fileGenerators = listOf(
-		EnumsGenerator(config, fileWriter, templates),
-		MessagesGenerator(config, fileWriter, templates),
+	private val clientGenerators = listOf(
+		EnumsGenerator(config.clientDir, fileWriter, templates),
+		MessagesGenerator(config.clientDir, fileWriter, templates),
 		ServicesGenerator(config, fileWriter, templates),
-		GsonGenerator(config, fileWriter, templates),
-		JaksonGenerator(config, fileWriter, templates)
+		GsonGenerator(config.gsonLibraryDir, fileWriter, templates),
+		JaksonGenerator(config.jaksonLibraryDir, fileWriter, templates)
 	)
 
-	fun generate(files: List<UpsourceFile>) {
+	private val webhookGenerators = listOf(
+		EnumsGenerator(config.webhooksDir, fileWriter, templates),
+		MessagesGenerator(config.webhooksDir, fileWriter, templates),
+		WebhookGenerator(config.webhooksDir, fileWriter, templates)
+	)
+
+	fun generateClient(files: List<UpsourceFile>) {
 		val typeMapping = TypeMapping(files)
 
-		fileGenerators.forEach {
+		clientGenerators.forEach {
+			it.processFiles(files, typeMapping)
+		}
+	}
+
+	fun generateWebhook(files: List<UpsourceFile>) {
+		val typeMapping = TypeMapping(files)
+
+		webhookGenerators.forEach {
 			it.processFiles(files, typeMapping)
 		}
 	}

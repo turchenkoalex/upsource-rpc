@@ -1,6 +1,5 @@
 package com.ecwid.upsource.codegen.generator
 
-import com.ecwid.upsource.codegen.Config
 import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.Message
@@ -17,7 +16,7 @@ private val NATIVE_TYPE_MAP = mapOf(
 )
 
 class MessagesGenerator(
-	private val config: Config,
+	private val clientDir: String,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
@@ -39,7 +38,7 @@ class MessagesGenerator(
 					message = message
 				)
 				fileWriter.writeFile(
-					dir = config.clientDir,
+					dir = clientDir,
 					filePackage = filePackage,
 					filename = fileName,
 					content = content

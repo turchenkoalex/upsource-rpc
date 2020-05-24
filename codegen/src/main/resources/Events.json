@@ -1,0 +1,628 @@
+{
+  "enums": [
+    {
+      "values": [
+        {
+          "number": 0,
+          "name": "Open"
+        },
+        {
+          "number": 1,
+          "name": "Closed"
+        }
+      ],
+      "name": "ReviewState",
+      "description": "Review state"
+    },
+    {
+      "values": [
+        {
+          "number": 0,
+          "name": "Unread"
+        },
+        {
+          "number": 1,
+          "name": "Read"
+        },
+        {
+          "number": 2,
+          "name": "Accepted"
+        },
+        {
+          "number": 3,
+          "name": "Rejected"
+        }
+      ],
+      "name": "ParticipantState",
+      "description": "Review participant state"
+    },
+    {
+      "values": [
+        {
+          "number": 1,
+          "name": "Author"
+        },
+        {
+          "number": 2,
+          "name": "Reviewer"
+        },
+        {
+          "number": 3,
+          "name": "Watcher"
+        }
+      ],
+      "name": "ParticipantRole",
+      "description": "Review participant role"
+    },
+    {
+      "values": [
+        {
+          "number": 0,
+          "name": "Unknown"
+        },
+        {
+          "number": 1,
+          "name": "CommentInAuthorFeed"
+        },
+        {
+          "number": 2,
+          "name": "NotifyCommitAuthor"
+        },
+        {
+          "number": 3,
+          "name": "Mention"
+        },
+        {
+          "number": 4,
+          "name": "HashTagSubscription"
+        },
+        {
+          "number": 5,
+          "name": "DiscussionIsStarred"
+        },
+        {
+          "number": 6,
+          "name": "ParticipatedInDiscussion"
+        },
+        {
+          "number": 7,
+          "name": "ParticipatedInReview"
+        },
+        {
+          "number": 8,
+          "name": "Reply"
+        }
+      ],
+      "name": "NotificationReason",
+      "description": "Reason feed event appears in someone's feed"
+    }
+  ],
+  "messages": [
+    {
+      "name": "UserIdBean",
+      "description": "User info",
+      "fields": [
+        {
+          "name": "userId",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "userName",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "userEmail",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "FeedEventBean",
+      "description": "Base event details included in all other events",
+      "fields": [
+        {
+          "name": "userId",
+          "description": "User that initiated the event",
+          "label": "optional",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "userIds",
+          "description": "List of users that will receive the event in their feeds",
+          "label": "repeated",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "reviewNumber",
+          "description": "Associated review number",
+          "label": "optional",
+          "type": "Int32"
+        },
+        {
+          "name": "reviewId",
+          "description": "Associated review ID",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "date",
+          "description": "Event date",
+          "label": "required",
+          "type": "Int64"
+        },
+        {
+          "name": "actor",
+          "description": "User that initiated the event",
+          "label": "required",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "feedEventId",
+          "description": "Event ID",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReviewCreatedFeedEventBean",
+      "description": "Review created",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "revisions",
+          "description": "List of revisions that were added to review at time of creation",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "branch",
+          "description": "Name of the branch being tracked by the review",
+          "label": "optional",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "DiscussionFeedEventBean",
+      "description": "Discussion event",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "notificationReason",
+          "description": "Notification reason",
+          "label": "required",
+          "type": "NotificationReason"
+        },
+        {
+          "name": "discussionId",
+          "description": "Discussion ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "commentId",
+          "description": "Comment ID",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "commentText",
+          "description": "Comment text",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "isEdit",
+          "description": "Whether the event corresponds to comment editing",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "isDeletion",
+          "description": "Whether the event corresponds to comment deletion",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "resolveAction",
+          "description": "Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve",
+          "label": "optional",
+          "type": "Bool"
+        }
+      ]
+    },
+    {
+      "name": "NewParticipantInReviewFeedEventBean",
+      "description": "Participant added to review",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "participant",
+          "description": "Participant user info",
+          "label": "required",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "role",
+          "description": "Participant role",
+          "label": "required",
+          "type": "ParticipantRole"
+        }
+      ]
+    },
+    {
+      "name": "ParticipantStateChangedFeedEventBean",
+      "description": "Review participant state changed",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "participant",
+          "description": "Participant user info",
+          "label": "required",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "oldState",
+          "description": "Old state",
+          "label": "required",
+          "type": "ParticipantState"
+        },
+        {
+          "name": "newState",
+          "description": "New state",
+          "label": "required",
+          "type": "ParticipantState"
+        }
+      ]
+    },
+    {
+      "name": "RemovedParticipantFromReviewFeedEventBean",
+      "description": "Participant removed from review",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "participant",
+          "description": "Participant user info",
+          "label": "required",
+          "type": "UserIdBean"
+        },
+        {
+          "name": "formerRole",
+          "description": "The role participant had before being removed from review",
+          "label": "required",
+          "type": "ParticipantRole"
+        }
+      ]
+    },
+    {
+      "name": "ReviewRemovedFeedEventBean",
+      "description": "Review removed",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "reviewId",
+          "description": "Review ID",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReviewStateChangedFeedEventBean",
+      "description": "Review state changed",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "oldState",
+          "description": "Old state",
+          "label": "required",
+          "type": "ReviewState"
+        },
+        {
+          "name": "newState",
+          "description": "New state",
+          "label": "required",
+          "type": "ReviewState"
+        }
+      ]
+    },
+    {
+      "name": "RevisionAddedToReviewFeedEventBean",
+      "description": "Revision added to review",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "revisionId",
+          "description": "Revision ID (deprecated)",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "revisionIds",
+          "description": "List of revision IDs",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "RevisionRemovedFromReviewFeedEventBean",
+      "description": "Revision removed from review",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "revisionIds",
+          "description": "List of revision IDs",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReviewStoppedBranchTrackingFeedEventBean",
+      "description": "Branch tracking stopped for review",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "branch",
+          "description": "Branch name",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReviewSquashedFeedEventBean",
+      "description": "Review squashed to revision",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "revisionId",
+          "description": "Target Revision ID",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "PullRequestMergedFeedEventBean",
+      "description": "Pull request merged",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "pullRequest",
+          "description": "Branch name",
+          "label": "required",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReviewDeadlineUpdatedFeedEventBean",
+      "fields": [
+        {
+          "name": "base",
+          "description": "Base feed event",
+          "label": "required",
+          "type": "FeedEventBean"
+        },
+        {
+          "name": "deadline",
+          "description": "Review due date (Unix timestamp)",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "NewRevisionEventBean",
+      "description": "New revision in project",
+      "fields": [
+        {
+          "name": "revisionId",
+          "description": "Revision ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "branches",
+          "description": "List of branches",
+          "label": "repeated",
+          "type": "String"
+        },
+        {
+          "name": "author",
+          "description": "Author ID",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "message",
+          "description": "Commit message",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "date",
+          "description": "Commit date",
+          "label": "optional",
+          "type": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "MergedToDefaultBranchEventBean",
+      "description": "Merged changes to default branch",
+      "fields": [
+        {
+          "name": "commitsCount",
+          "description": "Number of commits merged",
+          "label": "required",
+          "type": "Int32"
+        },
+        {
+          "name": "branches",
+          "description": "List of merged branches",
+          "label": "repeated",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "NewBranchEventBean",
+      "description": "New branch in project",
+      "fields": [{
+        "name": "name",
+        "description": "Branch name",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "DeleteBranchEventBean",
+      "description": "Removed branch in project",
+      "fields": [{
+        "name": "name",
+        "description": "Branch name",
+        "label": "required",
+        "type": "String"
+      }]
+    },
+    {
+      "name": "ReactionToggledEventBean",
+      "description": "Reaction added or removed",
+      "fields": [
+        {
+          "name": "discussionId",
+          "description": "Discussion ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "commentId",
+          "description": "Comment ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "reactionId",
+          "description": "Reaction ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "wasAdded",
+          "description": "Whether the reaction was added or removed",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "actor",
+          "description": "User who toggled reaction",
+          "label": "required",
+          "type": "UserIdBean"
+        }
+      ]
+    },
+    {
+      "name": "ReviewLabelChangedEventBean",
+      "description": "Review label added or removed",
+      "fields": [
+        {
+          "name": "reviewId",
+          "description": "Review ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "labelId",
+          "description": "Label ID",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "labelName",
+          "description": "Label name",
+          "label": "required",
+          "type": "String"
+        },
+        {
+          "name": "wasAdded",
+          "description": "Whether the label was added or removed",
+          "label": "required",
+          "type": "Bool"
+        },
+        {
+          "name": "actor",
+          "description": "User who changed label",
+          "label": "required",
+          "type": "UserIdBean"
+        }
+      ]
+    }
+  ]
+}

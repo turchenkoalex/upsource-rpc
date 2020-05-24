@@ -1,6 +1,5 @@
 package com.ecwid.upsource.codegen.generator
 
-import com.ecwid.upsource.codegen.Config
 import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.EnumType
@@ -9,7 +8,7 @@ import com.ecwid.upsource.codegen.templates.Template
 import com.ecwid.upsource.codegen.templates.Templates
 
 class EnumsGenerator(
-	private val config: Config,
+	private val clientDir: String,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
@@ -20,7 +19,7 @@ class EnumsGenerator(
 			val fileName = "${enum.name}.kt"
 			val content = buildContent(filePackage, enum)
 			fileWriter.writeFile(
-				dir = config.clientDir,
+				dir = clientDir,
 				filePackage = filePackage,
 				filename = fileName,
 				content = content
