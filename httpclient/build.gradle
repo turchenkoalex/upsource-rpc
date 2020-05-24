@@ -1,3 +1,13 @@
+apply plugin: "maven-publish"
+
 dependencies {
 	api project(":client")
+}
+
+publishing {
+	publications {
+		clientLibrary(MavenPublication) {
+			from components.java
+		}
+	}
 }
