@@ -3,6 +3,7 @@ package com.ecwid.upsource.serializer.jakson
 import com.ecwid.upsource.serializer.Serializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
+import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.JavaType
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
@@ -45,6 +46,7 @@ class JaksonSerializer : Serializer {
 
 private fun buildMapper(): ObjectMapper {
 	return ObjectMapper()
+		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 		.registerModule(buildUpsourceModule())
 		.registerKotlinModule()
 }

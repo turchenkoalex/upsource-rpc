@@ -15,7 +15,7 @@ internal class GsonSerializerTest {
 
 	@Test
 	fun `RevisionReviewInfoListDTO deserialize test`() {
-		val transportResponse = readTransportResponse("reviewInfo.json")
+		val transportResponse = readResource("reviewInfo.json")
 		val response = serializer.deserialize(transportResponse, RevisionReviewInfoListDTO::class.java)
 
 		require(response is RpcResponse.Ok)
@@ -31,7 +31,7 @@ internal class GsonSerializerTest {
 
 	@Test
 	fun `Empty ReviewListDTO deserialize test`() {
-		val transportResponse = readTransportResponse("reviewList.json")
+		val transportResponse = readResource("reviewList.json")
 		val response = serializer.deserialize(transportResponse, ReviewListDTO::class.java)
 
 		require(response is RpcResponse.Ok)
@@ -45,7 +45,7 @@ internal class GsonSerializerTest {
 
 	@Test
 	fun `Error test`() {
-		val transportResponse = readTransportResponse("error.json")
+		val transportResponse = readResource("error.json")
 		val response = serializer.deserialize(transportResponse, ReviewListDTO::class.java)
 
 		require(response is RpcResponse.Error)
@@ -53,14 +53,9 @@ internal class GsonSerializerTest {
 		assertThat(response.code).isEqualTo(103)
 		assertThat(response.message).isEqualTo("User guest doesn't have read access to project MyProject")
 	}
+}
 
-	private fun readTransportResponse(fileName: String): RpcTransportResponse {
-		val file = File(this.javaClass.classLoader.getResource(fileName).file)
-		if (file.exists()) {
-			val content = file.readText()
-			return RpcTransportResponse(statusCode = 200, content = content)
-		}
-
-		return RpcTransportResponse(statusCode = 404, content = "")
-	}
+internal fun GsonSerializerTest.readResource(file: String): RpcTransportResponse {
+	val content = this.javaClass.classLoader.getResource(file).readText(Charsets.UTF_8)
+	return RpcTransportResponse(statusCode = 200, content = content)
 }
