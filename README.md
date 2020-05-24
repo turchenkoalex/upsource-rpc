@@ -1,6 +1,7 @@
 # upsource rpc kotlin client library
 
-Usage:
+### Client
+
 ```
 val upsourceConnection = UpsourceConnection(
     serverUrl = "https://upsource.example.com",
@@ -58,6 +59,20 @@ when (revisionList) {
         // some logic
     }
     is RpcResponse.Error -> throw Error("Error")
+}
+```
+
+### Webhooks parser
+```
+val parser = Webhooks.newParser()
+
+val response: String = req.someReadHttpResponseContent()
+val webhook = parser.parse(response)
+
+when (webhook) {
+    is Webhook.NewRevisionEventBeanWebhook -> {
+        onReceiveNewRevision(webhook.data.revisionId)
+    }
 }
 ```
 
