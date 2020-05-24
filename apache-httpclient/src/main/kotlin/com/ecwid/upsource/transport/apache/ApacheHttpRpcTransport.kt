@@ -17,8 +17,10 @@ private val CONNECTION_TIMEOUT = Duration.ofSeconds(10).toMillis().toInt()
 private val READ_TIMEOUT = Duration.ofSeconds(5).toMillis().toInt()
 private const val MAX_CONNECTIONS = 10
 
-class ApacheHttpRpcTransport(private val upsourceConnection: UpsourceConnection) :
-	RpcTransport {
+class ApacheHttpRpcTransport(
+	private val upsourceConnection: UpsourceConnection
+) : RpcTransport {
+
 	private val httpClient: org.apache.http.client.HttpClient
 
 	init {

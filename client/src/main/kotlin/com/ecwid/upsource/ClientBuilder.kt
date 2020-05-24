@@ -3,49 +3,23 @@ package com.ecwid.upsource
 import com.ecwid.upsource.serializer.Serializer
 import com.ecwid.upsource.transport.RpcTransport
 
-interface EmptyClientBuilder<T> {
-	fun withTransport(transport: RpcTransport): ClientBuilderWithTransport<T>
-}
-
-interface ClientBuilderWithTransport<T> {
-	fun withSerializer(serializer: Serializer): ClientBuilder<T>
-}
-
+/**
+ * Build Service RPC
+ */
 interface ClientBuilder<T> {
 	fun build(): T
 }
 
-internal typealias ClientBuilderFactory<T> = (transport: RpcTransport, serializer: Serializer) -> T
+/**
+ * Serializer setter
+ */
+interface ClientBuilderWithTransport<T> {
+	fun withSerializer(serializer: Serializer): ClientBuilder<T>
+}
 
-internal class ClientBuilderImpl<T>(
-	private val factory: ClientBuilderFactory<T>
-) : EmptyClientBuilder<T>, ClientBuilderWithTransport<T>, ClientBuilder<T> {
-	private var transport: RpcTransport? = null
-	private var serializer: Serializer? = null
-
-	override fun withTransport(transport: RpcTransport): ClientBuilderImpl<T> {
-		this.transport = transport
-		return this
-	}
-
-	override fun withSerializer(serializer: Serializer): ClientBuilderImpl<T> {
-		this.serializer = serializer
-		return this
-	}
-
-	override fun build(): T {
-		val transport = this.transport
-			?: throw IllegalArgumentException("withTransport must be invoked")
-
-		val serializer = this.serializer
-			?: throw IllegalArgumentException("withSerializer must be invoked")
-
-		return factory(transport, serializer)
-	}
-
-	companion object {
-		fun <T> newClientBuilder(factory: ClientBuilderFactory<T>): EmptyClientBuilder<T> {
-			return ClientBuilderImpl(factory)
-		}
-	}
+/**
+ * Transport setter
+ */
+interface EmptyClientBuilder<T> {
+	fun withTransport(transport: RpcTransport): ClientBuilderWithTransport<T>
 }
