@@ -1,5 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Generate Client" type="NodeJSConfigurationType" path-to-js-file="generator.js" working-dir="$PROJECT_DIR$/gen">
-    <method v="2" />
-  </configuration>
-</component>
