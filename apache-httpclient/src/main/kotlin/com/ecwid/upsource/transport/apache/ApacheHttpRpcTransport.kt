@@ -18,28 +18,9 @@ private val READ_TIMEOUT = Duration.ofSeconds(5).toMillis().toInt()
 private const val MAX_CONNECTIONS = 10
 
 class ApacheHttpRpcTransport(
-	private val upsourceConnection: UpsourceConnection
-) : RpcTransport {
-
+	private val upsourceConnection: UpsourceConnection,
 	private val httpClient: org.apache.http.client.HttpClient
-
-	init {
-		val connectionManager = PoolingHttpClientConnectionManager().apply {
-			maxTotal = MAX_CONNECTIONS
-			defaultMaxPerRoute = MAX_CONNECTIONS
-		}
-
-		val requestConfig = RequestConfig.custom()
-			.setConnectTimeout(CONNECTION_TIMEOUT)
-			.setConnectionRequestTimeout(CONNECTION_TIMEOUT)
-			.setSocketTimeout(READ_TIMEOUT)
-			.build()
-
-		httpClient = HttpClientBuilder.create()
-			.setConnectionManager(connectionManager)
-			.setDefaultRequestConfig(requestConfig)
-			.build()
-	}
+) : RpcTransport {
 
 	override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
 		val httpRequest = RequestBuilder
@@ -61,6 +42,28 @@ class ApacheHttpRpcTransport(
 				statusCode = statusCode,
 				content = content
 			)
+		}
+	}
+
+	companion object {
+		internal fun newTransport(upsourceConnection: UpsourceConnection): ApacheHttpRpcTransport {
+			val connectionManager = PoolingHttpClientConnectionManager().apply {
+				maxTotal = MAX_CONNECTIONS
+				defaultMaxPerRoute = MAX_CONNECTIONS
+			}
+
+			val requestConfig = RequestConfig.custom()
+				.setConnectTimeout(CONNECTION_TIMEOUT)
+				.setConnectionRequestTimeout(CONNECTION_TIMEOUT)
+				.setSocketTimeout(READ_TIMEOUT)
+				.build()
+
+			val httpClient = HttpClientBuilder.create()
+				.setConnectionManager(connectionManager)
+				.setDefaultRequestConfig(requestConfig)
+				.build()
+
+			return ApacheHttpRpcTransport(upsourceConnection, httpClient)
 		}
 	}
 }

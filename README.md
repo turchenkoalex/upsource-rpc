@@ -9,7 +9,11 @@ val upsourceConnection = UpsourceConnection(
     password = "password"
 )
 
-val transport = HttpRpcTransport(upsourceConnection)
+val httpClient = HttpClient.newBuilder()
+                .connectTimeout(Duration.ofSeconds(5))
+                .build()
+
+val transport = HttpRpcTransport(upsourceConnection, httpClient)
 val serializer = GsonSerializer()
 
 val client = UpsourceRPC.newBuilder()

@@ -14,11 +14,10 @@ import java.util.logging.Logger
 
 private val log = Logger.getLogger(HttpRpcTransport::class.qualifiedName)
 
-class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) :
-	RpcTransport {
-	private val client = HttpClient.newBuilder()
-		.connectTimeout(Duration.ofSeconds(10))
-		.build()
+class HttpRpcTransport(
+	private val upsourceConnection: UpsourceConnection,
+	private val client: HttpClient
+) : RpcTransport {
 
 	override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
 		val httpRequest = HttpRequest.newBuilder()
@@ -42,6 +41,16 @@ class HttpRpcTransport(private val upsourceConnection: UpsourceConnection) :
 			statusCode = httpResponse.statusCode(),
 			content = body
 		)
+	}
+
+	companion object {
+		internal fun newTransport(upsourceConnection: UpsourceConnection): HttpRpcTransport {
+			val client = HttpClient.newBuilder()
+				.connectTimeout(Duration.ofSeconds(10))
+				.build()
+
+			return HttpRpcTransport(upsourceConnection, client)
+		}
 	}
 }
 

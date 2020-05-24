@@ -13,6 +13,7 @@ import java.util.logging.Logger
 private val log = Logger.getLogger(GsonSerializer::class.qualifiedName)
 
 class GsonSerializer : Serializer {
+
 	private val gsonMap = ConcurrentHashMap<Class<*>, Pair<Gson, Type>>()
 	private val genericGson = genericGsonBuiler().create()
 
