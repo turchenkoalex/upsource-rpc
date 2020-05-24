@@ -35,15 +35,10 @@ internal class ClientBuilderImpl<T>(
 
 	override fun build(): T {
 		val transport = this.transport
+			?: throw IllegalArgumentException("withTransport must be invoked")
+
 		val serializer = this.serializer
-
-		if (transport == null) {
-			throw IllegalArgumentException("withTransport must be invoked")
-		}
-
-		if (serializer == null) {
-			throw IllegalArgumentException("withSerializer must be invoked")
-		}
+			?: throw IllegalArgumentException("withSerializer must be invoked")
 
 		return factory(transport, serializer)
 	}
