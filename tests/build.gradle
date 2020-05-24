@@ -1,7 +1,7 @@
 dependencies {
-	api project(":client")
-
-	testImplementation project(":gson-serializer")
+	testImplementation project(":client")
 	testImplementation project(":httpclient")
 	testImplementation project(":apache-httpclient")
+	testImplementation project(":jakson-serializer")
+	testImplementation project(":gson-serializer")
 }
