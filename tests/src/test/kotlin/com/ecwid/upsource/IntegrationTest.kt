@@ -12,8 +12,10 @@ import com.ecwid.upsource.transport.UpsourceConnection
 import com.ecwid.upsource.transport.apache.withApacheHttpClient
 import com.ecwid.upsource.transport.httpclient.withHttpClient
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
+@Disabled
 internal class IntegrationTest {
 	private val upsourceConnection = UpsourceConnection(
 		serverUrl = System.getenv("UPSOURCE_URL"),
