@@ -1,4 +1,4 @@
-# upsource rpc kotlin client library
+# Upsource rpc kotlin client library ![Build Status](https://github.com/turchenkoalex/upsource-rpc/workflows/Gradle%20Check/badge.svg)
 
 ### Client
 
