@@ -20,9 +20,10 @@ buildscript {
 
 allprojects {
 	apply plugin: 'java'
+	apply plugin: "maven-publish"
 
-	group = 'com.ecwid.upsource'
-	version = '1.0'
+	group = 'com.ecwid.upsource-rpc'
+	version = '0.9.2'
 }
 
 subprojects {
@@ -32,5 +33,21 @@ subprojects {
 	repositories {
 		mavenCentral()
 	}
-}
 
+	dependencies {
+	}
+
+	publishing {
+		repositories {
+			maven {
+				name = 'GitHubPackages'
+				url = "https://maven.pkg.github.com/turchenkoalex/upsource-rpc"
+				credentials() {
+					username = System.getenv("GITHUB_ACTOR")
+					password = System.getenv("GITHUB_TOKEN")
+				}
+			}
+		}
+	}
+
+}

@@ -2,3 +2,11 @@ dependencies {
 	api project(":client")
 	api "com.google.code.gson:gson:$gsonVersion"
 }
+
+publishing {
+	publications {
+		clientLibrary(MavenPublication) {
+			from components.java
+		}
+	}
+}

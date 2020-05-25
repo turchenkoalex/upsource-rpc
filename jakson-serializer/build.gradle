@@ -3,3 +3,11 @@ dependencies {
 	api "com.fasterxml.jackson.core:jackson-databind:$jaksonVersion"
 	api "com.fasterxml.jackson.module:jackson-module-kotlin:$jaksonVersion"
 }
+
+publishing {
+	publications {
+		clientLibrary(MavenPublication) {
+			from components.java
+		}
+	}
+}
