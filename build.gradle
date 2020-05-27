@@ -39,6 +39,16 @@ subprojects {
 
 	publishing {
 		repositories {
+			task sourceJar(type: Jar) {
+				from sourceSets.main.allSource
+				archiveClassifier = "sources"
+			}
+
+			task javadocJar(type: Jar) {
+				from javadoc
+				archiveClassifier = "javadoc"
+			}
+
 			maven {
 				name = 'GitHubPackages'
 				url = "https://maven.pkg.github.com/turchenkoalex/upsource-rpc"
