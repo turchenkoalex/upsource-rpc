@@ -7,6 +7,8 @@ publishing {
 	publications {
 		clientLibrary(MavenPublication) {
 			from components.java
+			artifact sourceJar
+			artifact javadocJar
 		}
 	}
 }
