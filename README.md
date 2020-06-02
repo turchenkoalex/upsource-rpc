@@ -2,7 +2,7 @@
 
 ### Client
 
-```
+```kotlin
 val upsourceConnection = UpsourceConnection(
     serverUrl = "https://upsource.example.com",
     username = "user",
@@ -40,7 +40,7 @@ println(closeResponse)
 
 OR use with one line builder
 
-```
+```kotlin
 val upsourceConnection = UpsourceConnection(
     serverUrl = "https://upsource.example.com",
     username = "user",
@@ -67,7 +67,7 @@ when (revisionList) {
 ```
 
 ### Webhooks parser
-```
+```kotlin
 val parser = Webhooks.newParser()
 
 val response: String = req.someReadHttpResponseContent()
@@ -87,11 +87,11 @@ when (webhook) {
 |      0.9.*     |    2019.1.1644   |
 
 ### Update upsource schema for code generation
-```
+```shell script
 UPSOURCE_URL=https://upsource.example.com ./codegen/download-schema-jsons.sh
 ```
 
 ### Start client code generation
-```
+```shell script
 ./gradlew codegen:generate
 ```
