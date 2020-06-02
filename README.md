@@ -1,5 +1,22 @@
 # Upsource rpc kotlin client library ![Build Status](https://github.com/turchenkoalex/upsource-rpc/workflows/Gradle%20Check/badge.svg)
 
+### Libraries
+
+| Library           | Description                                             |
+|-------------------|---------------------------------------------------------|
+| client            | Core library. Contains RPC client class and DTO classes |
+
+| Serializers (use one of) | Description                                               |
+|--------------------------|-----------------------------------------------------------|
+| gson-serializer          | Gson TypeAdapters for core DTO classes                    |
+| jakson-serializer        | Jakson Serializers and Deserializers for core DTO classes |
+
+
+| Transports (use one of) | Description                        |
+|-------------------------|------------------------------------|
+| httpclient              | JDK 11 HttpClient wrapper          |
+| apache-httpclient       | Apache Commons Http Client wrapper |
+
 ### Client
 
 ```kotlin
