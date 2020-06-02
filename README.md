@@ -80,11 +80,11 @@ when (webhook) {
 }
 ```
 
-### Version compatibility
+### Compatibility Matrix
 
-| Client version | Upsource version |
-|----------------|------------------|
-|      0.9.*     |    2019.1.1644   |
+|              | Upsource 2019.1.1644 |
+|--------------|:--------------------:|
+| Client 0.9.3 |           ✓          |
 
 ### Update upsource schema for code generation
 ```shell script
