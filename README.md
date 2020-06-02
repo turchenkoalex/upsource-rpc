@@ -80,6 +80,12 @@ when (webhook) {
 }
 ```
 
+### Version compatibility
+
+| Client version | Upsource version |
+|----------------|------------------|
+|      0.9.*     |    2019.1.1644   |
+
 ### Update upsource schema for code generation
 ```
 UPSOURCE_URL=https://upsource.example.com ./codegen/download-schema-jsons.sh
