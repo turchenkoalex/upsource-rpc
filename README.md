@@ -2,21 +2,17 @@
 
 ## Libraries
 
-| Library           | Description                                             |
-|-------------------|---------------------------------------------------------|
-| client            | Core library. Contains RPC client class and DTO classes |
-| webhooks          | Webhooks parser (based on jakson deserializer)          |
+Core libraries:
+* `client` - Core library. Contains RPC client class and DTO classes
+* `webhooks` - Webhooks parser (based on jakson deserializer)
 
-| Serializers (use one of) | Description                                               |
-|--------------------------|-----------------------------------------------------------|
-| gson-serializer          | Gson TypeAdapters for core DTO classes                    |
-| jakson-serializer        | Jakson Serializers and Deserializers for core DTO classes |
+Serializers (required for `client`). Please use one of:
+* `gson-serializer` - Gson TypeAdapters for core DTO classes
+* `jakson-serializer` - Jakson Serializers and Deserializers for core DTO classes
 
-
-| Transports (use one of) | Description                        |
-|-------------------------|------------------------------------|
-| httpclient              | JDK 11 HttpClient wrapper          |
-| apache-httpclient       | Apache Commons Http Client wrapper |
+Transports (required for `client`). Please use one of:
+* `httpclient` - JDK 11 HttpClient wrapper
+* `apache-httpclient` - Apache Commons Http Client wrapper
 
 ## Usage
 
@@ -44,8 +40,8 @@ val client = UpsourceRPC.newBuilder()
 // or just use extensions
 
 val client = UpsourceRPC.newBuilder()
-    .withHttpClient(upsourceConnection)
-    .withGsonSerializer()
+    .withHttpClient(upsourceConnection) // or .withApacheHttpClient(upsourceConnection)
+    .withGsonSerializer() // or .withJaksonSerializer()
     .build()
 
 
@@ -67,8 +63,8 @@ val upsourceConnection = UpsourceConnection(
     password = "password"
 )
 
-val transport = HttpRpcTransport(upsourceConnection)
-val serializer = GsonSerializer()
+val transport = HttpRpcTransport(upsourceConnection) // or ApacheHttpRpcTransport(upsourceConnection)
+val serializer = GsonSerializer() // or JaksonSerializer()
 val client = ClientFactory.newUpsourceRPC(transport, serializer)
 
 val revisionList = client.getRevisionReviewInfo(
@@ -86,7 +82,7 @@ when (revisionList) {
 }
 ```
 
-### Webhooks parser
+### Webhooks parser usage example
 
 ```kotlin
 val parser = Webhooks.newParser()
@@ -97,6 +93,9 @@ val webhook = parser.parse(response)
 when (webhook) {
     is Webhook.NewRevisionEventBeanWebhook -> {
         onReceiveNewRevision(webhook.data.revisionId)
+    }
+    else -> {
+        // skip
     }
 }
 ```
