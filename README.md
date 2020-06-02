@@ -5,6 +5,7 @@
 | Library           | Description                                             |
 |-------------------|---------------------------------------------------------|
 | client            | Core library. Contains RPC client class and DTO classes |
+| webhooks          | Webhooks parser (based on jakson deserializer)          |
 
 | Serializers (use one of) | Description                                               |
 |--------------------------|-----------------------------------------------------------|
