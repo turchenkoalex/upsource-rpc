@@ -1,6 +1,6 @@
 # Upsource rpc kotlin client library ![Build Status](https://github.com/turchenkoalex/upsource-rpc/workflows/Gradle%20Check/badge.svg)
 
-### Libraries
+## Libraries
 
 | Library           | Description                                             |
 |-------------------|---------------------------------------------------------|
@@ -18,7 +18,9 @@
 | httpclient              | JDK 11 HttpClient wrapper          |
 | apache-httpclient       | Apache Commons Http Client wrapper |
 
-### Client
+## Usage
+
+### Upsource client
 
 ```kotlin
 val upsourceConnection = UpsourceConnection(
@@ -85,6 +87,7 @@ when (revisionList) {
 ```
 
 ### Webhooks parser
+
 ```kotlin
 val parser = Webhooks.newParser()
 
@@ -98,11 +101,13 @@ when (webhook) {
 }
 ```
 
-### Compatibility Matrix
+## Compatibility Matrix
 
 |              | Upsource 2019.1.1644 |
 |--------------|:--------------------:|
 | Client 0.9.3 |           ✓          |
+
+## Code generation
 
 ### Update upsource schema for code generation
 ```shell script
