@@ -18,13 +18,32 @@ Transports (required for `client`). Please use one of:
 
 ### Upsource client
 
+Create connection settings
 ```kotlin
 val upsourceConnection = UpsourceConnection(
     serverUrl = "https://upsource.example.com",
     username = "user",
     password = "password"
 )
+```
 
+Create client with default configuration (gson + JDK11 HttpClient)
+```kotlin
+val client = UpsourceRPC.newBuilder()
+    .withHttpClient(upsourceConnection) // or .withApacheHttpClient(upsourceConnection)
+    .withGsonSerializer() // or .withJaksonSerializer()
+    .build()
+```
+Or use Apache Commons httpclient and jakson (or mix them)
+```kotlin
+val client = UpsourceRPC.newBuilder()
+    .withApacheHttpClient(upsourceConnection)
+    .withJaksonSerializer()
+    .build()
+```
+
+You can configure httpclient
+```kotlin
 val httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(5))
                 .build()
@@ -36,37 +55,28 @@ val client = UpsourceRPC.newBuilder()
     .withTransport(transport)
     .withSerializer(serializer)
     .build()
+```
 
-// or just use extensions
+Non fluent client factory method 
+```kotlin
+val transport = HttpRpcTransport(upsourceConnection) // or ApacheHttpRpcTransport(upsourceConnection)
+val serializer = GsonSerializer() // or JaksonSerializer()
+val client = ClientFactory.newUpsourceRPC(transport, serializer)
+```
 
-val client = UpsourceRPC.newBuilder()
-    .withHttpClient(upsourceConnection) // or .withApacheHttpClient(upsourceConnection)
-    .withGsonSerializer() // or .withJaksonSerializer()
-    .build()
-
-
+Client usage:
+```kotlin
 val closeRequest = CloseReviewRequestDTO(
     reviewId = ReviewIdDTO(projectId = "project", reviewId = "REVIEW-ID-101"),
     isFlagged = true
 )
 
-val closeResponse = client.closeReview(closeRequest)
+val closeResponse = client.closeReview(closeRequest) // rpc call
 println(closeResponse)
 ```
 
-OR use with one line builder
-
+Result of rpc call is RpcResponse sealed class
 ```kotlin
-val upsourceConnection = UpsourceConnection(
-    serverUrl = "https://upsource.example.com",
-    username = "user",
-    password = "password"
-)
-
-val transport = HttpRpcTransport(upsourceConnection) // or ApacheHttpRpcTransport(upsourceConnection)
-val serializer = GsonSerializer() // or JaksonSerializer()
-val client = ClientFactory.newUpsourceRPC(transport, serializer)
-
 val revisionList = client.getRevisionReviewInfo(
     RevisionListDTO(
         projectId = "project",
@@ -76,9 +86,9 @@ val revisionList = client.getRevisionReviewInfo(
 
 when (revisionList) {
     is RpcResponse.Ok -> {
-        // some logic
+        println(revisionList.result)
     }
-    is RpcResponse.Error -> throw Error("Error")
+    is RpcResponse.Error -> throw Error(revisionList.errorMessage)
 }
 ```
 
@@ -87,7 +97,7 @@ when (revisionList) {
 ```kotlin
 val parser = Webhooks.newParser()
 
-val response: String = req.someReadHttpResponseContent()
+val response: String = req.someReadHttpResponseContent() // read input from http
 val webhook = parser.parse(response)
 
 when (webhook) {
