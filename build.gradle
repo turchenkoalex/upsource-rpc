@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
 	apply plugin: 'java'
-	apply plugin: "maven-publish"
+	apply plugin: 'maven-publish'
 
 	group = 'com.ecwid.upsource-rpc'
 	version = '0.9.3'
@@ -29,35 +29,13 @@ allprojects {
 subprojects {
 	apply from: "$rootDir/gradle/kotlin.gradle"
 	apply from: "$rootDir/gradle/testing.gradle"
+	apply from: "$rootDir/gradle/maven-publish.gradle"
 
 	repositories {
 		mavenCentral()
 	}
 
 	dependencies {
-	}
-
-	publishing {
-		repositories {
-			task sourceJar(type: Jar) {
-				from sourceSets.main.allSource
-				archiveClassifier = "sources"
-			}
-
-			task javadocJar(type: Jar) {
-				from javadoc
-				archiveClassifier = "javadoc"
-			}
-
-			maven {
-				name = 'GitHubPackages'
-				url = "https://maven.pkg.github.com/turchenkoalex/upsource-rpc"
-				credentials() {
-					username = System.getenv("GITHUB_ACTOR")
-					password = System.getenv("GITHUB_TOKEN")
-				}
-			}
-		}
 	}
 
 }
