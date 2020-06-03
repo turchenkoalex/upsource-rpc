@@ -190,7 +190,7 @@ when (webhook) {
 
 |              | Upsource 2019.1.1644 |
 |--------------|:--------------------:|
-| Client 0.9.3 |           ✓          |
+| Client 0.9.* |           ✓          |
 
 
 ## Code generation
