@@ -131,16 +131,23 @@ val client = UpsourceRPC.newBuilder()
     .build()
 ```
 
-### Webhooks parser usage example
+## Webhooks
 
+#### Usage
+
+Create parser
 ```kotlin
 val parser = Webhooks.newParser()
+```
 
-val response: String = req.someReadHttpResponseContent() // read input from http
-val webhook = parser.parse(response)
+Parse http request
+```kotlin
+val request: String = myReq.readRequestBody() // read input from http
+val webhook: Webhook = parser.parse(response)
 
 when (webhook) {
     is Webhook.NewRevisionEventBeanWebhook -> {
+        // Use type safe webhook DTO
         onReceiveNewRevision(webhook.data.revisionId)
     }
     else -> {
@@ -148,6 +155,29 @@ when (webhook) {
     }
 }
 ```
+
+#### Supported webhook types
+* DeleteBranchEventBean
+* DiscussionFeedEventBean
+* FeedEventBean
+* MergedToDefaultBranchEventBean
+* NewBranchEventBean
+* NewParticipantInReviewFeedEventBean
+* NewRevisionEventBean
+* ParticipantStateChangedFeedEventBean
+* PullRequestMergedFeedEventBean
+* ReactionToggledEventBean
+* RemovedParticipantFromReviewFeedEventBean
+* ReviewCreatedFeedEventBean
+* ReviewDeadlineUpdatedFeedEventBean
+* ReviewLabelChangedEventBean
+* ReviewRemovedFeedEventBean
+* ReviewSquashedFeedEventBean
+* ReviewStateChangedFeedEventBean
+* ReviewStoppedBranchTrackingFeedEventBean
+* RevisionAddedToReviewFeedEventBean
+* RevisionRemovedFromReviewFeedEventBean
+* UserIdBean
 
 
 ## Compatibility Matrix
