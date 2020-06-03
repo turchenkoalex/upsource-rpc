@@ -40,16 +40,16 @@ sealed class Template(val filename: String) {
 		val types: List<String>
 	) : Template("gson-generic-builder.ftl")
 
-	class JaksonEnumTemplate(
+	class JacksonEnumTemplate(
 		val filePackage: String,
 		val enum: EnumType
-	) : Template("jakson-enum.ftl")
+	) : Template("jackson-enum.ftl")
 
-	class JaksonModuleTemplate(
+	class JacksonModuleTemplate(
 		val filePackage: String,
 		val enums: List<String>,
 		val imports: List<String>
-	) : Template("jakson-module.ftl")
+	) : Template("jackson-module.ftl")
 
 	class ClientFactoryTemplate(
 		val filePackage: String,
@@ -63,9 +63,9 @@ sealed class Template(val filename: String) {
 		val imports: List<String>
 	) : Template("webhook.ftl")
 
-	class JaksonWebhookParserTemplate(
+	class JacksonWebhookParserTemplate(
 		val filePackage: String,
 		val types: List<String>,
 		val imports: List<String>
-	) : Template("jakson-webhook-parser.ftl")
+	) : Template("jackson-webhook-parser.ftl")
 }

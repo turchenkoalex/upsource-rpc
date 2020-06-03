@@ -8,14 +8,14 @@ import com.ecwid.upsource.codegen.schema.UpsourceFile
 import com.ecwid.upsource.codegen.templates.Template
 import com.ecwid.upsource.codegen.templates.Templates
 
-class JaksonGenerator(
+class JacksonGenerator(
 	private val libraryDir: String,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
 	override fun processFiles(files: List<UpsourceFile>, typeMapping: TypeMapping) {
 		super.processFiles(files, typeMapping)
-		createJaksonModule(files, typeMapping)
+		createJacksonModule(files, typeMapping)
 	}
 
 	override fun processFile(file: UpsourceFile, typeMapping: TypeMapping) {
@@ -34,7 +34,7 @@ class JaksonGenerator(
 	}
 
 	private fun buildContent(filePackage: String, enum: EnumType): String {
-		val template = Template.JaksonEnumTemplate(
+		val template = Template.JacksonEnumTemplate(
 			filePackage = filePackage,
 			enum = enum
 		)
@@ -42,7 +42,7 @@ class JaksonGenerator(
 		return templates.render(template)
 	}
 
-	private fun createJaksonModule(files: List<UpsourceFile>, typeMapping: TypeMapping) {
+	private fun createJacksonModule(files: List<UpsourceFile>, typeMapping: TypeMapping) {
 		val enums = files
 			.flatMap { file ->
 				file.schema.enums.map { it.name }
@@ -58,8 +58,8 @@ class JaksonGenerator(
 			.map { "$it.*" }
 			.sortedBy { it }
 
-		val filePackage = "$SERIALIZER_PACKAGE.jakson"
-		val template = Template.JaksonModuleTemplate(
+		val filePackage = "$SERIALIZER_PACKAGE.jackson"
+		val template = Template.JacksonModuleTemplate(
 			filePackage = filePackage,
 			enums = enums,
 			imports = imports

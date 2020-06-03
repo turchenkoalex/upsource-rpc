@@ -51,11 +51,11 @@ class WebhookGenerator(
 
 		fileWriter.writeFile(
 			dir = libraryDir,
-			filePackage = "$WEBHOOKS_PACKAGE.jakson",
-			filename = "JaksonWebhookParser.kt",
+			filePackage = "$WEBHOOKS_PACKAGE.jackson",
+			filename = "JacksonWebhookParser.kt",
 			content = templates.render(
-				Template.JaksonWebhookParserTemplate(
-					filePackage = "$WEBHOOKS_PACKAGE.jakson",
+				Template.JacksonWebhookParserTemplate(
+					filePackage = "$WEBHOOKS_PACKAGE.jackson",
 					types = types,
 					imports = imports
 				)

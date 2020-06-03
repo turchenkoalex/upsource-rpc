@@ -16,7 +16,7 @@ class CodeGenerator(
 		MessagesGenerator(config.clientDir, fileWriter, templates),
 		ServicesGenerator(config, fileWriter, templates),
 		GsonGenerator(config.gsonLibraryDir, fileWriter, templates),
-		JaksonGenerator(config.jaksonLibraryDir, fileWriter, templates)
+		JacksonGenerator(config.jacksonLibraryDir, fileWriter, templates)
 	)
 
 	private val webhookGenerators = listOf(

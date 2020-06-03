@@ -6,7 +6,7 @@ import com.ecwid.upsource.rpc.projects.ReviewStateEnum
 import com.ecwid.upsource.rpc.projects.ReviewsRequestDTO
 import com.ecwid.upsource.rpc.projects.RevisionListDTO
 import com.ecwid.upsource.serializer.gson.withGsonSerializer
-import com.ecwid.upsource.serializer.jakson.withJaksonSerializer
+import com.ecwid.upsource.serializer.jackson.withJacksonSerializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.UpsourceConnection
 import com.ecwid.upsource.transport.apache.withApacheHttpClient
@@ -44,10 +44,10 @@ internal class IntegrationTest {
 	}
 
 	@Test
-	fun `Jakson and apache httpclient test`() {
+	fun `Jackson and apache httpclient test`() {
 		val client = UpsourceRPC.newBuilder()
 			.withApacheHttpClient(upsourceConnection)
-			.withJaksonSerializer()
+			.withJacksonSerializer()
 			.build()
 
 		val revisionList = client.getRevisionReviewInfo(
@@ -65,7 +65,7 @@ internal class IntegrationTest {
 	fun `Fetch all opened reviews test`() {
 		val client = UpsourceRPC.newBuilder()
 			.withHttpClient(upsourceConnection)
-			.withJaksonSerializer()
+			.withJacksonSerializer()
 			.build()
 
 		val openedReviews = client

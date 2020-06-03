@@ -38,7 +38,7 @@ fun parseArgs(args: Array<String>): Config {
 	val config = Config(
 		clientDir = Path.of(rootDir, "client", "src", "main", "kotlin").toString(),
 		gsonLibraryDir = Path.of(rootDir, "gson-serializer", "src", "main", "kotlin").toString(),
-		jaksonLibraryDir = Path.of(rootDir, "jakson-serializer", "src", "main", "kotlin").toString(),
+		jacksonLibraryDir = Path.of(rootDir, "jackson-serializer", "src", "main", "kotlin").toString(),
 		webhooksDir = Path.of(rootDir, "webhooks", "src", "main", "kotlin").toString(),
 		dryRun = dryRun
 	)
