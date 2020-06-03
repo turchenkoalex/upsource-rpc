@@ -1,4 +1,4 @@
-# Upsource rpc kotlin client library ![Build Status](https://github.com/turchenkoalex/upsource-rpc/workflows/Gradle%20Check/badge.svg) ![version](https://img.shields.io/badge/version-0.9.4-blue)
+# Upsource rpc kotlin client library ![Build Status](https://github.com/turchenkoalex/upsource-rpc/workflows/Gradle%20Check/badge.svg) ![Release](https://img.shields.io/github/v/release/turchenkoalex/upsource-rpc)
 
 ## Libraries
 
