@@ -14,6 +14,7 @@ Transports (required for `client`). Please use one of:
 * `httpclient` - JDK 11 HttpClient wrapper
 * `apache-httpclient` - Apache Commons Http Client wrapper
 
+
 ## Usage
 
 ### Upsource client
@@ -88,8 +89,46 @@ when (revisionList) {
     is RpcResponse.Ok -> {
         println(revisionList.result)
     }
-    is RpcResponse.Error -> throw Error(revisionList.errorMessage)
+    is RpcResponse.Error -> throw Error(revisionList.message)
 }
+```
+
+### Extending library
+
+#### Custom transport
+
+Implement transport interface and use it with `.withTransport` method
+```kotlin
+class SampleTransport : com.ecwid.upsource.transport.RpcTransport {
+	override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
+		return RpcTransportResponse(statusCode = 200, content = "{}")
+	}
+}
+
+val client = UpsourceRPC.newBuilder()
+    .withTransport(SampleTransport())
+    .withGsonSerializer()
+    .build()
+```
+
+#### Custom serializer
+
+Implement serializer interface and use it with `.withSerializer` method
+```kotlin
+class SampleSerializer : com.ecwid.upsource.serializer.Serializer {
+	override fun serialize(request: Any): String {
+		return "{}" // request json
+	}
+
+	override fun <T> deserialize(response: RpcTransportResponse, clazz: Class<T>): RpcResponse<T> {
+		return RpcResponse.Error(code = 400, message = "Not implemented")
+	}
+}
+
+val client = UpsourceRPC.newBuilder()
+    .withHttpClient(upsourceConnection)
+    .withSerializer(SampleSerializer())
+    .build()
 ```
 
 ### Webhooks parser usage example
@@ -110,11 +149,13 @@ when (webhook) {
 }
 ```
 
+
 ## Compatibility Matrix
 
 |              | Upsource 2019.1.1644 |
 |--------------|:--------------------:|
 | Client 0.9.3 |           ✓          |
+
 
 ## Code generation
 
