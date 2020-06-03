@@ -21,7 +21,7 @@ Transports (required for `client`). Please use one of:
 
 Create connection settings
 ```kotlin
-val upsourceConnection = UpsourceConnection(
+val upsourceConnection = com.ecwid.upsource.transport.UpsourceConnection(
     serverUrl = "https://upsource.example.com",
     username = "user",
     password = "password"
@@ -30,13 +30,19 @@ val upsourceConnection = UpsourceConnection(
 
 Create client with default configuration (gson + JDK11 HttpClient)
 ```kotlin
-val client = UpsourceRPC.newBuilder()
+import com.ecwid.upsource.serializer.gson.withGsonSerializer
+import com.ecwid.upsource.transport.httpclient.withHttpClient
+
+val client = com.ecwid.upsource.rpc.UpsourceRPC.newBuilder()
     .withHttpClient(upsourceConnection) // or .withApacheHttpClient(upsourceConnection)
     .withGsonSerializer() // or .withJacksonSerializer()
     .build()
 ```
 Or use Apache Commons httpclient and jackson (or mix them)
 ```kotlin
+import com.ecwid.upsource.serializer.jackson.withJacksonSerializer
+import com.ecwid.upsource.transport.apache.withApacheHttpClient
+
 val client = UpsourceRPC.newBuilder()
     .withApacheHttpClient(upsourceConnection)
     .withJacksonSerializer()
