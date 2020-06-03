@@ -4,11 +4,11 @@
 
 Core libraries:
 * `client` - Core library. Contains RPC client class and DTO classes
-* `webhooks` - Webhooks parser (based on jakson deserializer)
+* `webhooks` - Webhooks parser (based on jackson deserializer)
 
 Serializers (required for `client`). Please use one of:
 * `gson-serializer` - Gson TypeAdapters for core DTO classes
-* `jakson-serializer` - Jakson Serializers and Deserializers for core DTO classes
+* `jackson-serializer` - Jackson Serializers and Deserializers for core DTO classes
 
 Transports (required for `client`). Please use one of:
 * `httpclient` - JDK 11 HttpClient wrapper
@@ -32,14 +32,14 @@ Create client with default configuration (gson + JDK11 HttpClient)
 ```kotlin
 val client = UpsourceRPC.newBuilder()
     .withHttpClient(upsourceConnection) // or .withApacheHttpClient(upsourceConnection)
-    .withGsonSerializer() // or .withJaksonSerializer()
+    .withGsonSerializer() // or .withJacksonSerializer()
     .build()
 ```
-Or use Apache Commons httpclient and jakson (or mix them)
+Or use Apache Commons httpclient and jackson (or mix them)
 ```kotlin
 val client = UpsourceRPC.newBuilder()
     .withApacheHttpClient(upsourceConnection)
-    .withJaksonSerializer()
+    .withJacksonSerializer()
     .build()
 ```
 
@@ -61,7 +61,7 @@ val client = UpsourceRPC.newBuilder()
 Non fluent client factory method 
 ```kotlin
 val transport = HttpRpcTransport(upsourceConnection) // or ApacheHttpRpcTransport(upsourceConnection)
-val serializer = GsonSerializer() // or JaksonSerializer()
+val serializer = GsonSerializer() // or JacksonSerializer()
 val client = ClientFactory.newUpsourceRPC(transport, serializer)
 ```
 

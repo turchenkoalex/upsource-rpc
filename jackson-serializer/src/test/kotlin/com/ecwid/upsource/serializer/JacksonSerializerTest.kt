@@ -3,14 +3,14 @@ package com.ecwid.upsource.serializer
 import com.ecwid.upsource.rpc.projects.ReviewListDTO
 import com.ecwid.upsource.rpc.projects.ReviewStateEnum
 import com.ecwid.upsource.rpc.projects.RevisionReviewInfoListDTO
-import com.ecwid.upsource.serializer.jakson.JaksonSerializer
+import com.ecwid.upsource.serializer.jackson.JacksonSerializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-internal class JaksonSerializerTest {
-	private val serializer = JaksonSerializer()
+internal class JacksonSerializerTest {
+	private val serializer = JacksonSerializer()
 
 	@Test
 	fun `RevisionReviewInfoListDTO deserialize test`() {
@@ -54,7 +54,7 @@ internal class JaksonSerializerTest {
 	}
 }
 
-internal fun JaksonSerializerTest.readResource(file: String): RpcTransportResponse {
+internal fun JacksonSerializerTest.readResource(file: String): RpcTransportResponse {
 	val content = this.javaClass.classLoader.getResource(file).readText(Charsets.UTF_8)
 	return com.ecwid.upsource.transport.RpcTransportResponse(statusCode = 200, content = content)
 }

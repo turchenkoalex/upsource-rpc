@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import java.util.concurrent.ConcurrentHashMap
 
-internal class JaksonWebhookParser : WebhookParser {
+internal class JacksonWebhookParser : WebhookParser {
 	private val objectMapper = ObjectMapper()
 		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 		.registerKotlinModule()

@@ -1,4 +1,4 @@
-package com.ecwid.upsource.serializer.jakson
+package com.ecwid.upsource.serializer.jackson
 
 import com.ecwid.upsource.serializer.Serializer
 import com.ecwid.upsource.transport.RpcResponse
@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import java.util.concurrent.ConcurrentHashMap
 
-class JaksonSerializer : Serializer {
+class JacksonSerializer : Serializer {
 	private val objectMapper = buildMapper()
 	private val types = ConcurrentHashMap<Class<*>, JavaType>()
 

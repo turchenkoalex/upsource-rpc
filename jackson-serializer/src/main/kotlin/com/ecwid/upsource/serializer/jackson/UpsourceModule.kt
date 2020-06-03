@@ -1,4 +1,4 @@
-package com.ecwid.upsource.serializer.jakson
+package com.ecwid.upsource.serializer.jackson
 
 import com.ecwid.upsource.rpc.analytics.*
 import com.ecwid.upsource.rpc.fileordirectorycontent.*

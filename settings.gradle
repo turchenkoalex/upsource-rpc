@@ -2,7 +2,7 @@ rootProject.name = "upsource-rpc"
 
 include("client")
 include("gson-serializer")
-include("jakson-serializer")
+include("jackson-serializer")
 include("httpclient")
 include("apache-httpclient")
 include("webhooks")
