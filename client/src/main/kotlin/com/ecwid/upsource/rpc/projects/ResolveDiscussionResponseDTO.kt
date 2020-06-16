@@ -1,6 +1,6 @@
 package com.ecwid.upsource.rpc.projects
 
-data class UpdateParticipantInReviewResponseDTO(
+data class ResolveDiscussionResponseDTO(
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
 	 */

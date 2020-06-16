@@ -292,7 +292,7 @@
       "name": "resolveDiscussion",
       "argumentType": "messages.ResolveDiscussionRequestDTO",
       "description": "Updates a discussion",
-      "returnType": "messages.VoidMessage"
+      "returnType": "messages.ResolveDiscussionResponseDTO"
     },
     {
       "name": "getCurrentUserCanResolveDiscussion",
@@ -490,7 +490,7 @@
       "name": "editReviewDescription",
       "argumentType": "messages.EditReviewDescriptionRequestDTO",
       "description": "Sets review description",
-      "returnType": "messages.VoidMessage"
+      "returnType": "messages.EditReviewDescriptionResponseDTO"
     },
     {
       "name": "getReviewDetails",
