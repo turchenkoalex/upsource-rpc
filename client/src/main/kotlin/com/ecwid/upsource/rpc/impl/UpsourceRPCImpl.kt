@@ -218,7 +218,7 @@ internal class UpsourceRPCImpl(
 		return invokeMethod("createDiscussion", request)
 	}
 
-	override fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage> {
+	override fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ResolveDiscussionResponseDTO> {
 		return invokeMethod("resolveDiscussion", request)
 	}
 
@@ -350,7 +350,7 @@ internal class UpsourceRPCImpl(
 		return invokeMethod("renameReview", request)
 	}
 
-	override fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage> {
+	override fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.projects.EditReviewDescriptionResponseDTO> {
 		return invokeMethod("editReviewDescription", request)
 	}
 

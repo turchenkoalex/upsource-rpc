@@ -252,7 +252,7 @@ interface UpsourceRPC {
 	/**
 	 * Updates a discussion
 	 */
-	fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
+	fun resolveDiscussion(request: com.ecwid.upsource.rpc.projects.ResolveDiscussionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.projects.ResolveDiscussionResponseDTO>
 
 	/**
 	 * Checks if current user can resolve the given discussion
@@ -417,7 +417,7 @@ interface UpsourceRPC {
 	/**
 	 * Sets review description
 	 */
-	fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
+	fun editReviewDescription(request: com.ecwid.upsource.rpc.projects.EditReviewDescriptionRequestDTO): RpcResponse<com.ecwid.upsource.rpc.projects.EditReviewDescriptionResponseDTO>
 
 	/**
 	 * Returns review details

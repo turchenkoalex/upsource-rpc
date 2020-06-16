@@ -9,10 +9,16 @@ data class UpdateParticipantInReviewRequestDTO(
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (required)
 	 */
-	val state: ParticipantStateEnum
+	val state: ParticipantStateEnum,
+
+	/**
+	 * User ID. When set, this user's participant state will be changed. (optional)
+	 */
+	val userId: String? = null
 ) {
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
-		state = ParticipantStateEnum.UNREAD
+		state = ParticipantStateEnum.UNREAD,
+		userId = null
 	)
 }
