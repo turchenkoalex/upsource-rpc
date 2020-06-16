@@ -188,9 +188,10 @@ when (webhook) {
 
 ## Compatibility Matrix
 
-|              | Upsource 2019.1.1644 |
-|--------------|:--------------------:|
-| Client 0.9.* |           ✓          |
+|    Client    |   Upsource  |
+|--------------|:-----------:|
+| Client 0.9.4 | 2019.1.1644 | 
+| Client 0.9.5 | 2019.1.1717 |
 
 
 ## Code generation
