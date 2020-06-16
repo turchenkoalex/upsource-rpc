@@ -1611,7 +1611,7 @@
         },
         {
           "name": "syncResult",
-          "description": "GitHub sync result. see SyncResultEnum parameters",
+          "description": "GitHub sync result. See SyncResultEnum parameters",
           "label": "optional",
           "type": "SyncResultEnum"
         },
@@ -1633,7 +1633,7 @@
       "name": "UpdateCommentResponseDTO",
       "fields": [{
         "name": "syncResult",
-        "description": "GitHub sync result. see SyncResultEnum parameters",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
         "label": "optional",
         "type": "SyncResultEnum"
       }]
@@ -1642,7 +1642,7 @@
       "name": "RemoveCommentResponseDTO",
       "fields": [{
         "name": "syncResult",
-        "description": "GitHub sync result. see SyncResultEnum parameters",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
         "label": "optional",
         "type": "SyncResultEnum"
       }]
@@ -1651,7 +1651,7 @@
       "name": "CloseReviewResponseDTO",
       "fields": [{
         "name": "syncResult",
-        "description": "GitHub sync result. see SyncResultEnum parameters",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
         "label": "optional",
         "type": "SyncResultEnum"
       }]
@@ -1660,7 +1660,7 @@
       "name": "RenameReviewResponseDTO",
       "fields": [{
         "name": "syncResult",
-        "description": "GitHub sync result. see SyncResultEnum parameters",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
         "label": "optional",
         "type": "SyncResultEnum"
       }]
@@ -2160,7 +2160,7 @@
         },
         {
           "name": "syncResult",
-          "description": "GitHub sync result. see SyncResultEnum parameters",
+          "description": "GitHub sync result. See SyncResultEnum parameters",
           "label": "optional",
           "type": "SyncResultEnum"
         }
@@ -2259,6 +2259,15 @@
       ]
     },
     {
+      "name": "EditReviewDescriptionResponseDTO",
+      "fields": [{
+        "name": "syncResult",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
+        "label": "optional",
+        "type": "SyncResultEnum"
+      }]
+    },
+    {
       "name": "RevisionsInReviewDTO",
       "fields": [
         {
@@ -2352,6 +2361,12 @@
           "description": "State of the participant. See ParticipantStateEnum parameters",
           "label": "required",
           "type": "ParticipantStateEnum"
+        },
+        {
+          "name": "userId",
+          "description": "User ID. When set, this user's participant state will be changed.",
+          "label": "optional",
+          "type": "String"
         }
       ]
     },
@@ -2359,7 +2374,7 @@
       "name": "UpdateParticipantInReviewResponseDTO",
       "fields": [{
         "name": "syncResult",
-        "description": "GitHub sync result. see SyncResultEnum parameters",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
         "label": "optional",
         "type": "SyncResultEnum"
       }]
@@ -2425,6 +2440,15 @@
       ]
     },
     {
+      "name": "ResolveDiscussionResponseDTO",
+      "fields": [{
+        "name": "syncResult",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
+        "label": "optional",
+        "type": "SyncResultEnum"
+      }]
+    },
+    {
       "name": "UpdateReviewLabelRequestDTO",
       "fields": [
         {
@@ -2458,7 +2482,7 @@
         },
         {
           "name": "syncResult",
-          "description": "GitHub sync result. see SyncResultEnum parameters",
+          "description": "GitHub sync result. See SyncResultEnum parameters",
           "label": "optional",
           "type": "SyncResultEnum"
         }
