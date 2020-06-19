@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.ids
 
+/**
+ * @param startOffset Start offset of the text range
+ * @param endOffset End offset of the text range
+ */
 data class RangeDTO(
 	/**
 	 * Start offset of the text range (required)

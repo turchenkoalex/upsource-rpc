@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revision See RevisionInfoDTO parameters
+ * @param hash Current head revision ID
+ */
 data class RevisionsListUpdateResponseDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revision: List<RevisionInfoDTO> = emptyList(),
 

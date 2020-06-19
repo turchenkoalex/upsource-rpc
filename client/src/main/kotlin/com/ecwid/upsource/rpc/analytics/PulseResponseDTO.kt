@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param userValues Pulse values (number of commits in a week) for the current authenticated user
+ * @param allValues Pulse values for all users in a project
+ */
 data class PulseResponseDTO(
 	/**
 	 * Pulse values (number of commits in a week) for the current authenticated user (repeated)

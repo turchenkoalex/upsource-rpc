@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param leftLocator The left location in the example
+ * @param rightLocator The right location in the example (usually a default branch)
+ * @param lastCommitTime The last commit time
+ */
 data class ExampleComparison(
 	/**
 	 * The left location in the example (required)

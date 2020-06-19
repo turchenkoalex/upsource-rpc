@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param doHide Whether to show or hide predefined labels
+ */
 data class HidePredefinedLabelsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

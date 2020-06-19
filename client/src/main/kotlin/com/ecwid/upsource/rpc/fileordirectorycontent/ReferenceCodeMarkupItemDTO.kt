@@ -3,9 +3,19 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param range See RangeDTO parameters
+ * @param markupId ID of the markup element
+ * @param targetId ID of the target element
+ * @param capabilityFlags Bit mask of the 'CapabilityFlagsEnum' enum
+ * @param localIndex Used to identify the exact reference when references overlap
+ * @param hash Hash of the PSI element (if any), used to test PSI elements for equality
+ */
 data class ReferenceCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
+	 * 
+	 * @see RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 

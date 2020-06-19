@@ -3,9 +3,33 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param title Review title
+ * @param description Review description
+ * @param participants See ParticipantInReviewDTO parameters
+ * @param state Review state: open(1), closed(2)
+ * @param isUnread Whether the review is unread by the requester
+ * @param isReadyToClose 'true' if all reviewers have accepted the changes but the review is still open
+ * @param branch Names of tracked branches
+ * @param issue List of issue IDs linked to the review
+ * @param isRemoved Whether the review has been removed
+ * @param createdAt Unix timestamp of review creation
+ * @param createdBy ID of the user who created the review
+ * @param updatedAt Unix timestamp of the last update
+ * @param completionRate Review completion rate (e.g. accepted by 1 out of 3 reviewers). See CompletionRateDTO parameters
+ * @param discussionCounter A list of discussion counters. See SimpleDiscussionCounterDTO parameters
+ * @param deadline Review due date (Unix timestamp)
+ * @param isMuted Whether the review is muted by the currently logged-in user
+ * @param labels Review labels
+ * @param mergeFromBranch Merge review: branch to merge from
+ * @param mergeToBranch Merge review: branch to merge into
+ */
 data class ReviewDescriptorDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -21,6 +45,8 @@ data class ReviewDescriptorDTO(
 
 	/**
 	 * See ParticipantInReviewDTO parameters (repeated)
+	 * 
+	 * @see ParticipantInReviewDTO
 	 */
 	val participants: List<ParticipantInReviewDTO> = emptyList(),
 
@@ -71,11 +97,15 @@ data class ReviewDescriptorDTO(
 
 	/**
 	 * Review completion rate (e.g. accepted by 1 out of 3 reviewers). See CompletionRateDTO parameters (optional)
+	 * 
+	 * @see CompletionRateDTO
 	 */
 	val completionRate: CompletionRateDTO? = null,
 
 	/**
 	 * A list of discussion counters. See SimpleDiscussionCounterDTO parameters (optional)
+	 * 
+	 * @see SimpleDiscussionCounterDTO
 	 */
 	val discussionCounter: SimpleDiscussionCounterDTO? = null,
 

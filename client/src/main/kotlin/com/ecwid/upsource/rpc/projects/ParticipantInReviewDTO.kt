@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param userId Participant user ID
+ * @param role Participant's role in the review. See RoleInReviewEnum parameters
+ * @param state State of the participant. See ParticipantStateEnum parameters
+ */
 data class ParticipantInReviewDTO(
 	/**
 	 * Participant user ID (required)
@@ -11,11 +16,15 @@ data class ParticipantInReviewDTO(
 
 	/**
 	 * Participant's role in the review. See RoleInReviewEnum parameters (required)
+	 * 
+	 * @see RoleInReviewEnum
 	 */
 	val role: com.ecwid.upsource.rpc.users.RoleInReviewEnum,
 
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (optional)
+	 * 
+	 * @see ParticipantStateEnum
 	 */
 	val state: ParticipantStateEnum? = null
 ) {

@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param id Achievement ID
+ * @param name Achievement title
+ * @param shortDescription Short description of the achievement
+ * @param description Longer description of the achievement
+ * @param date Unix timestamp of the unlocking event
+ * @param isUnread Whether the user saw a notification about the unlocking
+ * @param isUnlocked Whether the achievement is unlocked by the user
+ */
 data class AchievementDTO(
 	/**
 	 * Achievement ID (required)

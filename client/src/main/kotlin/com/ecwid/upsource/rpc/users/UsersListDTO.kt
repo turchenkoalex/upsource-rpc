@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param me User ID of the logged-in user
+ * @param suggestedUsers User IDs of suggested users
+ * @param suggestedUserRelevance Users' relevance [0..100] as a reviewer
+ * @param suggestedUserOpenedReviews The number of open reviews the user has
+ * @param committers User IDs of suggested committers
+ * @param others User IDs of other suggested participants
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ */
 data class UsersListDTO(
 	/**
 	 * User ID of the logged-in user (optional)

@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param file See FileInRevisionDTO parameters
+ * @param addedLines How many lines were added
+ * @param removedLines How many lines were deleted
+ */
 data class FileDiffSummaryDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

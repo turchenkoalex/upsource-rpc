@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param baseRevision ID of the base revision
+ * @param secondRevision ID of the revision that should be compared to the base revision
+ */
 data class RevisionsDiffRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

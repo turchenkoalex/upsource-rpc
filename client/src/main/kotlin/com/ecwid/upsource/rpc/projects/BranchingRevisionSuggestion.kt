@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisionId Revision ID to suggest
+ * @param pathToLeftSize The number of revisions to the left locator
+ * @param pathToRightSize The number of revisions to the right locator
+ */
 data class BranchingRevisionSuggestion(
 	/**
 	 * Revision ID to suggest (required)

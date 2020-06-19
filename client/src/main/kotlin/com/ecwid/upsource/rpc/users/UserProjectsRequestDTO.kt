@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param userId Upsource user ID
+ * @param commitTimestampFilter Project update timestamp to limit the returned projects by
+ */
 data class UserProjectsRequestDTO(
 	/**
 	 * Upsource user ID (required)

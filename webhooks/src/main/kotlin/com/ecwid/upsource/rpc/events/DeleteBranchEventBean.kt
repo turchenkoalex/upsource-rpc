@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param name Branch name
+ */
 data class DeleteBranchEventBean(
 	/**
 	 * Branch name (required)

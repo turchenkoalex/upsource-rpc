@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.ids
 
+/**
+ * @param revisionId VCS revision ID
+ */
 data class RevisionIdDTO(
 	/**
 	 * VCS revision ID (required)

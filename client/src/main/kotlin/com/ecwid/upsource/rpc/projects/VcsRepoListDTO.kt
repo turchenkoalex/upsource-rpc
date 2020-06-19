@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param repo See VcsRepoDTO parameters
+ */
 data class VcsRepoListDTO(
 	/**
 	 * See VcsRepoDTO parameters (repeated)
+	 * 
+	 * @see VcsRepoDTO
 	 */
 	val repo: List<VcsRepoDTO> = emptyList()
 )

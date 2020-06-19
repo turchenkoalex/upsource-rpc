@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param participant Participant user info
+ * @param formerRole The role participant had before being removed from review
+ */
 data class RemovedParticipantFromReviewFeedEventBean(
 	/**
 	 * Base feed event (required)

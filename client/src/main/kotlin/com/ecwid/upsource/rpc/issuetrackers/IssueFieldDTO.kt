@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param id Field ID
+ * @param name Field name. The following fields are recognized for JIRA: url, linkUrl, projectId, login, password, pkcs12cert, pkcs12pass, enableCreateIssue, enableReviewComment, wfc_reviewCreated, wfc_reviewAccepted, wfc_reviewRejected, wfc_reviewClosed. YouTrack configuration in Upsource is delegated to Hub.
+ * @param defaultValueId Default value
+ * @param value See IssueFieldValueDTO parameters
+ */
 data class IssueFieldDTO(
 	/**
 	 * Field ID (required)
@@ -21,6 +27,8 @@ data class IssueFieldDTO(
 
 	/**
 	 * See IssueFieldValueDTO parameters (repeated)
+	 * 
+	 * @see IssueFieldValueDTO
 	 */
 	val value: List<IssueFieldValueDTO> = emptyList()
 ) {

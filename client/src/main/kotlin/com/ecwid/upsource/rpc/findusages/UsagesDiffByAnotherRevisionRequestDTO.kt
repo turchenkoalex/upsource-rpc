@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param originElement Original element. See PsiElementIdDTO parameters
+ * @param anotherRevisionId ID of the other revision
+ * @param isAnotherOld Whether the other revision is older
+ */
 data class UsagesDiffByAnotherRevisionRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
+	 * 
+	 * @see PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,
 

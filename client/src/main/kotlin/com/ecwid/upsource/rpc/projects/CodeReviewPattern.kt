@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param pattern Code review ID pattern
+ */
 data class CodeReviewPattern(
 	/**
 	 * Project ID in Upsource (required)

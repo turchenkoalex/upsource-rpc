@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param revisionId Revision ID
+ * @param description Commit message
+ * @param time Unix timestamp of commit time
+ * @param shortRevisionId Short revision ID
+ */
 data class CommitInfo(
 	/**
 	 * Revision ID (required)

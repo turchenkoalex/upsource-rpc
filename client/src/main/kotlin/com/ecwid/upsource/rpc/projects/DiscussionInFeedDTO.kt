@@ -3,6 +3,20 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId Discussion ID
+ * @param anchor See AnchorDTO parameters
+ * @param comments See CommentDTO parameters
+ * @param review See ShortReviewInfoDTO parameters
+ * @param labels Discussion labels. See LabelDTO parameters
+ * @param read Whether a discussion has been read by the requester
+ * @param isStarred Whether a discussion has been starred by the requester
+ * @param firstUnreadCommentId An ID of the first unread comment
+ * @param issue An ID of the issue linked to the discussion
+ * @param isResolved Whether the discussion is resolved
+ * @param resolvedBy If the discussion is resolved, contains the ID of the user who resolved it
+ */
 data class DiscussionInFeedDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,21 +30,29 @@ data class DiscussionInFeedDTO(
 
 	/**
 	 * See AnchorDTO parameters (required)
+	 * 
+	 * @see AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See CommentDTO parameters (repeated)
+	 * 
+	 * @see CommentDTO
 	 */
 	val comments: List<CommentDTO> = emptyList(),
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
+	 * 
+	 * @see ShortReviewInfoDTO
 	 */
 	val review: ShortReviewInfoDTO? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
+	 * 
+	 * @see LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList(),
 

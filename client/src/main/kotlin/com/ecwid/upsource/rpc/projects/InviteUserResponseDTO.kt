@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param user See UserRolesDTO parameters
+ * @param isInvited Whether the user is already invited
+ */
 data class InviteUserResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (optional)
+	 * 
+	 * @see UserRolesDTO
 	 */
 	val user: UserRolesDTO? = null,
 

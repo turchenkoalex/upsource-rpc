@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param allRevisions Number of revisions covered by reviews
+ * @param revisionsCoveredByOpen Number of revisions covered by open reviews
+ * @param revisionsCoveredByClosed Number of revisions covered by closed reviews
+ */
 data class ReviewCoverageDTO(
 	/**
 	 * Number of revisions covered by reviews (repeated)

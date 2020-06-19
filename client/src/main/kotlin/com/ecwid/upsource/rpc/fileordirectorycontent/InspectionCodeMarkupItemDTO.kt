@@ -3,14 +3,25 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param range See RangeDTO parameters
+ * @param textAttribute See TextAttributeDTO parameters
+ * @param message Inspection message
+ * @param severity See InspectionSeverityEnum parameters
+ * @param textAttributesKey Name (if any) of this markup key, given by IntelliJ IDEA
+ */
 data class InspectionCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
+	 * 
+	 * @see RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 
 	/**
 	 * See TextAttributeDTO parameters (required)
+	 * 
+	 * @see TextAttributeDTO
 	 */
 	val textAttribute: TextAttributeDTO,
 
@@ -21,6 +32,8 @@ data class InspectionCodeMarkupItemDTO(
 
 	/**
 	 * See InspectionSeverityEnum parameters (required)
+	 * 
+	 * @see InspectionSeverityEnum
 	 */
 	val severity: InspectionSeverityEnum,
 

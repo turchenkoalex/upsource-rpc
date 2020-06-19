@@ -3,6 +3,28 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param isIdentical Whether file contents are identical in both revisions
+ * @param text Text of the diff
+ * @param oldFile See FileInRevisionDTO parameters
+ * @param newFile See FileInRevisionDTO parameters
+ * @param contentType See FileContentTypeDTO parameters
+ * @param addedLines How many lines were added
+ * @param removedLines How many lines were removed
+ * @param modifiedLines How many lines were modified
+ * @param collapsedLines Ranges of collapsed text (lines)
+ * @param addedRanges Ranges of text that were added
+ * @param removedRanges Ranges of text that were removed
+ * @param isSyntaxSupported Determines if syntax markup is supported for this file type
+ * @param syntaxMarkup See TextMarkupDTO parameters
+ * @param diffToOldDocument A mapping of diff ranges to ranges in the old document
+ * @param diffToNewDocument A mapping of diff ranges to ranges in the new document
+ * @param oldLineNumbers Line numbers as they appear in the old file
+ * @param newLineNumbers Line numbers as they appear in the new file
+ * @param annotation Authors of code fragments in the review diff
+ * @param hasUnrelatedChanges Some changes were filtered out (in the review diff)
+ * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
+ */
 data class FileInlineDiffResponseDTO(
 	/**
 	 * Whether file contents are identical in both revisions (required)
@@ -16,16 +38,22 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileContentTypeDTO parameters (required)
+	 * 
+	 * @see FileContentTypeDTO
 	 */
 	val contentType: com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO,
 
@@ -66,6 +94,8 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See TextMarkupDTO parameters (repeated)
+	 * 
+	 * @see TextMarkupDTO
 	 */
 	val syntaxMarkup: List<com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO> = emptyList(),
 

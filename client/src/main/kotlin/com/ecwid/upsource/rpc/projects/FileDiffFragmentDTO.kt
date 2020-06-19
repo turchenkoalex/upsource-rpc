@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param leftFileStartLine Line number to start with
+ * @param leftFileLineCount How many lines
+ * @param rightFileStartLine Line number to start with
+ * @param rightFileLineCount How many lines
+ * @param isUnchanged Indicates that a fragment is unchanged ("true" for unchanged commented lines)
+ * @param addedRanges Ranges of text that were added
+ * @param deletedRanges Ranges of text that were deleted
+ */
 data class FileDiffFragmentDTO(
 	/**
 	 * Line number to start with (required)

@@ -3,6 +3,19 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param discussionId ID of the discussion
+ * @param anchor Current discussion anchor
+ * @param origin Original discussion anchor
+ * @param comments See CommentDTO parameters
+ * @param read See ReadEnum parameters
+ * @param isStarred Whether the discussion is starred
+ * @param review See ShortReviewInfoDTO parameters
+ * @param labels Discussion labels. See LabelDTO parameters
+ * @param issue An ID of the issue linked to the discussion
+ * @param isResolved Whether the discussion is resolved
+ * @param syncResult GitHub sync result. See SyncResultEnum parameters
+ */
 data class DiscussionInFileDTO(
 	/**
 	 * ID of the discussion (required)
@@ -21,11 +34,15 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * See CommentDTO parameters (repeated)
+	 * 
+	 * @see CommentDTO
 	 */
 	val comments: List<CommentDTO> = emptyList(),
 
 	/**
 	 * See ReadEnum parameters (optional)
+	 * 
+	 * @see ReadEnum
 	 */
 	val read: ReadEnum? = null,
 
@@ -36,11 +53,15 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
+	 * 
+	 * @see ShortReviewInfoDTO
 	 */
 	val review: ShortReviewInfoDTO? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
+	 * 
+	 * @see LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList(),
 
@@ -56,6 +77,8 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
+	 * 
+	 * @see SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 ) {

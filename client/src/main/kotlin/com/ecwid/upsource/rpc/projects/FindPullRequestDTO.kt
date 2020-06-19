@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param branch Branch name
+ */
 data class FindPullRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param from Starting line number
+ * @param to Ending line number
+ */
 data class RangeMappingDTO(
 	/**
 	 * Starting line number (required)

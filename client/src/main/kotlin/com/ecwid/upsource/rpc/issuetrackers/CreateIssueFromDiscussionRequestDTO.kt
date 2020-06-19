@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId ID of the discussion
+ * @param fieldValue See IssueFieldValueIdDTO parameters
+ */
 data class CreateIssueFromDiscussionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,6 +21,8 @@ data class CreateIssueFromDiscussionRequestDTO(
 
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
+	 * 
+	 * @see IssueFieldValueIdDTO
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {

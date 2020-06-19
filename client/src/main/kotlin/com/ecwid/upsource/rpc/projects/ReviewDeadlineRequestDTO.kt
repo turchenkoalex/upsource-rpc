@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param deadline Review due date (Unix timestamp)
+ */
 data class ReviewDeadlineRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 

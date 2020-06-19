@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param oldState See ReviewStateEnum parameters
+ * @param newState See ReviewStateEnum parameters
+ */
 data class ReviewStateChangedDTO(
 	/**
 	 * See ReviewStateEnum parameters (required)
+	 * 
+	 * @see ReviewStateEnum
 	 */
 	val oldState: ReviewStateEnum,
 
 	/**
 	 * See ReviewStateEnum parameters (required)
+	 * 
+	 * @see ReviewStateEnum
 	 */
 	val newState: ReviewStateEnum
 ) {

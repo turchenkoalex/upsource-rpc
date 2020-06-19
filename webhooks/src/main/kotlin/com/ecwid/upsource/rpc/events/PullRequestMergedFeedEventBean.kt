@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param pullRequest Branch name
+ */
 data class PullRequestMergedFeedEventBean(
 	/**
 	 * Base feed event (required)

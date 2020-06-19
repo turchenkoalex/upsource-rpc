@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param key Role key (e.g. project-admin)
+ * @param isGlobal Whether the role is a global one in Hub
+ * @param isGroup Whether the role is assigned to a group
+ */
 data class RoleDTO(
 	/**
 	 * Role key (e.g. project-admin) (required)

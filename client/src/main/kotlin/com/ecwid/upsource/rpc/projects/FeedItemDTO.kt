@@ -3,6 +3,27 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param feedItemId News feed item ID
+ * @param projectId Project ID in Upsource
+ * @param discussion See DiscussionInFeedDTO parameters
+ * @param addedRevisions See RevisionInfoDTO parameters
+ * @param removedRevisions See RevisionInfoDTO parameters
+ * @param newParticipantInReview See ParticipantInReviewDTO parameters
+ * @param removedParticipantFromReview Show removed participants
+ * @param participantStateChanged See ParticipantStateChangedDTO parameters
+ * @param createdReview See ShortReviewInfoDTO parameters
+ * @param modifiedReview See ShortReviewInfoDTO parameters
+ * @param removedReview See ReviewIdDTO parameters
+ * @param reviewStateChanged See ReviewStateChangedDTO parameters
+ * @param branchTrackingStopped The branch name for the "Review stopped branch tracking" feed event
+ * @param updatedDeadline 
+ * @param pullRequest Whether the feed item relates to the pull request action
+ * @param date Unix timestamp
+ * @param actorId The ID of the user who performed the feed action
+ * @param squashedToRevision Indicates that a review was squashed to a single revision
+ * @param removedDiscussionId Indicates that a discussion was removed
+ */
 data class FeedItemDTO(
 	/**
 	 * News feed item ID (required)
@@ -16,21 +37,29 @@ data class FeedItemDTO(
 
 	/**
 	 * See DiscussionInFeedDTO parameters (optional)
+	 * 
+	 * @see DiscussionInFeedDTO
 	 */
 	val discussion: DiscussionInFeedDTO? = null,
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val addedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val removedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See ParticipantInReviewDTO parameters (optional)
+	 * 
+	 * @see ParticipantInReviewDTO
 	 */
 	val newParticipantInReview: ParticipantInReviewDTO? = null,
 
@@ -41,26 +70,36 @@ data class FeedItemDTO(
 
 	/**
 	 * See ParticipantStateChangedDTO parameters (optional)
+	 * 
+	 * @see ParticipantStateChangedDTO
 	 */
 	val participantStateChanged: ParticipantStateChangedDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
+	 * 
+	 * @see ShortReviewInfoDTO
 	 */
 	val createdReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
+	 * 
+	 * @see ShortReviewInfoDTO
 	 */
 	val modifiedReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val removedReview: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * See ReviewStateChangedDTO parameters (optional)
+	 * 
+	 * @see ReviewStateChangedDTO
 	 */
 	val reviewStateChanged: ReviewStateChangedDTO? = null,
 

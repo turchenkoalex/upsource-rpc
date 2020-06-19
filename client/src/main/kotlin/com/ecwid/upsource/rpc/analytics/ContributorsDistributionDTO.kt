@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param items See CommitterTimeValue parameters
+ * @param timePoints The specific time intervals that define the distribution
+ * @param users See CommitterUserInfo parameters
+ */
 data class ContributorsDistributionDTO(
 	/**
 	 * See CommitterTimeValue parameters (repeated)
+	 * 
+	 * @see CommitterTimeValue
 	 */
 	val items: List<CommitterTimeValue> = emptyList(),
 
@@ -16,6 +23,8 @@ data class ContributorsDistributionDTO(
 
 	/**
 	 * See CommitterUserInfo parameters (repeated)
+	 * 
+	 * @see CommitterUserInfo
 	 */
 	val users: List<CommitterUserInfo> = emptyList()
 )

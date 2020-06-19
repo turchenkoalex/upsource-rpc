@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId ID of the Upsource project
+ * @param email Email address of the Upsource user
+ */
 data class InviteUserRequestDTO(
 	/**
 	 * ID of the Upsource project (required)

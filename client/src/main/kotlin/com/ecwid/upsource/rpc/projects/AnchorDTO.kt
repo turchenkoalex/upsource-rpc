@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param range Text range associated with an anchor
+ * @param fileId File associated with an anchor
+ * @param revisionId VCS revision ID
+ * @param inlineInRevision Whether a comment was left in the inline diff
+ */
 data class AnchorDTO(
 	/**
 	 * Text range associated with an anchor (optional)

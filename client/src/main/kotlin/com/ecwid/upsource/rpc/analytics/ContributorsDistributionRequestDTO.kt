@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param module Name of the project module
+ * @param fromTime Unix timestamp
+ * @param toTime Unix timestamp
+ * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
+ */
 data class ContributorsDistributionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

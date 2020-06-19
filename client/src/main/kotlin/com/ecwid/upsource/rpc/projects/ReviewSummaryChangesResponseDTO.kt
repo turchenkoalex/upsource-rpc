@@ -3,9 +3,17 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param diff See RevisionsDiffDTO parameters
+ * @param annotation Review annotation message, e.g. "Some revisions in review are not indexed yet", "Review has too many files"
+ * @param ignoredFiles The list of files that were omitted in a review according to project settings
+ * @param fileDiffSummary See FileDiffSummaryDTO parameters
+ */
 data class ReviewSummaryChangesResponseDTO(
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
+	 * 
+	 * @see RevisionsDiffDTO
 	 */
 	val diff: RevisionsDiffDTO? = null,
 
@@ -21,6 +29,8 @@ data class ReviewSummaryChangesResponseDTO(
 
 	/**
 	 * See FileDiffSummaryDTO parameters (repeated)
+	 * 
+	 * @see FileDiffSummaryDTO
 	 */
 	val fileDiffSummary: List<FileDiffSummaryDTO> = emptyList()
 )

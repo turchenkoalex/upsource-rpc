@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param participant See ParticipantInReviewDTO parameters
+ */
 data class ParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * See ParticipantInReviewDTO parameters (required)
+	 * 
+	 * @see ParticipantInReviewDTO
 	 */
 	val participant: ParticipantInReviewDTO
 ) {

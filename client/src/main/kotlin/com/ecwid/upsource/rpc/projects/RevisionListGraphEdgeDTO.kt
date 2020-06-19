@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param position Edge position index
+ * @param toPosition Connecting edge position index
+ * @param isUp Whether a line is directed up or down
+ * @param isSolid Whether a line is solid or dashed
+ * @param hasArrow Whether a line ends with an arrow
+ * @param color Edge color
+ */
 data class RevisionListGraphEdgeDTO(
 	/**
 	 * Edge position index (required)

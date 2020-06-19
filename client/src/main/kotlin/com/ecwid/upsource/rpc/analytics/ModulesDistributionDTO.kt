@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param items See ModuleTimeValue parameters
+ * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
+ * @param modules Names of the project modules
+ */
 data class ModulesDistributionDTO(
 	/**
 	 * See ModuleTimeValue parameters (repeated)
+	 * 
+	 * @see ModuleTimeValue
 	 */
 	val items: List<ModuleTimeValue> = emptyList(),
 

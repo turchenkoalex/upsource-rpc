@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param hidePredefinedLabels Indicates if predefined labels are hidden
+ * @param predefinedLabels Predefined discussion labels. See LabelDTO parameters
+ * @param customLabels Custom discussion labels. See LabelDTO parameters
+ */
 data class LabelsListDTO(
 	/**
 	 * Indicates if predefined labels are hidden (required)
@@ -11,11 +16,15 @@ data class LabelsListDTO(
 
 	/**
 	 * Predefined discussion labels. See LabelDTO parameters (repeated)
+	 * 
+	 * @see LabelDTO
 	 */
 	val predefinedLabels: List<LabelDTO> = emptyList(),
 
 	/**
 	 * Custom discussion labels. See LabelDTO parameters (repeated)
+	 * 
+	 * @see LabelDTO
 	 */
 	val customLabels: List<LabelDTO> = emptyList()
 ) {

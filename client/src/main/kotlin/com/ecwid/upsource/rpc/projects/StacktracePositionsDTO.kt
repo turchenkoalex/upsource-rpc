@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param positions See StacktracePositionDTO parameters
+ */
 data class StacktracePositionsDTO(
 	/**
 	 * See StacktracePositionDTO parameters (repeated)
+	 * 
+	 * @see StacktracePositionDTO
 	 */
 	val positions: List<StacktracePositionDTO> = emptyList()
 )

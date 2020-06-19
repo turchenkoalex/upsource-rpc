@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param pattern Search query, e.g. part of the branch name
+ * @param limit Max number of results to return
+ */
 data class FindBranchRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

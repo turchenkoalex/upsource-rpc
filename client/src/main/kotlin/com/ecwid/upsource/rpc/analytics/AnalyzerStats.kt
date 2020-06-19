@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param minCommitTime Unix timestamp of the earliest commit
+ * @param maxCommitTime Unix timestamp of the latest commit
+ * @param totalCommits Total number of commits
+ * @param minIndexedCommitTime Unix timestamp of the earliest indexed commit
+ * @param maxIndexedCommitTime Unix timestamp of the latest indexed commit
+ * @param totalIndexedCommits Total number of indexed commits
+ * @param isProjectModelKnown Whether project model is known
+ */
 data class AnalyzerStats(
 	/**
 	 * Unix timestamp of the earliest commit (required)

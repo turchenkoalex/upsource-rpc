@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param originElement Original element. See PsiElementIdDTO parameters
+ * @param newRevisionId ID of the new revision
+ * @param boundaryRevisionId ID of the boundary revision
+ */
 data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
+	 * 
+	 * @see PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,
 

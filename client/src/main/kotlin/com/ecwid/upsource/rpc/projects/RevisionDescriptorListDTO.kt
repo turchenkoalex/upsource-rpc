@@ -3,14 +3,24 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revision See RevisionInfoDTO parameters
+ * @param graph See RevisionListGraphDTO parameters
+ * @param headHash Head revision ID
+ * @param query Search query
+ */
 data class RevisionDescriptorListDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revision: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
+	 * 
+	 * @see RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO? = null,
 

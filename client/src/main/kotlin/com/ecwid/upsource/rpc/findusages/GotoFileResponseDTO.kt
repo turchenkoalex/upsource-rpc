@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param items See GotoFileItemDTO parameters
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ */
 data class GotoFileResponseDTO(
 	/**
 	 * See GotoFileItemDTO parameters (repeated)
+	 * 
+	 * @see GotoFileItemDTO
 	 */
 	val items: List<GotoFileItemDTO> = emptyList(),
 

@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param id Discussion label ID
+ * @param name Discussion label name (e.g. bug, code style, enhancement, help wanted)
+ * @param colorId Discussion label color
+ */
 data class LabelDTO(
 	/**
 	 * Discussion label ID (optional)

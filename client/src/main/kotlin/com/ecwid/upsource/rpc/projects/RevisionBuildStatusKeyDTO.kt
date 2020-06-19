@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param status Build status: Success(1), Failed(2), InProgress(3)
+ * @param name Build name (e.g. "#1.0.1000")
+ * @param url Build URL (e.g. "http://teamcity-server/build-url")
+ * @param description Build description (e.g. "120 of 1500 tests failed")
+ */
 data class RevisionBuildStatusKeyDTO(
 	/**
 	 * Build status: Success(1), Failed(2), InProgress(3) (required)

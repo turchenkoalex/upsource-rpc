@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param fromTime Unix timestamp
+ * @param toTime Unix timestamp
+ */
 data class ReviewStatisticsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

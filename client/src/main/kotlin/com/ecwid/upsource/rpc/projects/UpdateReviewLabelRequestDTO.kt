@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param reviewId See ReviewIdDTO parameters
+ * @param label Review label being added or removed. See LabelDTO parameters
+ */
 data class UpdateReviewLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -11,11 +16,15 @@ data class UpdateReviewLabelRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * Review label being added or removed. See LabelDTO parameters (required)
+	 * 
+	 * @see LabelDTO
 	 */
 	val label: LabelDTO
 ) {

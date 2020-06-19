@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param serviceId VCS hosting service ID
+ * @param serviceUrl VCS hosting service URL
+ * @param repoIds IDs of the VCS repositories
+ * @param canCreateRepository Whether the requester has permission to create repositories in the VCS service
+ */
 data class VcsHostingServiceDTO(
 	/**
 	 * VCS hosting service ID (required)

@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param oldRevisionId ID of the old revision
+ * @param newRevisionId ID of the new revision
+ * @param usages See UsagesDiffDTO parameters
+ */
 data class UsagesDiffResponseDTO(
 	/**
 	 * ID of the old revision (required)
@@ -16,6 +21,8 @@ data class UsagesDiffResponseDTO(
 
 	/**
 	 * See UsagesDiffDTO parameters (repeated)
+	 * 
+	 * @see UsagesDiffDTO
 	 */
 	val usages: List<UsagesDiffDTO> = emptyList()
 ) {

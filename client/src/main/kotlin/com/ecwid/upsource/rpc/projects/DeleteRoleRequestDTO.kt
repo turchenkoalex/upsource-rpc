@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId ID of the Upsource project
+ * @param userId ID of the Upsource user
+ * @param roleKey Role key
+ */
 data class DeleteRoleRequestDTO(
 	/**
 	 * ID of the Upsource project (required)

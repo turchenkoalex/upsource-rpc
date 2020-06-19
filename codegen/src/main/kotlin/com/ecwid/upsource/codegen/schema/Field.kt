@@ -5,5 +5,6 @@ data class Field(
 	val description: String?,
 	val label: String,
 	val type: String,
-	val defaultValue: String = ""
+	val defaultValue: String = "",
+	val normalizedDescription: String? = null
 )

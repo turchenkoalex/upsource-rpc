@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param sanitizedHTML Sanitized HTML string
+ */
 data class SanitizeHTMLResponseDTO(
 	/**
 	 * Sanitized HTML string (required)

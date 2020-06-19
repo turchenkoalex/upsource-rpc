@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param targetBranch Branch to merge into
+ */
 data class ReviewTargetBranchDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 

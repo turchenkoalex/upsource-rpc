@@ -3,14 +3,25 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param leftFile See FileInRevisionDTO parameters
+ * @param rightFile See FileInRevisionDTO parameters
+ * @param ignoreWhitespace Whether to ignore whitespace changes
+ * @param isLeftFileDefinedAsNull Whether the left file for comparison is 'no-file' (for internal use only)
+ * @param contextLines Number of context lines around the modified fragment
+ */
 data class FileDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (optional)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val leftFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val rightFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 

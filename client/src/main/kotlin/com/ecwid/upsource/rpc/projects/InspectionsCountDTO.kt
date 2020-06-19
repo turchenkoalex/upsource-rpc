@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param errors 
+ * @param warnings 
+ * @param weakWarnings 
+ * @param infos 
+ */
 data class InspectionsCountDTO(
 	val errors: Int,
 

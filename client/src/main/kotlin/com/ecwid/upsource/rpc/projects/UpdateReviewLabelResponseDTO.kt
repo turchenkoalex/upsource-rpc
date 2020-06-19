@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param label The review label
+ * @param syncResult GitHub sync result. See SyncResultEnum parameters
+ */
 data class UpdateReviewLabelResponseDTO(
 	/**
 	 * The review label (required)
@@ -11,6 +15,8 @@ data class UpdateReviewLabelResponseDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
+	 * 
+	 * @see SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 ) {

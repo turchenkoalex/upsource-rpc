@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param labelId Discussion labels IDs
+ */
 data class EditLabelsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

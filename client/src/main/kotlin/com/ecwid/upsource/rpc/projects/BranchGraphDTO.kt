@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisions See RevisionInfoDTO parameters
+ * @param graph See RevisionListGraphDTO parameters
+ */
 data class BranchGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (required)
+	 * 
+	 * @see RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO
 ) {

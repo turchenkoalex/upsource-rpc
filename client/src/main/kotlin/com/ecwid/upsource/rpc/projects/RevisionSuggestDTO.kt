@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisionId Revision info
+ * @param score The confidence score
+ */
 data class RevisionSuggestDTO(
 	/**
 	 * Revision info (required)

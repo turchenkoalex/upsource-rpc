@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param isAllowed A branch review can be created
+ * @param message A message explaining the reason why a review can't be created
+ */
 data class CanCreateBranchReviewDTO(
 	/**
 	 * A branch review can be created (required)

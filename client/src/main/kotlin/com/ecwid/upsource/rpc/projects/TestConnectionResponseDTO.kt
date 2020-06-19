@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param status See TestConnectionStatusEnum parameters
+ * @param message Response message
+ */
 data class TestConnectionResponseDTO(
 	/**
 	 * See TestConnectionStatusEnum parameters (required)
+	 * 
+	 * @see TestConnectionStatusEnum
 	 */
 	val status: TestConnectionStatusEnum,
 

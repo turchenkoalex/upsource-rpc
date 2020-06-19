@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param userId ID of the specified Upsource user
+ * @param limit Number of revisions to return
+ * @param query Search query (e.g. "branch: master") and/or part of the commit message
+ */
 data class UserRevisionsListRequestDTO(
 	/**
 	 * ID of the specified Upsource user (required)

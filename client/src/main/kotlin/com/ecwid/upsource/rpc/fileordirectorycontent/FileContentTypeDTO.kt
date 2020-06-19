@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param isText Whether the file is presentable as text
+ * @param isDirectory Whether the file is a directory
+ * @param isGenerated Whether file contents are generated
+ * @param canDownload Whether the file can be downloaded
+ * @param fileType File extension
+ */
 data class FileContentTypeDTO(
 	/**
 	 * Whether the file is presentable as text (required)

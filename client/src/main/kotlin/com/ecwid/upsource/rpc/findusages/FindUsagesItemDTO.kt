@@ -3,9 +3,19 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param navigationTarget See NavigationTargetItemDTO parameters
+ * @param previewText Preview text
+ * @param startOffsetInPreview Start offset
+ * @param endOffsetInPreview End offset
+ * @param lineNumber Line number
+ * @param isImportant Identifies if this usage is semantic-sensitive or not
+ */
 data class FindUsagesItemDTO(
 	/**
 	 * See NavigationTargetItemDTO parameters (required)
+	 * 
+	 * @see NavigationTargetItemDTO
 	 */
 	val navigationTarget: NavigationTargetItemDTO,
 

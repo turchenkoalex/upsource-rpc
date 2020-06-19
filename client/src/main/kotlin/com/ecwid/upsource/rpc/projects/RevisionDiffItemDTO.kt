@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param diffType See DiffTypeEnum parameters
+ * @param newFile See FileInRevisionDTO parameters
+ * @param oldFile See FileInRevisionDTO parameters
+ * @param fileIcon Indicates type of file (e.g. "file:xml")
+ * @param isRead Whether the diff has been viewed by the user. When returned by the findCommits method, isRead is always set to 'true'.
+ * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
+ */
 data class RevisionDiffItemDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -11,16 +20,22 @@ data class RevisionDiffItemDTO(
 
 	/**
 	 * See DiffTypeEnum parameters (required)
+	 * 
+	 * @see DiffTypeEnum
 	 */
 	val diffType: DiffTypeEnum,
 
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 

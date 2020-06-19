@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param text New review title
+ */
 data class RenameReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 

@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param base64 Base64-encoded contents of a file
+ */
 data class FileContentRawResponseDTO(
 	/**
 	 * Base64-encoded contents of a file (required)

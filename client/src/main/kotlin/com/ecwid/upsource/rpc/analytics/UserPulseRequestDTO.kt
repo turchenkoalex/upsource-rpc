@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param userId Upsource user ID
+ * @param fromTime Unix timestamp
+ * @param toTime Unix timestamp
+ * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
+ */
 data class UserPulseRequestDTO(
 	/**
 	 * Upsource user ID (required)

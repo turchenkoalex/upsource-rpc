@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param participant Participant user info
+ * @param role Participant role
+ */
 data class NewParticipantInReviewFeedEventBean(
 	/**
 	 * Base feed event (required)

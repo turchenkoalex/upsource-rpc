@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewInfo See RevisionReviewInfoDTO parameters
+ */
 data class RevisionReviewInfoListDTO(
 	/**
 	 * See RevisionReviewInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionReviewInfoDTO
 	 */
 	val reviewInfo: List<RevisionReviewInfoDTO> = emptyList()
 )

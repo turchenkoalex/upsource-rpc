@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param newProjectId An ID of the new Upsource project
+ * @param settings See ProjectSettingsDTO parameters
+ * @param custom Optional custom settings
+ */
 data class CreateProjectRequestDTO(
 	/**
 	 * An ID of the new Upsource project (required)
@@ -11,6 +16,8 @@ data class CreateProjectRequestDTO(
 
 	/**
 	 * See ProjectSettingsDTO parameters (required)
+	 * 
+	 * @see ProjectSettingsDTO
 	 */
 	val settings: ProjectSettingsDTO,
 

@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param diff See RevisionExternalInspectionsDiffResponseDTO
+ */
 data class RevisionsExternalInspectionsDiffResponseDTO(
 	/**
 	 * See RevisionExternalInspectionsDiffResponseDTO (repeated)
+	 * 
+	 * @see RevisionExternalInspectionsDiffResponseDTO
 	 */
 	val diff: List<RevisionExternalInspectionsDiffResponseDTO> = emptyList()
 )

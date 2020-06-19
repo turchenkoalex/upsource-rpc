@@ -3,9 +3,18 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param fileId See FileInRevisionDTO parameters
+ * @param startOffset Start offset
+ * @param endOffset End offset
+ * @param stubIndex Stub index ID
+ * @param targetDescription See TargetDescriptionDTO parameters
+ */
 data class NavigationTargetItemDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -26,6 +35,8 @@ data class NavigationTargetItemDTO(
 
 	/**
 	 * See TargetDescriptionDTO parameters (optional)
+	 * 
+	 * @see TargetDescriptionDTO
 	 */
 	val targetDescription: TargetDescriptionDTO? = null
 ) {

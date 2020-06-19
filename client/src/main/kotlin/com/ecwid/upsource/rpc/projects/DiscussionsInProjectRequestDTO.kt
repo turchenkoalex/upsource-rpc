@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param query A query string
+ * @param limit Number of discussions to return
+ * @param skip Number of discussions to skip from the top (for pagination)
+ */
 data class DiscussionsInProjectRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

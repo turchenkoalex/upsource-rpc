@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param key Setting key
+ */
 data class GetSettingRequestDTO(
 	/**
 	 * Setting key (required)

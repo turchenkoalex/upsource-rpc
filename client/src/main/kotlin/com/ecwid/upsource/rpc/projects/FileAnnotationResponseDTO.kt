@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param retrospective See FileAnnotationSectionDTO parameters
+ * @param perspective See FileAnnotationSectionDTO parameters
+ */
 data class FileAnnotationResponseDTO(
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
+	 * 
+	 * @see FileAnnotationSectionDTO
 	 */
 	val retrospective: List<FileAnnotationSectionDTO> = emptyList(),
 
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
+	 * 
+	 * @see FileAnnotationSectionDTO
 	 */
 	val perspective: List<FileAnnotationSectionDTO> = emptyList()
 )

@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param query Search query, i.e. starting part of the name
+ * @param limit Maximum number of results to return
+ */
 data class ProjectUserGroupsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

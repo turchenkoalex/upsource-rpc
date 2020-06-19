@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param branch Branch name
+ */
 data class ReviewStoppedBranchTrackingFeedEventBean(
 	/**
 	 * Base feed event (required)

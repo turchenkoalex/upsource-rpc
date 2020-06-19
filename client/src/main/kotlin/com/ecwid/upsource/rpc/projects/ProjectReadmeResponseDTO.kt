@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param text Text of the README file
+ * @param fileName A full path to the README file starting with a slash (e.g. /directory/readme.txt)
+ * @param revisionId Revision ID
+ */
 data class ProjectReadmeResponseDTO(
 	/**
 	 * Text of the README file (required)

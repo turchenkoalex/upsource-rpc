@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param revisionId Revision ID (deprecated)
+ * @param revisionIds List of revision IDs
+ */
 data class RevisionAddedToReviewFeedEventBean(
 	/**
 	 * Base feed event (required)

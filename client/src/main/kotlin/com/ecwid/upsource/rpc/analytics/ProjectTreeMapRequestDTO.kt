@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId Revision ID
+ */
 data class ProjectTreeMapRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

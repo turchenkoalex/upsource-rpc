@@ -3,9 +3,17 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revision See RevisionInProjectDTO parameters
+ * @param compareToRevisionId ID of the revision to compare with
+ * @param limit How many files to return
+ * @param skip Number of files to skip from the top (for pagination)
+ */
 data class RevisionChangesRequestDTO(
 	/**
 	 * See RevisionInProjectDTO parameters (required)
+	 * 
+	 * @see RevisionInProjectDTO
 	 */
 	val revision: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO,
 

@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param fieldId Field ID (see IssueFieldDTO)
+ * @param valueId Value ID (see IssueFieldValueDTO)
+ */
 data class IssueFieldValueIdDTO(
 	/**
 	 * Field ID (see IssueFieldDTO) (required)

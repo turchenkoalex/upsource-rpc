@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param targetId ID of the target element
+ * @param startOffset Start offset
+ * @param endOffset End offset
+ */
 data class LocalDeclarationRangeDTO(
 	/**
 	 * ID of the target element (required)

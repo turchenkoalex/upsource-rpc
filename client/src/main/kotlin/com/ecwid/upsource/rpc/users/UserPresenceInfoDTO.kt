@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param userId Upsource user ID
+ * @param isOnline Whether the user is online
+ * @param absentUntil Absence end date, if the user is currently on leave
+ */
 data class UserPresenceInfoDTO(
 	/**
 	 * Upsource user ID (required)

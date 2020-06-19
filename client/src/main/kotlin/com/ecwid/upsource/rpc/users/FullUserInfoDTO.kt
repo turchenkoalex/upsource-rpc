@@ -3,6 +3,18 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param userId Upsource user ID
+ * @param name Upsource user name
+ * @param isResolved Whether the user has an account in Hub
+ * @param isMe Flags the currently logged-in user
+ * @param isOnline Whether the user is online
+ * @param avatarUrl URL of the userpic
+ * @param profileUrl URL of the Hub user profile
+ * @param email Email address
+ * @param login Login
+ * @param absentUntil Absence end date, if the user is currently on leave
+ */
 data class FullUserInfoDTO(
 	/**
 	 * Upsource user ID (required)

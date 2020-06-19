@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param displayName Display name of a project tree item
+ * @param displayType Display type – directory, module, file, etc.
+ * @param isDirectory Whether an item is a directory
+ * @param isModule Whether an item is a module
+ * @param fileId Path to file
+ * @param hasChildren Whether an item has children and can be expanded
+ */
 data class ProjectTreeItemDTO(
 	/**
 	 * Display name of a project tree item (required)

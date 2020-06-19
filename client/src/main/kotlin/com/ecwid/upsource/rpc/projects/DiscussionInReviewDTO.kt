@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param discussionId ID of the discussion
+ * @param reviewId See ReviewIdDTO parameters
+ */
 data class DiscussionInReviewDTO(
 	/**
 	 * ID of the discussion (required)
@@ -11,6 +15,8 @@ data class DiscussionInReviewDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO
 ) {

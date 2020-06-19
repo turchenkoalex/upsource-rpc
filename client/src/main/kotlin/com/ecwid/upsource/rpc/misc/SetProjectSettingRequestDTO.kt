@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param request See SetSettingRequestDTO parameters
+ */
 data class SetProjectSettingRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -11,6 +15,8 @@ data class SetProjectSettingRequestDTO(
 
 	/**
 	 * See SetSettingRequestDTO parameters (required)
+	 * 
+	 * @see SetSettingRequestDTO
 	 */
 	val request: SetSettingRequestDTO
 ) {

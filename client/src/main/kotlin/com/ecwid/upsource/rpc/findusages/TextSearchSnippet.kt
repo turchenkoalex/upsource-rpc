@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param text Snippet text
+ * @param startLineNumber Start line number
+ * @param rangeInSnippet Matching range in the snippet
+ * @param rangeInFile Matching range in the file
+ */
 data class TextSearchSnippet(
 	/**
 	 * Snippet text (required)

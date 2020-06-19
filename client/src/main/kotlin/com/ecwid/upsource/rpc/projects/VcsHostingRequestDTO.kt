@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ */
 data class VcsHostingRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)

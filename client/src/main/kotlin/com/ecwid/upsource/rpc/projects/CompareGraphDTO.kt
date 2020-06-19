@@ -3,14 +3,26 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisions See RevisionInfoDTO parameters
+ * @param graph See RevisionListGraphDTO parameters
+ * @param pathToBaseLength The length of the displayed path from the branching revision to the base
+ * @param fullPathToBaseLength The actual length of the path from the branching revision to the base
+ * @param pathToSecondLength The length of the displayed path from the branching revision to the second revision
+ * @param fullPathToSecondLength The actual length of the path from the branching revision to the second revision
+ */
 data class CompareGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (required)
+	 * 
+	 * @see RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO,
 

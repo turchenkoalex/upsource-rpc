@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param supportedVcs VCS types supported by the Upsource instance
+ */
 data class ProjectConfigurationResponseDTO(
 	/**
 	 * VCS types supported by the Upsource instance (repeated)

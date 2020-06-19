@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param userId User ID in Upsource
+ */
 data class UserAchievementsRequestDTO(
 	/**
 	 * User ID in Upsource (required)

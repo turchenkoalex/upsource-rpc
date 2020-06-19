@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param completedCount Number of reviewers who completed the review, either by accepting or raising concern about the changes
+ * @param reviewersCount Total number of reviewers
+ * @param hasConcern Whether someone has raised a concern about the changes
+ */
 data class CompletionRateDTO(
 	/**
 	 * Number of reviewers who completed the review, either by accepting or raising concern about the changes (required)

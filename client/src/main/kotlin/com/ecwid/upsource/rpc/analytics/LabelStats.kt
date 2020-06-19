@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param label Discussion label. See LabelDTO parameters
+ * @param countsPerUser See UserValue parameters
+ */
 data class LabelStats(
 	/**
 	 * Discussion label. See LabelDTO parameters (required)
+	 * 
+	 * @see LabelDTO
 	 */
 	val label: com.ecwid.upsource.rpc.projects.LabelDTO,
 
 	/**
 	 * See UserValue parameters (repeated)
+	 * 
+	 * @see UserValue
 	 */
 	val countsPerUser: List<UserValue> = emptyList()
 ) {

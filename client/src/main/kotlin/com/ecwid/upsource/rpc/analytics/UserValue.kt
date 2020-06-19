@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param userId Upsource user ID
+ * @param value The value associated with the user ID
+ */
 data class UserValue(
 	/**
 	 * Upsource user ID (required)

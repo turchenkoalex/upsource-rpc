@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param time Unix timestamp
+ * @param value The value associated with the timestamp
+ */
 data class TimeValue(
 	/**
 	 * Unix timestamp (required)

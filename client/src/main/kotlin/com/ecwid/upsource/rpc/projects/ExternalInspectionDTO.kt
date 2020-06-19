@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisionId VCS revision ID
+ * @param fileName Name of the file
+ * @param line Line number
+ * @param severity Inspection severity
+ * @param message Inspection message
+ */
 data class ExternalInspectionDTO(
 	/**
 	 * VCS revision ID (required)

@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param lineNumber Line number that corresponds to the given stacktrace
+ * @param fullPath A full path of the file
+ * @param vcsCommitId Revision ID
+ * @param interpolatedRange See RangeDTO parameters
+ */
 data class StacktracePositionDTO(
 	/**
 	 * Line number that corresponds to the given stacktrace (required)
@@ -21,6 +27,8 @@ data class StacktracePositionDTO(
 
 	/**
 	 * See RangeDTO parameters (optional)
+	 * 
+	 * @see RangeDTO
 	 */
 	val interpolatedRange: com.ecwid.upsource.rpc.ids.RangeDTO? = null
 ) {

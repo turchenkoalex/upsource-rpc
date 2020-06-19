@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param syncResult GitHub sync result. See SyncResultEnum parameters
+ */
 data class CloseReviewResponseDTO(
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
+	 * 
+	 * @see SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 )

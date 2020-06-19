@@ -3,14 +3,26 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param anchor See AnchorDTO parameters
+ * @param reviewId See ReviewIdDTO parameters
+ * @param text Text of the discussion
+ * @param projectId Project ID in Upsource
+ * @param markupType Currently not in use
+ * @param labels Discussion labels. See LabelDTO parameters
+ */
 data class CreateDiscussionRequestDTO(
 	/**
 	 * See AnchorDTO parameters (required)
+	 * 
+	 * @see AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
@@ -31,6 +43,8 @@ data class CreateDiscussionRequestDTO(
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
+	 * 
+	 * @see LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList()
 ) {

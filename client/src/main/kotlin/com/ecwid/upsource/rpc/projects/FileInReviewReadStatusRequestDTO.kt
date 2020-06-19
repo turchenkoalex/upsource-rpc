@@ -3,9 +3,17 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param file A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param revisions See RevisionsSetDTO parameters
+ * @param markAsUnread Pass 'true' to mark the file as unread
+ */
 data class FileInReviewReadStatusRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -16,6 +24,8 @@ data class FileInReviewReadStatusRequestDTO(
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
+	 * 
+	 * @see RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO,
 

@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param fileId Name of the file containing differing inspections
+ * @param introduced Count of introduced problems
+ * @param fixed Count of fixed problems
+ */
 data class FileExternalInspectionsDiffResponseDTO(
 	/**
 	 * Name of the file containing differing inspections (required)

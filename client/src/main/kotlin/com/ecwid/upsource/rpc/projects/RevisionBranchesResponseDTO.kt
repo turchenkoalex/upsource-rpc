@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param branchName Branches containing the given revision
+ */
 data class RevisionBranchesResponseDTO(
 	/**
 	 * Branches containing the given revision (repeated)

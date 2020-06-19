@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param url External link URL
+ * @param prefix External link prefix
+ */
 data class ExternalLinkDTO(
 	/**
 	 * External link URL (required)

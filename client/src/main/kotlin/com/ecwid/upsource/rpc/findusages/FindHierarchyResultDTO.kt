@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param ancestors The list of element's ancestors
+ * @param inheritors The list of element's inheritors
+ */
 data class FindHierarchyResultDTO(
 	/**
 	 * The list of element's ancestors (repeated)

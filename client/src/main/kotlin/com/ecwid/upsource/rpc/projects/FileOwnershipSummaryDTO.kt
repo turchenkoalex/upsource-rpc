@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param filePath A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param state See OwnershipSummaryEnum parameters
+ * @param userId Upsource user ID
+ */
 data class FileOwnershipSummaryDTO(
 	/**
 	 * A full path to the file starting with a slash (e.g. /directory/file.txt) (required)
@@ -11,6 +16,8 @@ data class FileOwnershipSummaryDTO(
 
 	/**
 	 * See OwnershipSummaryEnum parameters (required)
+	 * 
+	 * @see OwnershipSummaryEnum
 	 */
 	val state: OwnershipSummaryEnum,
 

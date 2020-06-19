@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param reviewId Review ID
+ */
 data class ReviewRemovedFeedEventBean(
 	/**
 	 * Base feed event (required)

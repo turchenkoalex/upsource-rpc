@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param service See VcsHostingServiceDTO parameters
+ */
 data class VcsHostingResponseDTO(
 	/**
 	 * See VcsHostingServiceDTO parameters (repeated)
+	 * 
+	 * @see VcsHostingServiceDTO
 	 */
 	val service: List<VcsHostingServiceDTO> = emptyList()
 )

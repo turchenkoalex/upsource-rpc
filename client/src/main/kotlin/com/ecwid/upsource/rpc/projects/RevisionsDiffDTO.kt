@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param diff See RevisionDiffItemDTO parameters
+ */
 data class RevisionsDiffDTO(
 	/**
 	 * See RevisionDiffItemDTO parameters (repeated)
+	 * 
+	 * @see RevisionDiffItemDTO
 	 */
 	val diff: List<RevisionDiffItemDTO> = emptyList()
 )

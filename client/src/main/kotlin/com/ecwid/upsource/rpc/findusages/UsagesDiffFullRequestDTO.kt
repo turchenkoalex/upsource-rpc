@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param oldElement Old element. See PsiElementIdDTO parameters
+ * @param newElement New element. See PsiElementIdDTO parameters
+ */
 data class UsagesDiffFullRequestDTO(
 	/**
 	 * Old element. See PsiElementIdDTO parameters (required)
+	 * 
+	 * @see PsiElementIdDTO
 	 */
 	val oldElement: PsiElementIdDTO,
 
 	/**
 	 * New element. See PsiElementIdDTO parameters (required)
+	 * 
+	 * @see PsiElementIdDTO
 	 */
 	val newElement: PsiElementIdDTO
 ) {

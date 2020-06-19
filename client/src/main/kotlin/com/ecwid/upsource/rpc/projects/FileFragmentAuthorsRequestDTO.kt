@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param file See FileInRevisionDTO parameters
+ * @param startLine Line number the fragment starts with
+ * @param endLine Line number the fragment ends with
+ */
 data class FileFragmentAuthorsRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

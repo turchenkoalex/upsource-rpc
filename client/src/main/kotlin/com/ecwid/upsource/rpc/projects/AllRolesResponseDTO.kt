@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param roleDetails See RoleDetailsDTO parameters
+ */
 data class AllRolesResponseDTO(
 	/**
 	 * See RoleDetailsDTO parameters (repeated)
+	 * 
+	 * @see RoleDetailsDTO
 	 */
 	val roleDetails: List<RoleDetailsDTO> = emptyList()
 )

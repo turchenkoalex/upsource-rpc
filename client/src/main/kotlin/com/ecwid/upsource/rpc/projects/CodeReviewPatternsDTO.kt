@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param patterns See CodeReviewPattern
+ */
 data class CodeReviewPatternsDTO(
 	/**
 	 * See CodeReviewPattern (repeated)
+	 * 
+	 * @see CodeReviewPattern
 	 */
 	val patterns: List<CodeReviewPattern> = emptyList()
 )

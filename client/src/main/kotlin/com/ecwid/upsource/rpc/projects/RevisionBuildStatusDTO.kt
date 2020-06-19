@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId VCS revision ID
+ * @param keys A unique build identifier (e.g. PROJECT-VERSION-1234)
+ */
 data class RevisionBuildStatusDTO(
 	/**
 	 * Project ID in Upsource (required)

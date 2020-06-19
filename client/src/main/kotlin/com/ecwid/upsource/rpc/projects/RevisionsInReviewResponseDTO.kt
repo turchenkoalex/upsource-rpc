@@ -3,14 +3,27 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param allRevisions See RevisionDescriptorListDTO parameters
+ * @param newRevisions See RevisionsSetDTO parameters
+ * @param hasMissingRevisions The review contains revisions that are no longer found in VCS (due to a rebase operation, for example)
+ * @param canSquash Indicates that revisions could have been squashed, meaning that the review can be squashed as well
+ * @param branchHint An optional field denoting that all revisions in a review are on a same branch
+ * @param canTrackBranch An optional field denoting that review can be converted to branch review
+ * @param canCherryPickWithTeamCity Internal
+ */
 data class RevisionsInReviewResponseDTO(
 	/**
 	 * See RevisionDescriptorListDTO parameters (required)
+	 * 
+	 * @see RevisionDescriptorListDTO
 	 */
 	val allRevisions: RevisionDescriptorListDTO,
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
+	 * 
+	 * @see RevisionsSetDTO
 	 */
 	val newRevisions: RevisionsSetDTO,
 
