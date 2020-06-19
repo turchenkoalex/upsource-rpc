@@ -5,6 +5,7 @@ jar {
 }
 
 task 'generate' (type: JavaExec) {
+	group = 'codegen'
 	classpath = sourceSets.main.runtimeClasspath
 	args = [
 			"-rootdir",
@@ -14,6 +15,7 @@ task 'generate' (type: JavaExec) {
 }
 
 task 'validate' (type: JavaExec) {
+	group = 'codegen'
 	classpath = sourceSets.main.runtimeClasspath
 	args = [
 			"-rootdir",
