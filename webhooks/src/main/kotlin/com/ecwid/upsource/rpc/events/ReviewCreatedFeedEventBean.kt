@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param revisions List of revisions that were added to review at time of creation
+ * @param branch Name of the branch being tracked by the review
+ */
 data class ReviewCreatedFeedEventBean(
 	/**
 	 * Base feed event (required)

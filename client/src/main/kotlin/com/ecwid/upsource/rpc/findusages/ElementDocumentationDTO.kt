@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param docString Text of the element documentation
+ */
 data class ElementDocumentationDTO(
 	/**
 	 * Text of the element documentation (optional)

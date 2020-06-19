@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param items See TimeValue parameters
+ * @param modules Names of project modules
+ * @param stats See AnalyzerStats parameters
+ */
 data class ProjectActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)
+	 * 
+	 * @see TimeValue
 	 */
 	val items: List<TimeValue> = emptyList(),
 
@@ -16,6 +23,8 @@ data class ProjectActivityDTO(
 
 	/**
 	 * See AnalyzerStats parameters (required)
+	 * 
+	 * @see AnalyzerStats
 	 */
 	val stats: AnalyzerStats
 ) {

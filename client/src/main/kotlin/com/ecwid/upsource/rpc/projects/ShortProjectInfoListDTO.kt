@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param project See ShortProjectInfoDTO parameters
+ */
 data class ShortProjectInfoListDTO(
 	/**
 	 * See ShortProjectInfoDTO parameters (repeated)
+	 * 
+	 * @see ShortProjectInfoDTO
 	 */
 	val project: List<ShortProjectInfoDTO> = emptyList()
 )

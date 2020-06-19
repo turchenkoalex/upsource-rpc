@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param discussions See DiscussionInFileDTO parameters
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ * @param totalCount Total number of discussions matching query
+ */
 data class DiscussionsInProjectDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)
+	 * 
+	 * @see DiscussionInFileDTO
 	 */
 	val discussions: List<DiscussionInFileDTO> = emptyList(),
 

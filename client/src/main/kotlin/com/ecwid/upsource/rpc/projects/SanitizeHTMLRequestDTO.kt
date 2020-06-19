@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param html The HTML string to sanitize
+ * @param isBasicMarkup "true" allows only basic HTML markup (text formatting, images, links), "false" additionally allows block-level HTML elements and tables
+ */
 data class SanitizeHTMLRequestDTO(
 	/**
 	 * The HTML string to sanitize (required)

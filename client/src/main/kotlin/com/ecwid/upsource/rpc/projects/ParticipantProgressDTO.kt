@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param userId User ID of the review participant
+ * @param readFilesCount Number of files that were viewed by the participant
+ * @param lastSeenTimestamp Unix timestamp of the last viewing
+ */
 data class ParticipantProgressDTO(
 	/**
 	 * User ID of the review participant (required)

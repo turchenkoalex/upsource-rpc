@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param hubProjectId Hub project ID
+ */
 data class CheckCanCreateProjectRequestDTO(
 	/**
 	 * Hub project ID (required)

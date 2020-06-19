@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisions IDs of the requested revisions
+ * @param selectAll Set this to "true" to request all revisions without enumerating them
+ */
 data class RevisionsSetDTO(
 	/**
 	 * IDs of the requested revisions (repeated)

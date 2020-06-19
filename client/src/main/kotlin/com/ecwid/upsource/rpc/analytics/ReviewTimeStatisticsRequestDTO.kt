@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param userId Upsource user ID
+ */
 data class ReviewTimeStatisticsRequestDTO(
 	/**
 	 * Upsource user ID (required)

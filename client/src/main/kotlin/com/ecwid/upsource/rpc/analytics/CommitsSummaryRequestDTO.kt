@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param fromTime Unix timestamp
+ * @param toTime Unix timestamp
+ * @param committers User IDs of committers
+ */
 data class CommitsSummaryRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

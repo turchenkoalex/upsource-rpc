@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param providerKey Issue tracker provider key ("YouTrack", "JIRA")
+ * @param settings Settings used to set up the integration (e.g server URL, login credentials, project ID in the issue tracker)
+ */
 data class IssueTrackerProviderSettingsDTO(
 	/**
 	 * Issue tracker provider key ("YouTrack", "JIRA") (required)

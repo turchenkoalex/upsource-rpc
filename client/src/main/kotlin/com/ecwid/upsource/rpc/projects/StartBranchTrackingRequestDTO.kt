@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId Review ID
+ * @param branch Branch name to track
+ */
 data class StartBranchTrackingRequestDTO(
 	/**
 	 * Review ID (required)

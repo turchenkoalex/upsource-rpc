@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param fileId See FileInRevisionDTO parameters
+ * @param stubIndex Stub index ID
+ */
 data class StubIdDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

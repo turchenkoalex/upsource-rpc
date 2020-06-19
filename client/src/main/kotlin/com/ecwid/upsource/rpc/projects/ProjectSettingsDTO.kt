@@ -3,6 +3,40 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectName Project name
+ * @param vcsSettings VCS configuration represented as a JSON-encoded string
+ * @param checkIntervalSeconds How often to check for new commits (in seconds)
+ * @param projectModel See ProjectModel parameters
+ * @param codeReviewIdPattern Code review ID pattern
+ * @param runInspections Whether to run code inspections
+ * @param inspectionProfileName Name of the inspection profile in IntelliJ IDEA
+ * @param mavenSettings The contents of maven-settings.xml
+ * @param mavenProfiles Maven profiles. Space- or comma-separated list
+ * @param mavenJdkName Maven project JDK
+ * @param modelConversionSystemProperties Model conversion system properties
+ * @param gradleProperties Gradle properties
+ * @param gradleInitScript Gradle init script
+ * @param externalLinks See ExternalLinkDTO parameters
+ * @param issueTrackerProviderSettings See IssueTrackerProviderSettingsDTO parameters
+ * @param userManagementUrl Hub user management page URL
+ * @param defaultEncoding Default encoding (e.g. UTF-8)
+ * @param defaultBranch Default branch
+ * @param ignoredFilesInReview A newline-separated list of wildcards. Files matching the patterns specified here will be excluded from reviews
+ * @param skipFileContentsImport A newline-separated list of wildcards. Files matching the patterns specified here — binaries, for example — won't be imported.
+ * @param javascriptLanguageLevel JavaScript language level (one of the following: JS_1_5, ES5, JS_1_8_5, ES6, JSX, NASHORN, FLOW)
+ * @param phpLanguageLevel PHP language level (one of the following: null, 5.3.0, 5.4.0, 5.5.0, 5.6.0, 7, 7.1)
+ * @param phpExternalDependencies List of paths to external dependencies for a PHP project
+ * @param phpComposerScript List of commands that will be run to set up PHP composer. Default command is "php composer.phar install"
+ * @param pythonLanguageLevel Python language level (one of the following: null, 2, 3)
+ * @param buildStatusReceiveToken "login:password" credentials used to receive build status from the build server
+ * @param authorCanCloseReview In addition to CLOSE_REVIEW permission, controls whether review authors can close reviews
+ * @param authorCanDeleteReview In addition to DELETE_REVIEW permission, controls whether review authors can delete reviews
+ * @param limitResolveDiscussion In addition to EDIT_REVIEW permission, controls whether only the person that started a discussion can resolve it
+ * @param reviewDeadlineHours Default review deadline, in hours
+ * @param addMergeCommitsToBranchReview Sets whether merge commits should be added to branch reviews
+ * @param isArchived Whether the project is archived
+ */
 data class ProjectSettingsDTO(
 	/**
 	 * Project name (required)
@@ -21,6 +55,8 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ProjectModel parameters (required)
+	 * 
+	 * @see ProjectModel
 	 */
 	val projectModel: ProjectModel,
 
@@ -71,11 +107,15 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ExternalLinkDTO parameters (repeated)
+	 * 
+	 * @see ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
 	/**
 	 * See IssueTrackerProviderSettingsDTO parameters (optional)
+	 * 
+	 * @see IssueTrackerProviderSettingsDTO
 	 */
 	val issueTrackerProviderSettings: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderSettingsDTO? = null,
 

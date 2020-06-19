@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param module Name of the project module
+ * @param value The value associated with the module
+ */
 data class ModuleValue(
 	/**
 	 * Name of the project module (required)

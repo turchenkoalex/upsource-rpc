@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param users See CommitterUserInfo parameters
+ */
 data class ProjectCommittersDTO(
 	/**
 	 * See CommitterUserInfo parameters (repeated)
+	 * 
+	 * @see CommitterUserInfo
 	 */
 	val users: List<CommitterUserInfo> = emptyList()
 )

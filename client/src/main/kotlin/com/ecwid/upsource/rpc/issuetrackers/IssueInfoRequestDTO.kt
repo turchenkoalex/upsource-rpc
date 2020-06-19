@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param issueId Issue ID
+ */
 data class IssueInfoRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

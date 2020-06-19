@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId ID of the discussion
+ * @param label Discussion label being added or removed. See LabelDTO parameters
+ */
 data class UpdateDiscussionLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,6 +21,8 @@ data class UpdateDiscussionLabelRequestDTO(
 
 	/**
 	 * Discussion label being added or removed. See LabelDTO parameters (required)
+	 * 
+	 * @see LabelDTO
 	 */
 	val label: LabelDTO
 ) {

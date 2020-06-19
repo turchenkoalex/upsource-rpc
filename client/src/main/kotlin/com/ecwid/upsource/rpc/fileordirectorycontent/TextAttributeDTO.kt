@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param fgColor Foreground color
+ * @param bgColor Background color
+ * @param fontStyle Font style (italic, bold)
+ * @param effectStyle Text effect (underline, wave underline, strikeout, etc.)
+ * @param effectColor Effect color
+ * @param errorStripeColor Error stripe color
+ */
 data class TextAttributeDTO(
 	/**
 	 * Foreground color (optional)

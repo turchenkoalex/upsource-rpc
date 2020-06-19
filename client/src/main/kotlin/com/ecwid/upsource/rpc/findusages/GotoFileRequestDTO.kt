@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId ID of the revision (search in heads if not provided)
+ * @param reviewId See ReviewIdDTO parameters
+ * @param pattern Search query, e.g. part of the name
+ * @param limit Number of results to return
+ */
 data class GotoFileRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
@@ -16,6 +23,8 @@ data class GotoFileRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 

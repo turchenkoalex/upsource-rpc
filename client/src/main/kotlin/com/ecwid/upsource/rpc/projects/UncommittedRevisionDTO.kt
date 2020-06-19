@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param parentRevisionId Parent revision ID
+ * @param files List of modified files (added, deleted, updated)
+ */
 data class UncommittedRevisionDTO(
 	/**
 	 * Project ID in Upsource (required)

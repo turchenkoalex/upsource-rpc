@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param markup See TextMarkupDTO parameters
+ */
 data class FileTextMarkupDTO(
 	/**
 	 * See TextMarkupDTO parameters (repeated)
+	 * 
+	 * @see TextMarkupDTO
 	 */
 	val markup: List<TextMarkupDTO> = emptyList()
 )

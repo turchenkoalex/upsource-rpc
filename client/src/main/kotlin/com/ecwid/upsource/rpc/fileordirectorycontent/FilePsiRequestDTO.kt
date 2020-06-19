@@ -3,9 +3,17 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param file See FileInRevisionDTO parameters
+ * @param requestReferences Whether to request references
+ * @param requestGutterMarks Whether to request gutter marks
+ * @param requestInspections Whether to request inspections
+ */
 data class FilePsiRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

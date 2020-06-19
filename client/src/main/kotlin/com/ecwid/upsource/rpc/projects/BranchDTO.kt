@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param name Branch name
+ * @param lastRevision See RevisionInfoDTO parameters
+ * @param isDefault Whether the branch is a default one
+ * @param stats See BranchStatsDTO parameters
+ * @param isHosted Whether the branch is from a hosted repository
+ * @param reviewId ID of the branch review, if one exists
+ */
 data class BranchDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,6 +25,8 @@ data class BranchDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val lastRevision: RevisionInfoDTO,
 
@@ -26,6 +37,8 @@ data class BranchDTO(
 
 	/**
 	 * See BranchStatsDTO parameters (required)
+	 * 
+	 * @see BranchStatsDTO
 	 */
 	val stats: BranchStatsDTO,
 

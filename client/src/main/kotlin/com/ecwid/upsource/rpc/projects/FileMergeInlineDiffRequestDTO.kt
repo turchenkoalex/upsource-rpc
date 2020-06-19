@@ -3,9 +3,19 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param fileId See FileInRevisionDTO parameters
+ * @param sourceRevisionId The source revision from which the branch originated
+ * @param baseBranch The base branch to compare against
+ * @param diffType Type of change (see DiffTypeEnum)
+ * @param ignoreWhitespace Whether to ignore whitespace changes
+ * @param contextLines Number of context lines around the modified fragment
+ */
 data class FileMergeInlineDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

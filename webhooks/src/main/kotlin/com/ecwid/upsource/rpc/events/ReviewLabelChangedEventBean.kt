@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param reviewId Review ID
+ * @param labelId Label ID
+ * @param labelName Label name
+ * @param wasAdded Whether the label was added or removed
+ * @param actor User who changed label
+ */
 data class ReviewLabelChangedEventBean(
 	/**
 	 * Review ID (required)

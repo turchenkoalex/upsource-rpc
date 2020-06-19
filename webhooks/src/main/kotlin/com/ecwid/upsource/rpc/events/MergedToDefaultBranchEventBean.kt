@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param commitsCount Number of commits merged
+ * @param branches List of merged branches
+ */
 data class MergedToDefaultBranchEventBean(
 	/**
 	 * Number of commits merged (required)

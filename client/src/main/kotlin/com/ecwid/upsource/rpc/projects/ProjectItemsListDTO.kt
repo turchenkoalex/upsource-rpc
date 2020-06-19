@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param items See ProjectTreeItemDTO parameters
+ */
 data class ProjectItemsListDTO(
 	/**
 	 * See ProjectTreeItemDTO parameters (repeated)
+	 * 
+	 * @see ProjectTreeItemDTO
 	 */
 	val items: List<ProjectTreeItemDTO> = emptyList()
 )

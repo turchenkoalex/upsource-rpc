@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param revisionId Revision ID
+ * @param branches List of branches
+ * @param author Author ID
+ * @param message Commit message
+ * @param date Commit date
+ */
 data class NewRevisionEventBean(
 	/**
 	 * Revision ID (required)

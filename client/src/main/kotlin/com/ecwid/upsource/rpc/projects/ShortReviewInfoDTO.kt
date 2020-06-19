@@ -3,9 +3,19 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param title Review title
+ * @param state Review state: open(1), closed(2)
+ * @param branch Names of tracked branches
+ * @param completionRate See CompletionRateDTO parameters
+ * @param labels Review labels
+ */
 data class ShortReviewInfoDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -26,6 +36,8 @@ data class ShortReviewInfoDTO(
 
 	/**
 	 * See CompletionRateDTO parameters (optional)
+	 * 
+	 * @see CompletionRateDTO
 	 */
 	val completionRate: CompletionRateDTO? = null,
 

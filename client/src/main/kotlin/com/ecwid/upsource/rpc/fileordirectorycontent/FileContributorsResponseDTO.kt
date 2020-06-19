@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param authorIds User IDs of the contributors
+ * @param authoredChangesCounts Number of changes made to the file
+ * @param reviewedChangesCounts Number of reviews performed on the file
+ * @param majorContributorUserId The major contributor to the file, if there is one
+ */
 data class FileContributorsResponseDTO(
 	/**
 	 * User IDs of the contributors (repeated)

@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param issueTypeId Issue type ID
+ * @param field See IssueFieldDTO parameters
+ * @param fieldType Field type
+ */
 data class IssueRequiredFieldDTO(
 	/**
 	 * Issue type ID (required)
@@ -11,6 +16,8 @@ data class IssueRequiredFieldDTO(
 
 	/**
 	 * See IssueFieldDTO parameters (required)
+	 * 
+	 * @see IssueFieldDTO
 	 */
 	val field: IssueFieldDTO,
 

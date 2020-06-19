@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param participant Participant user info
+ * @param oldState Old state
+ * @param newState New state
+ */
 data class ParticipantStateChangedFeedEventBean(
 	/**
 	 * Base feed event (required)

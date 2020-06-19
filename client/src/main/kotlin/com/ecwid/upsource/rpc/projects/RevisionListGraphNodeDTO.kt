@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param position Node position index
+ * @param color Node color
+ */
 data class RevisionListGraphNodeDTO(
 	/**
 	 * Node position index (required)

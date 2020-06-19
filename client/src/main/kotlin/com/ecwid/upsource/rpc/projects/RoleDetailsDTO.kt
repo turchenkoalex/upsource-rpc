@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param id Role ID
+ * @param key Role key (e.g. project-admin)
+ * @param name Role name (e.g. Project admin)
+ * @param description Role description
+ */
 data class RoleDetailsDTO(
 	/**
 	 * Role ID (required)

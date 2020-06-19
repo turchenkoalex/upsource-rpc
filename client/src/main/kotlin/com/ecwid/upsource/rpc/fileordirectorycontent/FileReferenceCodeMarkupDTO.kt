@@ -3,24 +3,38 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param markup See ReferenceCodeMarkupItemDTO parameters
+ * @param navigationPointsTable See MarkupNavigationPointDTO parameters
+ * @param fileNameTable See FileInRevisionDTO parameters
+ * @param localDeclarationRanges See LocalDeclarationRangeDTO parameters
+ */
 data class FileReferenceCodeMarkupDTO(
 	/**
 	 * See ReferenceCodeMarkupItemDTO parameters (repeated)
+	 * 
+	 * @see ReferenceCodeMarkupItemDTO
 	 */
 	val markup: List<ReferenceCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * See MarkupNavigationPointDTO parameters (repeated)
+	 * 
+	 * @see MarkupNavigationPointDTO
 	 */
 	val navigationPointsTable: List<MarkupNavigationPointDTO> = emptyList(),
 
 	/**
 	 * See FileInRevisionDTO parameters (repeated)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val fileNameTable: List<com.ecwid.upsource.rpc.ids.FileInRevisionDTO> = emptyList(),
 
 	/**
 	 * See LocalDeclarationRangeDTO parameters (repeated)
+	 * 
+	 * @see LocalDeclarationRangeDTO
 	 */
 	val localDeclarationRanges: List<LocalDeclarationRangeDTO> = emptyList()
 )

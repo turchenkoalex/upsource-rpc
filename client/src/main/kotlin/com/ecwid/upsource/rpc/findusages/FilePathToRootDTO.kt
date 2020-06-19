@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param fileName A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param pathToRoot See ProjectItemsListDTO parameters
+ */
 data class FilePathToRootDTO(
 	/**
 	 * A full path to the file starting with a slash (e.g. /directory/file.txt) (required)
@@ -11,6 +15,8 @@ data class FilePathToRootDTO(
 
 	/**
 	 * See ProjectItemsListDTO parameters (required)
+	 * 
+	 * @see ProjectItemsListDTO
 	 */
 	val pathToRoot: com.ecwid.upsource.rpc.projects.ProjectItemsListDTO
 ) {

@@ -3,9 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revision See RevisionInfoDTO parameters
+ * @param branch Branch name
+ */
 data class RevisionInBranchDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 

@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param inspections See InspectionCodeMarkupItemDTO parameters
+ * @param fileLevel See FileWarningLevelEnum parameters
+ */
 data class CodeInspectionsDTO(
 	/**
 	 * See InspectionCodeMarkupItemDTO parameters (repeated)
+	 * 
+	 * @see InspectionCodeMarkupItemDTO
 	 */
 	val inspections: List<InspectionCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * See FileWarningLevelEnum parameters (required)
+	 * 
+	 * @see FileWarningLevelEnum
 	 */
 	val fileLevel: FileWarningLevelEnum
 ) {

@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param absentUntil Absence end date
+ * @param userId User ID in Upsource ("null" denotes current user)
+ */
 data class UserAbsenceRequestDTO(
 	/**
 	 * Absence end date (optional)

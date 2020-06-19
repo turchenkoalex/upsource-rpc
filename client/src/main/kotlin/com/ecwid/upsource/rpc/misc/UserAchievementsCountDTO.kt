@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param count 
+ */
 data class UserAchievementsCountDTO(
 	val count: Int
 ) {

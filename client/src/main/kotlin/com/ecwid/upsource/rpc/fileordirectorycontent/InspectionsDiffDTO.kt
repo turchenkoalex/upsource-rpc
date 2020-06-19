@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param diffForFile See InspectionsDiffForFileDTO parameters
+ */
 data class InspectionsDiffDTO(
 	/**
 	 * See InspectionsDiffForFileDTO parameters (repeated)
+	 * 
+	 * @see InspectionsDiffForFileDTO
 	 */
 	val diffForFile: List<InspectionsDiffForFileDTO> = emptyList()
 )

@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param filePathToRoot See FilePathToRootDTO parameters
+ * @param item See FindUsagesItemDTO parameters
+ */
 data class FindUsagesResponseDTO(
 	/**
 	 * See FilePathToRootDTO parameters (repeated)
+	 * 
+	 * @see FilePathToRootDTO
 	 */
 	val filePathToRoot: List<FilePathToRootDTO> = emptyList(),
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
+	 * 
+	 * @see FindUsagesItemDTO
 	 */
 	val item: List<FindUsagesItemDTO> = emptyList()
 )

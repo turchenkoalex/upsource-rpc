@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param groups List of user groups
+ * @param hasMore Whether there are more groups by the request beyond the limit specified
+ */
 data class UserGroupsListDTO(
 	/**
 	 * List of user groups (repeated)

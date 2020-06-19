@@ -3,29 +3,46 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param oldFilePathToRoot See FilePathToRootDTO parameters
+ * @param newFilePathToRoot See FilePathToRootDTO parameters
+ * @param removedUsage See FindUsagesItemDTO parameters
+ * @param sameUsage See SameUsagesDTO parameters
+ * @param addedUsage See FindUsagesItemDTO parameters
+ */
 data class UsagesDiffDTO(
 	/**
 	 * See FilePathToRootDTO parameters (optional)
+	 * 
+	 * @see FilePathToRootDTO
 	 */
 	val oldFilePathToRoot: FilePathToRootDTO? = null,
 
 	/**
 	 * See FilePathToRootDTO parameters (optional)
+	 * 
+	 * @see FilePathToRootDTO
 	 */
 	val newFilePathToRoot: FilePathToRootDTO? = null,
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
+	 * 
+	 * @see FindUsagesItemDTO
 	 */
 	val removedUsage: List<FindUsagesItemDTO> = emptyList(),
 
 	/**
 	 * See SameUsagesDTO parameters (repeated)
+	 * 
+	 * @see SameUsagesDTO
 	 */
 	val sameUsage: List<SameUsagesDTO> = emptyList(),
 
 	/**
 	 * See FindUsagesItemDTO parameters (repeated)
+	 * 
+	 * @see FindUsagesItemDTO
 	 */
 	val addedUsage: List<FindUsagesItemDTO> = emptyList()
 )

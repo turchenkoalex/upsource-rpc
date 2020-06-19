@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param from Index of link source user
+ * @param to Index of link target user
+ * @param strength Link strength
+ * @param totalReviewsCount Total reviews count
+ * @param recentReviewsCount Recent reviews count
+ */
 data class ReviewersGraphLinkDTO(
 	/**
 	 * Index of link source user (required)

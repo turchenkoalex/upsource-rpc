@@ -3,14 +3,23 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param state State of the participant. See ParticipantStateEnum parameters
+ * @param userId User ID. When set, this user's participant state will be changed.
+ */
 data class UpdateParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (required)
+	 * 
+	 * @see ParticipantStateEnum
 	 */
 	val state: ParticipantStateEnum,
 

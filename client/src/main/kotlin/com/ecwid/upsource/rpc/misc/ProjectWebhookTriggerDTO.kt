@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param events Events to be notified of
+ * @param urls URL targets for webhook requests
+ */
 data class ProjectWebhookTriggerDTO(
 	/**
 	 * Events to be notified of (repeated)

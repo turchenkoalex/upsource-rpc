@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param reviewKey Review ID
+ * @param fieldValue See IssueFieldValueIdDTO parameters
+ */
 data class CreateIssueFromReviewRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,6 +21,8 @@ data class CreateIssueFromReviewRequestDTO(
 
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
+	 * 
+	 * @see IssueFieldValueIdDTO
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {

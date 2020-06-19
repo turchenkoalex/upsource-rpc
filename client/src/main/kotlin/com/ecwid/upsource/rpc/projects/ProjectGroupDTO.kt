@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param name Name of the Hub group
+ * @param description Description of the Hub group
+ */
 data class ProjectGroupDTO(
 	/**
 	 * Name of the Hub group (required)

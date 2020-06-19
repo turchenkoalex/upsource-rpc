@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param items 
+ */
 data class AchievementsListDTO(
 	val items: List<AchievementDTO> = emptyList()
 )

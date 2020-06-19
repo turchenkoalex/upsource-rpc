@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId If the reaction corresponds to a comment, ID of the discussion containing that comment
+ * @param commentId If the reaction corresponds to a comment, ID of that comment
+ * @param revisionId If the reaction corresponds to a revision, ID of that revision
+ * @param reviewId If the reaction corresponds to a review, ID of that review
+ */
 data class ReactionTargetDTO(
 	/**
 	 * Project ID in Upsource (required)

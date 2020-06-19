@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param targetId ID of the target element
+ * @param fileId Index of the file name as stored in the 'fileNameTable' table of the Upsource database
+ * @param startOffset Start offset
+ * @param endOffset End offset
+ * @param stubIndex Stub index ID
+ */
 data class MarkupNavigationPointDTO(
 	/**
 	 * ID of the target element (required)

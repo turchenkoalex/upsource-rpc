@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param providerKey Issue tracker project key (JIRA, YouTrack)
+ * @param scriptText Text of the issue tracker configuration script (must be a React component)
+ * @param isAutoSetup Whether issue tracker integration can be set up automatically
+ */
 data class IssueTrackerProviderDTO(
 	/**
 	 * Issue tracker project key (JIRA, YouTrack) (required)

@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param limit Number of revisions to return
+ * @param hash Current head revision ID
+ * @param messageSubstring Additional filter by message (applied as AND)
+ */
 data class RevisionsListUpdateRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

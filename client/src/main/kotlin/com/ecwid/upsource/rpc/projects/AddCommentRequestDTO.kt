@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId Discussion ID
+ * @param text Text of the comment being added
+ * @param parentId An ID of the comment you are replying to
+ * @param markupType Currently not in use
+ */
 data class AddCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

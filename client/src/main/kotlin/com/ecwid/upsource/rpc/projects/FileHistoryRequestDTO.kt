@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param file See FileInRevisionDTO parameters
+ * @param limit History size limit
+ * @param skip Number of history entries (file revisions) to skip from the top (for pagination)
+ */
 data class FileHistoryRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
+	 * 
+	 * @see FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

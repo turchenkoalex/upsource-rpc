@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param groupId ID of a user group
+ * @param role Role of users getting assigned. See RoleInReviewEnum parameters
+ */
 data class AddGroupToReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -16,6 +23,8 @@ data class AddGroupToReviewRequestDTO(
 
 	/**
 	 * Role of users getting assigned. See RoleInReviewEnum parameters (required)
+	 * 
+	 * @see RoleInReviewEnum
 	 */
 	val role: com.ecwid.upsource.rpc.users.RoleInReviewEnum
 ) {

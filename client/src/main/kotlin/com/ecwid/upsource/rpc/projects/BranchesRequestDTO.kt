@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param query Search query
+ * @param limit Number of branches to return
+ * @param sortBy Sort by: last updated ("updated", default), branch name ("name")
+ */
 data class BranchesRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

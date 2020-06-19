@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId ID of the revision
+ * @param fileName A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param isDeleted Whether the file is deleted
+ * @param lastModified Unix timestamp of the last modification
+ * @param branch Branch name
+ */
 data class GotoFileItemDTO(
 	/**
 	 * Project ID in Upsource (required)

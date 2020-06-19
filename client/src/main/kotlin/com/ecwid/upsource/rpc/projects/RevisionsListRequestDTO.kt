@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param limit Number of revisions to return
+ * @param skip Number of revisions to skip from the top (for pagination)
+ * @param requestGraph Whether revision graph should be returned
+ */
 data class RevisionsListRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param imageName ID of the element's image (if 'image' is none)
+ * @param image Base62-encoded image (if 'imageName' is none)
+ * @param targetPresentation Text representation of the given element
+ * @param locationPresentation Text surrounding the element
+ */
 data class TargetDescriptionDTO(
 	/**
 	 * ID of the element's image (if 'image' is none) (optional)

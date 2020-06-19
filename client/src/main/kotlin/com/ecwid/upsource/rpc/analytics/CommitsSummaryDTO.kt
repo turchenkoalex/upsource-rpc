@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param totalCommits Total number of commits
+ * @param offsiteCommits Number of commits that didn't affect any module
+ * @param modulesTouched Number of modules affected
+ */
 data class CommitsSummaryDTO(
 	/**
 	 * Total number of commits (required)

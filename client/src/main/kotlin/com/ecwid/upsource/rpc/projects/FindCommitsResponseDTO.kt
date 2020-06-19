@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param commits See FindCommitsResponseCommitsDTO parameters
+ */
 data class FindCommitsResponseDTO(
 	/**
 	 * See FindCommitsResponseCommitsDTO parameters (repeated)
+	 * 
+	 * @see FindCommitsResponseCommitsDTO
 	 */
 	val commits: List<FindCommitsResponseCommitsDTO> = emptyList()
 )

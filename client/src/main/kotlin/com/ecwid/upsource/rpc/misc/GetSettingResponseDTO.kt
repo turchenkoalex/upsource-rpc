@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param value User setting value
+ */
 data class GetSettingResponseDTO(
 	/**
 	 * User setting value (optional)

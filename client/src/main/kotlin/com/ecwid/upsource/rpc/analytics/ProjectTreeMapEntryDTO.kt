@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param path File path
+ * @param size File size
+ * @param modificationsCount Number of modifications
+ * @param isBinary Whether a file is binary
+ * @param timeSinceLastChange Time elapsed since last change (milliseconds)
+ */
 data class ProjectTreeMapEntryDTO(
 	/**
 	 * File path (required)

@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param offset Paging offset
+ * @param pageSize Page size
+ * @param query Search query
+ */
 data class UsersRolesRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

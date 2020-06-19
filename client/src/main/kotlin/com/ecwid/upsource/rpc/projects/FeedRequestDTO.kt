@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param limit Number of news feed messages returned
+ * @param type Feed type, see FeedTypeEnum for possible values
+ * @param projectId Project ID in Upsource
+ * @param reviewId Review ID
+ * @param searchQuery Search query. Use '#my' to request the personal feed, or leave empty for the full feed
+ * @param reviewFeedSort Review feed sorting ('Natural' by default)
+ */
 data class FeedRequestDTO(
 	/**
 	 * Number of news feed messages returned (required)

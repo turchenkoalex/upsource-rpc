@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param contentType See FileContentTypeDTO parameters
+ * @param fileContent See FileContentDTO parameters
+ */
 data class FileContentResponseDTO(
 	/**
 	 * See FileContentTypeDTO parameters (required)
+	 * 
+	 * @see FileContentTypeDTO
 	 */
 	val contentType: FileContentTypeDTO,
 
 	/**
 	 * See FileContentDTO parameters (optional)
+	 * 
+	 * @see FileContentDTO
 	 */
 	val fileContent: FileContentDTO? = null
 ) {

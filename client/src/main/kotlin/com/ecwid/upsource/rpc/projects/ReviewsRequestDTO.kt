@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param limit Number of reviews to return
+ * @param query Search query (e.g. "state: open") and/or phrase appearing in review title or discussion
+ * @param sortBy Sort by: last updated ("updated", default), review ID ("id,asc", "id,desc"), title ("title"), due date ("deadline,asc", "deadline,desc")
+ * @param projectId Project ID in Upsource
+ * @param skip Number of reviews to skip from the top (for pagination)
+ */
 data class ReviewsRequestDTO(
 	/**
 	 * Number of reviews to return (required)

@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param discussionId Discussion ID
+ * @param commentId Comment ID
+ * @param reactionId Reaction ID
+ * @param wasAdded Whether the reaction was added or removed
+ * @param actor User who toggled reaction
+ */
 data class ReactionToggledEventBean(
 	/**
 	 * Discussion ID (required)

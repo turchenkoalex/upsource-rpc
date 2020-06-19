@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param providerKey Issue tracker provider key ("YouTrack", "JIRA")
+ * @param projectUrl Issue tracker project URL
+ * @param field See IssueFieldDTO parameters
+ * @param canCreateIssue Whether an issue can be created
+ * @param requiredField See IssueRequiredFieldDTO parameters
+ */
 data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * Issue tracker provider key ("YouTrack", "JIRA") (required)
@@ -16,6 +23,8 @@ data class IssueTrackerProjectDetailsDTO(
 
 	/**
 	 * See IssueFieldDTO parameters (repeated)
+	 * 
+	 * @see IssueFieldDTO
 	 */
 	val field: List<IssueFieldDTO> = emptyList(),
 
@@ -26,6 +35,8 @@ data class IssueTrackerProjectDetailsDTO(
 
 	/**
 	 * See IssueRequiredFieldDTO parameters (repeated)
+	 * 
+	 * @see IssueRequiredFieldDTO
 	 */
 	val requiredField: List<IssueRequiredFieldDTO> = emptyList()
 ) {

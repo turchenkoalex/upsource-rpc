@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param leftRevisionId Revision ID on the left hand side of the comparison
+ * @param rightRevisionId Revision ID on the right hand side of the comparison
+ * @param heads The list of project head names for completion
+ * @param commitsCount Number of commits that took place between the revisions
+ * @param filesCount Number of files affected by these commits
+ * @param examples See ExampleComparison parameters
+ * @param suggestion See BranchingRevisionSuggestion parameters
+ */
 data class CompareInfoDTO(
 	/**
 	 * Revision ID on the left hand side of the comparison (required)
@@ -31,11 +40,15 @@ data class CompareInfoDTO(
 
 	/**
 	 * See ExampleComparison parameters (repeated)
+	 * 
+	 * @see ExampleComparison
 	 */
 	val examples: List<ExampleComparison> = emptyList(),
 
 	/**
 	 * See BranchingRevisionSuggestion parameters (optional)
+	 * 
+	 * @see BranchingRevisionSuggestion
 	 */
 	val suggestion: BranchingRevisionSuggestion? = null
 ) {

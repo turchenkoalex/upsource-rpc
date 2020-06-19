@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param text File text
+ * @param foldings See FoldingInfoDTO parameters
+ * @param isSyntaxSupported Whether syntax markup is available for this file type
+ * @param syntax See TextMarkupDTO parameters
+ */
 data class FileContentDTO(
 	/**
 	 * File text (required)
@@ -11,6 +17,8 @@ data class FileContentDTO(
 
 	/**
 	 * See FoldingInfoDTO parameters (repeated)
+	 * 
+	 * @see FoldingInfoDTO
 	 */
 	val foldings: List<FoldingInfoDTO> = emptyList(),
 
@@ -21,6 +29,8 @@ data class FileContentDTO(
 
 	/**
 	 * See TextMarkupDTO parameters (repeated)
+	 * 
+	 * @see TextMarkupDTO
 	 */
 	val syntax: List<TextMarkupDTO> = emptyList()
 ) {

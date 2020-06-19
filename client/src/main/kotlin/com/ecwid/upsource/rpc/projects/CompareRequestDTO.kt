@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param leftLocator Name of a branch or a revision ID to be used in a comparison
+ * @param rightLocator Name of a branch or a revision ID to be used in a comparison
+ */
 data class CompareRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param reviewId ID of the Upsource review
+ * @param revisionId ID of the revision
+ * @param fileName A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param query Search query, e.g. part of the name
+ * @param limit Number of results to return
+ */
 data class UsersForMentionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

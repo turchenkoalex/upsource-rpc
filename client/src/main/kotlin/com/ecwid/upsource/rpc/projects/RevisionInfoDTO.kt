@@ -3,6 +3,21 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId Upsource revision ID (may differ from VCS revision ID in case of a multi-root project)
+ * @param revisionDate Revision date (author date in case of Git which differentiates author and committer dates)
+ * @param effectiveRevisionDate Revision date that agrees with graph topology (this means that child revisions will always have a larger effective date). In case of Git, can be equal to either author or committer date.
+ * @param revisionCommitMessage Commit message of the revision
+ * @param state Revision state: none(1), found(2), imported(3)
+ * @param vcsRevisionId The VCS revision ID
+ * @param shortRevisionId Short revision ID
+ * @param authorId User ID of the commit's author
+ * @param reachability See RevisionReachabilityEnum parameters
+ * @param tags Revision tags, if any
+ * @param branchHeadLabel Branch head labels, if any
+ * @param parentRevisionIds List of parent revisions IDs
+ */
 data class RevisionInfoDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -51,6 +66,8 @@ data class RevisionInfoDTO(
 
 	/**
 	 * See RevisionReachabilityEnum parameters (required)
+	 * 
+	 * @see RevisionReachabilityEnum
 	 */
 	val reachability: RevisionReachabilityEnum,
 

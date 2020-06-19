@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param diffType Type of change (see DiffTypeEnum)
+ * @param revision See RevisionInfoDTO parameters
+ * @param fileName A full path of the file starting with a slash (e.g. /folder/subfolder/file.txt )
+ */
 data class FileHistoryItemDTO(
 	/**
 	 * Type of change (see DiffTypeEnum) (required)
@@ -11,6 +16,8 @@ data class FileHistoryItemDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 

@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisionId VCS revision ID
+ * @param projectId Project ID in Upsource
+ * @param messageFragment A fragment of the commit message used as a search query
+ * @param author Name of the commit author
+ * @param commitTime Unix timestamp of the commit
+ */
 data class FindCommitsRequestPatternDTO(
 	/**
 	 * VCS revision ID (optional)

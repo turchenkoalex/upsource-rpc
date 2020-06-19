@@ -3,14 +3,22 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewId See ReviewIdDTO parameters
+ * @param revisions See RevisionsSetDTO parameters
+ */
 data class ReviewSummaryDiscussionsRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
+	 * 
+	 * @see ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * See RevisionsSetDTO parameters (optional)
+	 * 
+	 * @see RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO? = null
 ) {

@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param userId User that initiated the event
+ * @param userIds List of users that will receive the event in their feeds
+ * @param reviewNumber Associated review number
+ * @param reviewId Associated review ID
+ * @param date Event date
+ * @param actor User that initiated the event
+ * @param feedEventId Event ID
+ */
 data class FeedEventBean(
 	/**
 	 * User that initiated the event (optional)

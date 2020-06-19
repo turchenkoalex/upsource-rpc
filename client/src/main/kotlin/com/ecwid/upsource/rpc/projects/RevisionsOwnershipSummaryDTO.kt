@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param revisionOwner See RevisionOwnershipSummaryDTO
+ */
 data class RevisionsOwnershipSummaryDTO(
 	/**
 	 * See RevisionOwnershipSummaryDTO (repeated)
+	 * 
+	 * @see RevisionOwnershipSummaryDTO
 	 */
 	val revisionOwner: List<RevisionOwnershipSummaryDTO> = emptyList()
 )

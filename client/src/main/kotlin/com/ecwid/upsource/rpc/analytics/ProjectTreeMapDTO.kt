@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param entries See ProjectTreeMapEntryDTO parameters
+ */
 data class ProjectTreeMapDTO(
 	/**
 	 * See ProjectTreeMapEntryDTO parameters (repeated)
+	 * 
+	 * @see ProjectTreeMapEntryDTO
 	 */
 	val entries: List<ProjectTreeMapEntryDTO> = emptyList()
 )

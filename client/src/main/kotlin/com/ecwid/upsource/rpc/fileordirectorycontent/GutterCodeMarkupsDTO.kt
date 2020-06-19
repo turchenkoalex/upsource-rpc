@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param items See GutterCodeMarkupItemDTO parameters
+ */
 data class GutterCodeMarkupsDTO(
 	/**
 	 * See GutterCodeMarkupItemDTO parameters (repeated)
+	 * 
+	 * @see GutterCodeMarkupItemDTO
 	 */
 	val items: List<GutterCodeMarkupItemDTO> = emptyList()
 )

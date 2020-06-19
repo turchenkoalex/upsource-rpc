@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param userId User ID in Upsource
+ * @param timezoneOffset Timezone offset
+ */
 data class UpdateUserTimezoneDTO(
 	/**
 	 * User ID in Upsource (required)

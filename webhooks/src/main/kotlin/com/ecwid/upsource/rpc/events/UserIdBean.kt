@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param userId 
+ * @param userName 
+ * @param userEmail 
+ */
 data class UserIdBean(
 	val userId: String? = null,
 

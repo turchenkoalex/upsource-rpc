@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param protocol Protocol type ("POP3", "POP3+SSL", "POP3+TLS")
+ * @param host Email service host name
+ * @param port Email server port number
+ * @param login Email login
+ * @param password Email password
+ */
 data class TestPOP3MailboxRequestDTO(
 	/**
 	 * Protocol type ("POP3", "POP3+SSL", "POP3+TLS") (required)

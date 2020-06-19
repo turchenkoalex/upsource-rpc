@@ -3,6 +3,16 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param notificationReason Notification reason
+ * @param discussionId Discussion ID
+ * @param commentId Comment ID
+ * @param commentText Comment text
+ * @param isEdit Whether the event corresponds to comment editing
+ * @param isDeletion Whether the event corresponds to comment deletion
+ * @param resolveAction Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve
+ */
 data class DiscussionFeedEventBean(
 	/**
 	 * Base feed event (required)

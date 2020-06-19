@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param file The file in a particular project and revision
+ * @param revisionInfo See RevisionInfoDTO parameters
+ * @param contentType File content type
+ * @param isDeleted Whether this file is deleted
+ * @param projectDetails Project details
+ * @param snippets Code snippets
+ * @param totalMatches Total number of matches in the file
+ */
 data class TextSearchItem(
 	/**
 	 * The file in a particular project and revision (required)
@@ -11,6 +20,8 @@ data class TextSearchItem(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revisionInfo: com.ecwid.upsource.rpc.projects.RevisionInfoDTO,
 

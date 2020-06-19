@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param settings See ProjectSettingsDTO parameters
+ */
 data class EditProjectRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -11,6 +15,8 @@ data class EditProjectRequestDTO(
 
 	/**
 	 * See ProjectSettingsDTO parameters (required)
+	 * 
+	 * @see ProjectSettingsDTO
 	 */
 	val settings: ProjectSettingsDTO
 ) {

@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.ids
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param revisionId VCS revision ID
+ */
 data class RevisionInProjectDTO(
 	/**
 	 * Project ID in Upsource (required)

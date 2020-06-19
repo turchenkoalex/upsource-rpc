@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param startLine Line number to start with
+ * @param lineCount How many lines
+ * @param revision See RevisionInfoDTO parameters
+ * @param filePath A full path to the file starting with a slash (e.g. /directory/file.txt)
+ * @param priorChangeAnnotation A reference to the prior revision of this section (only revision and file, but not the line number / line count)
+ */
 data class FileAnnotationSectionDTO(
 	/**
 	 * Line number to start with (required)
@@ -16,6 +23,8 @@ data class FileAnnotationSectionDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
+	 * 
+	 * @see RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 

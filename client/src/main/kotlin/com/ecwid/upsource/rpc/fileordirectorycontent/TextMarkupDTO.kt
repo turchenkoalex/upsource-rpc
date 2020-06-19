@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param range Text range
+ * @param textAttribute See TextAttributeDTO parameters
+ */
 data class TextMarkupDTO(
 	/**
 	 * Text range (required)
@@ -11,6 +15,8 @@ data class TextMarkupDTO(
 
 	/**
 	 * See TextAttributeDTO parameters (required)
+	 * 
+	 * @see TextAttributeDTO
 	 */
 	val textAttribute: TextAttributeDTO
 ) {

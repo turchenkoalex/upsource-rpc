@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param valueId Value ID
+ * @param name Value title
+ * @param html HTML presentation of the value, e.g. a <span> with some inline styles
+ */
 data class IssueFieldValueDTO(
 	/**
 	 * Value ID (required)

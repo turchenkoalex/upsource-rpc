@@ -3,9 +3,18 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param branch See BranchDTO parameters
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ * @param totalBranches How many branches
+ * @param defaultBranch Name of the default branch
+ * @param isDefaultBranchExists Whether the project has the default branch
+ */
 data class BranchListDTO(
 	/**
 	 * See BranchDTO parameters (repeated)
+	 * 
+	 * @see BranchDTO
 	 */
 	val branch: List<BranchDTO> = emptyList(),
 

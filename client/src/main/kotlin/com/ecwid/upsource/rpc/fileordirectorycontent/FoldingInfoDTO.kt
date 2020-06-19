@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param fromOffset Start offset of the foldable range
+ * @param toOffset End offset of the foldable range
+ * @param isInitialCollapsed Whether the range is initially collapsed
+ * @param collapsedText Text to be displayed in place of the folded range
+ */
 data class FoldingInfoDTO(
 	/**
 	 * Start offset of the foldable range (required)

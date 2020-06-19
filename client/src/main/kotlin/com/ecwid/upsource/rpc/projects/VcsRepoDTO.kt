@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param id Repository ID
+ * @param url Repository URL
+ */
 data class VcsRepoDTO(
 	/**
 	 * Repository ID (required)

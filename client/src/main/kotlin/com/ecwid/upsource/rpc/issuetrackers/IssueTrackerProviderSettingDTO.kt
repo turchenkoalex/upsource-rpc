@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param name Setting key
+ * @param value Setting value
+ */
 data class IssueTrackerProviderSettingDTO(
 	/**
 	 * Setting key (required)

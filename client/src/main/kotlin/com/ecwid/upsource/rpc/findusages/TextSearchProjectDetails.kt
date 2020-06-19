@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param projectName Holds the project name
+ */
 data class TextSearchProjectDetails(
 	/**
 	 * Holds the project name (required)

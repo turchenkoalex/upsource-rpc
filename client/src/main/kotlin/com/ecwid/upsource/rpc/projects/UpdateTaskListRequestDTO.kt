@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId An ID of the discussion being updated
+ * @param commentId An ID of the comment being updated
+ * @param itemIndex Index of the task list item being updated
+ * @param itemValue New value of the task list item being updated
+ */
 data class UpdateTaskListRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

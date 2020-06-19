@@ -3,6 +3,20 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param discussionId ID of the discussion
+ * @param commentId ID of the comment
+ * @param text Text of the comment
+ * @param authorId User ID of the comment author
+ * @param date Unix timestamp of the comment
+ * @param parentId ID of the parent comment
+ * @param isEditable Whether the comment can be edited
+ * @param markupType Currently not in use
+ * @param isSynchronized Whether the discussion is in sync with GitHub
+ * @param syncResult GitHub sync result. See SyncResultEnum parameters
+ * @param isRead Whether the comment has been read by the requester
+ * @param reactions Reactions added to the comment
+ */
 data class CommentDTO(
 	/**
 	 * ID of the discussion (required)
@@ -51,6 +65,8 @@ data class CommentDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
+	 * 
+	 * @see SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null,
 

@@ -3,9 +3,16 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param commits See FindCommitsRequestPatternDTO parameters
+ * @param requestChanges Whether revision changes should be returned along with revision metadata (unused, left for compatibility with older clients)
+ * @param limit Number of commits to return
+ */
 data class FindCommitsRequestDTO(
 	/**
 	 * See FindCommitsRequestPatternDTO parameters (repeated)
+	 * 
+	 * @see FindCommitsRequestPatternDTO
 	 */
 	val commits: List<FindCommitsRequestPatternDTO> = emptyList(),
 

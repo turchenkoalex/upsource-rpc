@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.events
 
+/**
+ * @param base Base feed event
+ * @param oldState Old state
+ * @param newState New state
+ */
 data class ReviewStateChangedFeedEventBean(
 	/**
 	 * Base feed event (required)

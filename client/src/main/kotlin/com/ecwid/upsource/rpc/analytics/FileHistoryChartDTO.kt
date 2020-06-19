@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param maxAge Age of the oldest file on the chart (Unix timestamp)
+ * @param maxEdits Number of edits for the most edited file on the chart
+ * @param paths Full paths to the files starting with a slash (e.g. /directory/file.txt)
+ * @param firstEdits Unix timestamps of first edits
+ * @param frames See FileHistoryFrameDTO parameters
+ */
 data class FileHistoryChartDTO(
 	/**
 	 * Age of the oldest file on the chart (Unix timestamp) (required)
@@ -26,6 +33,8 @@ data class FileHistoryChartDTO(
 
 	/**
 	 * See FileHistoryFrameDTO parameters (repeated)
+	 * 
+	 * @see FileHistoryFrameDTO
 	 */
 	val frames: List<FileHistoryFrameDTO> = emptyList()
 ) {

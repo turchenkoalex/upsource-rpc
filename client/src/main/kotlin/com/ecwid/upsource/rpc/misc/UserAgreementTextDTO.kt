@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.misc
 
+/**
+ * @param text 
+ */
 data class UserAgreementTextDTO(
 	val text: String
 ) {

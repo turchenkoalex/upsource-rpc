@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+/**
+ * @param issueId Issue ID
+ * @param issueLink Issue URL
+ * @param summary Issue summary
+ * @param isResolved Whether the issue has been resolved
+ * @param field HTML presentation of issue fields (Issue Type, Priority, State)
+ */
 data class IssueInfoDTO(
 	/**
 	 * Issue ID (required)

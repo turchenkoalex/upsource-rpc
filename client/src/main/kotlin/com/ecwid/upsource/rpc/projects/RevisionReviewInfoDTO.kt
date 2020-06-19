@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param reviewInfo See ShortReviewInfoDTO parameters
+ */
 data class RevisionReviewInfoDTO(
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
+	 * 
+	 * @see ShortReviewInfoDTO
 	 */
 	val reviewInfo: ShortReviewInfoDTO? = null
 )

@@ -3,6 +3,15 @@
 
 package com.ecwid.upsource.rpc.fileordirectorycontent
 
+/**
+ * @param hasPsi Whether the code model is available for a file
+ * @param psiStatusMessage PSI status message, e.g. a failure to provide code intelligence or another message regarding the file in general
+ * @param referenceMarkup See FileReferenceCodeMarkupDTO parameters
+ * @param textMarkup See FileTextMarkupDTO parameters
+ * @param gutterMarks See GutterCodeMarkupsDTO parameters
+ * @param inspections See CodeInspectionsDTO parameters
+ * @param externalInspections External inspections
+ */
 data class FilePsiResponseDTO(
 	/**
 	 * Whether the code model is available for a file (optional)
@@ -16,21 +25,29 @@ data class FilePsiResponseDTO(
 
 	/**
 	 * See FileReferenceCodeMarkupDTO parameters (optional)
+	 * 
+	 * @see FileReferenceCodeMarkupDTO
 	 */
 	val referenceMarkup: FileReferenceCodeMarkupDTO? = null,
 
 	/**
 	 * See FileTextMarkupDTO parameters (optional)
+	 * 
+	 * @see FileTextMarkupDTO
 	 */
 	val textMarkup: FileTextMarkupDTO? = null,
 
 	/**
 	 * See GutterCodeMarkupsDTO parameters (optional)
+	 * 
+	 * @see GutterCodeMarkupsDTO
 	 */
 	val gutterMarks: GutterCodeMarkupsDTO? = null,
 
 	/**
 	 * See CodeInspectionsDTO parameters (optional)
+	 * 
+	 * @see CodeInspectionsDTO
 	 */
 	val inspections: CodeInspectionsDTO? = null,
 

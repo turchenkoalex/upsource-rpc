@@ -3,6 +3,13 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param query The search query
+ * @param filenameFilter File name filter
+ * @param ignoreDeleted Ignore matches in deleted files
+ * @param ignoreArchived Whether to search in archived projects
+ */
 data class TextSearchRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)

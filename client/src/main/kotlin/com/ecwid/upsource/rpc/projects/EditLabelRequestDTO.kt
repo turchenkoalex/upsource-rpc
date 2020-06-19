@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param label See LabelDTO parameters
+ */
 data class EditLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -11,6 +15,8 @@ data class EditLabelRequestDTO(
 
 	/**
 	 * See LabelDTO parameters (required)
+	 * 
+	 * @see LabelDTO
 	 */
 	val label: LabelDTO
 ) {

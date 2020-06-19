@@ -3,9 +3,18 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param file See FileInReviewDTO parameters
+ * @param ignoreWhitespace Whether to ignore whitespace changes
+ * @param revisions See RevisionsSetDTO parameters
+ * @param showUnrelatedChanges Whether to show the changes that were filtered out in the review diff. 'false' by default.
+ * @param contextLines Number of context lines around the modified fragment
+ */
 data class FileInReviewDiffRequestDTO(
 	/**
 	 * See FileInReviewDTO parameters (required)
+	 * 
+	 * @see FileInReviewDTO
 	 */
 	val file: FileInReviewDTO,
 
@@ -16,6 +25,8 @@ data class FileInReviewDiffRequestDTO(
 
 	/**
 	 * See RevisionsSetDTO parameters (optional)
+	 * 
+	 * @see RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO? = null,
 

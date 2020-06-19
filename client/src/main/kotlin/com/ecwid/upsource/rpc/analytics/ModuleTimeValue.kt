@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param module Name of the project module
+ * @param items See TimeValue parameters
+ */
 data class ModuleTimeValue(
 	/**
 	 * Name of the project module (required)
@@ -11,6 +15,8 @@ data class ModuleTimeValue(
 
 	/**
 	 * See TimeValue parameters (repeated)
+	 * 
+	 * @see TimeValue
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {

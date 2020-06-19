@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+/**
+ * @param committer User ID of the committer
+ * @param items See ModuleValue parameters
+ */
 data class CommitterModuleValue(
 	/**
 	 * User ID of the committer (required)
@@ -11,6 +15,8 @@ data class CommitterModuleValue(
 
 	/**
 	 * See ModuleValue parameters (repeated)
+	 * 
+	 * @see ModuleValue
 	 */
 	val items: List<ModuleValue> = emptyList()
 ) {

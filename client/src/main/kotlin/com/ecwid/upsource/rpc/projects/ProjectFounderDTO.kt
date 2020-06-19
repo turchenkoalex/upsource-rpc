@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param userId User ID of the person who created the project
+ * @param date Unix timestamp of project creation
+ */
 data class ProjectFounderDTO(
 	/**
 	 * User ID of the person who created the project (required)

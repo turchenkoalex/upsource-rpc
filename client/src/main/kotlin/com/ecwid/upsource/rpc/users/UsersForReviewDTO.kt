@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param result Suggested reviewers for a given review
+ * @param relevantUser All relevant users
+ * @param userRelevance Users' relevance [0..100]
+ */
 data class UsersForReviewDTO(
 	/**
 	 * Suggested reviewers for a given review (required)

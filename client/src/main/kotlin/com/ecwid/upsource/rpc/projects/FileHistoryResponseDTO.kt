@@ -3,14 +3,23 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param history See FileHistoryItemDTO parameters
+ * @param graph See RevisionListGraphDTO parameters
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ */
 data class FileHistoryResponseDTO(
 	/**
 	 * See FileHistoryItemDTO parameters (repeated)
+	 * 
+	 * @see FileHistoryItemDTO
 	 */
 	val history: List<FileHistoryItemDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
+	 * 
+	 * @see RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO? = null,
 

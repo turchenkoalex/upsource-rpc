@@ -3,6 +3,23 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectName Project name
+ * @param projectId Project ID in Upsource
+ * @param headHash Head revision ID
+ * @param codeReviewIdPattern Code review ID pattern
+ * @param externalLinks External links. See ExternalLinkDTO parameters
+ * @param issueTrackerConnections Configured issue tracker links
+ * @param projectModelType Build system type ("none" to disable code intelligence, "maven" for Maven, "gradle" for Gradle, "idea" for IntelliJ IDEA)
+ * @param defaultEffectiveCharset Default encoding (e.g. UTF-8)
+ * @param defaultBranch Default branch
+ * @param issueTrackerDetails See IssueTrackerProjectDetailsDTO parameters
+ * @param isConnectedToGithub Whether the project is connected to GitHub
+ * @param isConnectedToGitlab Whether the project is connected to GitLab
+ * @param iconUrl URL of the project icon
+ * @param group See ProjectGroupDTO parameters
+ * @param isArchived 
+ */
 data class ProjectInfoDTO(
 	/**
 	 * Project name (required)
@@ -26,6 +43,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * External links. See ExternalLinkDTO parameters (repeated)
+	 * 
+	 * @see ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
@@ -51,6 +70,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (optional)
+	 * 
+	 * @see IssueTrackerProjectDetailsDTO
 	 */
 	val issueTrackerDetails: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO? = null,
 
@@ -71,6 +92,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
+	 * 
+	 * @see ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 

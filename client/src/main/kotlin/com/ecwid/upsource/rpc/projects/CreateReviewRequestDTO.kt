@@ -3,6 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param title Review title (unused, left for compatibility with older clients)
+ * @param revisions Revisions to attach
+ * @param branch Branch name for branch review
+ * @param mergeFromBranch Merge review: branch to merge from
+ * @param mergeToBranch Merge review: branch to merge into
+ */
 data class CreateReviewRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

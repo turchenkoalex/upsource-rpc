@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param discussionId ID of the discussion
+ * @param isResolved Whether the discussion is resolved
+ * @param revision ID of the revision the discussion is linked to
+ */
 data class ResolveDiscussionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

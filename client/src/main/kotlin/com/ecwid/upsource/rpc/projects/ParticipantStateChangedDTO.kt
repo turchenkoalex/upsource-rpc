@@ -3,6 +3,11 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param participant An Upsource user ID of the participant
+ * @param oldState See ParticipantStateEnum parameters
+ * @param newState See ParticipantStateEnum parameters
+ */
 data class ParticipantStateChangedDTO(
 	/**
 	 * An Upsource user ID of the participant (required)
@@ -11,11 +16,15 @@ data class ParticipantStateChangedDTO(
 
 	/**
 	 * See ParticipantStateEnum parameters (required)
+	 * 
+	 * @see ParticipantStateEnum
 	 */
 	val oldState: ParticipantStateEnum,
 
 	/**
 	 * See ParticipantStateEnum parameters (required)
+	 * 
+	 * @see ParticipantStateEnum
 	 */
 	val newState: ParticipantStateEnum
 ) {

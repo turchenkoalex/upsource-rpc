@@ -3,6 +3,21 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param userId Upsource user ID
+ * @param login Upsource login
+ * @param name Visible name
+ * @param isServerAdmin The user is a server admin
+ * @param isGuestUser The user is a guest user
+ * @param isTestUser The user is a test user
+ * @param canCreateProjects The user has the right to create projects
+ * @param emailStatus See EmailStatusEnum parameters
+ * @param adminPermissionsInProjects The list of projects where the user has admin permissions
+ * @param reviewEditPermissionsInProjects The list of projects where the user has permission to edit reviews
+ * @param reviewViewPermissionsInProjects The list of projects where the user has permission to view reviews
+ * @param codeContributePermissionsInProjects The list of projects where the user has permission to create/merge pull requests
+ * @param isEULAAccepted Checks if EULA is accepted by the current user. Returns 'null' if EULA is not set up in Hub
+ */
 data class CurrentUserResponseDTO(
 	/**
 	 * Upsource user ID (required)
@@ -41,6 +56,8 @@ data class CurrentUserResponseDTO(
 
 	/**
 	 * See EmailStatusEnum parameters (required)
+	 * 
+	 * @see EmailStatusEnum
 	 */
 	val emailStatus: EmailStatusEnum,
 

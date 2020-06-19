@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.ids
 
+/**
+ * @param projectId Project ID in Upsource
+ */
 data class ProjectIdListDTO(
 	/**
 	 * Project ID in Upsource (repeated)

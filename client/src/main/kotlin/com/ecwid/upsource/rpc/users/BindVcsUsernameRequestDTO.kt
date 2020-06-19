@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param userId User ID to register as an alias of the currently logged-in user
+ */
 data class BindVcsUsernameRequestDTO(
 	/**
 	 * User ID to register as an alias of the currently logged-in user (required)

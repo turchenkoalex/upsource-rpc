@@ -3,9 +3,14 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param discussions See DiscussionInFileWithFileDTO parameters
+ */
 data class DiscussionsInFilesDTO(
 	/**
 	 * See DiscussionInFileWithFileDTO parameters (repeated)
+	 * 
+	 * @see DiscussionInFileWithFileDTO
 	 */
 	val discussions: List<DiscussionInFileWithFileDTO> = emptyList()
 )

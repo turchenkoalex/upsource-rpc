@@ -3,6 +3,21 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param projectId Project ID in Upsource
+ * @param projectName Project name
+ * @param headHash Head revision ID
+ * @param isReady Whether project initialization is completed
+ * @param lastCommitDate Unix timestamp of the last commit
+ * @param lastCommitAuthorName User ID of the last commit's author
+ * @param iconUrl URL of the project icon
+ * @param group See ProjectGroupDTO parameters
+ * @param founder Who and when created the project
+ * @param lastDayCommits Number of commits made in the last 24 hours
+ * @param lastMonthCommits Number of commits made in the last 30 days
+ * @param totalCommits Total number of commits in the project
+ * @param isArchived Whether the project is archived
+ */
 data class ShortProjectInfoDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -41,6 +56,8 @@ data class ShortProjectInfoDTO(
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
+	 * 
+	 * @see ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 

@@ -3,6 +3,12 @@
 
 package com.ecwid.upsource.rpc.projects
 
+/**
+ * @param count Total number of discussions
+ * @param hasUnresolved Contains unresolved discussions
+ * @param unresolvedCount Number of unresolved discussions
+ * @param resolvedCount Number of resolved discussions
+ */
 data class SimpleDiscussionCounterDTO(
 	/**
 	 * Total number of discussions (required)

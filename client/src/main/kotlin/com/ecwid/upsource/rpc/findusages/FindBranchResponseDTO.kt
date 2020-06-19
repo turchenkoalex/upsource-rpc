@@ -3,6 +3,10 @@
 
 package com.ecwid.upsource.rpc.findusages
 
+/**
+ * @param branches The list of matched branches
+ * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
+ */
 data class FindBranchResponseDTO(
 	/**
 	 * The list of matched branches (repeated)

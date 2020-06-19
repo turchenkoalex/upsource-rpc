@@ -3,6 +3,9 @@
 
 package com.ecwid.upsource.rpc.users
 
+/**
+ * @param ids IDs of user groups
+ */
 data class UserGroupsIdsListDTO(
 	/**
 	 * IDs of user groups (repeated)
