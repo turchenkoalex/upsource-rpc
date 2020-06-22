@@ -19,6 +19,33 @@ Transports (required for `client`). Please use one of:
 
 ### Upsource client
 
+Add build dependencies (gradle)
+```groovy
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/turchenkoalex/upsource-rpc")
+        credentials {
+            username = "github login"
+            password = "access token with read packages"
+        }
+    }
+}
+
+dependencies {
+    implementation("com.ecwid.upsource-rpc:client:0.9.5")
+
+    // use one of:
+    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.5")
+    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.5")
+
+    // use one of:
+    implementation("com.ecwid.upsource-rpc:httpclient:0.9.5")
+    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.5")
+}
+```
+[How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+
+
 Create connection settings
 ```kotlin
 val upsourceConnection = com.ecwid.upsource.transport.UpsourceConnection(
@@ -106,9 +133,9 @@ when (revisionList) {
 Implement transport interface and use it with `.withTransport` method
 ```kotlin
 class SampleTransport : com.ecwid.upsource.transport.RpcTransport {
-	override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
-		return RpcTransportResponse(statusCode = 200, content = "{}")
-	}
+    override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
+        return RpcTransportResponse(statusCode = 200, content = "{}")
+    }
 }
 
 val client = UpsourceRPC.newBuilder()
@@ -122,13 +149,13 @@ val client = UpsourceRPC.newBuilder()
 Implement serializer interface and use it with `.withSerializer` method
 ```kotlin
 class SampleSerializer : com.ecwid.upsource.serializer.Serializer {
-	override fun serialize(request: Any): String {
-		return "{}" // request json
-	}
+    override fun serialize(request: Any): String {
+        return "{}" // request json
+    }
 
-	override fun <T> deserialize(response: RpcTransportResponse, clazz: Class<T>): RpcResponse<T> {
-		return RpcResponse.Error(code = 400, message = "Not implemented")
-	}
+    override fun <T> deserialize(response: RpcTransportResponse, clazz: Class<T>): RpcResponse<T> {
+        return RpcResponse.Error(code = 400, message = "Not implemented")
+    }
 }
 
 val client = UpsourceRPC.newBuilder()
@@ -140,6 +167,24 @@ val client = UpsourceRPC.newBuilder()
 ## Webhooks
 
 #### Usage
+
+Add build dependencies (gradle)
+```groovy
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/turchenkoalex/upsource-rpc")
+        credentials {
+            username = "github login"
+            password = "access token with read packages"
+        }
+    }
+}
+
+dependencies {
+    implementation("com.ecwid.upsource-rpc:webhooks:0.9.5")
+}
+```
+[How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 
 Create parser
 ```kotlin
@@ -190,8 +235,8 @@ when (webhook) {
 
 | Client |  Upsource   |
 |--------|:-----------:|
-| 0.9.4  | 2019.1.1644 | 
 | 0.9.5  | 2019.1.1717 |
+| 0.9.4  | 2019.1.1644 | 
 
 
 ## Code generation
