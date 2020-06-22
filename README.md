@@ -32,15 +32,15 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:client:0.9.5")
+    implementation("com.ecwid.upsource-rpc:client:0.9.6")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.5")
-    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.5")
+    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.6")
+    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.6")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:httpclient:0.9.5")
-    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.5")
+    implementation("com.ecwid.upsource-rpc:httpclient:0.9.6")
+    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.6")
 }
 ```
 [How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
@@ -181,7 +181,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:webhooks:0.9.5")
+    implementation("com.ecwid.upsource-rpc:webhooks:0.9.6")
 }
 ```
 [How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
@@ -235,6 +235,7 @@ when (webhook) {
 
 | Client |  Upsource   |
 |--------|:-----------:|
+| 0.9.6  | 2019.1.1717 |
 | 0.9.5  | 2019.1.1717 |
 | 0.9.4  | 2019.1.1644 | 
 
