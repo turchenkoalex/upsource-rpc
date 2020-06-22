@@ -1,7 +1,9 @@
 package com.ecwid.upsource.codegen.generator
 
 import com.ecwid.upsource.codegen.Config
+import com.ecwid.upsource.codegen.SERIALIZER_PACKAGE
 import com.ecwid.upsource.codegen.TypeMapping
+import com.ecwid.upsource.codegen.WEBHOOKS_PACKAGE
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.UpsourceFile
 import com.ecwid.upsource.codegen.templates.Templates
@@ -16,13 +18,14 @@ class CodeGenerator(
 		MessagesGenerator(config.clientDir, fileWriter, templates),
 		ServicesGenerator(config, fileWriter, templates),
 		GsonGenerator(config.gsonLibraryDir, fileWriter, templates),
-		JacksonGenerator(config.jacksonLibraryDir, fileWriter, templates)
+		JacksonGenerator(config.jacksonLibraryDir, "$SERIALIZER_PACKAGE.jackson", fileWriter, templates)
 	)
 
 	private val webhookGenerators = listOf(
 		EnumsGenerator(config.webhooksDir, fileWriter, templates),
 		MessagesGenerator(config.webhooksDir, fileWriter, templates),
-		WebhookGenerator(config.webhooksDir, fileWriter, templates)
+		WebhookGenerator(config.webhooksDir, fileWriter, templates),
+		JacksonGenerator(config.webhooksDir, "$WEBHOOKS_PACKAGE.jackson", fileWriter, templates)
 	)
 
 	fun generateClient(files: List<UpsourceFile>) {
