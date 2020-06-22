@@ -1,0 +1,38 @@
+{
+  "majorVersion": 2019,
+  "minorVersion": 1,
+  "projectId": "demo",
+  "dataType": "ReviewStateChangedFeedEventBean",
+  "data": {
+    "base": {
+      "userIds": [
+        {
+          "userId": "e630cdce-0897-472f-8cc2-12ca9ed95984",
+          "userName": "dev1",
+          "userEmail": "dev1@example.com"
+        },
+        {
+          "userId": "12e4492d-0b47-4d90-87f7-813e774cb4a3",
+          "userName": "dev2",
+          "userEmail": "dev2@example.com"
+        },
+        {
+          "userId": "c16d9741-65d2-4cec-a21a-01102e911889",
+          "userName": "dev3",
+          "userEmail": "dev3@example.com"
+        }
+      ],
+      "reviewNumber": 1001,
+      "reviewId": "DEMO-CR-1001",
+      "date": 1592482575648,
+      "actor": {
+        "userId": "12e4492d-0b47-4d90-87f7-813e774cb4a3",
+        "userName": "dev2",
+        "userEmail": "dev2@example.com"
+      },
+      "feedEventId": "1592482575648#demo#eb9af51d-c297-40e4-8f84-2ac6666b8a82"
+    },
+    "oldState": 0,
+    "newState": 1
+  }
+}
