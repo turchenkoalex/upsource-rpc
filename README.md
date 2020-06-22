@@ -134,7 +134,7 @@ class SampleSerializer : com.ecwid.upsource.serializer.Serializer {
 val client = UpsourceRPC.newBuilder()
     .withHttpClient(upsourceConnection)
     .withSerializer(SampleSerializer())
-    .build()
+.build()
 ```
 
 ## Webhooks
@@ -143,7 +143,7 @@ val client = UpsourceRPC.newBuilder()
 
 Create parser
 ```kotlin
-val parser = Webhooks.newParser()
+val parser = WebhookParser.newParser()
 ```
 
 Parse http request
