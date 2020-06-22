@@ -1,6 +1,5 @@
 package com.ecwid.upsource.codegen.generator
 
-import com.ecwid.upsource.codegen.SERIALIZER_PACKAGE
 import com.ecwid.upsource.codegen.TypeMapping
 import com.ecwid.upsource.codegen.filewriter.FileWriter
 import com.ecwid.upsource.codegen.schema.EnumType
@@ -10,6 +9,7 @@ import com.ecwid.upsource.codegen.templates.Templates
 
 class JacksonGenerator(
 	private val libraryDir: String,
+	private val modulePackage: String,
 	private val fileWriter: FileWriter,
 	private val templates: Templates
 ) : FilesGenerator {
@@ -22,7 +22,7 @@ class JacksonGenerator(
 		val filePackage = file.fullPackage
 
 		file.schema.enums.forEach { enum ->
-			val fileName = "${enum.name}.kt"
+			val fileName = "${enum.name}JacksonAdapter.kt"
 			val content = buildContent(filePackage, enum)
 			fileWriter.writeFile(
 				dir = libraryDir,
@@ -58,9 +58,8 @@ class JacksonGenerator(
 			.map { "$it.*" }
 			.sortedBy { it }
 
-		val filePackage = "$SERIALIZER_PACKAGE.jackson"
 		val template = Template.JacksonModuleTemplate(
-			filePackage = filePackage,
+			filePackage = modulePackage,
 			enums = enums,
 			imports = imports
 		)
@@ -70,7 +69,7 @@ class JacksonGenerator(
 		val fileName = "UpsourceModule.kt"
 		fileWriter.writeFile(
 			dir = libraryDir,
-			filePackage = filePackage,
+			filePackage = modulePackage,
 			filename = fileName,
 			content = content
 		)

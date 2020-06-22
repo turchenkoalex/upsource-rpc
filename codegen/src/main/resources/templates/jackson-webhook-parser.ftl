@@ -15,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap
 internal class JacksonWebhookParser : WebhookParser {
 	private val objectMapper = ObjectMapper()
 		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+		.registerModule(buildUpsourceModule())
 		.registerKotlinModule()
 	private val types = ConcurrentHashMap<Class<*>, JavaType>()
 
