@@ -19,6 +19,7 @@ package com.ecwid.upsource.rpc.projects
  * @param iconUrl URL of the project icon
  * @param group See ProjectGroupDTO parameters
  * @param isArchived 
+ * @param issueTrackerProjectDetails See IssueTrackerProjectDetailsDTO parameters
  */
 data class ProjectInfoDTO(
 	/**
@@ -97,7 +98,14 @@ data class ProjectInfoDTO(
 	 */
 	val group: ProjectGroupDTO? = null,
 
-	val isArchived: Boolean? = null
+	val isArchived: Boolean? = null,
+
+	/**
+	 * See IssueTrackerProjectDetailsDTO parameters (repeated)
+	 * 
+	 * @see IssueTrackerProjectDetailsDTO
+	 */
+	val issueTrackerProjectDetails: List<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO> = emptyList()
 ) {
 	internal constructor() : this(
 		projectName = "",
@@ -114,6 +122,7 @@ data class ProjectInfoDTO(
 		isConnectedToGitlab = false,
 		iconUrl = null,
 		group = null,
-		isArchived = null
+		isArchived = null,
+		issueTrackerProjectDetails = emptyList()
 	)
 }

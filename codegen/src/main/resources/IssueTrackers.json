@@ -87,6 +87,12 @@
           "description": "See IssueRequiredFieldDTO parameters",
           "label": "repeated",
           "type": "IssueRequiredFieldDTO"
+        },
+        {
+          "name": "projectKey",
+          "description": "Issue tracker project key",
+          "label": "optional",
+          "type": "String"
         }
       ]
     },

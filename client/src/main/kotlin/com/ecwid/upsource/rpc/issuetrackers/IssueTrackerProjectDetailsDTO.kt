@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param field See IssueFieldDTO parameters
  * @param canCreateIssue Whether an issue can be created
  * @param requiredField See IssueRequiredFieldDTO parameters
+ * @param projectKey Issue tracker project key
  */
 data class IssueTrackerProjectDetailsDTO(
 	/**
@@ -38,13 +39,19 @@ data class IssueTrackerProjectDetailsDTO(
 	 * 
 	 * @see IssueRequiredFieldDTO
 	 */
-	val requiredField: List<IssueRequiredFieldDTO> = emptyList()
+	val requiredField: List<IssueRequiredFieldDTO> = emptyList(),
+
+	/**
+	 * Issue tracker project key (optional)
+	 */
+	val projectKey: String? = null
 ) {
 	internal constructor() : this(
 		providerKey = "",
 		projectUrl = "",
 		field = emptyList(),
 		canCreateIssue = false,
-		requiredField = emptyList()
+		requiredField = emptyList(),
+		projectKey = null
 	)
 }
