@@ -598,7 +598,7 @@
       "name": "setReviewTargetBranch",
       "argumentType": "messages.ReviewTargetBranchDTO",
       "description": "Merge review: sets target branch",
-      "returnType": "messages.VoidMessage"
+      "returnType": "messages.SetReviewTargetBranchResponseDTO"
     },
     {
       "name": "getReviewSummaryChanges",

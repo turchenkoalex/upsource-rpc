@@ -560,6 +560,12 @@
           "name": "isArchived",
           "label": "optional",
           "type": "Bool"
+        },
+        {
+          "name": "issueTrackerProjectDetails",
+          "description": "See IssueTrackerProjectDetailsDTO parameters",
+          "label": "repeated",
+          "type": "IssueTrackerProjectDetailsDTO"
         }
       ]
     },
@@ -2438,6 +2444,15 @@
           "type": "String"
         }
       ]
+    },
+    {
+      "name": "SetReviewTargetBranchResponseDTO",
+      "fields": [{
+        "name": "syncResult",
+        "description": "GitHub sync result. See SyncResultEnum parameters",
+        "label": "optional",
+        "type": "SyncResultEnum"
+      }]
     },
     {
       "name": "ResolveDiscussionResponseDTO",

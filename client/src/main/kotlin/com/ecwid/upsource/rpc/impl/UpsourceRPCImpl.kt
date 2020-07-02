@@ -425,7 +425,7 @@ internal class UpsourceRPCImpl(
 		return invokeMethod("setReviewDeadline", request)
 	}
 
-	override fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage> {
+	override fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<com.ecwid.upsource.rpc.projects.SetReviewTargetBranchResponseDTO> {
 		return invokeMethod("setReviewTargetBranch", request)
 	}
 

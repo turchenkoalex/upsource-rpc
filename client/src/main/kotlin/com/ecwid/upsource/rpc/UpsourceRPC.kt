@@ -510,7 +510,7 @@ interface UpsourceRPC {
 	/**
 	 * Merge review: sets target branch
 	 */
-	fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<com.ecwid.upsource.rpc.ids.VoidMessage>
+	fun setReviewTargetBranch(request: com.ecwid.upsource.rpc.projects.ReviewTargetBranchDTO): RpcResponse<com.ecwid.upsource.rpc.projects.SetReviewTargetBranchResponseDTO>
 
 	/**
 	 * Returns the list of changes (sum of all revisions) in a review
