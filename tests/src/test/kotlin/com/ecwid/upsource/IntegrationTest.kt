@@ -11,7 +11,7 @@ import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.UpsourceConnection
 import com.ecwid.upsource.transport.apache.withApacheHttpClient
 import com.ecwid.upsource.transport.httpclient.withHttpClient
-import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
@@ -40,7 +40,7 @@ internal class IntegrationTest {
 		)
 
 		require(revisionList is RpcResponse.Error)
-		assertThat(revisionList.code).isEqualTo(2001)
+		assertEquals(2001, revisionList.code)
 	}
 
 	@Test
@@ -58,7 +58,7 @@ internal class IntegrationTest {
 		)
 
 		require(revisionList is RpcResponse.Error)
-		assertThat(revisionList.code).isEqualTo(2001)
+		assertEquals(2001, revisionList.code)
 	}
 
 	@Test

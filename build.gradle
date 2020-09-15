@@ -2,7 +2,6 @@ buildscript {
 	ext.kotlinVersion = '1.4.10'
 	ext.junitVersion = '5.7.0'
 	ext.apacheHttpClientVersion = '4.5.12'
-	ext.assertjVersion = '3.11.1'
 	ext.gsonVersion = '2.8.6'
 	ext.jacksonVersion = '2.11.0'
 	ext.commonsCliVersion = '1.4'

@@ -6,7 +6,8 @@ import com.ecwid.upsource.rpc.projects.RevisionReviewInfoListDTO
 import com.ecwid.upsource.serializer.jackson.JacksonSerializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
-import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 internal class JacksonSerializerTest {
@@ -22,10 +23,10 @@ internal class JacksonSerializerTest {
 		val reviewInfo = response.result.reviewInfo[0].reviewInfo
 		requireNotNull(reviewInfo)
 
-		assertThat(reviewInfo.reviewId.reviewId).isEqualTo("REVIEW-ID-1")
-		assertThat(reviewInfo.reviewId.projectId).isEqualTo("project")
-		assertThat(reviewInfo.branch).isEqualTo(listOf("my-branch"))
-		assertThat(reviewInfo.state).isEqualTo(ReviewStateEnum.OPEN)
+		assertEquals("REVIEW-ID-1", reviewInfo.reviewId.reviewId)
+		assertEquals("project", reviewInfo.reviewId.projectId)
+		assertEquals(listOf("my-branch"), reviewInfo.branch)
+		assertEquals(ReviewStateEnum.OPEN, reviewInfo.state)
 	}
 
 	@Test
@@ -37,9 +38,9 @@ internal class JacksonSerializerTest {
 
 		val reviewList = response.result
 
-		assertThat(reviewList.hasMore).isEqualTo(true)
-		assertThat(reviewList.totalCount).isEqualTo(101)
-		assertThat(reviewList.reviews).isEmpty()
+		assertTrue(reviewList.hasMore)
+		assertEquals(101, reviewList.totalCount)
+		assertTrue(reviewList.reviews.isEmpty())
 	}
 
 	@Test
@@ -49,12 +50,13 @@ internal class JacksonSerializerTest {
 
 		require(response is RpcResponse.Error)
 
-		assertThat(response.code).isEqualTo(103)
-		assertThat(response.message).isEqualTo("User guest doesn't have read access to project MyProject")
+		assertEquals(103, response.code)
+		assertEquals("User guest doesn't have read access to project MyProject", response.message)
 	}
 }
 
 internal fun JacksonSerializerTest.readResource(file: String): RpcTransportResponse {
+	@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 	val content = this.javaClass.classLoader.getResource(file).readText(Charsets.UTF_8)
-	return com.ecwid.upsource.transport.RpcTransportResponse(statusCode = 200, content = content)
+	return RpcTransportResponse(statusCode = 200, content = content)
 }
