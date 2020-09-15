@@ -3,7 +3,7 @@ buildscript {
 	ext.junitVersion = '5.7.0'
 	ext.apacheHttpClientVersion = '4.5.12'
 	ext.gsonVersion = '2.8.6'
-	ext.jacksonVersion = '2.11.0'
+	ext.jacksonVersion = '2.11.2'
 	ext.commonsCliVersion = '1.4'
 	ext.freemarkerVersion = '2.3.30'
 }
