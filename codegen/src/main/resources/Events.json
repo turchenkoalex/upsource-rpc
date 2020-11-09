@@ -220,20 +220,8 @@
           "type": "String"
         },
         {
-          "name": "commentText",
-          "description": "Comment text",
-          "label": "optional",
-          "type": "String"
-        },
-        {
           "name": "isEdit",
           "description": "Whether the event corresponds to comment editing",
-          "label": "optional",
-          "type": "Bool"
-        },
-        {
-          "name": "isDeletion",
-          "description": "Whether the event corresponds to comment deletion",
           "label": "optional",
           "type": "Bool"
         },
@@ -242,6 +230,36 @@
           "description": "Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve",
           "label": "optional",
           "type": "Bool"
+        },
+        {
+          "name": "commentText",
+          "description": "Comment text",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "isDeletion",
+          "description": "Whether the event corresponds to comment deletion",
+          "label": "optional",
+          "type": "Bool"
+        },
+        {
+          "name": "projectId",
+          "description": "Anchor data for event",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "revisionId",
+          "description": "Anchor data for event",
+          "label": "optional",
+          "type": "String"
+        },
+        {
+          "name": "fileName",
+          "description": "Anchor data for event",
+          "label": "optional",
+          "type": "String"
         }
       ]
     },
