@@ -8,10 +8,13 @@ package com.ecwid.upsource.rpc.events
  * @param notificationReason Notification reason
  * @param discussionId Discussion ID
  * @param commentId Comment ID
- * @param commentText Comment text
  * @param isEdit Whether the event corresponds to comment editing
- * @param isDeletion Whether the event corresponds to comment deletion
  * @param resolveAction Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve
+ * @param commentText Comment text
+ * @param isDeletion Whether the event corresponds to comment deletion
+ * @param projectId Anchor data for event
+ * @param revisionId Anchor data for event
+ * @param fileName Anchor data for event
  */
 data class DiscussionFeedEventBean(
 	/**
@@ -35,14 +38,19 @@ data class DiscussionFeedEventBean(
 	val commentId: String? = null,
 
 	/**
-	 * Comment text (optional)
-	 */
-	val commentText: String? = null,
-
-	/**
 	 * Whether the event corresponds to comment editing (optional)
 	 */
 	val isEdit: Boolean? = null,
+
+	/**
+	 * Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve (optional)
+	 */
+	val resolveAction: Boolean? = null,
+
+	/**
+	 * Comment text (optional)
+	 */
+	val commentText: String? = null,
 
 	/**
 	 * Whether the event corresponds to comment deletion (optional)
@@ -50,18 +58,31 @@ data class DiscussionFeedEventBean(
 	val isDeletion: Boolean? = null,
 
 	/**
-	 * Indicates a change of the discussion's resolved status: true for resolve, false for un-resolve (optional)
+	 * Anchor data for event (optional)
 	 */
-	val resolveAction: Boolean? = null
+	val projectId: String? = null,
+
+	/**
+	 * Anchor data for event (optional)
+	 */
+	val revisionId: String? = null,
+
+	/**
+	 * Anchor data for event (optional)
+	 */
+	val fileName: String? = null
 ) {
 	internal constructor() : this(
 		base = FeedEventBean(),
 		notificationReason = NotificationReason.UNKNOWN,
 		discussionId = "",
 		commentId = null,
-		commentText = null,
 		isEdit = null,
+		resolveAction = null,
+		commentText = null,
 		isDeletion = null,
-		resolveAction = null
+		projectId = null,
+		revisionId = null,
+		fileName = null
 	)
 }
