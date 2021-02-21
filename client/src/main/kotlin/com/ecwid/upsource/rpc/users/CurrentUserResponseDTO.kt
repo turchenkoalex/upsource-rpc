@@ -57,7 +57,7 @@ data class CurrentUserResponseDTO(
 	/**
 	 * See EmailStatusEnum parameters (required)
 	 * 
-	 * @see EmailStatusEnum
+	 * @see com.ecwid.upsource.rpc.users.EmailStatusEnum
 	 */
 	val emailStatus: EmailStatusEnum,
 

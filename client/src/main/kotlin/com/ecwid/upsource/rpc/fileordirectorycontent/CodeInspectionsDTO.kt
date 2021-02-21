@@ -11,14 +11,14 @@ data class CodeInspectionsDTO(
 	/**
 	 * See InspectionCodeMarkupItemDTO parameters (repeated)
 	 * 
-	 * @see InspectionCodeMarkupItemDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionCodeMarkupItemDTO
 	 */
 	val inspections: List<InspectionCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * See FileWarningLevelEnum parameters (required)
 	 * 
-	 * @see FileWarningLevelEnum
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnum
 	 */
 	val fileLevel: FileWarningLevelEnum
 ) {

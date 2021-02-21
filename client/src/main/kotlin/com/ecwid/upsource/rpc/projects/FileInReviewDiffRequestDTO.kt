@@ -14,7 +14,7 @@ data class FileInReviewDiffRequestDTO(
 	/**
 	 * See FileInReviewDTO parameters (required)
 	 * 
-	 * @see FileInReviewDTO
+	 * @see com.ecwid.upsource.rpc.projects.FileInReviewDTO
 	 */
 	val file: FileInReviewDTO,
 
@@ -26,7 +26,7 @@ data class FileInReviewDiffRequestDTO(
 	/**
 	 * See RevisionsSetDTO parameters (optional)
 	 * 
-	 * @see RevisionsSetDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO? = null,
 

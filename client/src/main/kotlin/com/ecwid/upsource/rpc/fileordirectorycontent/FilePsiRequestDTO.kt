@@ -13,7 +13,7 @@ data class FilePsiRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 * 
-	 * @see FileInRevisionDTO
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 

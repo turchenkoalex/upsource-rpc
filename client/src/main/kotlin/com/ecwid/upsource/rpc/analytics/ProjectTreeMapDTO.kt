@@ -10,7 +10,7 @@ data class ProjectTreeMapDTO(
 	/**
 	 * See ProjectTreeMapEntryDTO parameters (repeated)
 	 * 
-	 * @see ProjectTreeMapEntryDTO
+	 * @see com.ecwid.upsource.rpc.analytics.ProjectTreeMapEntryDTO
 	 */
 	val entries: List<ProjectTreeMapEntryDTO> = emptyList()
 )

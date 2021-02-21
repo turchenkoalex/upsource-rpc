@@ -11,14 +11,14 @@ data class ReviewStateChangedDTO(
 	/**
 	 * See ReviewStateEnum parameters (required)
 	 * 
-	 * @see ReviewStateEnum
+	 * @see com.ecwid.upsource.rpc.projects.ReviewStateEnum
 	 */
 	val oldState: ReviewStateEnum,
 
 	/**
 	 * See ReviewStateEnum parameters (required)
 	 * 
-	 * @see ReviewStateEnum
+	 * @see com.ecwid.upsource.rpc.projects.ReviewStateEnum
 	 */
 	val newState: ReviewStateEnum
 ) {

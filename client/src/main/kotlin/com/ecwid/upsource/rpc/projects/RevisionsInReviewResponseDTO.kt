@@ -16,14 +16,14 @@ data class RevisionsInReviewResponseDTO(
 	/**
 	 * See RevisionDescriptorListDTO parameters (required)
 	 * 
-	 * @see RevisionDescriptorListDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionDescriptorListDTO
 	 */
 	val allRevisions: RevisionDescriptorListDTO,
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
 	 * 
-	 * @see RevisionsSetDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val newRevisions: RevisionsSetDTO,
 

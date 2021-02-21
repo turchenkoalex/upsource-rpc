@@ -14,14 +14,14 @@ data class InspectionCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
 	 * 
-	 * @see RangeDTO
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 
 	/**
 	 * See TextAttributeDTO parameters (required)
 	 * 
-	 * @see TextAttributeDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextAttributeDTO
 	 */
 	val textAttribute: TextAttributeDTO,
 
@@ -33,7 +33,7 @@ data class InspectionCodeMarkupItemDTO(
 	/**
 	 * See InspectionSeverityEnum parameters (required)
 	 * 
-	 * @see InspectionSeverityEnum
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum
 	 */
 	val severity: InspectionSeverityEnum,
 

@@ -21,7 +21,7 @@ data class TextSearchItem(
 	/**
 	 * See RevisionInfoDTO parameters (required)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revisionInfo: com.ecwid.upsource.rpc.projects.RevisionInfoDTO,
 

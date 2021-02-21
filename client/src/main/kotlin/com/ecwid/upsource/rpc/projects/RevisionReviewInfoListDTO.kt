@@ -10,7 +10,7 @@ data class RevisionReviewInfoListDTO(
 	/**
 	 * See RevisionReviewInfoDTO parameters (repeated)
 	 * 
-	 * @see RevisionReviewInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionReviewInfoDTO
 	 */
 	val reviewInfo: List<RevisionReviewInfoDTO> = emptyList()
 )

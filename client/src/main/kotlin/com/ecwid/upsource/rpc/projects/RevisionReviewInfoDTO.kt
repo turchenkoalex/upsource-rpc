@@ -10,7 +10,7 @@ data class RevisionReviewInfoDTO(
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 * 
-	 * @see ShortReviewInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val reviewInfo: ShortReviewInfoDTO? = null
 )

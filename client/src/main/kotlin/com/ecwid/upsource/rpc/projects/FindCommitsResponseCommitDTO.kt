@@ -23,14 +23,14 @@ data class FindCommitsResponseCommitDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
 	 * 
-	 * @see RevisionsDiffDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsDiffDTO
 	 */
 	val changes: RevisionsDiffDTO? = null
 ) {

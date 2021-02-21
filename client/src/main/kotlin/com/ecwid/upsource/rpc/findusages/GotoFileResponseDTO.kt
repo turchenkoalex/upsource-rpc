@@ -11,7 +11,7 @@ data class GotoFileResponseDTO(
 	/**
 	 * See GotoFileItemDTO parameters (repeated)
 	 * 
-	 * @see GotoFileItemDTO
+	 * @see com.ecwid.upsource.rpc.findusages.GotoFileItemDTO
 	 */
 	val items: List<GotoFileItemDTO> = emptyList(),
 

@@ -17,14 +17,14 @@ data class ParticipantInReviewDTO(
 	/**
 	 * Participant's role in the review. See RoleInReviewEnum parameters (required)
 	 * 
-	 * @see RoleInReviewEnum
+	 * @see com.ecwid.upsource.rpc.users.RoleInReviewEnum
 	 */
 	val role: com.ecwid.upsource.rpc.users.RoleInReviewEnum,
 
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (optional)
 	 * 
-	 * @see ParticipantStateEnum
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val state: ParticipantStateEnum? = null
 ) {

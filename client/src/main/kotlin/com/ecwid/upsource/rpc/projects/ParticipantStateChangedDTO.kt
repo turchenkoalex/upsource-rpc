@@ -17,14 +17,14 @@ data class ParticipantStateChangedDTO(
 	/**
 	 * See ParticipantStateEnum parameters (required)
 	 * 
-	 * @see ParticipantStateEnum
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val oldState: ParticipantStateEnum,
 
 	/**
 	 * See ParticipantStateEnum parameters (required)
 	 * 
-	 * @see ParticipantStateEnum
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val newState: ParticipantStateEnum
 ) {

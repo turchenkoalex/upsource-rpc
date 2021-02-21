@@ -25,7 +25,7 @@ data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * See IssueFieldDTO parameters (repeated)
 	 * 
-	 * @see IssueFieldDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldDTO
 	 */
 	val field: List<IssueFieldDTO> = emptyList(),
 
@@ -37,7 +37,7 @@ data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * See IssueRequiredFieldDTO parameters (repeated)
 	 * 
-	 * @see IssueRequiredFieldDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldDTO
 	 */
 	val requiredField: List<IssueRequiredFieldDTO> = emptyList(),
 

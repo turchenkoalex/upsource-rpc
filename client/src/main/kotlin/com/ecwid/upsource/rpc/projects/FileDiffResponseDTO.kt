@@ -12,21 +12,21 @@ data class FileDiffResponseDTO(
 	/**
 	 * See FileInRevisionDTO parameters (optional)
 	 * 
-	 * @see FileInRevisionDTO
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val leftFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
 	 * 
-	 * @see FileInRevisionDTO
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val rightFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileDiffFragmentDTO parameters (repeated)
 	 * 
-	 * @see FileDiffFragmentDTO
+	 * @see com.ecwid.upsource.rpc.projects.FileDiffFragmentDTO
 	 */
 	val fragments: List<FileDiffFragmentDTO> = emptyList()
 )

@@ -33,35 +33,35 @@ data class BranchInfoDTO(
 	/**
 	 * Latest revision in the branch. See RevisionInfoDTO parameters (required)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val headRevision: RevisionInfoDTO,
 
 	/**
 	 * See ReviewDescriptorDTO parameters (optional)
 	 * 
-	 * @see ReviewDescriptorDTO
+	 * @see com.ecwid.upsource.rpc.projects.ReviewDescriptorDTO
 	 */
 	val reviewInfo: ReviewDescriptorDTO? = null,
 
 	/**
 	 * A branch review can be created. See CanCreateBranchReviewDTO parameters. (required)
 	 * 
-	 * @see CanCreateBranchReviewDTO
+	 * @see com.ecwid.upsource.rpc.projects.CanCreateBranchReviewDTO
 	 */
 	val canCreateReview: CanCreateBranchReviewDTO,
 
 	/**
 	 * See BranchStatsDTO parameters (required)
 	 * 
-	 * @see BranchStatsDTO
+	 * @see com.ecwid.upsource.rpc.projects.BranchStatsDTO
 	 */
 	val stats: BranchStatsDTO,
 
 	/**
 	 * See BranchMergeInfoDTO parameters (required)
 	 * 
-	 * @see BranchMergeInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.BranchMergeInfoDTO
 	 */
 	val mergeInfo: BranchMergeInfoDTO,
 

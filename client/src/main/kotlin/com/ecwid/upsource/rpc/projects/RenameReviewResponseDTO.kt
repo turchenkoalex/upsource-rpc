@@ -10,7 +10,7 @@ data class RenameReviewResponseDTO(
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
 	 * 
-	 * @see SyncResultEnum
+	 * @see com.ecwid.upsource.rpc.projects.SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 )

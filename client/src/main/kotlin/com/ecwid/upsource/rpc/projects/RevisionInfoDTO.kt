@@ -67,7 +67,7 @@ data class RevisionInfoDTO(
 	/**
 	 * See RevisionReachabilityEnum parameters (required)
 	 * 
-	 * @see RevisionReachabilityEnum
+	 * @see com.ecwid.upsource.rpc.projects.RevisionReachabilityEnum
 	 */
 	val reachability: RevisionReachabilityEnum,
 

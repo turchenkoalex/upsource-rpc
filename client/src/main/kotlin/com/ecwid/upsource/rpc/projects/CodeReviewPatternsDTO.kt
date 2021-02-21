@@ -10,7 +10,7 @@ data class CodeReviewPatternsDTO(
 	/**
 	 * See CodeReviewPattern (repeated)
 	 * 
-	 * @see CodeReviewPattern
+	 * @see com.ecwid.upsource.rpc.projects.CodeReviewPattern
 	 */
 	val patterns: List<CodeReviewPattern> = emptyList()
 )

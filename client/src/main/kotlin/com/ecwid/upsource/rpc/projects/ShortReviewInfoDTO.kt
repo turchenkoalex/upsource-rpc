@@ -15,7 +15,7 @@ data class ShortReviewInfoDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
 	 * 
-	 * @see ReviewIdDTO
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -37,7 +37,7 @@ data class ShortReviewInfoDTO(
 	/**
 	 * See CompletionRateDTO parameters (optional)
 	 * 
-	 * @see CompletionRateDTO
+	 * @see com.ecwid.upsource.rpc.projects.CompletionRateDTO
 	 */
 	val completionRate: CompletionRateDTO? = null,
 

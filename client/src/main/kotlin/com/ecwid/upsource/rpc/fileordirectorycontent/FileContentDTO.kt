@@ -18,7 +18,7 @@ data class FileContentDTO(
 	/**
 	 * See FoldingInfoDTO parameters (repeated)
 	 * 
-	 * @see FoldingInfoDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FoldingInfoDTO
 	 */
 	val foldings: List<FoldingInfoDTO> = emptyList(),
 
@@ -30,7 +30,7 @@ data class FileContentDTO(
 	/**
 	 * See TextMarkupDTO parameters (repeated)
 	 * 
-	 * @see TextMarkupDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO
 	 */
 	val syntax: List<TextMarkupDTO> = emptyList()
 ) {

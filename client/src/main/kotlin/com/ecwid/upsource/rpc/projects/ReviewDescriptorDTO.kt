@@ -29,7 +29,7 @@ data class ReviewDescriptorDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
 	 * 
-	 * @see ReviewIdDTO
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -46,7 +46,7 @@ data class ReviewDescriptorDTO(
 	/**
 	 * See ParticipantInReviewDTO parameters (repeated)
 	 * 
-	 * @see ParticipantInReviewDTO
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantInReviewDTO
 	 */
 	val participants: List<ParticipantInReviewDTO> = emptyList(),
 
@@ -98,14 +98,14 @@ data class ReviewDescriptorDTO(
 	/**
 	 * Review completion rate (e.g. accepted by 1 out of 3 reviewers). See CompletionRateDTO parameters (optional)
 	 * 
-	 * @see CompletionRateDTO
+	 * @see com.ecwid.upsource.rpc.projects.CompletionRateDTO
 	 */
 	val completionRate: CompletionRateDTO? = null,
 
 	/**
 	 * A list of discussion counters. See SimpleDiscussionCounterDTO parameters (optional)
 	 * 
-	 * @see SimpleDiscussionCounterDTO
+	 * @see com.ecwid.upsource.rpc.projects.SimpleDiscussionCounterDTO
 	 */
 	val discussionCounter: SimpleDiscussionCounterDTO? = null,
 

@@ -17,7 +17,7 @@ data class FileOwnershipSummaryDTO(
 	/**
 	 * See OwnershipSummaryEnum parameters (required)
 	 * 
-	 * @see OwnershipSummaryEnum
+	 * @see com.ecwid.upsource.rpc.projects.OwnershipSummaryEnum
 	 */
 	val state: OwnershipSummaryEnum,
 

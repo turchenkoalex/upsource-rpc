@@ -11,14 +11,14 @@ data class UserActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)
 	 * 
-	 * @see TimeValue
+	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList(),
 
 	/**
 	 * See AnalyzerStats parameters (required)
 	 * 
-	 * @see AnalyzerStats
+	 * @see com.ecwid.upsource.rpc.analytics.AnalyzerStats
 	 */
 	val stats: AnalyzerStats
 ) {

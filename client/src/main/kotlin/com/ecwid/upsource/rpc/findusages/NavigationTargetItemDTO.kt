@@ -14,7 +14,7 @@ data class NavigationTargetItemDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
 	 * 
-	 * @see FileInRevisionDTO
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -36,7 +36,7 @@ data class NavigationTargetItemDTO(
 	/**
 	 * See TargetDescriptionDTO parameters (optional)
 	 * 
-	 * @see TargetDescriptionDTO
+	 * @see com.ecwid.upsource.rpc.findusages.TargetDescriptionDTO
 	 */
 	val targetDescription: TargetDescriptionDTO? = null
 ) {

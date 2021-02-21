@@ -11,7 +11,7 @@ data class UsersRolesResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (repeated)
 	 * 
-	 * @see UserRolesDTO
+	 * @see com.ecwid.upsource.rpc.projects.UserRolesDTO
 	 */
 	val userRoles: List<UserRolesDTO> = emptyList(),
 

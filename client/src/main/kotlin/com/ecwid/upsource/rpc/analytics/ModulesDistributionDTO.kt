@@ -12,7 +12,7 @@ data class ModulesDistributionDTO(
 	/**
 	 * See ModuleTimeValue parameters (repeated)
 	 * 
-	 * @see ModuleTimeValue
+	 * @see com.ecwid.upsource.rpc.analytics.ModuleTimeValue
 	 */
 	val items: List<ModuleTimeValue> = emptyList(),
 

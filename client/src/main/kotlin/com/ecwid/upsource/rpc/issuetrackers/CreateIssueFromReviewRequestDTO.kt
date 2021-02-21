@@ -22,7 +22,7 @@ data class CreateIssueFromReviewRequestDTO(
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
 	 * 
-	 * @see IssueFieldValueIdDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldValueIdDTO
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {

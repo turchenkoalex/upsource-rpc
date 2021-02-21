@@ -10,7 +10,7 @@ data class CommitsDetailsDTO(
 	/**
 	 * See CommitInfo parameters (repeated)
 	 * 
-	 * @see CommitInfo
+	 * @see com.ecwid.upsource.rpc.analytics.CommitInfo
 	 */
 	val commits: List<CommitInfo> = emptyList()
 )

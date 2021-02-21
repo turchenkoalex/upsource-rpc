@@ -11,7 +11,7 @@ data class RevisionInBranchDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 

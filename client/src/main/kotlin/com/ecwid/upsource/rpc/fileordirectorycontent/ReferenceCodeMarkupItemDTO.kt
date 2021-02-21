@@ -15,7 +15,7 @@ data class ReferenceCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
 	 * 
-	 * @see RangeDTO
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 

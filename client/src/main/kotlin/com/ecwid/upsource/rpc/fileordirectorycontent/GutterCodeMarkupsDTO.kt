@@ -10,7 +10,7 @@ data class GutterCodeMarkupsDTO(
 	/**
 	 * See GutterCodeMarkupItemDTO parameters (repeated)
 	 * 
-	 * @see GutterCodeMarkupItemDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterCodeMarkupItemDTO
 	 */
 	val items: List<GutterCodeMarkupItemDTO> = emptyList()
 )

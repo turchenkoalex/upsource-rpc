@@ -10,7 +10,7 @@ data class VcsHostingResponseDTO(
 	/**
 	 * See VcsHostingServiceDTO parameters (repeated)
 	 * 
-	 * @see VcsHostingServiceDTO
+	 * @see com.ecwid.upsource.rpc.projects.VcsHostingServiceDTO
 	 */
 	val service: List<VcsHostingServiceDTO> = emptyList()
 )

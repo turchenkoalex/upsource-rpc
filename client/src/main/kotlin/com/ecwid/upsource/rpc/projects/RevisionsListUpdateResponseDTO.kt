@@ -11,7 +11,7 @@ data class RevisionsListUpdateResponseDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: List<RevisionInfoDTO> = emptyList(),
 

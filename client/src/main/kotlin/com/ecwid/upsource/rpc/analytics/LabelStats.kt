@@ -11,14 +11,14 @@ data class LabelStats(
 	/**
 	 * Discussion label. See LabelDTO parameters (required)
 	 * 
-	 * @see LabelDTO
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val label: com.ecwid.upsource.rpc.projects.LabelDTO,
 
 	/**
 	 * See UserValue parameters (repeated)
 	 * 
-	 * @see UserValue
+	 * @see com.ecwid.upsource.rpc.analytics.UserValue
 	 */
 	val countsPerUser: List<UserValue> = emptyList()
 ) {

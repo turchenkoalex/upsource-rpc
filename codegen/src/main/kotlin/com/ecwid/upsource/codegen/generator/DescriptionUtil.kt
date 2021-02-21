@@ -1,8 +1,10 @@
 package com.ecwid.upsource.codegen.generator
 
+import com.ecwid.upsource.codegen.TypeMapping
+
 private val seeMatcher = Regex("See (\\w+)")
 
-fun String.addSeeAnnotationsIfRequired(): String {
+fun String.addSeeAnnotationsIfRequired(typeMapping: TypeMapping): String {
 	val seeGroups = seeMatcher.findAll(this)
 		.toList()
 		.mapNotNull {
@@ -21,6 +23,11 @@ fun String.addSeeAnnotationsIfRequired(): String {
 		separator = "\n",
 		prefix = "$this\n\n"
 	) {
-		"@see $it"
+		val realType = typeMapping.findPackage(it)
+		if (!realType.isNullOrEmpty()) {
+			"@see $realType.$it"
+		} else {
+			"@see $it"
+		}
 	}
 }

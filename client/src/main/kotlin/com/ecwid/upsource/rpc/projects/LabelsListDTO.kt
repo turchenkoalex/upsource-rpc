@@ -17,14 +17,14 @@ data class LabelsListDTO(
 	/**
 	 * Predefined discussion labels. See LabelDTO parameters (repeated)
 	 * 
-	 * @see LabelDTO
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val predefinedLabels: List<LabelDTO> = emptyList(),
 
 	/**
 	 * Custom discussion labels. See LabelDTO parameters (repeated)
 	 * 
-	 * @see LabelDTO
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val customLabels: List<LabelDTO> = emptyList()
 ) {

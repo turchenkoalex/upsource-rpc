@@ -41,14 +41,14 @@ data class CompareInfoDTO(
 	/**
 	 * See ExampleComparison parameters (repeated)
 	 * 
-	 * @see ExampleComparison
+	 * @see com.ecwid.upsource.rpc.projects.ExampleComparison
 	 */
 	val examples: List<ExampleComparison> = emptyList(),
 
 	/**
 	 * See BranchingRevisionSuggestion parameters (optional)
 	 * 
-	 * @see BranchingRevisionSuggestion
+	 * @see com.ecwid.upsource.rpc.projects.BranchingRevisionSuggestion
 	 */
 	val suggestion: BranchingRevisionSuggestion? = null
 ) {

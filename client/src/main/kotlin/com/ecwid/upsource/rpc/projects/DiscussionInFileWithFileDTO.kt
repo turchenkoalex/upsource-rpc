@@ -22,7 +22,7 @@ data class DiscussionInFileWithFileDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (required)
 	 * 
-	 * @see DiscussionInFileDTO
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFileDTO
 	 */
 	val discussionInFile: DiscussionInFileDTO
 ) {

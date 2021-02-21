@@ -12,7 +12,7 @@ data class FindCommitsRequestDTO(
 	/**
 	 * See FindCommitsRequestPatternDTO parameters (repeated)
 	 * 
-	 * @see FindCommitsRequestPatternDTO
+	 * @see com.ecwid.upsource.rpc.projects.FindCommitsRequestPatternDTO
 	 */
 	val commits: List<FindCommitsRequestPatternDTO> = emptyList(),
 

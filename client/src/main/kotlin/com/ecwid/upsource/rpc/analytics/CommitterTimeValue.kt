@@ -16,7 +16,7 @@ data class CommitterTimeValue(
 	/**
 	 * See TimeValue parameters (repeated)
 	 * 
-	 * @see TimeValue
+	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {

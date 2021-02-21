@@ -22,7 +22,7 @@ data class UpdateDiscussionLabelRequestDTO(
 	/**
 	 * Discussion label being added or removed. See LabelDTO parameters (required)
 	 * 
-	 * @see LabelDTO
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val label: LabelDTO
 ) {

@@ -15,7 +15,7 @@ data class FindUsagesItemDTO(
 	/**
 	 * See NavigationTargetItemDTO parameters (required)
 	 * 
-	 * @see NavigationTargetItemDTO
+	 * @see com.ecwid.upsource.rpc.findusages.NavigationTargetItemDTO
 	 */
 	val navigationTarget: NavigationTargetItemDTO,
 

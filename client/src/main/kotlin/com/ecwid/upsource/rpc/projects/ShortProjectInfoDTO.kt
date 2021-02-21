@@ -57,7 +57,7 @@ data class ShortProjectInfoDTO(
 	/**
 	 * See ProjectGroupDTO parameters (optional)
 	 * 
-	 * @see ProjectGroupDTO
+	 * @see com.ecwid.upsource.rpc.projects.ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 

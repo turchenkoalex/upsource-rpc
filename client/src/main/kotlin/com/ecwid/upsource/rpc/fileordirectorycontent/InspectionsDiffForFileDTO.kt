@@ -18,14 +18,14 @@ data class InspectionsDiffForFileDTO(
 	/**
 	 * Introduced problems. See InspectionCodeMarkupItemDTO parameters (repeated)
 	 * 
-	 * @see InspectionCodeMarkupItemDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionCodeMarkupItemDTO
 	 */
 	val introduced: List<InspectionCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * Fixed problems. See InspectionCodeMarkupItemDTO parameters (repeated)
 	 * 
-	 * @see InspectionCodeMarkupItemDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionCodeMarkupItemDTO
 	 */
 	val fixed: List<InspectionCodeMarkupItemDTO> = emptyList(),
 

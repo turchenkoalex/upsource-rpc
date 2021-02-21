@@ -11,7 +11,7 @@ data class FeedDTO(
 	/**
 	 * See FeedItemDTO parameters (repeated)
 	 * 
-	 * @see FeedItemDTO
+	 * @see com.ecwid.upsource.rpc.projects.FeedItemDTO
 	 */
 	val feedItems: List<FeedItemDTO> = emptyList(),
 

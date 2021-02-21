@@ -10,7 +10,7 @@ data class UserInfoResponseDTO(
 	/**
 	 * See FullUserInfoDTO parameters (repeated)
 	 * 
-	 * @see FullUserInfoDTO
+	 * @see com.ecwid.upsource.rpc.users.FullUserInfoDTO
 	 */
 	val infos: List<FullUserInfoDTO> = emptyList()
 )

@@ -11,14 +11,14 @@ data class UsagesDiffFullRequestDTO(
 	/**
 	 * Old element. See PsiElementIdDTO parameters (required)
 	 * 
-	 * @see PsiElementIdDTO
+	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val oldElement: PsiElementIdDTO,
 
 	/**
 	 * New element. See PsiElementIdDTO parameters (required)
 	 * 
-	 * @see PsiElementIdDTO
+	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val newElement: PsiElementIdDTO
 ) {

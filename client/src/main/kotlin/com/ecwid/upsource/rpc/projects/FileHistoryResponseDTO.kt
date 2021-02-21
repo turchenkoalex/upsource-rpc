@@ -12,14 +12,14 @@ data class FileHistoryResponseDTO(
 	/**
 	 * See FileHistoryItemDTO parameters (repeated)
 	 * 
-	 * @see FileHistoryItemDTO
+	 * @see com.ecwid.upsource.rpc.projects.FileHistoryItemDTO
 	 */
 	val history: List<FileHistoryItemDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
 	 * 
-	 * @see RevisionListGraphDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO? = null,
 

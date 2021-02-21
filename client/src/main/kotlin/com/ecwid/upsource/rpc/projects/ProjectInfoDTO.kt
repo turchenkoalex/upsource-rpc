@@ -45,7 +45,7 @@ data class ProjectInfoDTO(
 	/**
 	 * External links. See ExternalLinkDTO parameters (repeated)
 	 * 
-	 * @see ExternalLinkDTO
+	 * @see com.ecwid.upsource.rpc.projects.ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
@@ -72,7 +72,7 @@ data class ProjectInfoDTO(
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (optional)
 	 * 
-	 * @see IssueTrackerProjectDetailsDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO
 	 */
 	val issueTrackerDetails: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO? = null,
 
@@ -94,7 +94,7 @@ data class ProjectInfoDTO(
 	/**
 	 * See ProjectGroupDTO parameters (optional)
 	 * 
-	 * @see ProjectGroupDTO
+	 * @see com.ecwid.upsource.rpc.projects.ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 
@@ -103,7 +103,7 @@ data class ProjectInfoDTO(
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (repeated)
 	 * 
-	 * @see IssueTrackerProjectDetailsDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO
 	 */
 	val issueTrackerProjectDetails: List<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO> = emptyList()
 ) {

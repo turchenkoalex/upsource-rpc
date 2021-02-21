@@ -13,28 +13,28 @@ data class FileReferenceCodeMarkupDTO(
 	/**
 	 * See ReferenceCodeMarkupItemDTO parameters (repeated)
 	 * 
-	 * @see ReferenceCodeMarkupItemDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.ReferenceCodeMarkupItemDTO
 	 */
 	val markup: List<ReferenceCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * See MarkupNavigationPointDTO parameters (repeated)
 	 * 
-	 * @see MarkupNavigationPointDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.MarkupNavigationPointDTO
 	 */
 	val navigationPointsTable: List<MarkupNavigationPointDTO> = emptyList(),
 
 	/**
 	 * See FileInRevisionDTO parameters (repeated)
 	 * 
-	 * @see FileInRevisionDTO
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileNameTable: List<com.ecwid.upsource.rpc.ids.FileInRevisionDTO> = emptyList(),
 
 	/**
 	 * See LocalDeclarationRangeDTO parameters (repeated)
 	 * 
-	 * @see LocalDeclarationRangeDTO
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.LocalDeclarationRangeDTO
 	 */
 	val localDeclarationRanges: List<LocalDeclarationRangeDTO> = emptyList()
 )

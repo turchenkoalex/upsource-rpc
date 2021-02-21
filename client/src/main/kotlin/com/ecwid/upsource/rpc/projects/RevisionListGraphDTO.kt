@@ -16,7 +16,7 @@ data class RevisionListGraphDTO(
 	/**
 	 * See RevisionListGraphRowDTO parameters (repeated)
 	 * 
-	 * @see RevisionListGraphRowDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphRowDTO
 	 */
 	val rows: List<RevisionListGraphRowDTO> = emptyList()
 ) {

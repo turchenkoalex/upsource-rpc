@@ -12,14 +12,14 @@ data class GutterCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
 	 * 
-	 * @see RangeDTO
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 
 	/**
 	 * See GutterMarkEnum parameters (repeated)
 	 * 
-	 * @see GutterMarkEnum
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnum
 	 */
 	val gutterMark: List<GutterMarkEnum> = emptyList(),
 

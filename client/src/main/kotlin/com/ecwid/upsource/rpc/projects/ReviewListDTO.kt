@@ -12,7 +12,7 @@ data class ReviewListDTO(
 	/**
 	 * See ReviewDescriptorDTO parameters (repeated)
 	 * 
-	 * @see ReviewDescriptorDTO
+	 * @see com.ecwid.upsource.rpc.projects.ReviewDescriptorDTO
 	 */
 	val reviews: List<ReviewDescriptorDTO> = emptyList(),
 

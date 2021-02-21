@@ -17,7 +17,7 @@ data class CreateProjectRequestDTO(
 	/**
 	 * See ProjectSettingsDTO parameters (required)
 	 * 
-	 * @see ProjectSettingsDTO
+	 * @see com.ecwid.upsource.rpc.projects.ProjectSettingsDTO
 	 */
 	val settings: ProjectSettingsDTO,
 

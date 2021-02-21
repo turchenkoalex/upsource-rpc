@@ -10,7 +10,7 @@ data class RevisionsDiffDTO(
 	/**
 	 * See RevisionDiffItemDTO parameters (repeated)
 	 * 
-	 * @see RevisionDiffItemDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionDiffItemDTO
 	 */
 	val diff: List<RevisionDiffItemDTO> = emptyList()
 )

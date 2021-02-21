@@ -10,7 +10,7 @@ data class DiscussionsInFileDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)
 	 * 
-	 * @see DiscussionInFileDTO
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFileDTO
 	 */
 	val discussions: List<DiscussionInFileDTO> = emptyList()
 )

@@ -28,7 +28,7 @@ data class IssueFieldDTO(
 	/**
 	 * See IssueFieldValueDTO parameters (repeated)
 	 * 
-	 * @see IssueFieldValueDTO
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldValueDTO
 	 */
 	val value: List<IssueFieldValueDTO> = emptyList()
 ) {

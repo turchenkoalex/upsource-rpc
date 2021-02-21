@@ -38,28 +38,28 @@ data class FeedItemDTO(
 	/**
 	 * See DiscussionInFeedDTO parameters (optional)
 	 * 
-	 * @see DiscussionInFeedDTO
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFeedDTO
 	 */
 	val discussion: DiscussionInFeedDTO? = null,
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val addedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val removedRevisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See ParticipantInReviewDTO parameters (optional)
 	 * 
-	 * @see ParticipantInReviewDTO
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantInReviewDTO
 	 */
 	val newParticipantInReview: ParticipantInReviewDTO? = null,
 
@@ -71,35 +71,35 @@ data class FeedItemDTO(
 	/**
 	 * See ParticipantStateChangedDTO parameters (optional)
 	 * 
-	 * @see ParticipantStateChangedDTO
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateChangedDTO
 	 */
 	val participantStateChanged: ParticipantStateChangedDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 * 
-	 * @see ShortReviewInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val createdReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
 	 * 
-	 * @see ShortReviewInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val modifiedReview: ShortReviewInfoDTO? = null,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
 	 * 
-	 * @see ReviewIdDTO
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val removedReview: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * See ReviewStateChangedDTO parameters (optional)
 	 * 
-	 * @see ReviewStateChangedDTO
+	 * @see com.ecwid.upsource.rpc.projects.ReviewStateChangedDTO
 	 */
 	val reviewStateChanged: ReviewStateChangedDTO? = null,
 

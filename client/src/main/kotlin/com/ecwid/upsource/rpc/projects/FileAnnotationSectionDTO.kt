@@ -24,7 +24,7 @@ data class FileAnnotationSectionDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)
 	 * 
-	 * @see RevisionInfoDTO
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 

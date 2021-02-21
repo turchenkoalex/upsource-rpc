@@ -10,7 +10,7 @@ data class FindCommitsResponseDTO(
 	/**
 	 * See FindCommitsResponseCommitsDTO parameters (repeated)
 	 * 
-	 * @see FindCommitsResponseCommitsDTO
+	 * @see com.ecwid.upsource.rpc.projects.FindCommitsResponseCommitsDTO
 	 */
 	val commits: List<FindCommitsResponseCommitsDTO> = emptyList()
 )

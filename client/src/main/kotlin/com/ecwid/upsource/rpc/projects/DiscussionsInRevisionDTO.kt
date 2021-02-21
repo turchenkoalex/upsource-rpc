@@ -10,7 +10,7 @@ data class DiscussionsInRevisionDTO(
 	/**
 	 * See DiscussionsGroupDTO parameters (repeated)
 	 * 
-	 * @see DiscussionsGroupDTO
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionsGroupDTO
 	 */
 	val groups: List<DiscussionsGroupDTO> = emptyList()
 )

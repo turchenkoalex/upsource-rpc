@@ -12,7 +12,7 @@ data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
 	 * 
-	 * @see PsiElementIdDTO
+	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,
 
