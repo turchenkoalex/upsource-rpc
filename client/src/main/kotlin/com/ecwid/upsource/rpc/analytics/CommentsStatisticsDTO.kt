@@ -52,3 +52,4 @@ data class CommentsStatisticsDTO(
 		statsPerLabel = emptyList()
 	)
 }
+

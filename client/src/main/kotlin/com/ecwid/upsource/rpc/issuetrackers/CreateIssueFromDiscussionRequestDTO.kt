@@ -34,3 +34,4 @@ data class CreateIssueFromDiscussionRequestDTO(
 		fieldValue = emptyList()
 	)
 }
+

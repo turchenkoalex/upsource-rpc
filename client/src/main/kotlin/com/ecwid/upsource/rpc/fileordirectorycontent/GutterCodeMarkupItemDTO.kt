@@ -36,3 +36,4 @@ data class GutterCodeMarkupItemDTO(
 		relatedSemanticMarkup = 0
 	)
 }
+

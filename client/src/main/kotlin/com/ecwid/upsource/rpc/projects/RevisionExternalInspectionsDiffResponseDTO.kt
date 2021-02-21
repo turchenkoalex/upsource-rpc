@@ -32,3 +32,4 @@ data class RevisionExternalInspectionsDiffResponseDTO(
 		files = emptyList()
 	)
 }
+

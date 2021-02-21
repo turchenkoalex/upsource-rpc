@@ -25,3 +25,4 @@ data class MergedToDefaultBranchEventBean(
 		branches = emptyList()
 	)
 }
+

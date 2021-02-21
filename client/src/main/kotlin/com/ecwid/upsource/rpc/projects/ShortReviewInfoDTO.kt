@@ -57,3 +57,4 @@ data class ShortReviewInfoDTO(
 		labels = emptyList()
 	)
 }
+

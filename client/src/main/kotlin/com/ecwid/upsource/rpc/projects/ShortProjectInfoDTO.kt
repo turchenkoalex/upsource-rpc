@@ -104,3 +104,4 @@ data class ShortProjectInfoDTO(
 		isArchived = null
 	)
 }
+

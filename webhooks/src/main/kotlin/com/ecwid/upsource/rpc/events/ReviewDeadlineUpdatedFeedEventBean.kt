@@ -25,3 +25,4 @@ data class ReviewDeadlineUpdatedFeedEventBean(
 		deadline = null
 	)
 }
+

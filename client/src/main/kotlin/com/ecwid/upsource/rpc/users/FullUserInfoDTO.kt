@@ -81,3 +81,4 @@ data class FullUserInfoDTO(
 		absentUntil = null
 	)
 }
+

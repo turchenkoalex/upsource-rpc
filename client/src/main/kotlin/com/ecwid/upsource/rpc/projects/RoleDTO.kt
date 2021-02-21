@@ -32,3 +32,4 @@ data class RoleDTO(
 		isGroup = false
 	)
 }
+

@@ -60,3 +60,4 @@ data class FileDiffFragmentDTO(
 		deletedRanges = emptyList()
 	)
 }
+

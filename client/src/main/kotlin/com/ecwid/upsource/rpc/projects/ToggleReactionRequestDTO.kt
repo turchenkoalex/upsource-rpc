@@ -34,3 +34,4 @@ data class ToggleReactionRequestDTO(
 		doAdd = false
 	)
 }
+

@@ -39,3 +39,4 @@ data class ResolveDiscussionRequestDTO(
 		revision = null
 	)
 }
+

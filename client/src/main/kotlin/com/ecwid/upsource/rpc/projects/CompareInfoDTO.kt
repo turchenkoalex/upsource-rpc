@@ -64,3 +64,4 @@ data class CompareInfoDTO(
 		suggestion = null
 	)
 }
+

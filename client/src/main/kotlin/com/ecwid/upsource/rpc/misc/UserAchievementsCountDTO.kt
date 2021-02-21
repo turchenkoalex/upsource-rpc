@@ -15,3 +15,4 @@ data class UserAchievementsCountDTO(
 		count = 0
 	)
 }
+

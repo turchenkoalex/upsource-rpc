@@ -27,3 +27,4 @@ data class CloseReviewRequestDTO(
 		isFlagged = false
 	)
 }
+

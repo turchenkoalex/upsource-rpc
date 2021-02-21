@@ -46,3 +46,4 @@ data class ReactionToggledEventBean(
 		actor = UserIdBean()
 	)
 }
+

@@ -29,3 +29,4 @@ data class LabelStats(
 		countsPerUser = emptyList()
 	)
 }
+

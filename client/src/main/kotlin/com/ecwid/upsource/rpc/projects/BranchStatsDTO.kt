@@ -32,3 +32,4 @@ data class BranchStatsDTO(
 		commitsBehind = 0
 	)
 }
+

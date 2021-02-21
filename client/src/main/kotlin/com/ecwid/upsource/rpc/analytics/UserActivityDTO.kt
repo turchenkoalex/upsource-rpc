@@ -29,3 +29,4 @@ data class UserActivityDTO(
 		stats = AnalyzerStats()
 	)
 }
+

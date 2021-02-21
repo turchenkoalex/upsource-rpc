@@ -18,3 +18,4 @@ data class AddGroupToReviewResponseDTO(
 		addedUsersCount = 0
 	)
 }
+

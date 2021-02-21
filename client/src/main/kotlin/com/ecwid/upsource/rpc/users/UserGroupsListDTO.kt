@@ -25,3 +25,4 @@ data class UserGroupsListDTO(
 		hasMore = false
 	)
 }
+

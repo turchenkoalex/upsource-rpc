@@ -34,3 +34,4 @@ data class IssueRequiredFieldDTO(
 		fieldType = IssueRequiredFieldTypeEnum.TEXT
 	)
 }
+

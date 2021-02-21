@@ -32,3 +32,4 @@ data class ParticipantProgressDTO(
 		lastSeenTimestamp = 0L
 	)
 }
+

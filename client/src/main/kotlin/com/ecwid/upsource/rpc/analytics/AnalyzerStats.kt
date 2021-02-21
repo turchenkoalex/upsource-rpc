@@ -60,3 +60,4 @@ data class AnalyzerStats(
 		isProjectModelKnown = false
 	)
 }
+

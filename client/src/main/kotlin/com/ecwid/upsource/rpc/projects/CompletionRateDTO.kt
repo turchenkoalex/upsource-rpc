@@ -32,3 +32,4 @@ data class CompletionRateDTO(
 		hasConcern = false
 	)
 }
+

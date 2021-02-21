@@ -25,3 +25,4 @@ data class ReviewProgressDTO(
 		totalFiles = 0
 	)
 }
+

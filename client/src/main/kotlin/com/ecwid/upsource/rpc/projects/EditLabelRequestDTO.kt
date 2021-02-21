@@ -27,3 +27,4 @@ data class EditLabelRequestDTO(
 		label = LabelDTO()
 	)
 }
+

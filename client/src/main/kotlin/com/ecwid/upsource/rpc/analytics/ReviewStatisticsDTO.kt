@@ -83,3 +83,4 @@ data class ReviewStatisticsDTO(
 		commentsStats = CommentsStatisticsDTO()
 	)
 }
+

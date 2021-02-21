@@ -32,3 +32,4 @@ data class BranchingRevisionSuggestion(
 		pathToRightSize = 0
 	)
 }
+

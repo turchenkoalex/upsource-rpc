@@ -27,3 +27,4 @@ data class FeedDTO(
 		hasMore = false
 	)
 }
+

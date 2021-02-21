@@ -45,3 +45,4 @@ data class ResponsibilityDistributionDTO(
 		stats = AnalyzerStats()
 	)
 }
+

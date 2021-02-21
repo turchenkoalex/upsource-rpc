@@ -128,3 +128,4 @@ data class ProjectInfoDTO(
 		issueTrackerProjectDetails = emptyList()
 	)
 }
+

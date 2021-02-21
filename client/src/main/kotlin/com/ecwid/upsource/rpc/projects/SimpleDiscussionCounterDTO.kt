@@ -39,3 +39,4 @@ data class SimpleDiscussionCounterDTO(
 		resolvedCount = 0
 	)
 }
+

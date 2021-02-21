@@ -48,3 +48,4 @@ data class FileHistoryChartDTO(
 		frames = emptyList()
 	)
 }
+

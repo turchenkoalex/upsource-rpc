@@ -57,3 +57,4 @@ data class IssueTrackerProjectDetailsDTO(
 		projectKey = null
 	)
 }
+

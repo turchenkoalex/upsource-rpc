@@ -25,3 +25,4 @@ data class ReviewSquashedFeedEventBean(
 		revisionId = ""
 	)
 }
+

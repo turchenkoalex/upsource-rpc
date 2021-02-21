@@ -32,3 +32,4 @@ data class FileExternalInspectionsDiffResponseDTO(
 		fixed = null
 	)
 }
+

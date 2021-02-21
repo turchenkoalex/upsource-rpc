@@ -29,3 +29,4 @@ data class SameUsagesDTO(
 		newUsage = FindUsagesItemDTO()
 	)
 }
+

@@ -29,3 +29,4 @@ data class FileInReviewDTO(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO()
 	)
 }
+

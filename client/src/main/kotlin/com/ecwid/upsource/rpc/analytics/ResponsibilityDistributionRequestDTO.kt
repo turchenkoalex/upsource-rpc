@@ -32,3 +32,4 @@ data class ResponsibilityDistributionRequestDTO(
 		toTime = 0L
 	)
 }
+

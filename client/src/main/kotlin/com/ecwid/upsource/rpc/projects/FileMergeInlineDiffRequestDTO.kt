@@ -55,3 +55,4 @@ data class FileMergeInlineDiffRequestDTO(
 		contextLines = null
 	)
 }
+

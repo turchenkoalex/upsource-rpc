@@ -25,3 +25,4 @@ data class HidePredefinedLabelsRequestDTO(
 		doHide = false
 	)
 }
+

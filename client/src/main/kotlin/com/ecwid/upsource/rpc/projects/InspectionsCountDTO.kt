@@ -27,3 +27,4 @@ data class InspectionsCountDTO(
 		infos = 0
 	)
 }
+

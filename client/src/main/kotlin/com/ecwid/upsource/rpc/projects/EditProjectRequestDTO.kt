@@ -27,3 +27,4 @@ data class EditProjectRequestDTO(
 		settings = ProjectSettingsDTO()
 	)
 }
+

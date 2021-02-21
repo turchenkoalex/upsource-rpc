@@ -27,3 +27,4 @@ data class TestConnectionResponseDTO(
 		message = null
 	)
 }
+

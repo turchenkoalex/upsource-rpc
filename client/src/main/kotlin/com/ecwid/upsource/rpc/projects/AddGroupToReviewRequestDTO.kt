@@ -36,3 +36,4 @@ data class AddGroupToReviewRequestDTO(
 		role = com.ecwid.upsource.rpc.users.RoleInReviewEnum.AUTHOR
 	)
 }
+

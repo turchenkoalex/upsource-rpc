@@ -46,3 +46,4 @@ data class MarkupNavigationPointDTO(
 		stubIndex = 0
 	)
 }
+

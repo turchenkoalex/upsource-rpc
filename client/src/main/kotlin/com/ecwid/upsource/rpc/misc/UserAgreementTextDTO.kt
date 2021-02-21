@@ -15,3 +15,4 @@ data class UserAgreementTextDTO(
 		text = ""
 	)
 }
+

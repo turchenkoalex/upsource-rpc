@@ -25,3 +25,4 @@ data class UpdateUserTimezoneDTO(
 		timezoneOffset = 0
 	)
 }
+

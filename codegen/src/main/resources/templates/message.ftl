@@ -30,3 +30,4 @@ data class ${message.name}(
 	)
 }
 </#if>
+

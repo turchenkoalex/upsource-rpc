@@ -29,3 +29,4 @@ data class ReviewSummaryDiscussionsRequestDTO(
 		revisions = null
 	)
 }
+

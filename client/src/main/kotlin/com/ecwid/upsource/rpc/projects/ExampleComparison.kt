@@ -32,3 +32,4 @@ data class ExampleComparison(
 		lastCommitTime = 0L
 	)
 }
+

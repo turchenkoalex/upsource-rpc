@@ -25,3 +25,4 @@ data class EditLabelsRequestDTO(
 		labelId = emptyList()
 	)
 }
+

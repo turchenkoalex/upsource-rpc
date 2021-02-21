@@ -103,3 +103,4 @@ data class DiscussionInFeedDTO(
 		resolvedBy = null
 	)
 }
+

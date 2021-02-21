@@ -53,3 +53,4 @@ data class RevisionListGraphEdgeDTO(
 		color = 0
 	)
 }
+

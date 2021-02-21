@@ -25,3 +25,4 @@ data class FileHistoryChartRequestDTO(
 		framesCount = null
 	)
 }
+

@@ -62,3 +62,4 @@ data class TextSearchItem(
 		totalMatches = 0
 	)
 }
+

@@ -32,3 +32,4 @@ data class UserGroupDTO(
 		usersCount = 0
 	)
 }
+

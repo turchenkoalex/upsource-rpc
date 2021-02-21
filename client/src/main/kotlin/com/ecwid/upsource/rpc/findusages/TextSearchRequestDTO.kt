@@ -46,3 +46,4 @@ data class TextSearchRequestDTO(
 		ignoreArchived = false
 	)
 }
+

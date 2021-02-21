@@ -46,3 +46,4 @@ data class ReactionTargetDTO(
 		reviewId = null
 	)
 }
+

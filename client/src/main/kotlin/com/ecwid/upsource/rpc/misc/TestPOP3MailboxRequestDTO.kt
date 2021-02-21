@@ -46,3 +46,4 @@ data class TestPOP3MailboxRequestDTO(
 		password = ""
 	)
 }
+

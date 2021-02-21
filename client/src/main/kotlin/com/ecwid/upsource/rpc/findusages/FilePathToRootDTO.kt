@@ -27,3 +27,4 @@ data class FilePathToRootDTO(
 		pathToRoot = com.ecwid.upsource.rpc.projects.ProjectItemsListDTO()
 	)
 }
+

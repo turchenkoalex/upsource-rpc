@@ -27,3 +27,4 @@ data class ToggleReviewMutedRequestDTO(
 		doMute = false
 	)
 }
+

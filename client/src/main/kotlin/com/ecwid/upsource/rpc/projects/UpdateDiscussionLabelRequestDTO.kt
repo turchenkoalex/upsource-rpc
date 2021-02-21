@@ -34,3 +34,4 @@ data class UpdateDiscussionLabelRequestDTO(
 		label = LabelDTO()
 	)
 }
+

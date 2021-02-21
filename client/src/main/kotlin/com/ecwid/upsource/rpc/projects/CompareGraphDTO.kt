@@ -57,3 +57,4 @@ data class CompareGraphDTO(
 		fullPathToSecondLength = 0
 	)
 }
+

@@ -39,3 +39,4 @@ data class RoleDetailsDTO(
 		description = null
 	)
 }
+

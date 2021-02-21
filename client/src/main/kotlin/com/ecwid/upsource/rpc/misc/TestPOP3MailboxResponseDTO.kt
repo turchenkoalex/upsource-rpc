@@ -25,3 +25,4 @@ data class TestPOP3MailboxResponseDTO(
 		message = null
 	)
 }
+

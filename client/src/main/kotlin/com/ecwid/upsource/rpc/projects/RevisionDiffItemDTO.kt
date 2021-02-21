@@ -66,3 +66,4 @@ data class RevisionDiffItemDTO(
 		conflictType = null
 	)
 }
+

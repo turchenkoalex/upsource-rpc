@@ -32,3 +32,4 @@ data class CommitsSummaryDTO(
 		modulesTouched = 0
 	)
 }
+

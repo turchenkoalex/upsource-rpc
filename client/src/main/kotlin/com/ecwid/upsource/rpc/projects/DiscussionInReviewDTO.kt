@@ -27,3 +27,4 @@ data class DiscussionInReviewDTO(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO()
 	)
 }
+

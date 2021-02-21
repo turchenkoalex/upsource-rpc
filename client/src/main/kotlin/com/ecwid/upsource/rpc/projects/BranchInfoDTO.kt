@@ -84,3 +84,4 @@ data class BranchInfoDTO(
 		isPullRequest = false
 	)
 }
+

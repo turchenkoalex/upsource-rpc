@@ -27,3 +27,4 @@ data class EditReviewDescriptionRequestDTO(
 		text = ""
 	)
 }
+

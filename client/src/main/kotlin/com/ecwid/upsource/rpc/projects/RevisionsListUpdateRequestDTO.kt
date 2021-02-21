@@ -39,3 +39,4 @@ data class RevisionsListUpdateRequestDTO(
 		messageSubstring = emptyList()
 	)
 }
+

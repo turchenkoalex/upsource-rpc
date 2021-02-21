@@ -59,3 +59,4 @@ data class CreateDiscussionRequestDTO(
 		labels = emptyList()
 	)
 }
+

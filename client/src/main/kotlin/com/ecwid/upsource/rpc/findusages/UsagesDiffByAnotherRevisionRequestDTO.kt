@@ -34,3 +34,4 @@ data class UsagesDiffByAnotherRevisionRequestDTO(
 		isAnotherOld = false
 	)
 }
+

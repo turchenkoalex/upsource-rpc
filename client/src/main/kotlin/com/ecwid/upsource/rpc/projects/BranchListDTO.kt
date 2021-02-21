@@ -48,3 +48,4 @@ data class BranchListDTO(
 		isDefaultBranchExists = null
 	)
 }
+

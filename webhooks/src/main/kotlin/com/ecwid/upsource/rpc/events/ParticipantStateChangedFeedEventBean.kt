@@ -39,3 +39,4 @@ data class ParticipantStateChangedFeedEventBean(
 		newState = ParticipantState.UNREAD
 	)
 }
+

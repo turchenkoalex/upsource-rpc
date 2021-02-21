@@ -27,3 +27,4 @@ data class ReviewSummaryChangesRequestDTO(
 		revisions = null
 	)
 }
+

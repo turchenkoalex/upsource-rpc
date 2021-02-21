@@ -29,3 +29,4 @@ data class ReviewStateChangedDTO(
 		newState = ReviewStateEnum.OPEN
 	)
 }
+

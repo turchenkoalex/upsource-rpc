@@ -39,3 +39,4 @@ data class CommitsSummaryRequestDTO(
 		committers = emptyList()
 	)
 }
+

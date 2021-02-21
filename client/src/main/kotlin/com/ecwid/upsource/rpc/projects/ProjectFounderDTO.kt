@@ -25,3 +25,4 @@ data class ProjectFounderDTO(
 		date = 0L
 	)
 }
+

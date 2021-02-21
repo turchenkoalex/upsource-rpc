@@ -60,3 +60,4 @@ data class FeedEventBean(
 		feedEventId = null
 	)
 }
+

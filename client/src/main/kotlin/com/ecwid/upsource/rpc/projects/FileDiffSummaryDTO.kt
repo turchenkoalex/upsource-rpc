@@ -34,3 +34,4 @@ data class FileDiffSummaryDTO(
 		removedLines = 0
 	)
 }
+

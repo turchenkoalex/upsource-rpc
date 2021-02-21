@@ -41,3 +41,4 @@ data class UserActivityRequestDTO(
 		committers = emptyList()
 	)
 }
+

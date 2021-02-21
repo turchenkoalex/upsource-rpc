@@ -34,3 +34,4 @@ data class ReviewListDTO(
 		totalCount = 0
 	)
 }
+

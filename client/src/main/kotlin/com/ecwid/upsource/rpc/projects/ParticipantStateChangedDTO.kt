@@ -36,3 +36,4 @@ data class ParticipantStateChangedDTO(
 		newState = ParticipantStateEnum.UNREAD
 	)
 }
+

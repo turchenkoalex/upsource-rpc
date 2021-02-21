@@ -25,3 +25,4 @@ data class UserValue(
 		value = 0
 	)
 }
+

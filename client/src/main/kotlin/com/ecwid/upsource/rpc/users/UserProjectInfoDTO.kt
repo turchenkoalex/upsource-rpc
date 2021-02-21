@@ -25,3 +25,4 @@ data class UserProjectInfoDTO(
 		lastCommitTime = 0L
 	)
 }
+

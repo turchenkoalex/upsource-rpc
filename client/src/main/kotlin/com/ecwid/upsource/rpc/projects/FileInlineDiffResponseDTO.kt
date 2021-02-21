@@ -159,3 +159,4 @@ data class FileInlineDiffResponseDTO(
 		conflictType = null
 	)
 }
+

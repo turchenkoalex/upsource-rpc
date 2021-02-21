@@ -25,3 +25,4 @@ data class ModuleValue(
 		value = 0
 	)
 }
+

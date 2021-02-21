@@ -18,3 +18,4 @@ data class TextSearchProjectDetails(
 		projectName = ""
 	)
 }
+

@@ -39,3 +39,4 @@ data class UserPulseRequestDTO(
 		timePoints = emptyList()
 	)
 }
+

@@ -25,3 +25,4 @@ data class StopBranchTrackingRequestDTO(
 		branch = null
 	)
 }
+

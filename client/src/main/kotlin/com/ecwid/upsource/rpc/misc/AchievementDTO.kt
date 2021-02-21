@@ -60,3 +60,4 @@ data class AchievementDTO(
 		isUnlocked = null
 	)
 }
+

@@ -25,3 +25,4 @@ data class RevisionRemovedFromReviewFeedEventBean(
 		revisionIds = emptyList()
 	)
 }
+

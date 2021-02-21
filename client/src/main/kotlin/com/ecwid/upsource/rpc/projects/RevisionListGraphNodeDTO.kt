@@ -25,3 +25,4 @@ data class RevisionListGraphNodeDTO(
 		color = 0
 	)
 }
+

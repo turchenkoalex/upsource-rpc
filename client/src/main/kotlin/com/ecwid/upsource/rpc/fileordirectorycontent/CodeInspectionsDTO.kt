@@ -29,3 +29,4 @@ data class CodeInspectionsDTO(
 		fileLevel = FileWarningLevelEnum.NONE
 	)
 }
+

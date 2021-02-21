@@ -48,3 +48,4 @@ data class FileAnnotationSectionDTO(
 		priorChangeAnnotation = null
 	)
 }
+

@@ -25,3 +25,4 @@ data class RevisionSuggestDTO(
 		score = 0.0
 	)
 }
+

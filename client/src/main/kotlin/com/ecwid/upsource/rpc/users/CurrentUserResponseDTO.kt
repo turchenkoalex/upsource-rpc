@@ -104,3 +104,4 @@ data class CurrentUserResponseDTO(
 		isEULAAccepted = null
 	)
 }
+

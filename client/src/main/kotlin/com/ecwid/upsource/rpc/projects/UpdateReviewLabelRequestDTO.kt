@@ -36,3 +36,4 @@ data class UpdateReviewLabelRequestDTO(
 		label = LabelDTO()
 	)
 }
+

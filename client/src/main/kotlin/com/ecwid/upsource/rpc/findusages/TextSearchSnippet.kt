@@ -39,3 +39,4 @@ data class TextSearchSnippet(
 		rangeInFile = com.ecwid.upsource.rpc.ids.RangeDTO()
 	)
 }
+
