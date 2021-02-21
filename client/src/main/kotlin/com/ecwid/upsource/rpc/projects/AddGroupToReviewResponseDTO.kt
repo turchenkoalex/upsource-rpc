@@ -12,6 +12,7 @@ data class AddGroupToReviewResponseDTO(
 	 */
 	val addedUsersCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		addedUsersCount = 0
 	)

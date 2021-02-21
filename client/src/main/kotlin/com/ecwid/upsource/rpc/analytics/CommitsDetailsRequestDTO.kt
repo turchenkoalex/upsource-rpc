@@ -36,6 +36,7 @@ data class CommitsDetailsRequestDTO(
 	 */
 	val module: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = 0L,

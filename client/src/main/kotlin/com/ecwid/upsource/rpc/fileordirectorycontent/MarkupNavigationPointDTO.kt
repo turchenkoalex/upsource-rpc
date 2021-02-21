@@ -36,6 +36,7 @@ data class MarkupNavigationPointDTO(
 	 */
 	val stubIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		targetId = 0,
 		fileId = 0,

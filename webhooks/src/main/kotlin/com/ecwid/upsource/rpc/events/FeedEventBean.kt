@@ -48,6 +48,7 @@ data class FeedEventBean(
 	 */
 	val feedEventId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = null,
 		userIds = emptyList(),

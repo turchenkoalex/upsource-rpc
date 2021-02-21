@@ -18,6 +18,7 @@ data class ReviewStoppedBranchTrackingFeedEventBean(
 	 */
 	val branch: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		branch = ""

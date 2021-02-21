@@ -24,6 +24,7 @@ data class CompareRequestDTO(
 	 */
 	val rightLocator: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		leftLocator = "",

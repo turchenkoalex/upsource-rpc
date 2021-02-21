@@ -24,6 +24,7 @@ data class RevisionAddedToReviewFeedEventBean(
 	 */
 	val revisionIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		revisionId = null,

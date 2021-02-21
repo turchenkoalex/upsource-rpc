@@ -20,6 +20,7 @@ data class RevisionListGraphDTO(
 	 */
 	val rows: List<RevisionListGraphRowDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		width = 0,
 		rows = emptyList()

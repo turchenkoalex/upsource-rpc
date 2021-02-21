@@ -24,6 +24,7 @@ data class NewParticipantInReviewFeedEventBean(
 	 */
 	val role: ParticipantRole
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		participant = UserIdBean(),

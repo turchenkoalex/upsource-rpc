@@ -26,6 +26,7 @@ data class FileHistoryRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		limit = 0,

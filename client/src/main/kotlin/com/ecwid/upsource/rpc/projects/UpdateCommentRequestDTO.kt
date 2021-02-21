@@ -36,6 +36,7 @@ data class UpdateCommentRequestDTO(
 	 */
 	val markupType: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

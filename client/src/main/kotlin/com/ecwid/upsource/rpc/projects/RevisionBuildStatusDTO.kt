@@ -24,6 +24,7 @@ data class RevisionBuildStatusDTO(
 	 */
 	val keys: List<RevisionBuildStatusKeyDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",

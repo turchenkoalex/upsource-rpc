@@ -36,6 +36,7 @@ data class ReviewersGraphLinkDTO(
 	 */
 	val recentReviewsCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		from = 0,
 		to = 0,

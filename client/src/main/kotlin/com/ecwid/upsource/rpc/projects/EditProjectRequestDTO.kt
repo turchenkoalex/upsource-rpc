@@ -20,6 +20,7 @@ data class EditProjectRequestDTO(
 	 */
 	val settings: ProjectSettingsDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		settings = ProjectSettingsDTO()

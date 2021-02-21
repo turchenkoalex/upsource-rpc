@@ -30,6 +30,7 @@ data class DiscussionsInProjectRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		query = "",

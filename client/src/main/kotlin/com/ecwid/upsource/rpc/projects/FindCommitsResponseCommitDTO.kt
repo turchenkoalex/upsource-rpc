@@ -34,6 +34,7 @@ data class FindCommitsResponseCommitDTO(
 	 */
 	val changes: RevisionsDiffDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		projectName = "",

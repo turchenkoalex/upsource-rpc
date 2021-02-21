@@ -36,6 +36,7 @@ data class TextSearchRequestDTO(
 	 */
 	val ignoreArchived: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		query = "",

@@ -134,6 +134,7 @@ data class ReviewDescriptorDTO(
 	 */
 	val mergeToBranch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		title = "",

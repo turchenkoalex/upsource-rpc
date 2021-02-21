@@ -36,6 +36,7 @@ data class NewRevisionEventBean(
 	 */
 	val date: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		branches = emptyList(),

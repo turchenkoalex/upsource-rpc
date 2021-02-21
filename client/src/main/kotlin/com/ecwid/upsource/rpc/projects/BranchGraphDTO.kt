@@ -22,6 +22,7 @@ data class BranchGraphDTO(
 	 */
 	val graph: RevisionListGraphDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisions = emptyList(),
 		graph = RevisionListGraphDTO()

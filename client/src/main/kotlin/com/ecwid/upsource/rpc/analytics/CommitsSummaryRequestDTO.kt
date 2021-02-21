@@ -30,6 +30,7 @@ data class CommitsSummaryRequestDTO(
 	 */
 	val committers: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = 0L,

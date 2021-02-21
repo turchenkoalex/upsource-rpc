@@ -24,6 +24,7 @@ data class ReviewStateChangedFeedEventBean(
 	 */
 	val newState: ReviewState
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		oldState = ReviewState.OPEN,

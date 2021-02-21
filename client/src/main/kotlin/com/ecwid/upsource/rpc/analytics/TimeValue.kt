@@ -18,6 +18,7 @@ data class TimeValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		time = 0L,
 		value = 0

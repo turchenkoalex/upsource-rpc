@@ -40,6 +40,7 @@ data class FileInReviewDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = FileInReviewDTO(),
 		ignoreWhitespace = false,

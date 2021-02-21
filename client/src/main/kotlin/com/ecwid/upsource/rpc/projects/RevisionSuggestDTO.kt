@@ -18,6 +18,7 @@ data class RevisionSuggestDTO(
 	 */
 	val score: Double
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		score = 0.0

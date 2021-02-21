@@ -18,6 +18,7 @@ data class InviteUserRequestDTO(
 	 */
 	val email: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		email = ""

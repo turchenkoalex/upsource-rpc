@@ -42,6 +42,7 @@ data class CreateReviewRequestDTO(
 	 */
 	val mergeToBranch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		title = null,

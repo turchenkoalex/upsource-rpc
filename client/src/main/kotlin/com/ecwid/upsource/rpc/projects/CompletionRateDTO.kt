@@ -24,6 +24,7 @@ data class CompletionRateDTO(
 	 */
 	val hasConcern: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		completedCount = 0,
 		reviewersCount = 0,

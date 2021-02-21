@@ -20,6 +20,7 @@ data class ReviewSummaryChangesRequestDTO(
 	 */
 	val revisions: RevisionsSetDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		revisions = null

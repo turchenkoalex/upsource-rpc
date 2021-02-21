@@ -20,6 +20,7 @@ data class InviteUserResponseDTO(
 	 */
 	val isInvited: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		user = null,
 		isInvited = false

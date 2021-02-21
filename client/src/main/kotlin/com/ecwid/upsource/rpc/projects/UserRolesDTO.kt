@@ -20,6 +20,7 @@ data class UserRolesDTO(
 	 */
 	val roles: List<RoleDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		roles = emptyList()

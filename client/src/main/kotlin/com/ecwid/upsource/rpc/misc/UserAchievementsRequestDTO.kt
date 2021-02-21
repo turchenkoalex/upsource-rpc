@@ -12,6 +12,7 @@ data class UserAchievementsRequestDTO(
 	 */
 	val userId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = ""
 	)

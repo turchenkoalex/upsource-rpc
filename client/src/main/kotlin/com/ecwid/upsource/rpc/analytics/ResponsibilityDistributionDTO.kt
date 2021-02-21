@@ -36,6 +36,7 @@ data class ResponsibilityDistributionDTO(
 	 */
 	val stats: AnalyzerStats
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		users = emptyList(),

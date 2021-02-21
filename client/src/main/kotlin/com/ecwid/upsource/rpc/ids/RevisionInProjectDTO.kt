@@ -18,6 +18,7 @@ data class RevisionInProjectDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = ""

@@ -26,6 +26,7 @@ data class IssueRequiredFieldDTO(
 	 */
 	val fieldType: IssueRequiredFieldTypeEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		issueTypeId = "",
 		field = IssueFieldDTO(),

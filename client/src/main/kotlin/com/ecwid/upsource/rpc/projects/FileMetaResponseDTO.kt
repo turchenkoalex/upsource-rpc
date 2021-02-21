@@ -66,6 +66,7 @@ data class FileMetaResponseDTO(
 	 */
 	val defaultBranch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isUpToDate = false,
 		isDeleted = false,

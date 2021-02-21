@@ -26,6 +26,7 @@ data class CreateIssueFromReviewRequestDTO(
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		reviewKey = "",

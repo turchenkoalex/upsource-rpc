@@ -26,6 +26,7 @@ data class CreateProjectRequestDTO(
 	 */
 	val custom: List<com.ecwid.upsource.rpc.misc.SetSettingRequestDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		newProjectId = "",
 		settings = ProjectSettingsDTO(),

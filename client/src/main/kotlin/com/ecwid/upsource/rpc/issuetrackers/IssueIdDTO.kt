@@ -24,6 +24,7 @@ data class IssueIdDTO(
 	 */
 	val isCreatedFromUpsource: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		issueId = "",
 		issueLink = null,

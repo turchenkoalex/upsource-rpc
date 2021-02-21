@@ -34,6 +34,7 @@ data class FileInReviewReadStatusRequestDTO(
 	 */
 	val markAsUnread: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		file = "",

@@ -28,6 +28,7 @@ data class GutterCodeMarkupItemDTO(
 	 */
 	val relatedSemanticMarkup: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		gutterMark = emptyList(),

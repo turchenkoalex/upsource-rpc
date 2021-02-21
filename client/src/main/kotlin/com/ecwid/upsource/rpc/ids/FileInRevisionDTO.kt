@@ -24,6 +24,7 @@ data class FileInRevisionDTO(
 	 */
 	val fileName: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",

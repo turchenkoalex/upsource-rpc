@@ -18,6 +18,7 @@ data class ReviewDeadlineUpdatedFeedEventBean(
 	 */
 	val deadline: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		deadline = null

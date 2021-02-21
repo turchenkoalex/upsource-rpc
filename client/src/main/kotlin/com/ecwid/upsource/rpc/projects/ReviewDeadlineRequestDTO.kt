@@ -20,6 +20,7 @@ data class ReviewDeadlineRequestDTO(
 	 */
 	val deadline: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		deadline = null

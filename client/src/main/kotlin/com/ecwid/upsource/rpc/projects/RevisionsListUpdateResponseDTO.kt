@@ -20,6 +20,7 @@ data class RevisionsListUpdateResponseDTO(
 	 */
 	val hash: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revision = emptyList(),
 		hash = ""

@@ -18,6 +18,7 @@ data class CommitterUserInfo(
 	 */
 	val userId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		committer = "",
 		userId = ""

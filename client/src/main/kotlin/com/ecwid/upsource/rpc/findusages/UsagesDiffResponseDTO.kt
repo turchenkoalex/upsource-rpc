@@ -26,6 +26,7 @@ data class UsagesDiffResponseDTO(
 	 */
 	val usages: List<UsagesDiffDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldRevisionId = "",
 		newRevisionId = "",

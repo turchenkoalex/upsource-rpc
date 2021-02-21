@@ -46,6 +46,7 @@ data class IssueTrackerProjectDetailsDTO(
 	 */
 	val projectKey: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		providerKey = "",
 		projectUrl = "",

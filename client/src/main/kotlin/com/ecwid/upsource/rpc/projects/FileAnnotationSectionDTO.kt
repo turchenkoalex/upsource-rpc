@@ -38,6 +38,7 @@ data class FileAnnotationSectionDTO(
 	 */
 	val priorChangeAnnotation: FileAnnotationSectionDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		startLine = 0,
 		lineCount = 0,

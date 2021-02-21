@@ -20,6 +20,7 @@ data class SetProjectSettingRequestDTO(
 	 */
 	val request: SetSettingRequestDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		request = SetSettingRequestDTO()

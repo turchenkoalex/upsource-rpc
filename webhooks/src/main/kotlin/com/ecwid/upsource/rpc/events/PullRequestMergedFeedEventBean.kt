@@ -18,6 +18,7 @@ data class PullRequestMergedFeedEventBean(
 	 */
 	val pullRequest: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		pullRequest = ""

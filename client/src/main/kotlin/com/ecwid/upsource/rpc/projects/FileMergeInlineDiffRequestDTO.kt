@@ -44,6 +44,7 @@ data class FileMergeInlineDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		sourceRevisionId = "",

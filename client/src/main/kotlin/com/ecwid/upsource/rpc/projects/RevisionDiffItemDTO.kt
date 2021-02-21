@@ -54,6 +54,7 @@ data class RevisionDiffItemDTO(
 	 */
 	val conflictType: ConflictTypeEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		diffType = DiffTypeEnum.ADDED,

@@ -36,6 +36,7 @@ data class ProjectTreeMapEntryDTO(
 	 */
 	val timeSinceLastChange: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		path = "",
 		size = 0,

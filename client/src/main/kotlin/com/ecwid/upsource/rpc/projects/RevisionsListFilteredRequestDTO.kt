@@ -36,6 +36,7 @@ data class RevisionsListFilteredRequestDTO(
 	 */
 	val requestGraph: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		query = "",

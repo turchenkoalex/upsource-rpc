@@ -26,6 +26,7 @@ data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	 */
 	val boundaryRevisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		originElement = PsiElementIdDTO(),
 		newRevisionId = "",

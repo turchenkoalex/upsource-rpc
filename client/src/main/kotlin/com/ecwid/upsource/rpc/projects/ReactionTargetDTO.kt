@@ -36,6 +36,7 @@ data class ReactionTargetDTO(
 	 */
 	val reviewId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = null,

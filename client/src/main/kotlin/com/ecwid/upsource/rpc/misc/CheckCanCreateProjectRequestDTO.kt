@@ -12,6 +12,7 @@ data class CheckCanCreateProjectRequestDTO(
 	 */
 	val hubProjectId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		hubProjectId = ""
 	)

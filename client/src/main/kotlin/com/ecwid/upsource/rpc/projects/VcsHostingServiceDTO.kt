@@ -30,6 +30,7 @@ data class VcsHostingServiceDTO(
 	 */
 	val canCreateRepository: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		serviceId = "",
 		serviceUrl = "",

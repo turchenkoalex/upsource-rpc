@@ -18,6 +18,7 @@ data class FileHistoryFrameDTO(
 	 */
 	val deltas: List<Int> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		timestamp = 0L,
 		deltas = emptyList()

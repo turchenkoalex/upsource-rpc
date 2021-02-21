@@ -36,6 +36,7 @@ data class TestPOP3MailboxRequestDTO(
 	 */
 	val password: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		protocol = "",
 		host = "",

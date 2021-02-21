@@ -18,6 +18,7 @@ data class UserValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		value = 0

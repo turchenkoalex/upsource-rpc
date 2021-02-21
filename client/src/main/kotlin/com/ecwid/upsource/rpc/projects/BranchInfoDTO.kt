@@ -70,6 +70,7 @@ data class BranchInfoDTO(
 	 */
 	val isPullRequest: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		commitsCount = 0,
 		filesCount = 0,

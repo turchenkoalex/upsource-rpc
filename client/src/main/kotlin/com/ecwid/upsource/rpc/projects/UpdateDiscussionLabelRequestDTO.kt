@@ -26,6 +26,7 @@ data class UpdateDiscussionLabelRequestDTO(
 	 */
 	val label: LabelDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

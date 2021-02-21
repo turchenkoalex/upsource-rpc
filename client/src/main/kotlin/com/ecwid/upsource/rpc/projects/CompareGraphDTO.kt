@@ -46,6 +46,7 @@ data class CompareGraphDTO(
 	 */
 	val fullPathToSecondLength: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisions = emptyList(),
 		graph = RevisionListGraphDTO(),

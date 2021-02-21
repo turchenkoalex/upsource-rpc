@@ -44,6 +44,7 @@ data class ReferenceCodeMarkupItemDTO(
 	 */
 	val hash: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		markupId = 0,

@@ -18,6 +18,7 @@ data class ReviewRemovedFeedEventBean(
 	 */
 	val reviewId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		reviewId = ""

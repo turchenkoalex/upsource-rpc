@@ -18,6 +18,7 @@ data class MergedToDefaultBranchEventBean(
 	 */
 	val branches: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		commitsCount = 0,
 		branches = emptyList()

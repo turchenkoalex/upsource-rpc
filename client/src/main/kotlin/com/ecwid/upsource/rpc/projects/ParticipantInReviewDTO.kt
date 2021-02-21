@@ -28,6 +28,7 @@ data class ParticipantInReviewDTO(
 	 */
 	val state: ParticipantStateEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		role = com.ecwid.upsource.rpc.users.RoleInReviewEnum.AUTHOR,

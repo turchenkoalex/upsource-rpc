@@ -12,6 +12,7 @@ data class FileContentRawResponseDTO(
 	 */
 	val base64: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base64 = ""
 	)

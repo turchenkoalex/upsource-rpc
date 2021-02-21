@@ -18,6 +18,7 @@ data class RangeDTO(
 	 */
 	val endOffset: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		startOffset = 0,
 		endOffset = 0

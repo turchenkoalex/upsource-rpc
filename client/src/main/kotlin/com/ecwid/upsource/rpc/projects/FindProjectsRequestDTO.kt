@@ -24,6 +24,7 @@ data class FindProjectsRequestDTO(
 	 */
 	val isExact: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		pattern = "",
 		limit = 0,

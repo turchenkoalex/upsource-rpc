@@ -18,6 +18,7 @@ data class ProjectGroupDTO(
 	 */
 	val description: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = "",
 		description = ""

@@ -30,6 +30,7 @@ data class SimpleDiscussionCounterDTO(
 	 */
 	val resolvedCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		count = 0,
 		hasUnresolved = false,

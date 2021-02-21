@@ -20,6 +20,7 @@ data class UsersRolesResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userRoles = emptyList(),
 		hasMore = false

@@ -18,6 +18,7 @@ data class RevisionListGraphNodeDTO(
 	 */
 	val color: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		position = 0,
 		color = 0

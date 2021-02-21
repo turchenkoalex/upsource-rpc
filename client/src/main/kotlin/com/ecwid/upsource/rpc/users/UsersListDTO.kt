@@ -48,6 +48,7 @@ data class UsersListDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		me = null,
 		suggestedUsers = emptyList(),

@@ -24,6 +24,7 @@ data class DeleteRoleRequestDTO(
 	 */
 	val roleKey: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		userId = "",

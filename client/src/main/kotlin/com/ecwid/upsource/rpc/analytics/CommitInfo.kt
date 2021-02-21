@@ -30,6 +30,7 @@ data class CommitInfo(
 	 */
 	val shortRevisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		description = "",

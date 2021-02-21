@@ -52,6 +52,7 @@ data class BranchDTO(
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		name = "",

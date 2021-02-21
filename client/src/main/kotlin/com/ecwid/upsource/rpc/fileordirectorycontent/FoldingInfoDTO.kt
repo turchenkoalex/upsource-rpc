@@ -30,6 +30,7 @@ data class FoldingInfoDTO(
 	 */
 	val collapsedText: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fromOffset = 0,
 		toOffset = 0,

@@ -68,6 +68,7 @@ data class ReviewStatisticsDTO(
 	 */
 	val commentsStats: CommentsStatisticsDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		openReviews = 0,
 		closedReviews = 0,

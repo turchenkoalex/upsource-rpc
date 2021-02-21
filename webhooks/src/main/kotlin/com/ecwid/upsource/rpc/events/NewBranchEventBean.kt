@@ -12,6 +12,7 @@ data class NewBranchEventBean(
 	 */
 	val name: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = ""
 	)

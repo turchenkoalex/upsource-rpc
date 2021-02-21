@@ -18,6 +18,7 @@ data class EditLabelsRequestDTO(
 	 */
 	val labelId: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		labelId = emptyList()

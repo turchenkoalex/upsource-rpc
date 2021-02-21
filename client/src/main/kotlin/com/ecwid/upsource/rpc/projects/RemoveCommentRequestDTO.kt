@@ -24,6 +24,7 @@ data class RemoveCommentRequestDTO(
 	 */
 	val commentId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

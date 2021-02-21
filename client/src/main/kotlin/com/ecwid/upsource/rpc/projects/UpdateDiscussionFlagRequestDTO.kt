@@ -24,6 +24,7 @@ data class UpdateDiscussionFlagRequestDTO(
 	 */
 	val isFlagged: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

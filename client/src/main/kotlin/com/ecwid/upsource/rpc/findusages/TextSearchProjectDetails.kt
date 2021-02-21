@@ -12,6 +12,7 @@ data class TextSearchProjectDetails(
 	 */
 	val projectName: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectName = ""
 	)

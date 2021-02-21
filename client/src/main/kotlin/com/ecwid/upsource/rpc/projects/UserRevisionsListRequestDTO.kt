@@ -24,6 +24,7 @@ data class UserRevisionsListRequestDTO(
 	 */
 	val query: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		limit = 0,

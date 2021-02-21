@@ -30,6 +30,7 @@ data class ResolveDiscussionRequestDTO(
 	 */
 	val revision: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

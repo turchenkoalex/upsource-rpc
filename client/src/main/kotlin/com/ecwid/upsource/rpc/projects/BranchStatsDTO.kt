@@ -24,6 +24,7 @@ data class BranchStatsDTO(
 	 */
 	val commitsBehind: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		parentBranch = null,
 		commitsAhead = 0,

@@ -24,6 +24,7 @@ data class StacktraceDTO(
 	 */
 	val revisionId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		stacktrace = "",

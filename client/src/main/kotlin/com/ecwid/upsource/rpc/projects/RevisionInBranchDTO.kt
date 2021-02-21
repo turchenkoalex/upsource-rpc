@@ -20,6 +20,7 @@ data class RevisionInBranchDTO(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revision = RevisionInfoDTO(),
 		branch = null

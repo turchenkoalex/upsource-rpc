@@ -18,6 +18,7 @@ data class ProjectTreeMapRequestDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = ""

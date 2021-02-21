@@ -32,6 +32,7 @@ data class RevisionChangesRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revision = com.ecwid.upsource.rpc.ids.RevisionInProjectDTO(),
 		compareToRevisionId = null,

@@ -24,6 +24,7 @@ data class RevisionsDiffRequestDTO(
 	 */
 	val secondRevision: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		baseRevision = "",

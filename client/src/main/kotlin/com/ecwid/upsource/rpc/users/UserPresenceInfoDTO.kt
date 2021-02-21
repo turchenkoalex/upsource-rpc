@@ -24,6 +24,7 @@ data class UserPresenceInfoDTO(
 	 */
 	val absentUntil: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		isOnline = false,

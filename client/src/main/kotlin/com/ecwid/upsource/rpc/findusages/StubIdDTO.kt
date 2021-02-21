@@ -20,6 +20,7 @@ data class StubIdDTO(
 	 */
 	val stubIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		stubIndex = 0

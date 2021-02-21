@@ -18,6 +18,7 @@ data class TestConnectionRequestDTO(
 	 */
 	val vcsSettings: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		vcsSettings = ""

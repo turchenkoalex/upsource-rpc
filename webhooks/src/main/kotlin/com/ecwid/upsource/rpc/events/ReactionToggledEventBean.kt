@@ -36,6 +36,7 @@ data class ReactionToggledEventBean(
 	 */
 	val actor: UserIdBean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		commentId = "",

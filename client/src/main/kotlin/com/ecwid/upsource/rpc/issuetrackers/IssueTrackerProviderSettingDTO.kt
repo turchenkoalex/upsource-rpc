@@ -18,6 +18,7 @@ data class IssueTrackerProviderSettingDTO(
 	 */
 	val value: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = "",
 		value = ""

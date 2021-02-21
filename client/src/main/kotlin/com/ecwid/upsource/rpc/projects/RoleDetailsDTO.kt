@@ -30,6 +30,7 @@ data class RoleDetailsDTO(
 	 */
 	val description: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		key = "",

@@ -20,6 +20,7 @@ data class DiscussionsGroupDTO(
 	 */
 	val discussions: DiscussionsInFileDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = null,
 		discussions = DiscussionsInFileDTO()

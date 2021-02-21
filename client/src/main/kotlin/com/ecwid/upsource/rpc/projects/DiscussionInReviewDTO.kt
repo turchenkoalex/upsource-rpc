@@ -20,6 +20,7 @@ data class DiscussionInReviewDTO(
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO()

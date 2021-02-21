@@ -22,6 +22,7 @@ data class UserActivityDTO(
 	 */
 	val stats: AnalyzerStats
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		stats = AnalyzerStats()

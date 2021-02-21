@@ -24,6 +24,7 @@ data class FindUsersRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		pattern = "",

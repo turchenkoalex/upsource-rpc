@@ -42,6 +42,7 @@ data class GotoFileItemDTO(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",

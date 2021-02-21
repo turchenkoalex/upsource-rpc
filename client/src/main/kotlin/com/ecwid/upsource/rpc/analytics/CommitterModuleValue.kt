@@ -20,6 +20,7 @@ data class CommitterModuleValue(
 	 */
 	val items: List<ModuleValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		committer = "",
 		items = emptyList()

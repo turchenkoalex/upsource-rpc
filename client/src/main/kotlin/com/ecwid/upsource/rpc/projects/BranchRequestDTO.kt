@@ -18,6 +18,7 @@ data class BranchRequestDTO(
 	 */
 	val branch: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		branch = ""

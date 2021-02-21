@@ -36,6 +36,7 @@ data class FileContentTypeDTO(
 	 */
 	val fileType: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isText = false,
 		isDirectory = false,

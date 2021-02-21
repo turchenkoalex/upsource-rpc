@@ -32,6 +32,7 @@ data class FilePsiRequestDTO(
 	 */
 	val requestInspections: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		requestReferences = null,

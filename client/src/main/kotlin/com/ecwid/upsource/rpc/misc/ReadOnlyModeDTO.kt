@@ -18,6 +18,7 @@ data class ReadOnlyModeDTO(
 	 */
 	val description: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isReadOnly = false,
 		description = null

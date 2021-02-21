@@ -22,6 +22,7 @@ data class ReviewStateChangedDTO(
 	 */
 	val newState: ReviewStateEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldState = ReviewStateEnum.OPEN,
 		newState = ReviewStateEnum.OPEN

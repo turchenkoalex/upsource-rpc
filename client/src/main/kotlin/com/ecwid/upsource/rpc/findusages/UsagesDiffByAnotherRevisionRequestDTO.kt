@@ -26,6 +26,7 @@ data class UsagesDiffByAnotherRevisionRequestDTO(
 	 */
 	val isAnotherOld: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		originElement = PsiElementIdDTO(),
 		anotherRevisionId = "",

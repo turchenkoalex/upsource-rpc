@@ -134,6 +134,7 @@ data class FileInlineDiffResponseDTO(
 	 */
 	val conflictType: ConflictTypeEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isIdentical = false,
 		text = "",

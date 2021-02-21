@@ -20,6 +20,7 @@ data class CommitterTimeValue(
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		committer = "",
 		items = emptyList()

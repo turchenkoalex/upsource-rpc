@@ -86,6 +86,7 @@ data class ShortProjectInfoDTO(
 	 */
 	val isArchived: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		projectName = "",

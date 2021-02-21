@@ -26,6 +26,7 @@ data class ReviewListDTO(
 	 */
 	val totalCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviews = emptyList(),
 		hasMore = false,

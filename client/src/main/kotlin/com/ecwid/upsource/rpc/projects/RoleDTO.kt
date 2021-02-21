@@ -24,6 +24,7 @@ data class RoleDTO(
 	 */
 	val isGroup: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		key = "",
 		isGlobal = false,

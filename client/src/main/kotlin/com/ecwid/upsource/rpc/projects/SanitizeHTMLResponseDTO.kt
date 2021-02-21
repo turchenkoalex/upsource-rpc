@@ -12,6 +12,7 @@ data class SanitizeHTMLResponseDTO(
 	 */
 	val sanitizedHTML: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		sanitizedHTML = ""
 	)

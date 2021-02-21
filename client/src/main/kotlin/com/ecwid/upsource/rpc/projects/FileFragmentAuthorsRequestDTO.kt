@@ -26,6 +26,7 @@ data class FileFragmentAuthorsRequestDTO(
 	 */
 	val endLine: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		startLine = 0,

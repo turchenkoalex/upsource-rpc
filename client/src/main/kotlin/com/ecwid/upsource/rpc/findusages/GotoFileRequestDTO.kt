@@ -38,6 +38,7 @@ data class GotoFileRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		revisionId = null,

@@ -30,6 +30,7 @@ data class RevisionBuildStatusKeyDTO(
 	 */
 	val description: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		status = BuildStatusEnum.SUCCESS,
 		name = null,

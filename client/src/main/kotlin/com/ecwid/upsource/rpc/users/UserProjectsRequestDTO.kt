@@ -18,6 +18,7 @@ data class UserProjectsRequestDTO(
 	 */
 	val commitTimestampFilter: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		commitTimestampFilter = 0L

@@ -18,6 +18,7 @@ data class ReviewersGraphRequestDTO(
 	 */
 	val fromTime: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = null

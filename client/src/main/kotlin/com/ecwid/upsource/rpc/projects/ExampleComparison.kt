@@ -24,6 +24,7 @@ data class ExampleComparison(
 	 */
 	val lastCommitTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftLocator = "",
 		rightLocator = "",

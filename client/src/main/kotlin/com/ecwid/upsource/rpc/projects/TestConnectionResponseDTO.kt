@@ -20,6 +20,7 @@ data class TestConnectionResponseDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		status = TestConnectionStatusEnum.SUCCESS,
 		message = null

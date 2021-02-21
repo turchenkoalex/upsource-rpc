@@ -32,6 +32,7 @@ data class IssueFieldDTO(
 	 */
 	val value: List<IssueFieldValueDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		name = "",

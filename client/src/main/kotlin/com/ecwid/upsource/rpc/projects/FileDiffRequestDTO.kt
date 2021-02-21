@@ -40,6 +40,7 @@ data class FileDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftFile = null,
 		rightFile = null,

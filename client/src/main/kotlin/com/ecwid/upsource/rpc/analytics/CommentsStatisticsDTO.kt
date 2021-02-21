@@ -42,6 +42,7 @@ data class CommentsStatisticsDTO(
 	 */
 	val statsPerLabel: List<LabelStats> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewComments = 0,
 		totalComments = 0,

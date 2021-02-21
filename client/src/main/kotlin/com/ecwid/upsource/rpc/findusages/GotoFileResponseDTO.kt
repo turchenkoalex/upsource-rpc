@@ -20,6 +20,7 @@ data class GotoFileResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		hasMore = false

@@ -18,6 +18,7 @@ data class RangeMappingDTO(
 	 */
 	val to: com.ecwid.upsource.rpc.ids.RangeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		from = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		to = com.ecwid.upsource.rpc.ids.RangeDTO()

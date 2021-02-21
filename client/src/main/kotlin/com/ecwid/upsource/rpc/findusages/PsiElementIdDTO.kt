@@ -26,6 +26,7 @@ data class PsiElementIdDTO(
 	 */
 	val localIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),

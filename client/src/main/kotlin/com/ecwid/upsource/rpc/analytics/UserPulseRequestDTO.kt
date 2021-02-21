@@ -30,6 +30,7 @@ data class UserPulseRequestDTO(
 	 */
 	val timePoints: List<Long> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		fromTime = 0L,

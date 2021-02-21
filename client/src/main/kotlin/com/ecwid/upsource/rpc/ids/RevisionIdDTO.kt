@@ -12,6 +12,7 @@ data class RevisionIdDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = ""
 	)

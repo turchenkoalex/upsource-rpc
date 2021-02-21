@@ -24,6 +24,7 @@ data class ProjectReadmeResponseDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		fileName = "",

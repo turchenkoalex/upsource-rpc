@@ -18,6 +18,7 @@ data class UserProjectInfoDTO(
 	 */
 	val lastCommitTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		lastCommitTime = 0L

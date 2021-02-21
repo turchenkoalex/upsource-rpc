@@ -42,6 +42,7 @@ data class FeedRequestDTO(
 	 */
 	val reviewFeedSort: ReviewFeedSortEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		limit = 0,
 		type = FeedTypeEnum.FEED,

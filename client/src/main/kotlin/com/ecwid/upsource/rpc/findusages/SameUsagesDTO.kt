@@ -22,6 +22,7 @@ data class SameUsagesDTO(
 	 */
 	val newUsage: FindUsagesItemDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldUsage = FindUsagesItemDTO(),
 		newUsage = FindUsagesItemDTO()

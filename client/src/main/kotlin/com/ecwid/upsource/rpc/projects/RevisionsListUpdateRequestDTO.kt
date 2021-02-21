@@ -30,6 +30,7 @@ data class RevisionsListUpdateRequestDTO(
 	 */
 	val messageSubstring: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		limit = 0,

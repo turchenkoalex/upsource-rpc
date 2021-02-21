@@ -32,6 +32,7 @@ data class UserActivityRequestDTO(
 	 */
 	val committers: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		period = TimeUnitEnum.HOUR,

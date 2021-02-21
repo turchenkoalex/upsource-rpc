@@ -20,6 +20,7 @@ data class RevisionDiscussionCountersRequestDTO(
 	 */
 	val fileNameFilter: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisions = RevisionListDTO(),
 		fileNameFilter = null

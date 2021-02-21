@@ -30,6 +30,7 @@ data class UsersRolesRequestDTO(
 	 */
 	val query: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		offset = 0,

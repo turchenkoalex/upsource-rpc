@@ -42,6 +42,7 @@ data class InspectionCodeMarkupItemDTO(
 	 */
 	val textAttributesKey: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		textAttribute = TextAttributeDTO(),

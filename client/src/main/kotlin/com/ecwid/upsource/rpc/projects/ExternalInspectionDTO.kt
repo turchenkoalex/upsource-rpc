@@ -36,6 +36,7 @@ data class ExternalInspectionDTO(
 	 */
 	val message: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		fileName = "",

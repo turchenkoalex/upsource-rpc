@@ -18,6 +18,7 @@ data class ReactionDTO(
 	 */
 	val usersIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		usersIds = emptyList()

@@ -30,6 +30,7 @@ data class TextSearchSnippet(
 	 */
 	val rangeInFile: com.ecwid.upsource.rpc.ids.RangeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		startLineNumber = 0,

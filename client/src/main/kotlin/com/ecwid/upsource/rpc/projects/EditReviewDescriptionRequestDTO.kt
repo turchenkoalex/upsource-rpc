@@ -20,6 +20,7 @@ data class EditReviewDescriptionRequestDTO(
 	 */
 	val text: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		text = ""

@@ -24,6 +24,7 @@ data class ParticipantProgressDTO(
 	 */
 	val lastSeenTimestamp: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		readFilesCount = 0,

@@ -28,6 +28,7 @@ data class UpdateReviewLabelRequestDTO(
 	 */
 	val label: LabelDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		reviewId = null,

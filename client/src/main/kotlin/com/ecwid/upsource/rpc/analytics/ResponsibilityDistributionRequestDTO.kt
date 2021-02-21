@@ -24,6 +24,7 @@ data class ResponsibilityDistributionRequestDTO(
 	 */
 	val toTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = 0L,

@@ -24,6 +24,7 @@ data class UncommittedRevisionDTO(
 	 */
 	val files: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		parentRevisionId = "",

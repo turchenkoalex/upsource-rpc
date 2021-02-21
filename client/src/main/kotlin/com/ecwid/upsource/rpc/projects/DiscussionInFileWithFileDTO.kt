@@ -26,6 +26,7 @@ data class DiscussionInFileWithFileDTO(
 	 */
 	val discussionInFile: DiscussionInFileDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = null,
 		fileName = "",

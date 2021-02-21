@@ -18,6 +18,7 @@ data class RevisionRemovedFromReviewFeedEventBean(
 	 */
 	val revisionIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		revisionIds = emptyList()

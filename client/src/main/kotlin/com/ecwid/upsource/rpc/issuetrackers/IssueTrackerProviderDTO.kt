@@ -24,6 +24,7 @@ data class IssueTrackerProviderDTO(
 	 */
 	val isAutoSetup: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		providerKey = "",
 		scriptText = "",

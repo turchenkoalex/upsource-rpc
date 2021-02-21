@@ -12,6 +12,7 @@ data class ProjectIdDTO(
 	 */
 	val projectId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = ""
 	)

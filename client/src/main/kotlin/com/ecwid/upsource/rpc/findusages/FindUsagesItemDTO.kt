@@ -44,6 +44,7 @@ data class FindUsagesItemDTO(
 	 */
 	val isImportant: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		navigationTarget = NavigationTargetItemDTO(),
 		previewText = "",

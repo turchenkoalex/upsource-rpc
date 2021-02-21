@@ -18,6 +18,7 @@ data class IssueInfoRequestDTO(
 	 */
 	val issueId: IssueIdDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		issueId = IssueIdDTO()

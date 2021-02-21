@@ -34,6 +34,7 @@ data class InspectionsDiffForFileDTO(
 	 */
 	val fixedOriginalRanges: List<com.ecwid.upsource.rpc.ids.RangeDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		path = "",
 		introduced = emptyList(),

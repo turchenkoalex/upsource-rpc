@@ -22,6 +22,7 @@ data class FileInReviewDTO(
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO()

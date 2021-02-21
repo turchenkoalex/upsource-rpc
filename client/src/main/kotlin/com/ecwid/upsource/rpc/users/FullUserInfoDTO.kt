@@ -66,6 +66,7 @@ data class FullUserInfoDTO(
 	 */
 	val absentUntil: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		name = "",

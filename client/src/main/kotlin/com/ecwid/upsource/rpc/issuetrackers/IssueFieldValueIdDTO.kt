@@ -18,6 +18,7 @@ data class IssueFieldValueIdDTO(
 	 */
 	val valueId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fieldId = "",
 		valueId = ""

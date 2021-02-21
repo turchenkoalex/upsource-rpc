@@ -36,6 +36,7 @@ data class ReviewLabelChangedEventBean(
 	 */
 	val actor: UserIdBean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = "",
 		labelId = "",

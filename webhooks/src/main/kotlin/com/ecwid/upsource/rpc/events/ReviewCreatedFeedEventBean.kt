@@ -24,6 +24,7 @@ data class ReviewCreatedFeedEventBean(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		revisions = emptyList(),

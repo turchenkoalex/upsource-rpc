@@ -26,6 +26,7 @@ data class ToggleReactionRequestDTO(
 	 */
 	val doAdd: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		target = ReactionTargetDTO(),
 		reactionId = "",

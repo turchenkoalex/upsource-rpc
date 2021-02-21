@@ -21,6 +21,7 @@ data class ${message.name}(
 </#list>
 
 )<#if has_required> {
+	@Suppress("unused")
 	internal constructor() : this(
 	<#list message.fields as field>
 		${field.name} = ${field.defaultValue}<#sep>,</#sep>

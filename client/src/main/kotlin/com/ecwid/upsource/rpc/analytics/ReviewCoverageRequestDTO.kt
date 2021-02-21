@@ -26,6 +26,7 @@ data class ReviewCoverageRequestDTO(
 	 */
 	val referenceTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		period = TimeUnitEnum.HOUR,

@@ -12,6 +12,7 @@ data class GetSettingRequestDTO(
 	 */
 	val key: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		key = ""
 	)

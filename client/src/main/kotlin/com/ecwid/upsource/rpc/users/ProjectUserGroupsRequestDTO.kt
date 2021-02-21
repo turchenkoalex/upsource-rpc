@@ -24,6 +24,7 @@ data class ProjectUserGroupsRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		query = null,

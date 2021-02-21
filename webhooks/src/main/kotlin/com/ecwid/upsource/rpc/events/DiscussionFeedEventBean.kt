@@ -72,6 +72,7 @@ data class DiscussionFeedEventBean(
 	 */
 	val fileName: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		notificationReason = NotificationReason.UNKNOWN,

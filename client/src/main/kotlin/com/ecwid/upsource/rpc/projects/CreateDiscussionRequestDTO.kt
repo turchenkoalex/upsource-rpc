@@ -48,6 +48,7 @@ data class CreateDiscussionRequestDTO(
 	 */
 	val labels: List<LabelDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		anchor = AnchorDTO(),
 		reviewId = null,

@@ -38,6 +38,7 @@ data class FileHistoryChartDTO(
 	 */
 	val frames: List<FileHistoryFrameDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		maxAge = 0L,
 		maxEdits = 0,

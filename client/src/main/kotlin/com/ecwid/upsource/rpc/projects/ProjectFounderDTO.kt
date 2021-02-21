@@ -18,6 +18,7 @@ data class ProjectFounderDTO(
 	 */
 	val date: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		date = 0L

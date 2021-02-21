@@ -22,6 +22,7 @@ data class UsagesDiffFullRequestDTO(
 	 */
 	val newElement: PsiElementIdDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldElement = PsiElementIdDTO(),
 		newElement = PsiElementIdDTO()

@@ -24,6 +24,7 @@ data class RemovedParticipantFromReviewFeedEventBean(
 	 */
 	val formerRole: ParticipantRole
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		participant = UserIdBean(),

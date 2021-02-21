@@ -30,6 +30,7 @@ data class BranchesRequestDTO(
 	 */
 	val sortBy: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		query = "",

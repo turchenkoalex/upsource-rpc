@@ -26,6 +26,7 @@ data class FileOwnershipSummaryDTO(
 	 */
 	val userId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		filePath = "",
 		state = OwnershipSummaryEnum.OK,

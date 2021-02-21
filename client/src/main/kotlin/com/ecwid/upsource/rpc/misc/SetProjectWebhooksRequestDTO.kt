@@ -18,6 +18,7 @@ data class SetProjectWebhooksRequestDTO(
 	 */
 	val triggers: List<ProjectWebhookTriggerDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		triggers = emptyList()

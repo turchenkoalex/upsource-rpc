@@ -22,6 +22,7 @@ data class FileContentResponseDTO(
 	 */
 	val fileContent: FileContentDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		contentType = FileContentTypeDTO(),
 		fileContent = null

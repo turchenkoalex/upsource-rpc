@@ -12,6 +12,7 @@ data class ExportDataResponseDTO(
 	 */
 	val serverPath: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		serverPath = ""
 	)

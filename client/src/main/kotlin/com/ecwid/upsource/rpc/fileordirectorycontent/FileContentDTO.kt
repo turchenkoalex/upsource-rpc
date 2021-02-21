@@ -34,6 +34,7 @@ data class FileContentDTO(
 	 */
 	val syntax: List<TextMarkupDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		foldings = emptyList(),

@@ -82,6 +82,7 @@ data class DiscussionInFileDTO(
 	 */
 	val syncResult: SyncResultEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		anchor = AnchorDTO(),

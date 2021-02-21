@@ -48,6 +48,7 @@ data class AchievementDTO(
 	 */
 	val isUnlocked: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		name = "",

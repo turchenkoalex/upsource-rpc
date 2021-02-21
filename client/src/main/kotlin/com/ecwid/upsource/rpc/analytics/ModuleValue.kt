@@ -18,6 +18,7 @@ data class ModuleValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		module = "",
 		value = 0

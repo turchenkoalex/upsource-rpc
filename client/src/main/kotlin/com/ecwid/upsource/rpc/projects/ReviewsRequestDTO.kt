@@ -36,6 +36,7 @@ data class ReviewsRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		limit = 0,
 		query = null,

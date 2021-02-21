@@ -42,6 +42,7 @@ data class UsersForMentionRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		reviewId = null,

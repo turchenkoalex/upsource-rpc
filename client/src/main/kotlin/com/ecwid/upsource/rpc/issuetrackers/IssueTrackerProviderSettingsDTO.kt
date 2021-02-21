@@ -18,6 +18,7 @@ data class IssueTrackerProviderSettingsDTO(
 	 */
 	val settings: List<IssueTrackerProviderSettingDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		providerKey = "",
 		settings = emptyList()

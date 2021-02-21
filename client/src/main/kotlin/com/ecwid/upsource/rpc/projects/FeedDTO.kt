@@ -20,6 +20,7 @@ data class FeedDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		feedItems = emptyList(),
 		hasMore = false

@@ -20,6 +20,7 @@ data class CloseReviewRequestDTO(
 	 */
 	val isFlagged: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		isFlagged = false

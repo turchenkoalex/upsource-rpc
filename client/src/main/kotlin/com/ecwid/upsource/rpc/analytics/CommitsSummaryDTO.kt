@@ -24,6 +24,7 @@ data class CommitsSummaryDTO(
 	 */
 	val modulesTouched: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		totalCommits = 0,
 		offsiteCommits = 0,

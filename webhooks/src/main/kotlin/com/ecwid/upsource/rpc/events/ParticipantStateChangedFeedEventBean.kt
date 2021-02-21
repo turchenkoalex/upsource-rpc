@@ -30,6 +30,7 @@ data class ParticipantStateChangedFeedEventBean(
 	 */
 	val newState: ParticipantState
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		participant = UserIdBean(),

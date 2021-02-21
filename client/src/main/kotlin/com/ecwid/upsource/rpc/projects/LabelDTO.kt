@@ -24,6 +24,7 @@ data class LabelDTO(
 	 */
 	val colorId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = null,
 		name = "",

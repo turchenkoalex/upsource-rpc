@@ -24,6 +24,7 @@ data class BranchingRevisionSuggestion(
 	 */
 	val pathToRightSize: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		pathToLeftSize = 0,

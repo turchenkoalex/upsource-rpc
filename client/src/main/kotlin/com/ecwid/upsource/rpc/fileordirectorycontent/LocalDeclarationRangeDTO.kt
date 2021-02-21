@@ -24,6 +24,7 @@ data class LocalDeclarationRangeDTO(
 	 */
 	val endOffset: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		targetId = 0,
 		startOffset = 0,

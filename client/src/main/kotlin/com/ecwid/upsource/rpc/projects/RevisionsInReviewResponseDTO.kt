@@ -52,6 +52,7 @@ data class RevisionsInReviewResponseDTO(
 	 */
 	val canCherryPickWithTeamCity: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		allRevisions = RevisionDescriptorListDTO(),
 		newRevisions = RevisionsSetDTO(),

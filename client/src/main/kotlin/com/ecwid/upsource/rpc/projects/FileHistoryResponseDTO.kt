@@ -28,6 +28,7 @@ data class FileHistoryResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		history = emptyList(),
 		graph = null,

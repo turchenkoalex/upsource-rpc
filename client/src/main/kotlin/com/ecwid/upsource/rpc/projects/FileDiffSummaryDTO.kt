@@ -26,6 +26,7 @@ data class FileDiffSummaryDTO(
 	 */
 	val removedLines: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		addedLines = 0,

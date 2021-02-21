@@ -18,6 +18,7 @@ data class SetSettingRequestDTO(
 	 */
 	val value: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		key = "",
 		value = ""

@@ -28,6 +28,7 @@ data class ProjectActivityDTO(
 	 */
 	val stats: AnalyzerStats
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		modules = emptyList(),

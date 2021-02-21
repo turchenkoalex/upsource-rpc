@@ -24,6 +24,7 @@ data class ProjectActivityRequestDTO(
 	 */
 	val referenceTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		module = null,

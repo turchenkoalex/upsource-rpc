@@ -42,6 +42,7 @@ data class ProjectTreeItemDTO(
 	 */
 	val hasChildren: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		displayName = "",
 		displayType = "",

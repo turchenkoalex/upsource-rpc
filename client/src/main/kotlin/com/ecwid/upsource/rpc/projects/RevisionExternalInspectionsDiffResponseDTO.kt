@@ -24,6 +24,7 @@ data class RevisionExternalInspectionsDiffResponseDTO(
 	 */
 	val files: List<FileExternalInspectionsDiffResponseDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",

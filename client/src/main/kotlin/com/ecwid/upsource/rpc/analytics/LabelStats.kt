@@ -22,6 +22,7 @@ data class LabelStats(
 	 */
 	val countsPerUser: List<UserValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		label = com.ecwid.upsource.rpc.projects.LabelDTO(),
 		countsPerUser = emptyList()

@@ -18,6 +18,7 @@ data class CodeReviewPattern(
 	 */
 	val pattern: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		pattern = ""

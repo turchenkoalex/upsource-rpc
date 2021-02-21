@@ -50,6 +50,7 @@ data class TextSearchItem(
 	 */
 	val totalMatches: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		revisionInfo = com.ecwid.upsource.rpc.projects.RevisionInfoDTO(),

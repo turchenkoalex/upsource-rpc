@@ -20,6 +20,7 @@ data class UpdateReviewLabelResponseDTO(
 	 */
 	val syncResult: SyncResultEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		label = LabelDTO(),
 		syncResult = null

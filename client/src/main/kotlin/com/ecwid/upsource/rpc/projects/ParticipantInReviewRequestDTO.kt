@@ -22,6 +22,7 @@ data class ParticipantInReviewRequestDTO(
 	 */
 	val participant: ParticipantInReviewDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		participant = ParticipantInReviewDTO()

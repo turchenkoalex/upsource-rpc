@@ -18,6 +18,7 @@ data class TestPOP3MailboxResponseDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		status = TestPOP3MailboxStatusEnum.OK,
 		message = null

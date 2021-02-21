@@ -24,6 +24,7 @@ data class UserGroupDTO(
 	 */
 	val usersCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		name = "",

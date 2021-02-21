@@ -12,6 +12,7 @@ data class DeleteBranchEventBean(
 	 */
 	val name: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = ""
 	)

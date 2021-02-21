@@ -12,6 +12,7 @@ data class UserActionNotificationDTO(
 	 */
 	val userId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = ""
 	)

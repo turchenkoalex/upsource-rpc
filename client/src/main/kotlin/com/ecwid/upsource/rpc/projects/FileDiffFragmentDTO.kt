@@ -48,6 +48,7 @@ data class FileDiffFragmentDTO(
 	 */
 	val deletedRanges: List<com.ecwid.upsource.rpc.ids.RangeDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftFileStartLine = 0,
 		leftFileLineCount = 0,

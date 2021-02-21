@@ -18,6 +18,7 @@ data class HidePredefinedLabelsRequestDTO(
 	 */
 	val doHide: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		doHide = false

@@ -20,6 +20,7 @@ data class ModuleTimeValue(
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		module = "",
 		items = emptyList()

@@ -40,6 +40,7 @@ data class NavigationTargetItemDTO(
 	 */
 	val targetDescription: TargetDescriptionDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		startOffset = 0,

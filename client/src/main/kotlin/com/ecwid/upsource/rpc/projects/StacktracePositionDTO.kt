@@ -32,6 +32,7 @@ data class StacktracePositionDTO(
 	 */
 	val interpolatedRange: com.ecwid.upsource.rpc.ids.RangeDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		lineNumber = 0,
 		fullPath = "",

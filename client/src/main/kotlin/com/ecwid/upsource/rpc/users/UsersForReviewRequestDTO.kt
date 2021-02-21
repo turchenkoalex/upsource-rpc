@@ -40,6 +40,7 @@ data class UsersForReviewRequestDTO(
 	 */
 	val timeout: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		role = RoleInReviewEnum.AUTHOR,

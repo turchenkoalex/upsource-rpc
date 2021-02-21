@@ -36,6 +36,7 @@ data class IssueInfoDTO(
 	 */
 	val field: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		issueId = "",
 		issueLink = null,

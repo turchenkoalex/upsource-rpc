@@ -38,6 +38,7 @@ data class BranchListDTO(
 	 */
 	val isDefaultBranchExists: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		branch = emptyList(),
 		hasMore = false,

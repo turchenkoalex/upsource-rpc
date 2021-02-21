@@ -204,6 +204,7 @@ data class ProjectSettingsDTO(
 	 */
 	val isArchived: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectName = "",
 		vcsSettings = null,

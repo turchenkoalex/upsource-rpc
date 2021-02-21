@@ -24,6 +24,7 @@ data class FileExternalInspectionsDiffResponseDTO(
 	 */
 	val fixed: InspectionsCountDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = "",
 		introduced = null,

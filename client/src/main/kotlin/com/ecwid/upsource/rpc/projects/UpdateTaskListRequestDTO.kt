@@ -36,6 +36,7 @@ data class UpdateTaskListRequestDTO(
 	 */
 	val itemValue: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

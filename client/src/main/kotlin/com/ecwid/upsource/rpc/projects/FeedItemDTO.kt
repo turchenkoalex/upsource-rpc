@@ -135,6 +135,7 @@ data class FeedItemDTO(
 	 */
 	val removedDiscussionId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		feedItemId = "",
 		projectId = "",

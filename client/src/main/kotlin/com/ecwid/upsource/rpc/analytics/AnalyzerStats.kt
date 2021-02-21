@@ -48,6 +48,7 @@ data class AnalyzerStats(
 	 */
 	val isProjectModelKnown: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		minCommitTime = 0L,
 		maxCommitTime = 0L,

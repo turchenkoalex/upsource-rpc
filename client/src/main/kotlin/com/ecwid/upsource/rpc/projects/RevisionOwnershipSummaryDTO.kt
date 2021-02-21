@@ -18,6 +18,7 @@ data class RevisionOwnershipSummaryDTO(
 	 */
 	val userId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		userId = ""

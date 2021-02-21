@@ -52,6 +52,7 @@ data class CompareInfoDTO(
 	 */
 	val suggestion: BranchingRevisionSuggestion? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftRevisionId = "",
 		rightRevisionId = "",

@@ -20,6 +20,7 @@ data class TextMarkupDTO(
 	 */
 	val textAttribute: TextAttributeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		textAttribute = TextAttributeDTO()

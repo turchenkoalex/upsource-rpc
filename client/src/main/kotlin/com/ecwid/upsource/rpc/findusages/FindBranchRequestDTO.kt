@@ -24,6 +24,7 @@ data class FindBranchRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		pattern = "",

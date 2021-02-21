@@ -42,6 +42,7 @@ data class RevisionListGraphEdgeDTO(
 	 */
 	val color: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		position = 0,
 		toPosition = 0,

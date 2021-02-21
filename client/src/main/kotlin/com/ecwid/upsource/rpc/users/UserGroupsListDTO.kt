@@ -18,6 +18,7 @@ data class UserGroupsListDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		groups = emptyList(),
 		hasMore = false

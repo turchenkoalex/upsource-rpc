@@ -18,6 +18,7 @@ data class UpdateUserTimezoneDTO(
 	 */
 	val timezoneOffset: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		timezoneOffset = 0

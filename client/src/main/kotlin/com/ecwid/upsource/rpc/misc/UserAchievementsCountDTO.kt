@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.misc
 data class UserAchievementsCountDTO(
 	val count: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		count = 0
 	)

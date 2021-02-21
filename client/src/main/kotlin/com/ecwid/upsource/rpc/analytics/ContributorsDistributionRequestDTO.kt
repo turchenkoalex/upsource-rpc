@@ -36,6 +36,7 @@ data class ContributorsDistributionRequestDTO(
 	 */
 	val timePoints: List<Long> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		module = null,

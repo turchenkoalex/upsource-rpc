@@ -86,6 +86,7 @@ data class RevisionInfoDTO(
 	 */
 	val parentRevisionIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",

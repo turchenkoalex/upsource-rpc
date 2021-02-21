@@ -24,6 +24,7 @@ data class ReviewStatisticsRequestDTO(
 	 */
 	val toTime: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = null,

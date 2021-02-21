@@ -80,6 +80,7 @@ data class CommentDTO(
 	 */
 	val reactions: List<ReactionDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		commentId = "",

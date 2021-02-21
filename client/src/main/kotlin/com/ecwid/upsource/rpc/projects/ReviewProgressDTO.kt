@@ -18,6 +18,7 @@ data class ReviewProgressDTO(
 	 */
 	val totalFiles: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		participants = emptyList(),
 		totalFiles = 0

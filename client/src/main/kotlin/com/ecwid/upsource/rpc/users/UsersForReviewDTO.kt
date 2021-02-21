@@ -24,6 +24,7 @@ data class UsersForReviewDTO(
 	 */
 	val userRelevance: List<Int> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		result = UsersListDTO(),
 		relevantUser = emptyList(),

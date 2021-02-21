@@ -18,6 +18,7 @@ data class ExternalLinkDTO(
 	 */
 	val prefix: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		url = "",
 		prefix = ""

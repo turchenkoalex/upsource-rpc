@@ -18,6 +18,7 @@ data class FileHistoryChartRequestDTO(
 	 */
 	val framesCount: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		framesCount = null

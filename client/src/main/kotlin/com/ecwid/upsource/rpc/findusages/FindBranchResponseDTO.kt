@@ -18,6 +18,7 @@ data class FindBranchResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		branches = emptyList(),
 		hasMore = false

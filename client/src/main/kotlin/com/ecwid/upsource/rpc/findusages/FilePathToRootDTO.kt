@@ -20,6 +20,7 @@ data class FilePathToRootDTO(
 	 */
 	val pathToRoot: com.ecwid.upsource.rpc.projects.ProjectItemsListDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileName = "",
 		pathToRoot = com.ecwid.upsource.rpc.projects.ProjectItemsListDTO()

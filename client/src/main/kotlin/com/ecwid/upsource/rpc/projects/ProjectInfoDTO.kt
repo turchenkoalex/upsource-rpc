@@ -107,6 +107,7 @@ data class ProjectInfoDTO(
 	 */
 	val issueTrackerProjectDetails: List<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectName = "",
 		projectId = "",

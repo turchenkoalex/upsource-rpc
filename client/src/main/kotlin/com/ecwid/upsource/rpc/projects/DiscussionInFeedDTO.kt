@@ -86,6 +86,7 @@ data class DiscussionInFeedDTO(
 	 */
 	val resolvedBy: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",

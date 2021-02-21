@@ -24,6 +24,7 @@ data class ProjectModel(
 	 */
 	val defaultJdkId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		type = "",
 		pathToModel = null,

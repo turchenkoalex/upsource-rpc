@@ -28,6 +28,7 @@ data class ParticipantStateChangedDTO(
 	 */
 	val newState: ParticipantStateEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		participant = "",
 		oldState = ParticipantStateEnum.UNREAD,

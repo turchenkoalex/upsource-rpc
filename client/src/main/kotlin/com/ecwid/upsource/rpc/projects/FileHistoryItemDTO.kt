@@ -26,6 +26,7 @@ data class FileHistoryItemDTO(
 	 */
 	val fileName: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		diffType = DiffTypeEnum.ADDED,
 		revision = RevisionInfoDTO(),

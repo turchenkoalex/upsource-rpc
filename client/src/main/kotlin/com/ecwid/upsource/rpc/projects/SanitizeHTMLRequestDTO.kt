@@ -18,6 +18,7 @@ data class SanitizeHTMLRequestDTO(
 	 */
 	val isBasicMarkup: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		html = "",
 		isBasicMarkup = false

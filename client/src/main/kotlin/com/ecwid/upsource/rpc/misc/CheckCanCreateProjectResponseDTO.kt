@@ -18,6 +18,7 @@ data class CheckCanCreateProjectResponseDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isAllowed = false,
 		message = null

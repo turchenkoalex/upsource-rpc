@@ -18,6 +18,7 @@ data class InspectionsCountDTO(
 
 	val infos: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		errors = 0,
 		warnings = 0,

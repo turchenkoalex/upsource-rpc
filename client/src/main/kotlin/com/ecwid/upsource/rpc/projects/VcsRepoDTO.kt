@@ -18,6 +18,7 @@ data class VcsRepoDTO(
 	 */
 	val url: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		url = emptyList()

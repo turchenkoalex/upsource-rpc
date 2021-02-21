@@ -86,6 +86,7 @@ data class CurrentUserResponseDTO(
 	 */
 	val isEULAAccepted: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		login = "",

@@ -22,6 +22,7 @@ data class CodeInspectionsDTO(
 	 */
 	val fileLevel: FileWarningLevelEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		inspections = emptyList(),
 		fileLevel = FileWarningLevelEnum.NONE

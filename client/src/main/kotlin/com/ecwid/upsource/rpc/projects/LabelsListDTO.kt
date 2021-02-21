@@ -28,6 +28,7 @@ data class LabelsListDTO(
 	 */
 	val customLabels: List<LabelDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		hidePredefinedLabels = false,
 		predefinedLabels = emptyList(),

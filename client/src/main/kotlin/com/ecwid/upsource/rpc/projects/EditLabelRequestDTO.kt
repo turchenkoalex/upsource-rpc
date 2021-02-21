@@ -20,6 +20,7 @@ data class EditLabelRequestDTO(
 	 */
 	val label: LabelDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		label = LabelDTO()

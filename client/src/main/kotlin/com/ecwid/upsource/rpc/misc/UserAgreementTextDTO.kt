@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.misc
 data class UserAgreementTextDTO(
 	val text: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = ""
 	)
