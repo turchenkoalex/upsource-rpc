@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param count 
  */
+@Suppress("unused")
 data class UserAchievementsCountDTO(
 	val count: Int
 ) {

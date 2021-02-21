@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param discussionId ID of the discussion
  */
+@Suppress("unused")
 data class DiscussionIdDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -25,6 +25,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hasUnrelatedChanges Some changes were filtered out (in the review diff)
  * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
  */
+@Suppress("unused")
 data class FileInlineDiffResponseDTO(
 	/**
 	 * Whether file contents are identical in both revisions (required)

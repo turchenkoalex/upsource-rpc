@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param showUnrelatedChanges Whether to show the changes that were filtered out in the review diff. 'false' by default.
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileInReviewDiffRequestDTO(
 	/**
 	 * See FileInReviewDTO parameters (required)

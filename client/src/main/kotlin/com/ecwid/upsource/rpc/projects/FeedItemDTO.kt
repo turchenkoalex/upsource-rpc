@@ -24,6 +24,7 @@ package com.ecwid.upsource.rpc.projects
  * @param squashedToRevision Indicates that a review was squashed to a single revision
  * @param removedDiscussionId Indicates that a discussion was removed
  */
+@Suppress("unused")
 data class FeedItemDTO(
 	/**
 	 * News feed item ID (required)

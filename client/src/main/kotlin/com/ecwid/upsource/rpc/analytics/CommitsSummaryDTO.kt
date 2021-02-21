@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param offsiteCommits Number of commits that didn't affect any module
  * @param modulesTouched Number of modules affected
  */
+@Suppress("unused")
 data class CommitsSummaryDTO(
 	/**
 	 * Total number of commits (required)

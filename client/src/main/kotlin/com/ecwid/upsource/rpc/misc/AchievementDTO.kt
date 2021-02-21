@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.misc
  * @param isUnread Whether the user saw a notification about the unlocking
  * @param isUnlocked Whether the achievement is unlocked by the user
  */
+@Suppress("unused")
 data class AchievementDTO(
 	/**
 	 * Achievement ID (required)

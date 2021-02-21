@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param filePath A full path to the file starting with a slash (e.g. /directory/file.txt)
  * @param priorChangeAnnotation A reference to the prior revision of this section (only revision and file, but not the line number / line count)
  */
+@Suppress("unused")
 data class FileAnnotationSectionDTO(
 	/**
 	 * Line number to start with (required)

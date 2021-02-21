@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param deadline Review due date (Unix timestamp)
  */
+@Suppress("unused")
 data class ReviewDeadlineRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

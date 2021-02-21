@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param hubProjectId Hub project ID
  */
+@Suppress("unused")
 data class CheckCanCreateProjectRequestDTO(
 	/**
 	 * Hub project ID (required)

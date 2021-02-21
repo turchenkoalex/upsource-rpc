@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.events
  * @param message Commit message
  * @param date Commit date
  */
+@Suppress("unused")
 data class NewRevisionEventBean(
 	/**
 	 * Revision ID (required)

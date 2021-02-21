@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param diffForFile See InspectionsDiffForFileDTO parameters
  */
+@Suppress("unused")
 data class InspectionsDiffDTO(
 	/**
 	 * See InspectionsDiffForFileDTO parameters (repeated)

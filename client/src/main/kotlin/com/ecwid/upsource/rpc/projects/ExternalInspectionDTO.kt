@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param severity Inspection severity
  * @param message Inspection message
  */
+@Suppress("unused")
 data class ExternalInspectionDTO(
 	/**
 	 * VCS revision ID (required)

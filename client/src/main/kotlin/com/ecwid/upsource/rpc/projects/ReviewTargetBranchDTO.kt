@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param targetBranch Branch to merge into
  */
+@Suppress("unused")
 data class ReviewTargetBranchDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

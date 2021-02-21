@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param startOffset Start offset
  * @param endOffset End offset
  */
+@Suppress("unused")
 data class LocalDeclarationRangeDTO(
 	/**
 	 * ID of the target element (required)

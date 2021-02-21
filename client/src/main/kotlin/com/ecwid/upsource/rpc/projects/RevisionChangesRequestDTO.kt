@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit How many files to return
  * @param skip Number of files to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class RevisionChangesRequestDTO(
 	/**
 	 * See RevisionInProjectDTO parameters (required)

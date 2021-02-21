@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param fixed Fixed problems. See InspectionCodeMarkupItemDTO parameters
  * @param fixedOriginalRanges A list of ranges pointing to fixed problems in the original revision
  */
+@Suppress("unused")
 data class InspectionsDiffForFileDTO(
 	/**
 	 * A full path to the file starting with a slash (e.g. /directory/file.txt) (required)

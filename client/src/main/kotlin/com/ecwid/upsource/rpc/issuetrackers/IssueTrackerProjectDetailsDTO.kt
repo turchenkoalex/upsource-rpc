@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param requiredField See IssueRequiredFieldDTO parameters
  * @param projectKey Issue tracker project key
  */
+@Suppress("unused")
 data class IssueTrackerProjectDetailsDTO(
 	/**
 	 * Issue tracker provider key ("YouTrack", "JIRA") (required)

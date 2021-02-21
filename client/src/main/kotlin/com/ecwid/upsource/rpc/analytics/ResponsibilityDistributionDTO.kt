@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param modules Names of the project modules
  * @param stats See AnalyzerStats parameters
  */
+@Suppress("unused")
 data class ResponsibilityDistributionDTO(
 	/**
 	 * See CommitterModuleValue parameters (repeated)

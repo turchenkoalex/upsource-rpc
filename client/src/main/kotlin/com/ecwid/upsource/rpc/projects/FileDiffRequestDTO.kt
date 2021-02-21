@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isLeftFileDefinedAsNull Whether the left file for comparison is 'no-file' (for internal use only)
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (optional)

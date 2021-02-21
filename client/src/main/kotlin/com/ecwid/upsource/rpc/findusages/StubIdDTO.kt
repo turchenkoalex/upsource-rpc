@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param fileId See FileInRevisionDTO parameters
  * @param stubIndex Stub index ID
  */
+@Suppress("unused")
 data class StubIdDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

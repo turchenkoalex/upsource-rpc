@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param oldState See ReviewStateEnum parameters
  * @param newState See ReviewStateEnum parameters
  */
+@Suppress("unused")
 data class ReviewStateChangedDTO(
 	/**
 	 * See ReviewStateEnum parameters (required)

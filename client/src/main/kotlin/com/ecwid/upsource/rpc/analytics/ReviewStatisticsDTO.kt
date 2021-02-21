@@ -15,6 +15,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param reviewerStatsByRevisions Review revisions counts per reviewer
  * @param commentsStats Discussion comments statistics. See CommentsStatisticsDTO parameters
  */
+@Suppress("unused")
 data class ReviewStatisticsDTO(
 	/**
 	 * Number of open reviews (required)

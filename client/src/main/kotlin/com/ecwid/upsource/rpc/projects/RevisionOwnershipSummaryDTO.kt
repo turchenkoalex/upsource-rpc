@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId VCS revision ID
  * @param userId Upsource user ID
  */
+@Suppress("unused")
 data class RevisionOwnershipSummaryDTO(
 	/**
 	 * VCS revision ID (required)

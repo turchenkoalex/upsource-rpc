@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.ids
 /**
  * @param projectId Project ID in Upsource
  */
+@Suppress("unused")
 data class ProjectIdListDTO(
 	/**
 	 * Project ID in Upsource (repeated)

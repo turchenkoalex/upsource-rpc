@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param searchQuery Search query. Use '#my' to request the personal feed, or leave empty for the full feed
  * @param reviewFeedSort Review feed sorting ('Natural' by default)
  */
+@Suppress("unused")
 data class FeedRequestDTO(
 	/**
 	 * Number of news feed messages returned (required)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param label Discussion label. See LabelDTO parameters
  * @param countsPerUser See UserValue parameters
  */
+@Suppress("unused")
 data class LabelStats(
 	/**
 	 * Discussion label. See LabelDTO parameters (required)

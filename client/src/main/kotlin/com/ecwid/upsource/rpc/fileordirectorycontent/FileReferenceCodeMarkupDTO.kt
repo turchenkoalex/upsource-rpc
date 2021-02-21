@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param fileNameTable See FileInRevisionDTO parameters
  * @param localDeclarationRanges See LocalDeclarationRangeDTO parameters
  */
+@Suppress("unused")
 data class FileReferenceCodeMarkupDTO(
 	/**
 	 * See ReferenceCodeMarkupItemDTO parameters (repeated)

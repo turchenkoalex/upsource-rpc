@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId Review ID
  * @param branch Branch name to stop tracking. When none specified, tracking of all branches will stop.
  */
+@Suppress("unused")
 data class StopBranchTrackingRequestDTO(
 	/**
 	 * Review ID (required)

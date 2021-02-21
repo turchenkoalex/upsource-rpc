@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param committers User IDs of committers
  * @param module Name of the project module
  */
+@Suppress("unused")
 data class CommitsDetailsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

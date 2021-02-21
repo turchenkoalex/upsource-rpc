@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param requestGutterMarks Whether to request gutter marks
  * @param requestInspections Whether to request inspections
  */
+@Suppress("unused")
 data class FilePsiRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

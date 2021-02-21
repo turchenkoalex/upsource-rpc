@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param contentType See FileContentTypeDTO parameters
  * @param fileContent See FileContentDTO parameters
  */
+@Suppress("unused")
 data class FileContentResponseDTO(
 	/**
 	 * See FileContentTypeDTO parameters (required)

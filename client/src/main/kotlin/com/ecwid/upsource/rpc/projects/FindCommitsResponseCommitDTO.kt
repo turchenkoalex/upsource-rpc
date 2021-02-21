@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revision See RevisionInfoDTO parameters
  * @param changes See RevisionsDiffDTO parameters
  */
+@Suppress("unused")
 data class FindCommitsResponseCommitDTO(
 	/**
 	 * Project ID in Upsource (required)

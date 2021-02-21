@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param revisions IDs of the requested revisions
  */
+@Suppress("unused")
 data class ReviewInspectionsDiffRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

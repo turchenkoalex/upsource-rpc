@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param localIndex Used to identify the exact reference when references overlap
  * @param hash Hash of the PSI element (if any), used to test PSI elements for equality
  */
+@Suppress("unused")
 data class ReferenceCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)

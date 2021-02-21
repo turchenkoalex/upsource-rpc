@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param userId ID of the Upsource user
  * @param roleKey Role key
  */
+@Suppress("unused")
 data class DeleteRoleRequestDTO(
 	/**
 	 * ID of the Upsource project (required)

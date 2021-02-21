@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param markupType Currently not in use
  * @param labels Discussion labels. See LabelDTO parameters
  */
+@Suppress("unused")
 data class CreateDiscussionRequestDTO(
 	/**
 	 * See AnchorDTO parameters (required)

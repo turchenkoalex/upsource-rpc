@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param issueLink Issue link
  * @param isCreatedFromUpsource Whether the issue has been created from Upsource
  */
+@Suppress("unused")
 data class IssueIdDTO(
 	/**
 	 * Issue ID (required)

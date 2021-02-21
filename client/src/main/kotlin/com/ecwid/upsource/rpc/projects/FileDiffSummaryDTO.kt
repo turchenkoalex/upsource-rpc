@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param addedLines How many lines were added
  * @param removedLines How many lines were deleted
  */
+@Suppress("unused")
 data class FileDiffSummaryDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

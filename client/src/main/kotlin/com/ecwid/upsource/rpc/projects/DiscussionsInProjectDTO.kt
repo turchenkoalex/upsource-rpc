@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  * @param totalCount Total number of discussions matching query
  */
+@Suppress("unused")
 data class DiscussionsInProjectDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)

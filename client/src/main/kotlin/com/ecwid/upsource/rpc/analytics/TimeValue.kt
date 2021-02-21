@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param time Unix timestamp
  * @param value The value associated with the timestamp
  */
+@Suppress("unused")
 data class TimeValue(
 	/**
 	 * Unix timestamp (required)

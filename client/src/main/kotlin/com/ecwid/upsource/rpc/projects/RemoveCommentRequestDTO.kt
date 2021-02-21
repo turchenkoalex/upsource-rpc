@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param discussionId An ID of the discussion being removed
  * @param commentId An ID of the comment being removed
  */
+@Suppress("unused")
 data class RemoveCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param range Text range of the given PSI element
  * @param localIndex Copy of the localIndex from 'ReferenceCodeMarkupItemDTO' to identify the exact PSI element
  */
+@Suppress("unused")
 data class PsiElementIdDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

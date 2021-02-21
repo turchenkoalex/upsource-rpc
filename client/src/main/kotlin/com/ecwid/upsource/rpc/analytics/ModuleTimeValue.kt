@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param module Name of the project module
  * @param items See TimeValue parameters
  */
+@Suppress("unused")
 data class ModuleTimeValue(
 	/**
 	 * Name of the project module (required)

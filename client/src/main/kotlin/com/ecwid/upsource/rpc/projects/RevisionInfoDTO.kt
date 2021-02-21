@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.projects
  * @param branchHeadLabel Branch head labels, if any
  * @param parentRevisionIds List of parent revisions IDs
  */
+@Suppress("unused")
 data class RevisionInfoDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param reviewedChangesCounts Number of reviews performed on the file
  * @param majorContributorUserId The major contributor to the file, if there is one
  */
+@Suppress("unused")
 data class FileContributorsResponseDTO(
 	/**
 	 * User IDs of the contributors (repeated)

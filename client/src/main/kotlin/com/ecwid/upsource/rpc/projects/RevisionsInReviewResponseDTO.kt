@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param canTrackBranch An optional field denoting that review can be converted to branch review
  * @param canCherryPickWithTeamCity Internal
  */
+@Suppress("unused")
 data class RevisionsInReviewResponseDTO(
 	/**
 	 * See RevisionDescriptorListDTO parameters (required)

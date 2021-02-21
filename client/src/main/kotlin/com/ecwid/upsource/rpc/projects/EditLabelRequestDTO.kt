@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param label See LabelDTO parameters
  */
+@Suppress("unused")
 data class EditLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

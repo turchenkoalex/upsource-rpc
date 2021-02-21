@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param discussionId ID of the discussion
  * @param reviewId See ReviewIdDTO parameters
  */
+@Suppress("unused")
 data class DiscussionInReviewDTO(
 	/**
 	 * ID of the discussion (required)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param items 
  */
+@Suppress("unused")
 data class AchievementsListDTO(
 	val items: List<AchievementDTO> = emptyList()
 )

@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param defaultBranch Name of the default branch
  * @param isDefaultBranchExists Whether the project has the default branch
  */
+@Suppress("unused")
 data class BranchListDTO(
 	/**
 	 * See BranchDTO parameters (repeated)

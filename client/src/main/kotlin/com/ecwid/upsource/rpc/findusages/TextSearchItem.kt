@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param snippets Code snippets
  * @param totalMatches Total number of matches in the file
  */
+@Suppress("unused")
 data class TextSearchItem(
 	/**
 	 * The file in a particular project and revision (required)

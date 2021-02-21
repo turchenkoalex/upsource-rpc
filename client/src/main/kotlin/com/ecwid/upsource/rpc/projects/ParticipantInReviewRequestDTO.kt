@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param participant See ParticipantInReviewDTO parameters
  */
+@Suppress("unused")
 data class ParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

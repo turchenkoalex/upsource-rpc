@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param examples See ExampleComparison parameters
  * @param suggestion See BranchingRevisionSuggestion parameters
  */
+@Suppress("unused")
 data class CompareInfoDTO(
 	/**
 	 * Revision ID on the left hand side of the comparison (required)

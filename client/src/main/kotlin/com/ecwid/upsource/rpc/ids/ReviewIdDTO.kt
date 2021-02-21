@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.ids
  * @param projectId Project ID in Upsource
  * @param reviewId Review ID assigned to it when it's created
  */
+@Suppress("unused")
 data class ReviewIdDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param projectId Project ID in Upsource
  * @param request See GetSettingRequestDTO parameters
  */
+@Suppress("unused")
 data class GetProjectSettingRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

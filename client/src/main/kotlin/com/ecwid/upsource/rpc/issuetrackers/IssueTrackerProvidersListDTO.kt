@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.issuetrackers
 /**
  * @param providers See IssueTrackerProviderDTO parameters
  */
+@Suppress("unused")
 data class IssueTrackerProvidersListDTO(
 	/**
 	 * See IssueTrackerProviderDTO parameters (repeated)

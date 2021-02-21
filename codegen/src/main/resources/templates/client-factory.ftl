@@ -9,6 +9,7 @@ import com.ecwid.upsource.transport.RpcTransport
 /**
  * Service RPC builders
  */
+@Suppress("unused")
 class ClientFactory {
 	companion object {
 		<#list services as service>

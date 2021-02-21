@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param branch Branch name
  */
+@Suppress("unused")
 data class FindPullRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param isInitialCollapsed Whether the range is initially collapsed
  * @param collapsedText Text to be displayed in place of the folded range
  */
+@Suppress("unused")
 data class FoldingInfoDTO(
 	/**
 	 * Start offset of the foldable range (required)

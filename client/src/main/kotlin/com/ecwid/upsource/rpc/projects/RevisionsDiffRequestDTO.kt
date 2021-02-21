@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param baseRevision ID of the base revision
  * @param secondRevision ID of the revision that should be compared to the base revision
  */
+@Suppress("unused")
 data class RevisionsDiffRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param key Setting key
  * @param value Setting value
  */
+@Suppress("unused")
 data class SetSettingRequestDTO(
 	/**
 	 * Setting key (required)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param revisionIds List of revision IDs
  */
+@Suppress("unused")
 data class RevisionRemovedFromReviewFeedEventBean(
 	/**
 	 * Base feed event (required)

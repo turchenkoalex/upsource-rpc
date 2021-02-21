@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param anotherRevisionId ID of the other revision
  * @param isAnotherOld Whether the other revision is older
  */
+@Suppress("unused")
 data class UsagesDiffByAnotherRevisionRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)

@@ -15,6 +15,7 @@ package com.ecwid.upsource.rpc.users
  * @param login Login
  * @param absentUntil Absence end date, if the user is currently on leave
  */
+@Suppress("unused")
 data class FullUserInfoDTO(
 	/**
 	 * Upsource user ID (required)

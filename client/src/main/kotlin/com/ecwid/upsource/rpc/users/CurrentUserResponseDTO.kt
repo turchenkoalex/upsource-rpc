@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.users
  * @param codeContributePermissionsInProjects The list of projects where the user has permission to create/merge pull requests
  * @param isEULAAccepted Checks if EULA is accepted by the current user. Returns 'null' if EULA is not set up in Hub
  */
+@Suppress("unused")
 data class CurrentUserResponseDTO(
 	/**
 	 * Upsource user ID (required)

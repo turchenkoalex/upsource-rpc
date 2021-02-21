@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param commits See FindCommitsResponseCommitDTO parameters
  */
+@Suppress("unused")
 data class FindCommitsResponseCommitsDTO(
 	/**
 	 * See FindCommitsResponseCommitDTO parameters (repeated)

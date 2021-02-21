@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * @param projects See UserProjectInfoDTO parameters
  */
+@Suppress("unused")
 data class UserProjectsResponseDTO(
 	/**
 	 * See UserProjectInfoDTO parameters (repeated)

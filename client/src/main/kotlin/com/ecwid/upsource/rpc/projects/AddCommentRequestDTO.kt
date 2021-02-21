@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param parentId An ID of the comment you are replying to
  * @param markupType Currently not in use
  */
+@Suppress("unused")
 data class AddCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

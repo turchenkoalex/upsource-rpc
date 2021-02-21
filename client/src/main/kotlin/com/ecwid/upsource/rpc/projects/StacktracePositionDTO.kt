@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param vcsCommitId Revision ID
  * @param interpolatedRange See RangeDTO parameters
  */
+@Suppress("unused")
 data class StacktracePositionDTO(
 	/**
 	 * Line number that corresponds to the given stacktrace (required)

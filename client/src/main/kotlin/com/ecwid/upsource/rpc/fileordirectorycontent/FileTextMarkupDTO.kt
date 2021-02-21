@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param markup See TextMarkupDTO parameters
  */
+@Suppress("unused")
 data class FileTextMarkupDTO(
 	/**
 	 * See TextMarkupDTO parameters (repeated)

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param modules Names of project modules
  * @param stats See AnalyzerStats parameters
  */
+@Suppress("unused")
 data class ProjectActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param user See UserRolesDTO parameters
  * @param isInvited Whether the user is already invited
  */
+@Suppress("unused")
 data class InviteUserResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (optional)

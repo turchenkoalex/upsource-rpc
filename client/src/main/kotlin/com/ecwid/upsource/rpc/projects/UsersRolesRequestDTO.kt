@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param pageSize Page size
  * @param query Search query
  */
+@Suppress("unused")
 data class UsersRolesRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

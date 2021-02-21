@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param graph See RevisionListGraphDTO parameters
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class FileHistoryResponseDTO(
 	/**
 	 * See FileHistoryItemDTO parameters (repeated)

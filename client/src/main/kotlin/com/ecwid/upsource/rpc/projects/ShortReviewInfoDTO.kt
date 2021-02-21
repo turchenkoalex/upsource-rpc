@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param completionRate See CompletionRateDTO parameters
  * @param labels Review labels
  */
+@Suppress("unused")
 data class ShortReviewInfoDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

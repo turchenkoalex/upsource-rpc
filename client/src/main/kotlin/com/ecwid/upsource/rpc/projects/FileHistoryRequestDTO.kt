@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit History size limit
  * @param skip Number of history entries (file revisions) to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class FileHistoryRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

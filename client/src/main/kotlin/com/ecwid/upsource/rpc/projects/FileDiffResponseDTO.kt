@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param rightFile See FileInRevisionDTO parameters
  * @param fragments See FileDiffFragmentDTO parameters
  */
+@Suppress("unused")
 data class FileDiffResponseDTO(
 	/**
 	 * See FileInRevisionDTO parameters (optional)

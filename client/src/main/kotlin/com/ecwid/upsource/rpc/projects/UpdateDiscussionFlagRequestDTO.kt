@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param discussionId Discussion ID
  * @param isFlagged Whether the discussion is flagged (starred)
  */
+@Suppress("unused")
 data class UpdateDiscussionFlagRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

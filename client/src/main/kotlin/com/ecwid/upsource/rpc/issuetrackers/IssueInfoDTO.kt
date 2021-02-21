@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param isResolved Whether the issue has been resolved
  * @param field HTML presentation of issue fields (Issue Type, Priority, State)
  */
+@Suppress("unused")
 data class IssueInfoDTO(
 	/**
 	 * Issue ID (required)

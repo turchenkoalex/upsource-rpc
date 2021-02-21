@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param fileName A full path to the file starting with a slash (e.g. /directory/file.txt)
  * @param pathToRoot See ProjectItemsListDTO parameters
  */
+@Suppress("unused")
 data class FilePathToRootDTO(
 	/**
 	 * A full path to the file starting with a slash (e.g. /directory/file.txt) (required)

@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param skip Number of revisions to skip from the top (for pagination)
  * @param requestGraph Whether revision graph should be returned
  */
+@Suppress("unused")
 data class RevisionsListFilteredRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

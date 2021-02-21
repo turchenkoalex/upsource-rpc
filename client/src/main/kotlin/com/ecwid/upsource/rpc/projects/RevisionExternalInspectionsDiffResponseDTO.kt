@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId VCS revision ID
  * @param files Files that contain differing inspections
  */
+@Suppress("unused")
 data class RevisionExternalInspectionsDiffResponseDTO(
 	/**
 	 * Project ID in Upsource (required)

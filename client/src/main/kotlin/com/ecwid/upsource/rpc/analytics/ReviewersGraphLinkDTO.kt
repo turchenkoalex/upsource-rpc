@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param totalReviewsCount Total reviews count
  * @param recentReviewsCount Recent reviews count
  */
+@Suppress("unused")
 data class ReviewersGraphLinkDTO(
 	/**
 	 * Index of link source user (required)

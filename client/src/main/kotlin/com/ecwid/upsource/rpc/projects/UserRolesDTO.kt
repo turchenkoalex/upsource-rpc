@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param userId ID of the Upsource user
  * @param roles See RoleDTO parameters
  */
+@Suppress("unused")
 data class UserRolesDTO(
 	/**
 	 * ID of the Upsource user (required)

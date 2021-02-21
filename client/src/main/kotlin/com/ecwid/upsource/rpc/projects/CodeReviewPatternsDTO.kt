@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param patterns See CodeReviewPattern
  */
+@Suppress("unused")
 data class CodeReviewPatternsDTO(
 	/**
 	 * See CodeReviewPattern (repeated)

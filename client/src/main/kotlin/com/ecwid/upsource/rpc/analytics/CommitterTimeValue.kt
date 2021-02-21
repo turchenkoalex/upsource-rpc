@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param committer User ID of the committer
  * @param items See TimeValue parameters
  */
+@Suppress("unused")
 data class CommitterTimeValue(
 	/**
 	 * User ID of the committer (required)

@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.projects
  * @param totalCommits Total number of commits in the project
  * @param isArchived Whether the project is archived
  */
+@Suppress("unused")
 data class ShortProjectInfoDTO(
 	/**
 	 * Project ID in Upsource (required)

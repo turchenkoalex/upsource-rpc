@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revision See RevisionInfoDTO parameters
  * @param hash Current head revision ID
  */
+@Suppress("unused")
 data class RevisionsListUpdateResponseDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)

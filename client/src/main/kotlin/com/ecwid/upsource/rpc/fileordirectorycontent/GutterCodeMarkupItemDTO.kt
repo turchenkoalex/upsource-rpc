@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param gutterMark See GutterMarkEnum parameters
  * @param relatedSemanticMarkup Index in 'referenceMarkup' list this gutter mark corresponds to
  */
+@Suppress("unused")
 data class GutterCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)

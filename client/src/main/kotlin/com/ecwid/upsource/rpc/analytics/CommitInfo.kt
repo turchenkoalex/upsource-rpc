@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param time Unix timestamp of commit time
  * @param shortRevisionId Short revision ID
  */
+@Suppress("unused")
 data class CommitInfo(
 	/**
 	 * Revision ID (required)

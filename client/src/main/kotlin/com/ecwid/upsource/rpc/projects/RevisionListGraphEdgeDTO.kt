@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hasArrow Whether a line ends with an arrow
  * @param color Edge color
  */
+@Suppress("unused")
 data class RevisionListGraphEdgeDTO(
 	/**
 	 * Edge position index (required)

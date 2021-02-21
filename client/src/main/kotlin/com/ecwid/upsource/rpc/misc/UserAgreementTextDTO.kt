@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param text 
  */
+@Suppress("unused")
 data class UserAgreementTextDTO(
 	val text: String
 ) {

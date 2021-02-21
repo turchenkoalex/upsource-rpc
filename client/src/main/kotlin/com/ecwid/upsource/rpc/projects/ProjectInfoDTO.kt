@@ -21,6 +21,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isArchived 
  * @param issueTrackerProjectDetails See IssueTrackerProjectDetailsDTO parameters
  */
+@Suppress("unused")
 data class ProjectInfoDTO(
 	/**
 	 * Project name (required)

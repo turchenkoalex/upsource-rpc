@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param nodes See RevisionListGraphNodeDTO parameters
  * @param edges See RevisionListGraphEdgeDTO parameters
  */
+@Suppress("unused")
 data class RevisionListGraphRowDTO(
 	/**
 	 * See RevisionListGraphNodeDTO parameters (repeated)

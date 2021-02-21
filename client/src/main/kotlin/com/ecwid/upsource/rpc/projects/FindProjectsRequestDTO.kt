@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit Number of projects to return
  * @param isExact Whether to search for the exact match
  */
+@Suppress("unused")
 data class FindProjectsRequestDTO(
 	/**
 	 * Search query, e.g. part of the name (required)

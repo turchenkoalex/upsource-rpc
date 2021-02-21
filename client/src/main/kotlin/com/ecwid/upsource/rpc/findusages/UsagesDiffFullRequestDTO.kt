@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param oldElement Old element. See PsiElementIdDTO parameters
  * @param newElement New element. See PsiElementIdDTO parameters
  */
+@Suppress("unused")
 data class UsagesDiffFullRequestDTO(
 	/**
 	 * Old element. See PsiElementIdDTO parameters (required)

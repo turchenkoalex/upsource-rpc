@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID
  * @param vcsSettings VCS configuration represented as a JSON-encoded string
  */
+@Suppress("unused")
 data class TestConnectionRequestDTO(
 	/**
 	 * Project ID (optional)

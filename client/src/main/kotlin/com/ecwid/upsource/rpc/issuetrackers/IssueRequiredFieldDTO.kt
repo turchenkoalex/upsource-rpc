@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param field See IssueFieldDTO parameters
  * @param fieldType Field type
  */
+@Suppress("unused")
 data class IssueRequiredFieldDTO(
 	/**
 	 * Issue type ID (required)

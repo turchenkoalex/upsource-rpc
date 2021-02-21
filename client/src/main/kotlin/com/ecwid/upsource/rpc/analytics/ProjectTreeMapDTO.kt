@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.analytics
 /**
  * @param entries See ProjectTreeMapEntryDTO parameters
  */
+@Suppress("unused")
 data class ProjectTreeMapDTO(
 	/**
 	 * See ProjectTreeMapEntryDTO parameters (repeated)

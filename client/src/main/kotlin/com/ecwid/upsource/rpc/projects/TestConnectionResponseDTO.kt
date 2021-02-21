@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param status See TestConnectionStatusEnum parameters
  * @param message Response message
  */
+@Suppress("unused")
 data class TestConnectionResponseDTO(
 	/**
 	 * See TestConnectionStatusEnum parameters (required)

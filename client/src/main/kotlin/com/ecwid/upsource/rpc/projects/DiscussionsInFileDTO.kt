@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param discussions See DiscussionInFileDTO parameters
  */
+@Suppress("unused")
 data class DiscussionsInFileDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)

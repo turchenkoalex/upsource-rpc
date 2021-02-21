@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isRead Whether the diff has been viewed by the user. When returned by the findCommits method, isRead is always set to 'true'.
  * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
  */
+@Suppress("unused")
 data class RevisionDiffItemDTO(
 	/**
 	 * Project ID in Upsource (required)

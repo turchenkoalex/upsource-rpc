@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param from Starting line number
  * @param to Ending line number
  */
+@Suppress("unused")
 data class RangeMappingDTO(
 	/**
 	 * Starting line number (required)

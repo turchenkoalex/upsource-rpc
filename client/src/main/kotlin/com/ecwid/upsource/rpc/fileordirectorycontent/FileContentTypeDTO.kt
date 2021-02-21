@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param canDownload Whether the file can be downloaded
  * @param fileType File extension
  */
+@Suppress("unused")
 data class FileContentTypeDTO(
 	/**
 	 * Whether the file is presentable as text (required)

@@ -16,6 +16,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isResolved Whether the discussion is resolved
  * @param syncResult GitHub sync result. See SyncResultEnum parameters
  */
+@Suppress("unused")
 data class DiscussionInFileDTO(
 	/**
 	 * ID of the discussion (required)

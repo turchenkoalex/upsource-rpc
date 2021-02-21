@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param text New text of the comment being updated
  * @param markupType Currently not in use
  */
+@Suppress("unused")
 data class UpdateCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

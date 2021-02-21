@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param lastModified Unix timestamp of the last modification
  * @param branch Branch name
  */
+@Suppress("unused")
 data class GotoFileItemDTO(
 	/**
 	 * Project ID in Upsource (required)

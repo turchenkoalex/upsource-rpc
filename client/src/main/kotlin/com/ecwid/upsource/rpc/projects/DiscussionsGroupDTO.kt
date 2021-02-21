@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param fileId Path to file
  * @param discussions Discussions contained in the file. See DiscussionsInFileDTO parameters
  */
+@Suppress("unused")
 data class DiscussionsGroupDTO(
 	/**
 	 * Path to file (optional)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param commitsCount Number of commits merged
  * @param branches List of merged branches
  */
+@Suppress("unused")
 data class MergedToDefaultBranchEventBean(
 	/**
 	 * Number of commits merged (required)

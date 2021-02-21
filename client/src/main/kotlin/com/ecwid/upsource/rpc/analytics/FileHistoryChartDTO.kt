@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param firstEdits Unix timestamps of first edits
  * @param frames See FileHistoryFrameDTO parameters
  */
+@Suppress("unused")
 data class FileHistoryChartDTO(
 	/**
 	 * Age of the oldest file on the chart (Unix timestamp) (required)

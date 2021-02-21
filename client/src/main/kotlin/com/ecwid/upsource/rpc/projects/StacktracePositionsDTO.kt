@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param positions See StacktracePositionDTO parameters
  */
+@Suppress("unused")
 data class StacktracePositionsDTO(
 	/**
 	 * See StacktracePositionDTO parameters (repeated)

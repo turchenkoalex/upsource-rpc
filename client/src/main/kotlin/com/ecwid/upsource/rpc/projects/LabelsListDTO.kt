@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param predefinedLabels Predefined discussion labels. See LabelDTO parameters
  * @param customLabels Custom discussion labels. See LabelDTO parameters
  */
+@Suppress("unused")
 data class LabelsListDTO(
 	/**
 	 * Indicates if predefined labels are hidden (required)

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param discussionId ID of the discussion
  * @param fieldValue See IssueFieldValueIdDTO parameters
  */
+@Suppress("unused")
 data class CreateIssueFromDiscussionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

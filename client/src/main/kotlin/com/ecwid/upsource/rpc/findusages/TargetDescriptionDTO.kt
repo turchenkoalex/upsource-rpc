@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param targetPresentation Text representation of the given element
  * @param locationPresentation Text surrounding the element
  */
+@Suppress("unused")
 data class TargetDescriptionDTO(
 	/**
 	 * ID of the element's image (if 'image' is none) (optional)

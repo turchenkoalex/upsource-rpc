@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param role Participant's role in the review. See RoleInReviewEnum parameters
  * @param state State of the participant. See ParticipantStateEnum parameters
  */
+@Suppress("unused")
 data class ParticipantInReviewDTO(
 	/**
 	 * Participant user ID (required)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param items See ProjectTreeItemDTO parameters
  */
+@Suppress("unused")
 data class ProjectItemsListDTO(
 	/**
 	 * See ProjectTreeItemDTO parameters (repeated)

@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param toTime Unix timestamp
  * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
  */
+@Suppress("unused")
 data class ContributorsDistributionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

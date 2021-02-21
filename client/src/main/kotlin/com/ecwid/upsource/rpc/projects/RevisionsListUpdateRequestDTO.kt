@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hash Current head revision ID
  * @param messageSubstring Additional filter by message (applied as AND)
  */
+@Suppress("unused")
 data class RevisionsListUpdateRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

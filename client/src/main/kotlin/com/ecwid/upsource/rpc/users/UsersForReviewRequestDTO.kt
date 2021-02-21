@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.users
  * @param limit Number of results to return
  * @param timeout Timeout(ms) to calculate smart users suggestion, by default - 1 minute
  */
+@Suppress("unused")
 data class UsersForReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

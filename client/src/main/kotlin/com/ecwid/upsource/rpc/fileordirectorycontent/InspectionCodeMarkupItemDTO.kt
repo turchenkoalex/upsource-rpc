@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param severity See InspectionSeverityEnum parameters
  * @param textAttributesKey Name (if any) of this markup key, given by IntelliJ IDEA
  */
+@Suppress("unused")
 data class InspectionCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)

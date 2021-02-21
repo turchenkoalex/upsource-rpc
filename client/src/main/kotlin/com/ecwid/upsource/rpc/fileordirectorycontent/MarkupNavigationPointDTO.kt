@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param endOffset End offset
  * @param stubIndex Stub index ID
  */
+@Suppress("unused")
 data class MarkupNavigationPointDTO(
 	/**
 	 * ID of the target element (required)

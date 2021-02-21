@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param reviewKey Review ID
  * @param fieldValue See IssueFieldValueIdDTO parameters
  */
+@Suppress("unused")
 data class CreateIssueFromReviewRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

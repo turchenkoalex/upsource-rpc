@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionInfoDTO parameters
  * @param graph See RevisionListGraphDTO parameters
  */
+@Suppress("unused")
 data class BranchGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)

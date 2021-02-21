@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reactionId ID of the reaction
  * @param doAdd Whether to add or remove the reaction
  */
+@Suppress("unused")
 data class ToggleReactionRequestDTO(
 	/**
 	 * See ReactionTargetDTO parameters (required)

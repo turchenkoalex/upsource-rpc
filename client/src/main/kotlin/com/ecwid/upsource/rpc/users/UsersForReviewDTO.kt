@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param relevantUser All relevant users
  * @param userRelevance Users' relevance [0..100]
  */
+@Suppress("unused")
 data class UsersForReviewDTO(
 	/**
 	 * Suggested reviewers for a given review (required)

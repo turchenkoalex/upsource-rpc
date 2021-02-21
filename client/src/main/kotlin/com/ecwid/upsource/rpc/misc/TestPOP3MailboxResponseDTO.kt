@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param status Mailbox status. OK (1); LoginFailed (2); ConnectionFailed (3);
  * @param message Optional text message
  */
+@Suppress("unused")
 data class TestPOP3MailboxResponseDTO(
 	/**
 	 * Mailbox status. OK (1); LoginFailed (2); ConnectionFailed (3); (required)

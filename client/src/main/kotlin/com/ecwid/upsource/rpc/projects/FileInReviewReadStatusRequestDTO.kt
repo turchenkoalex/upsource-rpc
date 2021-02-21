@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionsSetDTO parameters
  * @param markAsUnread Pass 'true' to mark the file as unread
  */
+@Suppress("unused")
 data class FileInReviewReadStatusRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.events
  * @param actor User that initiated the event
  * @param feedEventId Event ID
  */
+@Suppress("unused")
 data class FeedEventBean(
 	/**
 	 * User that initiated the event (optional)

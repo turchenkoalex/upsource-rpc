@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param state State of the participant. See ParticipantStateEnum parameters
  * @param userId User ID. When set, this user's participant state will be changed.
  */
+@Suppress("unused")
 data class UpdateParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param id ID of the reaction
  * @param usersIds List of Upsource user IDs
  */
+@Suppress("unused")
 data class ReactionDTO(
 	/**
 	 * ID of the reaction (required)

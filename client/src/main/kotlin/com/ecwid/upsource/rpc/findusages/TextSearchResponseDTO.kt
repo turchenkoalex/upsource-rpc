@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.findusages
 /**
  * @param items The items that match the search query
  */
+@Suppress("unused")
 data class TextSearchResponseDTO(
 	/**
 	 * The items that match the search query (repeated)

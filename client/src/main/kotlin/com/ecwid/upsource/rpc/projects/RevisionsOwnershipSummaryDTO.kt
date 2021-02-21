@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param revisionOwner See RevisionOwnershipSummaryDTO
  */
+@Suppress("unused")
 data class RevisionsOwnershipSummaryDTO(
 	/**
 	 * See RevisionOwnershipSummaryDTO (repeated)

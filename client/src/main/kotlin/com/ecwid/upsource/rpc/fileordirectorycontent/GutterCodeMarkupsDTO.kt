@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param items See GutterCodeMarkupItemDTO parameters
  */
+@Suppress("unused")
 data class GutterCodeMarkupsDTO(
 	/**
 	 * See GutterCodeMarkupItemDTO parameters (repeated)

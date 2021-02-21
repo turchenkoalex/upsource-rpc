@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param period See TimeUnitEnum parameters
  * @param referenceTime Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.
  */
+@Suppress("unused")
 data class ReviewCoverageRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

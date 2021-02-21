@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isHosted Whether the branch is from a hosted repository
  * @param reviewId ID of the branch review, if one exists
  */
+@Suppress("unused")
 data class BranchDTO(
 	/**
 	 * Project ID in Upsource (required)

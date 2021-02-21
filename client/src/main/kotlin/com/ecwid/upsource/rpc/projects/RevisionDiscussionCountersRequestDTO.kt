@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionListDTO parameters
  * @param fileNameFilter Additional revisions filter
  */
+@Suppress("unused")
 data class RevisionDiscussionCountersRequestDTO(
 	/**
 	 * See RevisionListDTO parameters (required)

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param groupId ID of a user group
  * @param role Role of users getting assigned. See RoleInReviewEnum parameters
  */
+@Suppress("unused")
 data class AddGroupToReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

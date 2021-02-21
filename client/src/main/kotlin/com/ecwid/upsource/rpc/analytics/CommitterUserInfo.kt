@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param committer VCS committer name
  * @param userId User ID of the committer
  */
+@Suppress("unused")
 data class CommitterUserInfo(
 	/**
 	 * VCS committer name (required)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param serverPath A full path to the server
  */
+@Suppress("unused")
 data class ExportDataResponseDTO(
 	/**
 	 * A full path to the server (required)

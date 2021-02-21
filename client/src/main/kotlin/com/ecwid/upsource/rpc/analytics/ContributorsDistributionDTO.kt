@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param timePoints The specific time intervals that define the distribution
  * @param users See CommitterUserInfo parameters
  */
+@Suppress("unused")
 data class ContributorsDistributionDTO(
 	/**
 	 * See CommitterTimeValue parameters (repeated)

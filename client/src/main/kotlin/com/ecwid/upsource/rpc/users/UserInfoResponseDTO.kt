@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * @param infos See FullUserInfoDTO parameters
  */
+@Suppress("unused")
 data class UserInfoResponseDTO(
 	/**
 	 * See FullUserInfoDTO parameters (repeated)

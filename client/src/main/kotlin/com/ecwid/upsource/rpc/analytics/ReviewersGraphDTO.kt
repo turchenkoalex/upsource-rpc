@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param userIds User IDs of graph nodes
  * @param links Graph links
  */
+@Suppress("unused")
 data class ReviewersGraphDTO(
 	/**
 	 * User IDs of graph nodes (repeated)

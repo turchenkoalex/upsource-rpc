@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param range Text range
  * @param textAttribute See TextAttributeDTO parameters
  */
+@Suppress("unused")
 data class TextMarkupDTO(
 	/**
 	 * Text range (required)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param reviewInfo See RevisionReviewInfoDTO parameters
  */
+@Suppress("unused")
 data class RevisionReviewInfoListDTO(
 	/**
 	 * See RevisionReviewInfoDTO parameters (repeated)

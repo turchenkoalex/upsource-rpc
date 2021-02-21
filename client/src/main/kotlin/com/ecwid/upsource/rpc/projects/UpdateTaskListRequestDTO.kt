@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param itemIndex Index of the task list item being updated
  * @param itemValue New value of the task list item being updated
  */
+@Suppress("unused")
 data class UpdateTaskListRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param newRevisionId ID of the new revision
  * @param boundaryRevisionId ID of the boundary revision
  */
+@Suppress("unused")
 data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)

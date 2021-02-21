@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param startLine Line number the fragment starts with
  * @param endLine Line number the fragment ends with
  */
+@Suppress("unused")
 data class FileFragmentAuthorsRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

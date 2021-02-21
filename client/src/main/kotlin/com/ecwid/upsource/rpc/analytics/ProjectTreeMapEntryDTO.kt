@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param isBinary Whether a file is binary
  * @param timeSinceLastChange Time elapsed since last change (milliseconds)
  */
+@Suppress("unused")
 data class ProjectTreeMapEntryDTO(
 	/**
 	 * File path (required)

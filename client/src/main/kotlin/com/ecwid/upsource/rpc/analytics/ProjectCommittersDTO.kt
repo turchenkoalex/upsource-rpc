@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.analytics
 /**
  * @param users See CommitterUserInfo parameters
  */
+@Suppress("unused")
 data class ProjectCommittersDTO(
 	/**
 	 * See CommitterUserInfo parameters (repeated)

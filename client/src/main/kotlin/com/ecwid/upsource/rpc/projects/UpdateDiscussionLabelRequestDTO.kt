@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param discussionId ID of the discussion
  * @param label Discussion label being added or removed. See LabelDTO parameters
  */
+@Suppress("unused")
 data class UpdateDiscussionLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

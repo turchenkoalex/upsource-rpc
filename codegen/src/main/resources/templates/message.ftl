@@ -6,6 +6,7 @@ package ${filePackage}
  * @param ${field.name} ${field.description!""}
 </#list>
  */
+@Suppress("unused")
 data class ${message.name}(
 <#list message.fields as field>
 	<#if field.normalizedDescription?has_content>

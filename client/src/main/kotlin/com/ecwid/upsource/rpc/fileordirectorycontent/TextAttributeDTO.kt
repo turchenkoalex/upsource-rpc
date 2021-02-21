@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param effectColor Effect color
  * @param errorStripeColor Error stripe color
  */
+@Suppress("unused")
 data class TextAttributeDTO(
 	/**
 	 * Foreground color (optional)

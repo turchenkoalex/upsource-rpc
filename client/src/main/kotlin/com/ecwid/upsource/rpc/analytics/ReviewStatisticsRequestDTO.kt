@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param fromTime Unix timestamp
  * @param toTime Unix timestamp
  */
+@Suppress("unused")
 data class ReviewStatisticsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

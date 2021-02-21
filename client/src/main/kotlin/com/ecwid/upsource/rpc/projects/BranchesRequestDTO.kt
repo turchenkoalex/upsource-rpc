@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit Number of branches to return
  * @param sortBy Sort by: last updated ("updated", default), branch name ("name")
  */
+@Suppress("unused")
 data class BranchesRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

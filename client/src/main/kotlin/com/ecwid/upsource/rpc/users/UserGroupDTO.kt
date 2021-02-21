@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param name Group name
  * @param usersCount Number of users participating in this group
  */
+@Suppress("unused")
 data class UserGroupDTO(
 	/**
 	 * Group ID (required)

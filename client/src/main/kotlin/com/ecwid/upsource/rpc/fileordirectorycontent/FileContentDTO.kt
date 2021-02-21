@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param isSyntaxSupported Whether syntax markup is available for this file type
  * @param syntax See TextMarkupDTO parameters
  */
+@Suppress("unused")
 data class FileContentDTO(
 	/**
 	 * File text (required)

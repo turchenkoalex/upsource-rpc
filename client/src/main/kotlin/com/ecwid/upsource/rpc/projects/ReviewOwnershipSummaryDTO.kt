@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param files See FileOwnershipSummaryDTO parameters
  */
+@Suppress("unused")
 data class ReviewOwnershipSummaryDTO(
 	/**
 	 * See FileOwnershipSummaryDTO parameters (repeated)

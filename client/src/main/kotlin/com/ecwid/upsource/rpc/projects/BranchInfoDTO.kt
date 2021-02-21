@@ -14,6 +14,7 @@ package com.ecwid.upsource.rpc.projects
  * @param mergeInfo See BranchMergeInfoDTO parameters
  * @param isPullRequest Whether the branch is a pull request
  */
+@Suppress("unused")
 data class BranchInfoDTO(
 	/**
 	 * Number of commits associated with the branch (required)

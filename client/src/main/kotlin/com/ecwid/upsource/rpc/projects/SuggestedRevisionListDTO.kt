@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param suggest 
  */
+@Suppress("unused")
 data class SuggestedRevisionListDTO(
 	val suggest: List<RevisionSuggestDTO> = emptyList()
 )

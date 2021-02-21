@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param doMute Whether to mute or to unmute
  */
+@Suppress("unused")
 data class ToggleReviewMutedRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param weakWarnings 
  * @param infos 
  */
+@Suppress("unused")
 data class InspectionsCountDTO(
 	val errors: Int,
 

@@ -17,6 +17,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isRead Whether the comment has been read by the requester
  * @param reactions Reactions added to the comment
  */
+@Suppress("unused")
 data class CommentDTO(
 	/**
 	 * ID of the discussion (required)

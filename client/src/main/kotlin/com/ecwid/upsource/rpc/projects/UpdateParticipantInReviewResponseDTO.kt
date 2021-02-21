@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param syncResult GitHub sync result. See SyncResultEnum parameters
  */
+@Suppress("unused")
 data class UpdateParticipantInReviewResponseDTO(
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)

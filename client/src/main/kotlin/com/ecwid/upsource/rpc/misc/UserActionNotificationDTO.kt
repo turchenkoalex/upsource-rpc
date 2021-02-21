@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param userId User ID in Upsource
  */
+@Suppress("unused")
 data class UserActionNotificationDTO(
 	/**
 	 * User ID in Upsource (required)

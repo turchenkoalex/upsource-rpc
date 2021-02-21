@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param items See TimeValue parameters
  * @param stats See AnalyzerStats parameters
  */
+@Suppress("unused")
 data class UserActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)

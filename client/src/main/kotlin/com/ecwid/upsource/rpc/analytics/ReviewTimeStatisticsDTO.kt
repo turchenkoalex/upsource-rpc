@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.analytics
 /**
  * @param distribution Durations of review iterations, sorted in ascending order
  */
+@Suppress("unused")
 data class ReviewTimeStatisticsDTO(
 	/**
 	 * Durations of review iterations, sorted in ascending order (repeated)

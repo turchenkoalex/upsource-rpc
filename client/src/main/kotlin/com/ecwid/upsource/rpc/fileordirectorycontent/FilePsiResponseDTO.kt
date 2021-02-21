@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param inspections See CodeInspectionsDTO parameters
  * @param externalInspections External inspections
  */
+@Suppress("unused")
 data class FilePsiResponseDTO(
 	/**
 	 * Whether the code model is available for a file (optional)

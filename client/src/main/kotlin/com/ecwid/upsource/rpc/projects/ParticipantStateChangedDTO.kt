@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param oldState See ParticipantStateEnum parameters
  * @param newState See ParticipantStateEnum parameters
  */
+@Suppress("unused")
 data class ParticipantStateChangedDTO(
 	/**
 	 * An Upsource user ID of the participant (required)

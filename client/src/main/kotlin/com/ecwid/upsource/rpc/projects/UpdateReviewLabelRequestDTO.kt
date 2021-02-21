@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param label Review label being added or removed. See LabelDTO parameters
  */
+@Suppress("unused")
 data class UpdateReviewLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

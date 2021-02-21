@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param service See VcsHostingServiceDTO parameters
  */
+@Suppress("unused")
 data class VcsHostingResponseDTO(
 	/**
 	 * See VcsHostingServiceDTO parameters (repeated)

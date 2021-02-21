@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param projectId Project ID in Upsource
  * @param framesCount Number of frames
  */
+@Suppress("unused")
 data class FileHistoryChartRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

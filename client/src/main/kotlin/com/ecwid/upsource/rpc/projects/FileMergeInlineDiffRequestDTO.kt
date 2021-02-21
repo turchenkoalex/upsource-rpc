@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param ignoreWhitespace Whether to ignore whitespace changes
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileMergeInlineDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

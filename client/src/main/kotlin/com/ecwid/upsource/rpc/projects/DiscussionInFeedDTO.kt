@@ -17,6 +17,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isResolved Whether the discussion is resolved
  * @param resolvedBy If the discussion is resolved, contains the ID of the user who resolved it
  */
+@Suppress("unused")
 data class DiscussionInFeedDTO(
 	/**
 	 * Project ID in Upsource (required)

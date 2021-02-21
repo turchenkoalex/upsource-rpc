@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param query Search query, i.e. starting part of the name
  * @param limit Maximum number of results to return
  */
+@Suppress("unused")
 data class ProjectUserGroupsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

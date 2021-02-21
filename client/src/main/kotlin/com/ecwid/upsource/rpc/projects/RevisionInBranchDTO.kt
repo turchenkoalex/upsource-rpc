@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revision See RevisionInfoDTO parameters
  * @param branch Branch name
  */
+@Suppress("unused")
 data class RevisionInBranchDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)

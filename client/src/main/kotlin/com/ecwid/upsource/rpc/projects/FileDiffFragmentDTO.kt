@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param addedRanges Ranges of text that were added
  * @param deletedRanges Ranges of text that were deleted
  */
+@Suppress("unused")
 data class FileDiffFragmentDTO(
 	/**
 	 * Line number to start with (required)

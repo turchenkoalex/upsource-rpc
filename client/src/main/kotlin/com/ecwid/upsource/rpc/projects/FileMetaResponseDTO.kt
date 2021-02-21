@@ -14,6 +14,7 @@ package com.ecwid.upsource.rpc.projects
  * @param modifiedInParallelBranches See RevisionInBranchDTO parameters
  * @param defaultBranch The default branch (null if not set)
  */
+@Suppress("unused")
 data class FileMetaResponseDTO(
 	/**
 	 * Whether the current revision is the latest (required)

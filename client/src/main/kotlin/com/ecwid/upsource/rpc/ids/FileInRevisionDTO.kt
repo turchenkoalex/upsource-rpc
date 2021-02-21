@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.ids
  * @param revisionId VCS revision ID
  * @param fileName A full path to the file starting with a slash (e.g. /directory/file.txt)
  */
+@Suppress("unused")
 data class FileInRevisionDTO(
 	/**
 	 * Project ID in Upsource (required)

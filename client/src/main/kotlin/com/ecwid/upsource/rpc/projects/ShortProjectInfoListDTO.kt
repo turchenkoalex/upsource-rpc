@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param project See ShortProjectInfoDTO parameters
  */
+@Suppress("unused")
 data class ShortProjectInfoListDTO(
 	/**
 	 * See ShortProjectInfoDTO parameters (repeated)

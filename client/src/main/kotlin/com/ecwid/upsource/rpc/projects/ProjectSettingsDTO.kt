@@ -37,6 +37,7 @@ package com.ecwid.upsource.rpc.projects
  * @param addMergeCommitsToBranchReview Sets whether merge commits should be added to branch reviews
  * @param isArchived Whether the project is archived
  */
+@Suppress("unused")
 data class ProjectSettingsDTO(
 	/**
 	 * Project name (required)

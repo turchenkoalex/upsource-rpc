@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param requestByAnotherRevision See UsagesDiffByAnotherRevisionRequestDTO parameters
  * @param requestByBoundaryRevisions See UsagesDiffByBoundaryRevisionsRequestDTO parameters
  */
+@Suppress("unused")
 data class UsagesDiffRequestDTO(
 	/**
 	 * See UsagesDiffFullRequestDTO parameters (optional)

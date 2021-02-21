@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param retrospective See FileAnnotationSectionDTO parameters
  * @param perspective See FileAnnotationSectionDTO parameters
  */
+@Suppress("unused")
 data class FileAnnotationResponseDTO(
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param sanitizedHTML Sanitized HTML string
  */
+@Suppress("unused")
 data class SanitizeHTMLResponseDTO(
 	/**
 	 * Sanitized HTML string (required)

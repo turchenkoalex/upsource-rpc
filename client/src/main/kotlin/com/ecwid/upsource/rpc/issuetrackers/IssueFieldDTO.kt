@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param defaultValueId Default value
  * @param value See IssueFieldValueDTO parameters
  */
+@Suppress("unused")
 data class IssueFieldDTO(
 	/**
 	 * Field ID (required)

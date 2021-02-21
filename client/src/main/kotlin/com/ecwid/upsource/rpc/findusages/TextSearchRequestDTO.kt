@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param ignoreDeleted Ignore matches in deleted files
  * @param ignoreArchived Whether to search in archived projects
  */
+@Suppress("unused")
 data class TextSearchRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)

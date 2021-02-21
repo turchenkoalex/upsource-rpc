@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param pathToSecondLength The length of the displayed path from the branching revision to the second revision
  * @param fullPathToSecondLength The actual length of the path from the branching revision to the second revision
  */
+@Suppress("unused")
 data class CompareGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)

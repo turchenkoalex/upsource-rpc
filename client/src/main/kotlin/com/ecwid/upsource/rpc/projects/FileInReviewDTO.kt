@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param file See FileInRevisionDTO parameters
  */
+@Suppress("unused")
 data class FileInReviewDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param projectId Project ID in Upsource
  */
+@Suppress("unused")
 data class VcsHostingRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)

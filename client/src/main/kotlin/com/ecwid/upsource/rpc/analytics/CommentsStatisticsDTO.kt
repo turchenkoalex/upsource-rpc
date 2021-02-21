@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param unlabeledCounts See UserValue parameters
  * @param statsPerLabel See LabelStats parameters
  */
+@Suppress("unused")
 data class CommentsStatisticsDTO(
 	/**
 	 * Number of review comments (required)

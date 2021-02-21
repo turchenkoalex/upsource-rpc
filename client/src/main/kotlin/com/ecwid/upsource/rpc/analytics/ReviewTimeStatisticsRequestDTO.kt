@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.analytics
 /**
  * @param userId Upsource user ID
  */
+@Suppress("unused")
 data class ReviewTimeStatisticsRequestDTO(
 	/**
 	 * Upsource user ID (required)

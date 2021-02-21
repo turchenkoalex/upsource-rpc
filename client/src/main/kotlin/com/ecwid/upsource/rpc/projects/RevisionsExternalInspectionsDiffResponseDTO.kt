@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param diff See RevisionExternalInspectionsDiffResponseDTO
  */
+@Suppress("unused")
 data class RevisionsExternalInspectionsDiffResponseDTO(
 	/**
 	 * See RevisionExternalInspectionsDiffResponseDTO (repeated)

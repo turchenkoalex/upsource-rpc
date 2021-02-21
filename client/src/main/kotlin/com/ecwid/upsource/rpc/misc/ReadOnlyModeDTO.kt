@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param isReadOnly Whether the server is in read-only mode
  * @param description Describes the reason for enabling read-only mode (if any)
  */
+@Suppress("unused")
 data class ReadOnlyModeDTO(
 	/**
 	 * Whether the server is in read-only mode (required)

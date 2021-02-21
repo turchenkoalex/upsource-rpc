@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param text Review description (Markdown is supported)
  */
+@Suppress("unused")
 data class EditReviewDescriptionRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)

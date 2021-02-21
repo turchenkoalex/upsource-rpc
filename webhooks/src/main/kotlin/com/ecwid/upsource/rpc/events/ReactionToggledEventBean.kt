@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.events
  * @param wasAdded Whether the reaction was added or removed
  * @param actor User who toggled reaction
  */
+@Suppress("unused")
 data class ReactionToggledEventBean(
 	/**
 	 * Discussion ID (required)

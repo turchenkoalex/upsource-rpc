@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param author Name of the commit author
  * @param commitTime Unix timestamp of the commit
  */
+@Suppress("unused")
 data class FindCommitsRequestPatternDTO(
 	/**
 	 * VCS revision ID (optional)

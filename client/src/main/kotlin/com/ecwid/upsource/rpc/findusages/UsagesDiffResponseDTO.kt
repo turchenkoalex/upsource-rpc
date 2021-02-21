@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param newRevisionId ID of the new revision
  * @param usages See UsagesDiffDTO parameters
  */
+@Suppress("unused")
 data class UsagesDiffResponseDTO(
 	/**
 	 * ID of the old revision (required)

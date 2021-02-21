@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param parentRevisionId Parent revision ID
  * @param files List of modified files (added, deleted, updated)
  */
+@Suppress("unused")
 data class UncommittedRevisionDTO(
 	/**
 	 * Project ID in Upsource (required)

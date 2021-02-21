@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param ignoredFiles The list of files that were omitted in a review according to project settings
  * @param fileDiffSummary See FileDiffSummaryDTO parameters
  */
+@Suppress("unused")
 data class ReviewSummaryChangesResponseDTO(
 	/**
 	 * See RevisionsDiffDTO parameters (optional)

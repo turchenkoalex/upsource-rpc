@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param totalIndexedCommits Total number of indexed commits
  * @param isProjectModelKnown Whether project model is known
  */
+@Suppress("unused")
 data class AnalyzerStats(
 	/**
 	 * Unix timestamp of the earliest commit (required)

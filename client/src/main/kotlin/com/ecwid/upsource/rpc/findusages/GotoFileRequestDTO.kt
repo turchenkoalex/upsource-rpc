@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param pattern Search query, e.g. part of the name
  * @param limit Number of results to return
  */
+@Suppress("unused")
 data class GotoFileRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param oldUsage Old usage of the element. See FindUsagesItemDTO parameters
  * @param newUsage New usage of the element. See FindUsagesItemDTO parameters
  */
+@Suppress("unused")
 data class SameUsagesDTO(
 	/**
 	 * Old usage of the element. See FindUsagesItemDTO parameters (required)

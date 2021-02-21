@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param sameUsage See SameUsagesDTO parameters
  * @param addedUsage See FindUsagesItemDTO parameters
  */
+@Suppress("unused")
 data class UsagesDiffDTO(
 	/**
 	 * See FilePathToRootDTO parameters (optional)

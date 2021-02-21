@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param inspections See InspectionCodeMarkupItemDTO parameters
  * @param fileLevel See FileWarningLevelEnum parameters
  */
+@Suppress("unused")
 data class CodeInspectionsDTO(
 	/**
 	 * See InspectionCodeMarkupItemDTO parameters (repeated)

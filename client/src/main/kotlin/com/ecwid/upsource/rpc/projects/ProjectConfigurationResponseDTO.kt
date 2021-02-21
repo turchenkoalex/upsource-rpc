@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param supportedVcs VCS types supported by the Upsource instance
  */
+@Suppress("unused")
 data class ProjectConfigurationResponseDTO(
 	/**
 	 * VCS types supported by the Upsource instance (repeated)

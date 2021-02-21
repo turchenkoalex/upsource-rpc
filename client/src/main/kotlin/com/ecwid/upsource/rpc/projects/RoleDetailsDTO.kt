@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param name Role name (e.g. Project admin)
  * @param description Role description
  */
+@Suppress("unused")
 data class RoleDetailsDTO(
 	/**
 	 * Role ID (required)

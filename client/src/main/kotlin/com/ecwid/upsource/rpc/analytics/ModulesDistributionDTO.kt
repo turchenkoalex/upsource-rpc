@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
  * @param modules Names of the project modules
  */
+@Suppress("unused")
 data class ModulesDistributionDTO(
 	/**
 	 * See ModuleTimeValue parameters (repeated)

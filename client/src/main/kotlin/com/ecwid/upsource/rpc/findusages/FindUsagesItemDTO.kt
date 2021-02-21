@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param lineNumber Line number
  * @param isImportant Identifies if this usage is semantic-sensitive or not
  */
+@Suppress("unused")
 data class FindUsagesItemDTO(
 	/**
 	 * See NavigationTargetItemDTO parameters (required)

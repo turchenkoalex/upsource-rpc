@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param stacktrace Stacktrace text to be analyzed
  * @param revisionId VCS revision ID
  */
+@Suppress("unused")
 data class StacktraceDTO(
 	/**
 	 * Project ID in Upsource (required)

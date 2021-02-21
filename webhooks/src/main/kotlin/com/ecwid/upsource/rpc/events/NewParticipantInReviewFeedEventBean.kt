@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.events
  * @param participant Participant user info
  * @param role Participant role
  */
+@Suppress("unused")
 data class NewParticipantInReviewFeedEventBean(
 	/**
 	 * Base feed event (required)

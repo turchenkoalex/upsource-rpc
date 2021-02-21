@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param filePathToRoot See FilePathToRootDTO parameters
  * @param item See FindUsagesItemDTO parameters
  */
+@Suppress("unused")
 data class FindUsagesResponseDTO(
 	/**
 	 * See FilePathToRootDTO parameters (repeated)

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit Number of discussions to return
  * @param skip Number of discussions to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class DiscussionsInProjectRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param stubIndex Stub index ID
  * @param targetDescription See TargetDescriptionDTO parameters
  */
+@Suppress("unused")
 data class NavigationTargetItemDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)

@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param mergeFromBranch Merge review: branch to merge from
  * @param mergeToBranch Merge review: branch to merge into
  */
+@Suppress("unused")
 data class CreateReviewRequestDTO(
 	/**
 	 * Project ID in Upsource (required)

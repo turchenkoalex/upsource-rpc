@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId If the reaction corresponds to a revision, ID of that revision
  * @param reviewId If the reaction corresponds to a review, ID of that review
  */
+@Suppress("unused")
 data class ReactionTargetDTO(
 	/**
 	 * Project ID in Upsource (required)

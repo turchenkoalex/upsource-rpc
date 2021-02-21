@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.events
 /**
  * @param name Branch name
  */
+@Suppress("unused")
 data class NewBranchEventBean(
 	/**
 	 * Branch name (required)

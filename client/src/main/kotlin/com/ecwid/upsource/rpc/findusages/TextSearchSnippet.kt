@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param rangeInSnippet Matching range in the snippet
  * @param rangeInFile Matching range in the file
  */
+@Suppress("unused")
 data class TextSearchSnippet(
 	/**
 	 * Snippet text (required)
