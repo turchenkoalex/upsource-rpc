@@ -19,179 +19,266 @@ internal class JacksonWebhookParser : WebhookParser {
 		.registerModule(buildUpsourceModule())
 		.registerKotlinModule()
 	private val types = ConcurrentHashMap<Class<*>, JavaType>()
+	private val parseMapping: Map<String, (WebhookMetadata, String) -> Webhook> = mapOf(
+		"DeleteBranchEventBean" to ::parseDeleteBranchEventBean,
+		"DiscussionFeedEventBean" to ::parseDiscussionFeedEventBean,
+		"FeedEventBean" to ::parseFeedEventBean,
+		"MergedToDefaultBranchEventBean" to ::parseMergedToDefaultBranchEventBean,
+		"NewBranchEventBean" to ::parseNewBranchEventBean,
+		"NewParticipantInReviewFeedEventBean" to ::parseNewParticipantInReviewFeedEventBean,
+		"NewRevisionEventBean" to ::parseNewRevisionEventBean,
+		"ParticipantStateChangedFeedEventBean" to ::parseParticipantStateChangedFeedEventBean,
+		"PullRequestMergedFeedEventBean" to ::parsePullRequestMergedFeedEventBean,
+		"ReactionToggledEventBean" to ::parseReactionToggledEventBean,
+		"RemovedParticipantFromReviewFeedEventBean" to ::parseRemovedParticipantFromReviewFeedEventBean,
+		"ReviewCreatedFeedEventBean" to ::parseReviewCreatedFeedEventBean,
+		"ReviewDeadlineUpdatedFeedEventBean" to ::parseReviewDeadlineUpdatedFeedEventBean,
+		"ReviewLabelChangedEventBean" to ::parseReviewLabelChangedEventBean,
+		"ReviewRemovedFeedEventBean" to ::parseReviewRemovedFeedEventBean,
+		"ReviewSquashedFeedEventBean" to ::parseReviewSquashedFeedEventBean,
+		"ReviewStateChangedFeedEventBean" to ::parseReviewStateChangedFeedEventBean,
+		"ReviewStoppedBranchTrackingFeedEventBean" to ::parseReviewStoppedBranchTrackingFeedEventBean,
+		"RevisionAddedToReviewFeedEventBean" to ::parseRevisionAddedToReviewFeedEventBean,
+		"RevisionRemovedFromReviewFeedEventBean" to ::parseRevisionRemovedFromReviewFeedEventBean,
+		"UserIdBean" to ::parseUserIdBean,
+	)
 
 	override fun parse(data: String): Webhook {
 		val metadata = objectMapper.readValue(data, WebhookMetadata::class.java)
-		return when (metadata.dataType) {
-			"DeleteBranchEventBean" -> {
-				val type = types.computeIfAbsent(DeleteBranchEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<DeleteBranchEventBean>>(data, type)
-				Webhook.DeleteBranchEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"DiscussionFeedEventBean" -> {
-				val type = types.computeIfAbsent(DiscussionFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<DiscussionFeedEventBean>>(data, type)
-				Webhook.DiscussionFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"FeedEventBean" -> {
-				val type = types.computeIfAbsent(FeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<FeedEventBean>>(data, type)
-				Webhook.FeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"MergedToDefaultBranchEventBean" -> {
-				val type = types.computeIfAbsent(MergedToDefaultBranchEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<MergedToDefaultBranchEventBean>>(data, type)
-				Webhook.MergedToDefaultBranchEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"NewBranchEventBean" -> {
-				val type = types.computeIfAbsent(NewBranchEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<NewBranchEventBean>>(data, type)
-				Webhook.NewBranchEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"NewParticipantInReviewFeedEventBean" -> {
-				val type = types.computeIfAbsent(NewParticipantInReviewFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<NewParticipantInReviewFeedEventBean>>(data, type)
-				Webhook.NewParticipantInReviewFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"NewRevisionEventBean" -> {
-				val type = types.computeIfAbsent(NewRevisionEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<NewRevisionEventBean>>(data, type)
-				Webhook.NewRevisionEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ParticipantStateChangedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ParticipantStateChangedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ParticipantStateChangedFeedEventBean>>(data, type)
-				Webhook.ParticipantStateChangedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"PullRequestMergedFeedEventBean" -> {
-				val type = types.computeIfAbsent(PullRequestMergedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<PullRequestMergedFeedEventBean>>(data, type)
-				Webhook.PullRequestMergedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReactionToggledEventBean" -> {
-				val type = types.computeIfAbsent(ReactionToggledEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReactionToggledEventBean>>(data, type)
-				Webhook.ReactionToggledEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"RemovedParticipantFromReviewFeedEventBean" -> {
-				val type = types.computeIfAbsent(RemovedParticipantFromReviewFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<RemovedParticipantFromReviewFeedEventBean>>(data, type)
-				Webhook.RemovedParticipantFromReviewFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewCreatedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewCreatedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewCreatedFeedEventBean>>(data, type)
-				Webhook.ReviewCreatedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewDeadlineUpdatedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewDeadlineUpdatedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewDeadlineUpdatedFeedEventBean>>(data, type)
-				Webhook.ReviewDeadlineUpdatedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewLabelChangedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewLabelChangedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewLabelChangedEventBean>>(data, type)
-				Webhook.ReviewLabelChangedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewRemovedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewRemovedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewRemovedFeedEventBean>>(data, type)
-				Webhook.ReviewRemovedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewSquashedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewSquashedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewSquashedFeedEventBean>>(data, type)
-				Webhook.ReviewSquashedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewStateChangedFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewStateChangedFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewStateChangedFeedEventBean>>(data, type)
-				Webhook.ReviewStateChangedFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"ReviewStoppedBranchTrackingFeedEventBean" -> {
-				val type = types.computeIfAbsent(ReviewStoppedBranchTrackingFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<ReviewStoppedBranchTrackingFeedEventBean>>(data, type)
-				Webhook.ReviewStoppedBranchTrackingFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"RevisionAddedToReviewFeedEventBean" -> {
-				val type = types.computeIfAbsent(RevisionAddedToReviewFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<RevisionAddedToReviewFeedEventBean>>(data, type)
-				Webhook.RevisionAddedToReviewFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"RevisionRemovedFromReviewFeedEventBean" -> {
-				val type = types.computeIfAbsent(RevisionRemovedFromReviewFeedEventBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<RevisionRemovedFromReviewFeedEventBean>>(data, type)
-				Webhook.RevisionRemovedFromReviewFeedEventBeanWebhook(metadata, webhookData.data)
-			}
-
-			"UserIdBean" -> {
-				val type = types.computeIfAbsent(UserIdBean::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<UserIdBean>>(data, type)
-				Webhook.UserIdBeanWebhook(metadata, webhookData.data)
-			}
-
-			else -> Webhook.Unknown
-		}
+		val parser = parseMapping[metadata.dataType]
+			?: return Webhook.Unknown
+		return parser(metadata, data)
 	}
+
+	private fun parseDeleteBranchEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.DeleteBranchEventBeanWebhook {
+		val type = types.computeIfAbsent(DeleteBranchEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<DeleteBranchEventBean>>(data, type)
+		return Webhook.DeleteBranchEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseDiscussionFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.DiscussionFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(DiscussionFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<DiscussionFeedEventBean>>(data, type)
+		return Webhook.DiscussionFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.FeedEventBeanWebhook {
+		val type = types.computeIfAbsent(FeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<FeedEventBean>>(data, type)
+		return Webhook.FeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseMergedToDefaultBranchEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.MergedToDefaultBranchEventBeanWebhook {
+		val type = types.computeIfAbsent(MergedToDefaultBranchEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<MergedToDefaultBranchEventBean>>(data, type)
+		return Webhook.MergedToDefaultBranchEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseNewBranchEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.NewBranchEventBeanWebhook {
+		val type = types.computeIfAbsent(NewBranchEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<NewBranchEventBean>>(data, type)
+		return Webhook.NewBranchEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseNewParticipantInReviewFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.NewParticipantInReviewFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(NewParticipantInReviewFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<NewParticipantInReviewFeedEventBean>>(data, type)
+		return Webhook.NewParticipantInReviewFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseNewRevisionEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.NewRevisionEventBeanWebhook {
+		val type = types.computeIfAbsent(NewRevisionEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<NewRevisionEventBean>>(data, type)
+		return Webhook.NewRevisionEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseParticipantStateChangedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ParticipantStateChangedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ParticipantStateChangedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ParticipantStateChangedFeedEventBean>>(data, type)
+		return Webhook.ParticipantStateChangedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parsePullRequestMergedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.PullRequestMergedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(PullRequestMergedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<PullRequestMergedFeedEventBean>>(data, type)
+		return Webhook.PullRequestMergedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReactionToggledEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReactionToggledEventBeanWebhook {
+		val type = types.computeIfAbsent(ReactionToggledEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReactionToggledEventBean>>(data, type)
+		return Webhook.ReactionToggledEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseRemovedParticipantFromReviewFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.RemovedParticipantFromReviewFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(RemovedParticipantFromReviewFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<RemovedParticipantFromReviewFeedEventBean>>(data, type)
+		return Webhook.RemovedParticipantFromReviewFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewCreatedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewCreatedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewCreatedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewCreatedFeedEventBean>>(data, type)
+		return Webhook.ReviewCreatedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewDeadlineUpdatedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewDeadlineUpdatedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewDeadlineUpdatedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewDeadlineUpdatedFeedEventBean>>(data, type)
+		return Webhook.ReviewDeadlineUpdatedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewLabelChangedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewLabelChangedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewLabelChangedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewLabelChangedEventBean>>(data, type)
+		return Webhook.ReviewLabelChangedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewRemovedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewRemovedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewRemovedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewRemovedFeedEventBean>>(data, type)
+		return Webhook.ReviewRemovedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewSquashedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewSquashedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewSquashedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewSquashedFeedEventBean>>(data, type)
+		return Webhook.ReviewSquashedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewStateChangedFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewStateChangedFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewStateChangedFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewStateChangedFeedEventBean>>(data, type)
+		return Webhook.ReviewStateChangedFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseReviewStoppedBranchTrackingFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.ReviewStoppedBranchTrackingFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(ReviewStoppedBranchTrackingFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<ReviewStoppedBranchTrackingFeedEventBean>>(data, type)
+		return Webhook.ReviewStoppedBranchTrackingFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseRevisionAddedToReviewFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.RevisionAddedToReviewFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(RevisionAddedToReviewFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<RevisionAddedToReviewFeedEventBean>>(data, type)
+		return Webhook.RevisionAddedToReviewFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseRevisionRemovedFromReviewFeedEventBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.RevisionRemovedFromReviewFeedEventBeanWebhook {
+		val type = types.computeIfAbsent(RevisionRemovedFromReviewFeedEventBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<RevisionRemovedFromReviewFeedEventBean>>(data, type)
+		return Webhook.RevisionRemovedFromReviewFeedEventBeanWebhook(metadata, webhookData.data)
+	}
+
+	private fun parseUserIdBean(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.UserIdBeanWebhook {
+		val type = types.computeIfAbsent(UserIdBean::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue<WebhookData<UserIdBean>>(data, type)
+		return Webhook.UserIdBeanWebhook(metadata, webhookData.data)
+	}
+
 }
