@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes a GitHub / GitLab configuration problem
  */
+@Suppress("unused")
 enum class AppConfigurationProblemEnum(val value: Byte, val originalName: String) {
 	INCOMPATIBLE_HUB(value = 1, originalName = "IncompatibleHub"),
 	MISSING_AUTH_MODULE(value = 2, originalName = "MissingAuthModule");

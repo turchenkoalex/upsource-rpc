@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes participant status
  */
+@Suppress("unused")
 enum class ParticipantStateEnum(val value: Byte, val originalName: String) {
 	UNREAD(value = 1, originalName = "Unread"),
 	READ(value = 2, originalName = "Read"),

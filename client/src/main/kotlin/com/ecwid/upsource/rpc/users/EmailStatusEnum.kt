@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * Describes status of an email address
  */
+@Suppress("unused")
 enum class EmailStatusEnum(val value: Byte, val originalName: String) {
 	OK(value = 1, originalName = "OK"),
 	NOT_VERIFIED(value = 2, originalName = "NotVerified"),

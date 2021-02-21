@@ -5,6 +5,7 @@ package ${filePackage}
  * ${enum.description}
  */
 </#if>
+@Suppress("unused")
 enum class ${enum.name}(val value: Byte, val originalName: String) {
 <#list enum.values as value>
 	${value.name}(value = ${value.number}, originalName = "${value.originalName}")<#sep>,

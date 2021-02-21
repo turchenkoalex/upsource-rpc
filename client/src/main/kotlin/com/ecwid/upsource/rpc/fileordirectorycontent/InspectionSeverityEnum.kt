@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * Describes severity of an inspection result
  */
+@Suppress("unused")
 enum class InspectionSeverityEnum(val value: Byte, val originalName: String) {
 	INFORMATION(value = 1, originalName = "information"),
 	WEAK_WARNING(value = 2, originalName = "weak_warning"),

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes review feed sorting criteria
  */
+@Suppress("unused")
 enum class ReviewFeedSortEnum(val value: Byte, val originalName: String) {
 	NATURAL(value = 1, originalName = "Natural"),
 	LAST_UPDATED(value = 2, originalName = "LastUpdated");

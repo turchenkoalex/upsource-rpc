@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes project status
  */
+@Suppress("unused")
 enum class ProjectStateEnum(val value: Byte, val originalName: String) {
 	NOT_STARTED(value = 1, originalName = "NotStarted"),
 	INITIALIZING(value = 2, originalName = "Initializing"),

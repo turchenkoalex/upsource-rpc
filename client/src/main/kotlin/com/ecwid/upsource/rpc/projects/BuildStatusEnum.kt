@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes build status
  */
+@Suppress("unused")
 enum class BuildStatusEnum(val value: Byte, val originalName: String) {
 	SUCCESS(value = 1, originalName = "Success"),
 	FAILED(value = 2, originalName = "Failed"),

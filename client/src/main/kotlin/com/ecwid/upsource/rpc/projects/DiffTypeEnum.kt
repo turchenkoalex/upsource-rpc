@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes file-level diff type
  */
+@Suppress("unused")
 enum class DiffTypeEnum(val value: Byte, val originalName: String) {
 	ADDED(value = 1, originalName = "Added"),
 	REMOVED(value = 2, originalName = "Removed"),

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes status of a GitHub/GitLab synchronisation
  */
+@Suppress("unused")
 enum class SyncResultEnum(val value: Byte, val originalName: String) {
 	OK(value = 1, originalName = "Ok"),
 	PROJECT_NOT_SYNCHRONIZED(value = 2, originalName = "ProjectNotSynchronized"),

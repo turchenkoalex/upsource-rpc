@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes review state
  */
+@Suppress("unused")
 enum class ReviewStateEnum(val value: Byte, val originalName: String) {
 	OPEN(value = 1, originalName = "Open"),
 	CLOSED(value = 2, originalName = "Closed");

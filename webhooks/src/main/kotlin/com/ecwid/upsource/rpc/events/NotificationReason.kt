@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.events
 /**
  * Reason feed event appears in someone's feed
  */
+@Suppress("unused")
 enum class NotificationReason(val value: Byte, val originalName: String) {
 	UNKNOWN(value = 0, originalName = "Unknown"),
 	COMMENT_IN_AUTHOR_FEED(value = 1, originalName = "CommentInAuthorFeed"),

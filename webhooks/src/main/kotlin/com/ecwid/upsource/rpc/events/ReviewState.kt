@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.events
 /**
  * Review state
  */
+@Suppress("unused")
 enum class ReviewState(val value: Byte, val originalName: String) {
 	OPEN(value = 0, originalName = "Open"),
 	CLOSED(value = 1, originalName = "Closed");

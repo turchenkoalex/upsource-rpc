@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes revision status
  */
+@Suppress("unused")
 enum class RevisionStateEnum(val value: Byte, val originalName: String) {
 	NONE(value = 1, originalName = "None"),
 	FOUND(value = 2, originalName = "Found"),
