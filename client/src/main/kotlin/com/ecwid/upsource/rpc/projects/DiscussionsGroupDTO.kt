@@ -16,7 +16,7 @@ data class DiscussionsGroupDTO(
 
 	/**
 	 * Discussions contained in the file. See DiscussionsInFileDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.DiscussionsInFileDTO
 	 */
 	val discussions: DiscussionsInFileDTO

@@ -17,7 +17,7 @@ data class IssueRequiredFieldDTO(
 
 	/**
 	 * See IssueFieldDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldDTO
 	 */
 	val field: IssueFieldDTO,

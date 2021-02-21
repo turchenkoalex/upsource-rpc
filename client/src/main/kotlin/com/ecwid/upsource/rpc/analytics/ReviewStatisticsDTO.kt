@@ -64,7 +64,7 @@ data class ReviewStatisticsDTO(
 
 	/**
 	 * Discussion comments statistics. See CommentsStatisticsDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.CommentsStatisticsDTO
 	 */
 	val commentsStats: CommentsStatisticsDTO

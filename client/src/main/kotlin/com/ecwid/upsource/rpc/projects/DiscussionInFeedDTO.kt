@@ -31,28 +31,28 @@ data class DiscussionInFeedDTO(
 
 	/**
 	 * See AnchorDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See CommentDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.CommentDTO
 	 */
 	val comments: List<CommentDTO> = emptyList(),
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val review: ShortReviewInfoDTO? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList(),

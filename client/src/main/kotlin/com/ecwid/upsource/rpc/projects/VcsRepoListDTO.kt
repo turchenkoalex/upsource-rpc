@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.projects
 data class VcsRepoListDTO(
 	/**
 	 * See VcsRepoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.VcsRepoDTO
 	 */
 	val repo: List<VcsRepoDTO> = emptyList()

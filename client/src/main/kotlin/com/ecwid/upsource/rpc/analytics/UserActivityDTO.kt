@@ -11,14 +11,14 @@ package com.ecwid.upsource.rpc.analytics
 data class UserActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList(),
 
 	/**
 	 * See AnalyzerStats parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.AnalyzerStats
 	 */
 	val stats: AnalyzerStats

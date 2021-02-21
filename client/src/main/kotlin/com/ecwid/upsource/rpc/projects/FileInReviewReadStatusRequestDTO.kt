@@ -13,7 +13,7 @@ package com.ecwid.upsource.rpc.projects
 data class FileInReviewReadStatusRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
@@ -25,7 +25,7 @@ data class FileInReviewReadStatusRequestDTO(
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO,

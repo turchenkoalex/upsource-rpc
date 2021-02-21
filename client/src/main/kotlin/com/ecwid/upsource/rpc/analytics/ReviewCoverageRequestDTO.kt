@@ -17,7 +17,7 @@ data class ReviewCoverageRequestDTO(
 
 	/**
 	 * See TimeUnitEnum parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.TimeUnitEnum
 	 */
 	val period: TimeUnitEnum,

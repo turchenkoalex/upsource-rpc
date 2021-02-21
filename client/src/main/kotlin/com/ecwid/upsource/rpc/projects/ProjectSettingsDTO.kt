@@ -56,7 +56,7 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ProjectModel parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ProjectModel
 	 */
 	val projectModel: ProjectModel,
@@ -108,14 +108,14 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ExternalLinkDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
 	/**
 	 * See IssueTrackerProviderSettingsDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderSettingsDTO
 	 */
 	val issueTrackerProviderSettings: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderSettingsDTO? = null,

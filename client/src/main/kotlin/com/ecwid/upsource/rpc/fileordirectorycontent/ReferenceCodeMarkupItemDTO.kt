@@ -15,7 +15,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 data class ReferenceCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,

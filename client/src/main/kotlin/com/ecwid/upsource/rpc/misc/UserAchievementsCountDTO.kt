@@ -4,7 +4,7 @@
 package com.ecwid.upsource.rpc.misc
 
 /**
- * @param count 
+ * @param count
  */
 @Suppress("unused")
 data class UserAchievementsCountDTO(

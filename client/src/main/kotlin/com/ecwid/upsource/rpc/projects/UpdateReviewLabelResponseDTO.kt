@@ -16,7 +16,7 @@ data class UpdateReviewLabelResponseDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null

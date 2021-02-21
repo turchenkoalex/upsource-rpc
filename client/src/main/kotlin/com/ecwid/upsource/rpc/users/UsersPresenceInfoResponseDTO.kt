@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.users
 data class UsersPresenceInfoResponseDTO(
 	/**
 	 * See UserPresenceInfoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.users.UserPresenceInfoDTO
 	 */
 	val presences: List<UserPresenceInfoDTO> = emptyList()

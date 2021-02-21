@@ -13,7 +13,7 @@ package com.ecwid.upsource.rpc.projects
 data class ReviewSummaryChangesResponseDTO(
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionsDiffDTO
 	 */
 	val diff: RevisionsDiffDTO? = null,
@@ -30,7 +30,7 @@ data class ReviewSummaryChangesResponseDTO(
 
 	/**
 	 * See FileDiffSummaryDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.FileDiffSummaryDTO
 	 */
 	val fileDiffSummary: List<FileDiffSummaryDTO> = emptyList()

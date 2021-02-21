@@ -16,7 +16,7 @@ data class GetProjectSettingRequestDTO(
 
 	/**
 	 * See GetSettingRequestDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.misc.GetSettingRequestDTO
 	 */
 	val request: GetSettingRequestDTO

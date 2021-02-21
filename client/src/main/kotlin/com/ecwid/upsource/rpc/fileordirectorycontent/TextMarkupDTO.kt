@@ -16,7 +16,7 @@ data class TextMarkupDTO(
 
 	/**
 	 * See TextAttributeDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextAttributeDTO
 	 */
 	val textAttribute: TextAttributeDTO

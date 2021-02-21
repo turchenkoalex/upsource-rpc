@@ -11,14 +11,14 @@ package com.ecwid.upsource.rpc.findusages
 data class SameUsagesDTO(
 	/**
 	 * Old usage of the element. See FindUsagesItemDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.FindUsagesItemDTO
 	 */
 	val oldUsage: FindUsagesItemDTO,
 
 	/**
 	 * New usage of the element. See FindUsagesItemDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.FindUsagesItemDTO
 	 */
 	val newUsage: FindUsagesItemDTO

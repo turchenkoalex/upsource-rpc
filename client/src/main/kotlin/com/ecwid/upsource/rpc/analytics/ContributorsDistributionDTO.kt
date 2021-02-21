@@ -12,7 +12,7 @@ package com.ecwid.upsource.rpc.analytics
 data class ContributorsDistributionDTO(
 	/**
 	 * See CommitterTimeValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.CommitterTimeValue
 	 */
 	val items: List<CommitterTimeValue> = emptyList(),
@@ -24,7 +24,7 @@ data class ContributorsDistributionDTO(
 
 	/**
 	 * See CommitterUserInfo parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.CommitterUserInfo
 	 */
 	val users: List<CommitterUserInfo> = emptyList()

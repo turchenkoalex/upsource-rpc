@@ -15,14 +15,14 @@ package com.ecwid.upsource.rpc.projects
 data class CreateDiscussionRequestDTO(
 	/**
 	 * See AnchorDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
@@ -44,7 +44,7 @@ data class CreateDiscussionRequestDTO(
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList()

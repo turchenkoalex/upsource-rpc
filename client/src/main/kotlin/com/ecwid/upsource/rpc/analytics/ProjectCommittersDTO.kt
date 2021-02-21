@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.analytics
 data class ProjectCommittersDTO(
 	/**
 	 * See CommitterUserInfo parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.CommitterUserInfo
 	 */
 	val users: List<CommitterUserInfo> = emptyList()

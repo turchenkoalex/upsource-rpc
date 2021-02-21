@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.projects
 data class DiscussionsInRevisionDTO(
 	/**
 	 * See DiscussionsGroupDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.DiscussionsGroupDTO
 	 */
 	val groups: List<DiscussionsGroupDTO> = emptyList()

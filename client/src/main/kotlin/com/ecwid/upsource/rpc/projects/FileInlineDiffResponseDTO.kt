@@ -39,21 +39,21 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileContentTypeDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO
 	 */
 	val contentType: com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO,
@@ -95,7 +95,7 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See TextMarkupDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO
 	 */
 	val syntaxMarkup: List<com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO> = emptyList(),

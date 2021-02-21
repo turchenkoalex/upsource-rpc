@@ -15,7 +15,7 @@ package com.ecwid.upsource.rpc.projects
 data class FileMergeInlineDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,

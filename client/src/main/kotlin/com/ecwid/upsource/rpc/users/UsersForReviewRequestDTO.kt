@@ -14,14 +14,14 @@ package com.ecwid.upsource.rpc.users
 data class UsersForReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * See RoleInReviewEnum parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.users.RoleInReviewEnum
 	 */
 	val role: RoleInReviewEnum,

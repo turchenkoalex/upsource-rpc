@@ -11,14 +11,14 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionListGraphRowDTO(
 	/**
 	 * See RevisionListGraphNodeDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphNodeDTO
 	 */
 	val nodes: List<RevisionListGraphNodeDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphEdgeDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphEdgeDTO
 	 */
 	val edges: List<RevisionListGraphEdgeDTO> = emptyList()

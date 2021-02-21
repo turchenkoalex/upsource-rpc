@@ -16,7 +16,7 @@ data class EditLabelRequestDTO(
 
 	/**
 	 * See LabelDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val label: LabelDTO

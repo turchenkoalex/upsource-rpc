@@ -3,7 +3,7 @@ package ${filePackage}
 
 /**
 <#list message.fields as field>
- * @param ${field.name} ${field.description!""}
+ * @param ${field.name}<#if field.description?has_content> ${field.description!""}</#if>
 </#list>
  */
 @Suppress("unused")
@@ -12,7 +12,7 @@ data class ${message.name}(
 	<#if field.normalizedDescription?has_content>
 	/**
 	<#list field.normalizedDescription?split("\n") as descriptionLine>
-	 * ${descriptionLine}
+	 *<#if descriptionLine?has_content> ${descriptionLine}</#if>
 	</#list>
 	 */
 	</#if>

@@ -24,7 +24,7 @@ data class GotoFileRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,

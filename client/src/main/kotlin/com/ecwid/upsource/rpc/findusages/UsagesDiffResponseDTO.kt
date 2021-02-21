@@ -22,7 +22,7 @@ data class UsagesDiffResponseDTO(
 
 	/**
 	 * See UsagesDiffDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.UsagesDiffDTO
 	 */
 	val usages: List<UsagesDiffDTO> = emptyList()

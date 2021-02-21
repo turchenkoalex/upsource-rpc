@@ -13,14 +13,14 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionDescriptorListDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO? = null,

@@ -11,14 +11,14 @@ package com.ecwid.upsource.rpc.findusages
 data class UsagesDiffFullRequestDTO(
 	/**
 	 * Old element. See PsiElementIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val oldElement: PsiElementIdDTO,
 
 	/**
 	 * New element. See PsiElementIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val newElement: PsiElementIdDTO

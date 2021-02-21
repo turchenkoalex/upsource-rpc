@@ -33,7 +33,7 @@ data class FileMetaResponseDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val lastModifiedRevision: RevisionInfoDTO,
@@ -45,7 +45,7 @@ data class FileMetaResponseDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val deletedInRevision: RevisionInfoDTO? = null,
@@ -57,7 +57,7 @@ data class FileMetaResponseDTO(
 
 	/**
 	 * See RevisionInBranchDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInBranchDTO
 	 */
 	val modifiedInParallelBranches: List<RevisionInBranchDTO> = emptyList(),

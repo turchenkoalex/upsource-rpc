@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.users
 data class UserProjectsResponseDTO(
 	/**
 	 * See UserProjectInfoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.users.UserProjectInfoDTO
 	 */
 	val projects: List<UserProjectInfoDTO> = emptyList()

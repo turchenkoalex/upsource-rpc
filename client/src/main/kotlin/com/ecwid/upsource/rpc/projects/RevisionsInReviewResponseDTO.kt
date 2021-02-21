@@ -16,14 +16,14 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionsInReviewResponseDTO(
 	/**
 	 * See RevisionDescriptorListDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionDescriptorListDTO
 	 */
 	val allRevisions: RevisionDescriptorListDTO,
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val newRevisions: RevisionsSetDTO,

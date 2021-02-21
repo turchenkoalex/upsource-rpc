@@ -28,7 +28,7 @@ data class StacktracePositionDTO(
 
 	/**
 	 * See RangeDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val interpolatedRange: com.ecwid.upsource.rpc.ids.RangeDTO? = null

@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.projects
 data class ReviewOwnershipSummaryDTO(
 	/**
 	 * See FileOwnershipSummaryDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.FileOwnershipSummaryDTO
 	 */
 	val files: List<FileOwnershipSummaryDTO> = emptyList()

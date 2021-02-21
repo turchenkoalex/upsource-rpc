@@ -11,7 +11,7 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionDiscussionCountersRequestDTO(
 	/**
 	 * See RevisionListDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionListDTO
 	 */
 	val revisions: RevisionListDTO,

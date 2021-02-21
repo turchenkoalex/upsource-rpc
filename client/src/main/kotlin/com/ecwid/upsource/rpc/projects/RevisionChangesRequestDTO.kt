@@ -13,7 +13,7 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionChangesRequestDTO(
 	/**
 	 * See RevisionInProjectDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.RevisionInProjectDTO
 	 */
 	val revision: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO,

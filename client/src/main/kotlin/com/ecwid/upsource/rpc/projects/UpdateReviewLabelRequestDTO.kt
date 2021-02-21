@@ -17,14 +17,14 @@ data class UpdateReviewLabelRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * Review label being added or removed. See LabelDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val label: LabelDTO

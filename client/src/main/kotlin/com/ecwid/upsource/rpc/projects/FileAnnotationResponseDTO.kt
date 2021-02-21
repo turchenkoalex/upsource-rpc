@@ -11,14 +11,14 @@ package com.ecwid.upsource.rpc.projects
 data class FileAnnotationResponseDTO(
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.FileAnnotationSectionDTO
 	 */
 	val retrospective: List<FileAnnotationSectionDTO> = emptyList(),
 
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.FileAnnotationSectionDTO
 	 */
 	val perspective: List<FileAnnotationSectionDTO> = emptyList()

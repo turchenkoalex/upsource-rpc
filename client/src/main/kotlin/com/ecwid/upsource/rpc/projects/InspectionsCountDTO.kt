@@ -4,10 +4,10 @@
 package com.ecwid.upsource.rpc.projects
 
 /**
- * @param errors 
- * @param warnings 
- * @param weakWarnings 
- * @param infos 
+ * @param errors
+ * @param warnings
+ * @param weakWarnings
+ * @param infos
  */
 @Suppress("unused")
 data class InspectionsCountDTO(

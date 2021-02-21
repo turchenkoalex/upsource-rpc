@@ -12,14 +12,14 @@ package com.ecwid.upsource.rpc.projects
 data class UpdateParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val state: ParticipantStateEnum,

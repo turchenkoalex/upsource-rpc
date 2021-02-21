@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 data class InspectionsDiffDTO(
 	/**
 	 * See InspectionsDiffForFileDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionsDiffForFileDTO
 	 */
 	val diffForFile: List<InspectionsDiffForFileDTO> = emptyList()

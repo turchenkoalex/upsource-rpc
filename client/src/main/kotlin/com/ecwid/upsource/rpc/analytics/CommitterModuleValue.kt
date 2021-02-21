@@ -16,7 +16,7 @@ data class CommitterModuleValue(
 
 	/**
 	 * See ModuleValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.ModuleValue
 	 */
 	val items: List<ModuleValue> = emptyList()

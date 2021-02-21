@@ -12,7 +12,7 @@ package com.ecwid.upsource.rpc.analytics
 data class ProjectActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList(),
@@ -24,7 +24,7 @@ data class ProjectActivityDTO(
 
 	/**
 	 * See AnalyzerStats parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.AnalyzerStats
 	 */
 	val stats: AnalyzerStats

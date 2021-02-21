@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.issuetrackers
 data class IssueTrackerProvidersListDTO(
 	/**
 	 * See IssueTrackerProviderDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderDTO
 	 */
 	val providers: List<IssueTrackerProviderDTO> = emptyList()

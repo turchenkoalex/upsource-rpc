@@ -12,7 +12,7 @@ package com.ecwid.upsource.rpc.findusages
 data class UsagesDiffByAnotherRevisionRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,

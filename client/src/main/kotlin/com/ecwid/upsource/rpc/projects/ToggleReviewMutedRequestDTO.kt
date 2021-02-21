@@ -11,7 +11,7 @@ package com.ecwid.upsource.rpc.projects
 data class ToggleReviewMutedRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,

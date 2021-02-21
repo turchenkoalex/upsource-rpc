@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.projects
 data class RevisionReviewInfoDTO(
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val reviewInfo: ShortReviewInfoDTO? = null

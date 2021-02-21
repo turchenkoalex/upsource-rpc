@@ -15,14 +15,14 @@ package com.ecwid.upsource.rpc.projects
 data class CompareGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO,

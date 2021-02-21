@@ -26,7 +26,7 @@ data class BranchDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val lastRevision: RevisionInfoDTO,
@@ -38,7 +38,7 @@ data class BranchDTO(
 
 	/**
 	 * See BranchStatsDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.BranchStatsDTO
 	 */
 	val stats: BranchStatsDTO,

@@ -14,7 +14,7 @@ package com.ecwid.upsource.rpc.projects
 data class BranchListDTO(
 	/**
 	 * See BranchDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.BranchDTO
 	 */
 	val branch: List<BranchDTO> = emptyList(),

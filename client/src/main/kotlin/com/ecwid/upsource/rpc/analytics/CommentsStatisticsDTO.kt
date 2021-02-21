@@ -24,21 +24,21 @@ data class CommentsStatisticsDTO(
 
 	/**
 	 * See UserValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.UserValue
 	 */
 	val totalCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See UserValue parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.UserValue
 	 */
 	val unlabeledCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See LabelStats parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.LabelStats
 	 */
 	val statsPerLabel: List<LabelStats> = emptyList()

@@ -12,7 +12,7 @@ package com.ecwid.upsource.rpc.projects
 data class ToggleReactionRequestDTO(
 	/**
 	 * See ReactionTargetDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ReactionTargetDTO
 	 */
 	val target: ReactionTargetDTO,

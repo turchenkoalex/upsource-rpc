@@ -34,7 +34,7 @@ data class FileHistoryChartDTO(
 
 	/**
 	 * See FileHistoryFrameDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.analytics.FileHistoryFrameDTO
 	 */
 	val frames: List<FileHistoryFrameDTO> = emptyList()

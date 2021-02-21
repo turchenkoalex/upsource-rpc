@@ -16,7 +16,7 @@ data class FilePathToRootDTO(
 
 	/**
 	 * See ProjectItemsListDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.ProjectItemsListDTO
 	 */
 	val pathToRoot: com.ecwid.upsource.rpc.projects.ProjectItemsListDTO

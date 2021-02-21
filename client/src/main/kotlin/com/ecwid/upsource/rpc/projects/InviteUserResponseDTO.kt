@@ -11,7 +11,7 @@ package com.ecwid.upsource.rpc.projects
 data class InviteUserResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.UserRolesDTO
 	 */
 	val user: UserRolesDTO? = null,

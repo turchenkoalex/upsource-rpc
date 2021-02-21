@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.users
 data class UserInfoResponseDTO(
 	/**
 	 * See FullUserInfoDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.users.FullUserInfoDTO
 	 */
 	val infos: List<FullUserInfoDTO> = emptyList()

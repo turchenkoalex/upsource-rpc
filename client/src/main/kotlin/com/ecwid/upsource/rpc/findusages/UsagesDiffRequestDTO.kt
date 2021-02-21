@@ -12,21 +12,21 @@ package com.ecwid.upsource.rpc.findusages
 data class UsagesDiffRequestDTO(
 	/**
 	 * See UsagesDiffFullRequestDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.UsagesDiffFullRequestDTO
 	 */
 	val fullRequest: UsagesDiffFullRequestDTO? = null,
 
 	/**
 	 * See UsagesDiffByAnotherRevisionRequestDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.UsagesDiffByAnotherRevisionRequestDTO
 	 */
 	val requestByAnotherRevision: UsagesDiffByAnotherRevisionRequestDTO? = null,
 
 	/**
 	 * See UsagesDiffByBoundaryRevisionsRequestDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.findusages.UsagesDiffByBoundaryRevisionsRequestDTO
 	 */
 	val requestByBoundaryRevisions: UsagesDiffByBoundaryRevisionsRequestDTO? = null

@@ -21,21 +21,21 @@ data class RevisionDiffItemDTO(
 
 	/**
 	 * See DiffTypeEnum parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.DiffTypeEnum
 	 */
 	val diffType: DiffTypeEnum,
 
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,

@@ -4,7 +4,7 @@
 package com.ecwid.upsource.rpc.misc
 
 /**
- * @param text 
+ * @param text
  */
 @Suppress("unused")
 data class UserAgreementTextDTO(

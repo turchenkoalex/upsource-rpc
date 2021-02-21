@@ -26,28 +26,28 @@ data class FilePsiResponseDTO(
 
 	/**
 	 * See FileReferenceCodeMarkupDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileReferenceCodeMarkupDTO
 	 */
 	val referenceMarkup: FileReferenceCodeMarkupDTO? = null,
 
 	/**
 	 * See FileTextMarkupDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileTextMarkupDTO
 	 */
 	val textMarkup: FileTextMarkupDTO? = null,
 
 	/**
 	 * See GutterCodeMarkupsDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterCodeMarkupsDTO
 	 */
 	val gutterMarks: GutterCodeMarkupsDTO? = null,
 
 	/**
 	 * See CodeInspectionsDTO parameters (optional)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.CodeInspectionsDTO
 	 */
 	val inspections: CodeInspectionsDTO? = null,

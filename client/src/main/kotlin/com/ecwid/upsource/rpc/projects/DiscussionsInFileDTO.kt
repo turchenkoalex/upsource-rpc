@@ -10,7 +10,7 @@ package com.ecwid.upsource.rpc.projects
 data class DiscussionsInFileDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)
-	 * 
+	 *
 	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFileDTO
 	 */
 	val discussions: List<DiscussionInFileDTO> = emptyList()
