@@ -15,7 +15,7 @@ private val log = Logger.getLogger(GsonSerializer::class.qualifiedName)
 class GsonSerializer : Serializer {
 
 	private val gsonMap = ConcurrentHashMap<Class<*>, Pair<Gson, Type>>()
-	private val genericGson = genericGsonBuiler().create()
+	private val genericGson = genericGsonBuilder().create()
 
 	override fun serialize(request: Any): String {
 		return genericGson.toJson(request)

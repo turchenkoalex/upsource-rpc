@@ -5,114 +5,40 @@ package com.ecwid.upsource.serializer.gson
 
 import com.google.gson.GsonBuilder
 
-internal fun genericGsonBuiler(): GsonBuilder {
-	return GsonBuilder()
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.AnalyzerProblemSeverityEnum::class.java,
-			com.ecwid.upsource.rpc.projects.AnalyzerProblemSeverityEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.AppConfigurationProblemEnum::class.java,
-			com.ecwid.upsource.rpc.projects.AppConfigurationProblemEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.BuildStatusEnum::class.java,
-			com.ecwid.upsource.rpc.projects.BuildStatusEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnum::class.java,
-			com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ConflictTypeEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ConflictTypeEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.DiffTypeEnum::class.java,
-			com.ecwid.upsource.rpc.projects.DiffTypeEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.users.EmailStatusEnum::class.java,
-			com.ecwid.upsource.rpc.users.EmailStatusEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.FeedTypeEnum::class.java,
-			com.ecwid.upsource.rpc.projects.FeedTypeEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnum::class.java,
-			com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnum::class.java,
-			com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum::class.java,
-			com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldTypeEnum::class.java,
-			com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldTypeEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.OwnershipSummaryEnum::class.java,
-			com.ecwid.upsource.rpc.projects.OwnershipSummaryEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ParticipantStateEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ParticipantStateEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ProjectStateEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ProjectStateEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ReadEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ReadEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.analytics.ReviewCoverageStateEnum::class.java,
-			com.ecwid.upsource.rpc.analytics.ReviewCoverageStateEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ReviewFeedSortEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ReviewFeedSortEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.ReviewStateEnum::class.java,
-			com.ecwid.upsource.rpc.projects.ReviewStateEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.RevisionReachabilityEnum::class.java,
-			com.ecwid.upsource.rpc.projects.RevisionReachabilityEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.RevisionStateEnum::class.java,
-			com.ecwid.upsource.rpc.projects.RevisionStateEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.users.RoleInReviewEnum::class.java,
-			com.ecwid.upsource.rpc.users.RoleInReviewEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.SyncResultEnum::class.java,
-			com.ecwid.upsource.rpc.projects.SyncResultEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.projects.TestConnectionStatusEnum::class.java,
-			com.ecwid.upsource.rpc.projects.TestConnectionStatusEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.misc.TestPOP3MailboxStatusEnum::class.java,
-			com.ecwid.upsource.rpc.misc.TestPOP3MailboxStatusEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.analytics.TimeUnitEnum::class.java,
-			com.ecwid.upsource.rpc.analytics.TimeUnitEnumTypeAdapter()
-		)
-		.registerTypeAdapter(
-			com.ecwid.upsource.rpc.misc.WebhookEventEnum::class.java,
-			com.ecwid.upsource.rpc.misc.WebhookEventEnumTypeAdapter()
-		)
+private val adapters = listOf(
+	com.ecwid.upsource.rpc.projects.AnalyzerProblemSeverityEnum::class.java to com.ecwid.upsource.rpc.projects.AnalyzerProblemSeverityEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.AppConfigurationProblemEnum::class.java to com.ecwid.upsource.rpc.projects.AppConfigurationProblemEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.BuildStatusEnum::class.java to com.ecwid.upsource.rpc.projects.BuildStatusEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnum::class.java to com.ecwid.upsource.rpc.fileordirectorycontent.CapabilityFlagsEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ConflictTypeEnum::class.java to com.ecwid.upsource.rpc.projects.ConflictTypeEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.DiffTypeEnum::class.java to com.ecwid.upsource.rpc.projects.DiffTypeEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.users.EmailStatusEnum::class.java to com.ecwid.upsource.rpc.users.EmailStatusEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.FeedTypeEnum::class.java to com.ecwid.upsource.rpc.projects.FeedTypeEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnum::class.java to com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnum::class.java to com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnum::class.java to com.ecwid.upsource.rpc.fileordirectorycontent.InspectionSeverityEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldTypeEnum::class.java to com.ecwid.upsource.rpc.issuetrackers.IssueRequiredFieldTypeEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.OwnershipSummaryEnum::class.java to com.ecwid.upsource.rpc.projects.OwnershipSummaryEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ParticipantStateEnum::class.java to com.ecwid.upsource.rpc.projects.ParticipantStateEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ProjectStateEnum::class.java to com.ecwid.upsource.rpc.projects.ProjectStateEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ReadEnum::class.java to com.ecwid.upsource.rpc.projects.ReadEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.analytics.ReviewCoverageStateEnum::class.java to com.ecwid.upsource.rpc.analytics.ReviewCoverageStateEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ReviewFeedSortEnum::class.java to com.ecwid.upsource.rpc.projects.ReviewFeedSortEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.ReviewStateEnum::class.java to com.ecwid.upsource.rpc.projects.ReviewStateEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.RevisionReachabilityEnum::class.java to com.ecwid.upsource.rpc.projects.RevisionReachabilityEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.RevisionStateEnum::class.java to com.ecwid.upsource.rpc.projects.RevisionStateEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.users.RoleInReviewEnum::class.java to com.ecwid.upsource.rpc.users.RoleInReviewEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.SyncResultEnum::class.java to com.ecwid.upsource.rpc.projects.SyncResultEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.projects.TestConnectionStatusEnum::class.java to com.ecwid.upsource.rpc.projects.TestConnectionStatusEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.misc.TestPOP3MailboxStatusEnum::class.java to com.ecwid.upsource.rpc.misc.TestPOP3MailboxStatusEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.analytics.TimeUnitEnum::class.java to com.ecwid.upsource.rpc.analytics.TimeUnitEnumTypeAdapter(),
+	com.ecwid.upsource.rpc.misc.WebhookEventEnum::class.java to com.ecwid.upsource.rpc.misc.WebhookEventEnumTypeAdapter(),
+)
+
+internal fun genericGsonBuilder(): GsonBuilder {
+	return GsonBuilder().apply {
+		adapters.forEach { (clazz, adapter) ->
+			registerTypeAdapter(clazz, adapter)
+		}
+	}
 }

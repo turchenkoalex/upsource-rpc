@@ -2,12 +2,16 @@ package ${filePackage}
 
 import com.google.gson.GsonBuilder
 
-internal fun genericGsonBuiler(): GsonBuilder {
-	return GsonBuilder()
+private val adapters = listOf(
 <#list types as type>
-		.registerTypeAdapter(
-			${type}::class.java,
-			${type}TypeAdapter()
-		)
+	${type}::class.java to ${type}TypeAdapter(),
 </#list>
+)
+
+internal fun genericGsonBuilder(): GsonBuilder {
+	return GsonBuilder().apply {
+		adapters.forEach { (clazz, adapter) ->
+			registerTypeAdapter(clazz, adapter)
+		}
+	}
 }
