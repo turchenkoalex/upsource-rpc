@@ -17,7 +17,7 @@ internal class JacksonWebhookParser : WebhookParser {
 		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 		.registerModule(buildUpsourceModule())
 		.registerKotlinModule()
-	private val types = ConcurrentHashMap<Class<*>, JavaType>()
+	private val types = ConcurrentHashMap${"<Class<*>, JavaType>"}()
 
 	override fun parse(data: String): Webhook {
 		val metadata = objectMapper.readValue(data, WebhookMetadata::class.java)
@@ -27,7 +27,7 @@ internal class JacksonWebhookParser : WebhookParser {
 				val type = types.computeIfAbsent(${type}::class.java) {
 					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
 				}
-				val webhookData = objectMapper.readValue<WebhookData<${type}>>(data, type)
+				val webhookData = objectMapper.readValue${"<WebhookData<${type}>>"}(data, type)
 				Webhook.${type}Webhook(metadata, webhookData.data)
 			}
 
