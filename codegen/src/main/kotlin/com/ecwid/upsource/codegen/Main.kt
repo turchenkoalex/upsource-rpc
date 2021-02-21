@@ -1,65 +1,38 @@
 package com.ecwid.upsource.codegen
 
-import com.ecwid.upsource.codegen.filewriter.DiskFileWriter
-import com.ecwid.upsource.codegen.filewriter.DryRunFileWriter
-import com.ecwid.upsource.codegen.generator.CodeGenerator
-import com.ecwid.upsource.codegen.resources.Resources
-import com.ecwid.upsource.codegen.templates.Templates
-import java.util.logging.Logger
-import kotlin.system.exitProcess
+private val UPSOURCE_CLIENT_JSON_FILES = listOf(
+	"Ids.json",
+	"Projects.json",
+	"Users.json",
+	"IssueTrackers.json",
+	"Misc.json",
+	"Analytics.json",
+	"FindUsages.json",
+	"FileOrDirectoryContent.json",
+	"Service.json"
+)
 
-private val log = Logger.getLogger("codegen")
+private val UPSOURCE_WEBHOOK_JSON_FILES = listOf(
+	"Events.json"
+)
 
 fun main(args: Array<String>) {
 	System.setProperty("java.util.logging.SimpleFormatter.format", "[%1\$tF %1\$tT] [%4\$s] %5\$s%n")
 
 	val config = parseArgs(args)
 
-	log.info("Start generator with config $config")
-
-	val dryRunFileWriter = DryRunFileWriter()
-	val fileWriter = if (config.dryRun) {
-		dryRunFileWriter
+	val generator = if (config.dryRun) {
+		DryRunGeneratorRunner(
+			clientJsonFiles = UPSOURCE_CLIENT_JSON_FILES,
+			webhooksJsonFiles = UPSOURCE_WEBHOOK_JSON_FILES
+		)
 	} else {
-		DiskFileWriter()
+		DiskGeneratorRunner(
+			clientJsonFiles = UPSOURCE_CLIENT_JSON_FILES,
+			webhooksJsonFiles = UPSOURCE_WEBHOOK_JSON_FILES
+		)
 	}
 
-	val codeGenerator = CodeGenerator(
-		config = config,
-		templates = Templates(),
-		fileWriter = fileWriter
-	)
-
-	val upsourceFileLoader = UpsourceFileLoader(Resources())
-	val clientFiles = listOf(
-		"Ids.json",
-		"Projects.json",
-		"Users.json",
-		"IssueTrackers.json",
-		"Misc.json",
-		"Analytics.json",
-		"FindUsages.json",
-		"FileOrDirectoryContent.json",
-		"Service.json"
-	).map(upsourceFileLoader::loadUpsourceFile)
-
-	val webhooksFiles = listOf(
-		"Events.json"
-	).map(upsourceFileLoader::loadUpsourceFile)
-
-	codeGenerator.generateClient(clientFiles)
-	codeGenerator.generateWebhook(webhooksFiles)
-
-	if (!config.dryRun) {
-		log.info("All files generated")
-		return
-	}
-
-	if (dryRunFileWriter.hasChanges()) {
-		log.warning("Dry run failed:")
-		log.warning(dryRunFileWriter.report())
-		exitProcess(1)
-	} else {
-		log.info("No changes detected")
-	}
+	generator.run(config)
 }
+

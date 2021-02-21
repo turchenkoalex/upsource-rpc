@@ -33,7 +33,6 @@ class TypeMapping(
 		return "${enum.name}.${firstValue.name}"
 	}
 
-
 	fun findPackage(typeName: String): String? {
 		return typePackages[typeName]
 	}
