@@ -7,18 +7,19 @@ package com.ecwid.upsource.rpc.projects
  * @param nodes See RevisionListGraphNodeDTO parameters
  * @param edges See RevisionListGraphEdgeDTO parameters
  */
+@Suppress("unused")
 data class RevisionListGraphRowDTO(
 	/**
 	 * See RevisionListGraphNodeDTO parameters (repeated)
-	 * 
-	 * @see RevisionListGraphNodeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphNodeDTO
 	 */
 	val nodes: List<RevisionListGraphNodeDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphEdgeDTO parameters (repeated)
-	 * 
-	 * @see RevisionListGraphEdgeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphEdgeDTO
 	 */
 	val edges: List<RevisionListGraphEdgeDTO> = emptyList()
 )

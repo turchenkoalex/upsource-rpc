@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.events
 /**
  * Review participant state
  */
+@Suppress("unused")
 enum class ParticipantState(val value: Byte, val originalName: String) {
 	UNREAD(value = 0, originalName = "Unread"),
 	READ(value = 1, originalName = "Read"),

@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param filePath A full path to the file starting with a slash (e.g. /directory/file.txt)
  * @param priorChangeAnnotation A reference to the prior revision of this section (only revision and file, but not the line number / line count)
  */
+@Suppress("unused")
 data class FileAnnotationSectionDTO(
 	/**
 	 * Line number to start with (required)
@@ -23,8 +24,8 @@ data class FileAnnotationSectionDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 
@@ -38,6 +39,7 @@ data class FileAnnotationSectionDTO(
 	 */
 	val priorChangeAnnotation: FileAnnotationSectionDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		startLine = 0,
 		lineCount = 0,
@@ -46,3 +48,4 @@ data class FileAnnotationSectionDTO(
 		priorChangeAnnotation = null
 	)
 }
+

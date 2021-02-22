@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param fromTime Unix timestamp
  * @param toTime Unix timestamp
  */
+@Suppress("unused")
 data class ReviewStatisticsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class ReviewStatisticsRequestDTO(
 	 */
 	val toTime: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = null,
 		toTime = null
 	)
 }
+

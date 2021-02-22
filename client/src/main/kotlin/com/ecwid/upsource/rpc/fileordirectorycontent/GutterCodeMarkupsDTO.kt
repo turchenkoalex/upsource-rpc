@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param items See GutterCodeMarkupItemDTO parameters
  */
+@Suppress("unused")
 data class GutterCodeMarkupsDTO(
 	/**
 	 * See GutterCodeMarkupItemDTO parameters (repeated)
-	 * 
-	 * @see GutterCodeMarkupItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterCodeMarkupItemDTO
 	 */
 	val items: List<GutterCodeMarkupItemDTO> = emptyList()
 )

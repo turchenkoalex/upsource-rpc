@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.projects
  * @param addedLines How many lines were added
  * @param removedLines How many lines were deleted
  */
+@Suppress("unused")
 data class FileDiffSummaryDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -26,9 +27,11 @@ data class FileDiffSummaryDTO(
 	 */
 	val removedLines: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		addedLines = 0,
 		removedLines = 0
 	)
 }
+

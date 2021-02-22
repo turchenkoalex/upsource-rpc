@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.projects
  * @param limit History size limit
  * @param skip Number of history entries (file revisions) to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class FileHistoryRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -26,9 +27,11 @@ data class FileHistoryRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		limit = 0,
 		skip = null
 	)
 }
+

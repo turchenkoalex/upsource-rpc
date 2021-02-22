@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param introduced Count of introduced problems
  * @param fixed Count of fixed problems
  */
+@Suppress("unused")
 data class FileExternalInspectionsDiffResponseDTO(
 	/**
 	 * Name of the file containing differing inspections (required)
@@ -24,9 +25,11 @@ data class FileExternalInspectionsDiffResponseDTO(
 	 */
 	val fixed: InspectionsCountDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = "",
 		introduced = null,
 		fixed = null
 	)
 }
+

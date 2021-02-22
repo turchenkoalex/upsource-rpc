@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param project See ShortProjectInfoDTO parameters
  */
+@Suppress("unused")
 data class ShortProjectInfoListDTO(
 	/**
 	 * See ShortProjectInfoDTO parameters (repeated)
-	 * 
-	 * @see ShortProjectInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ShortProjectInfoDTO
 	 */
 	val project: List<ShortProjectInfoDTO> = emptyList()
 )

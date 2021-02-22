@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param reviewInfo See RevisionReviewInfoDTO parameters
  */
+@Suppress("unused")
 data class RevisionReviewInfoListDTO(
 	/**
 	 * See RevisionReviewInfoDTO parameters (repeated)
-	 * 
-	 * @see RevisionReviewInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionReviewInfoDTO
 	 */
 	val reviewInfo: List<RevisionReviewInfoDTO> = emptyList()
 )

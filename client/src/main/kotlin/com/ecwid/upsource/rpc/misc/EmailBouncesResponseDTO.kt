@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param emails Emails with either a "soft bounce" or a "hard bounce" status
  */
+@Suppress("unused")
 data class EmailBouncesResponseDTO(
 	/**
 	 * Emails with either a "soft bounce" or a "hard bounce" status (repeated)

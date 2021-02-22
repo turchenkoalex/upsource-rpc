@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param isFlagged Pass 'true' to close a review, 'false' to reopen a closed review
  */
+@Suppress("unused")
 data class CloseReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -20,8 +21,10 @@ data class CloseReviewRequestDTO(
 	 */
 	val isFlagged: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		isFlagged = false
 	)
 }
+

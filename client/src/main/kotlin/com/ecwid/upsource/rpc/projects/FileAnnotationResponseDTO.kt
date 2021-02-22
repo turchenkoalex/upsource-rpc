@@ -7,18 +7,19 @@ package com.ecwid.upsource.rpc.projects
  * @param retrospective See FileAnnotationSectionDTO parameters
  * @param perspective See FileAnnotationSectionDTO parameters
  */
+@Suppress("unused")
 data class FileAnnotationResponseDTO(
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
-	 * 
-	 * @see FileAnnotationSectionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileAnnotationSectionDTO
 	 */
 	val retrospective: List<FileAnnotationSectionDTO> = emptyList(),
 
 	/**
 	 * See FileAnnotationSectionDTO parameters (repeated)
-	 * 
-	 * @see FileAnnotationSectionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileAnnotationSectionDTO
 	 */
 	val perspective: List<FileAnnotationSectionDTO> = emptyList()
 )

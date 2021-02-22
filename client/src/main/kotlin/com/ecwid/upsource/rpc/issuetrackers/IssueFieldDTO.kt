@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param defaultValueId Default value
  * @param value See IssueFieldValueDTO parameters
  */
+@Suppress("unused")
 data class IssueFieldDTO(
 	/**
 	 * Field ID (required)
@@ -27,11 +28,12 @@ data class IssueFieldDTO(
 
 	/**
 	 * See IssueFieldValueDTO parameters (repeated)
-	 * 
-	 * @see IssueFieldValueDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldValueDTO
 	 */
 	val value: List<IssueFieldValueDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		name = "",
@@ -39,3 +41,4 @@ data class IssueFieldDTO(
 		value = emptyList()
 	)
 }
+

@@ -9,11 +9,12 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionsSetDTO parameters
  * @param markAsUnread Pass 'true' to mark the file as unread
  */
+@Suppress("unused")
 data class FileInReviewReadStatusRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -24,8 +25,8 @@ data class FileInReviewReadStatusRequestDTO(
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
-	 * 
-	 * @see RevisionsSetDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO,
 
@@ -34,6 +35,7 @@ data class FileInReviewReadStatusRequestDTO(
 	 */
 	val markAsUnread: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		file = "",
@@ -41,3 +43,4 @@ data class FileInReviewReadStatusRequestDTO(
 		markAsUnread = null
 	)
 }
+

@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param inspections See InspectionCodeMarkupItemDTO parameters
  * @param fileLevel See FileWarningLevelEnum parameters
  */
+@Suppress("unused")
 data class CodeInspectionsDTO(
 	/**
 	 * See InspectionCodeMarkupItemDTO parameters (repeated)
-	 * 
-	 * @see InspectionCodeMarkupItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionCodeMarkupItemDTO
 	 */
 	val inspections: List<InspectionCodeMarkupItemDTO> = emptyList(),
 
 	/**
 	 * See FileWarningLevelEnum parameters (required)
-	 * 
-	 * @see FileWarningLevelEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileWarningLevelEnum
 	 */
 	val fileLevel: FileWarningLevelEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		inspections = emptyList(),
 		fileLevel = FileWarningLevelEnum.NONE
 	)
 }
+

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param pathToLeftSize The number of revisions to the left locator
  * @param pathToRightSize The number of revisions to the right locator
  */
+@Suppress("unused")
 data class BranchingRevisionSuggestion(
 	/**
 	 * Revision ID to suggest (required)
@@ -24,9 +25,11 @@ data class BranchingRevisionSuggestion(
 	 */
 	val pathToRightSize: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		pathToLeftSize = 0,
 		pathToRightSize = 0
 	)
 }
+

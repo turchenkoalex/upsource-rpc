@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param branch Branch name
  */
+@Suppress("unused")
 data class ReviewStoppedBranchTrackingFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -18,8 +19,10 @@ data class ReviewStoppedBranchTrackingFeedEventBean(
 	 */
 	val branch: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		branch = ""
 	)
 }
+

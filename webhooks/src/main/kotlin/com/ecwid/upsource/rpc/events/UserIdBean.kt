@@ -4,10 +4,11 @@
 package com.ecwid.upsource.rpc.events
 
 /**
- * @param userId 
- * @param userName 
- * @param userEmail 
+ * @param userId
+ * @param userName
+ * @param userEmail
  */
+@Suppress("unused")
 data class UserIdBean(
 	val userId: String? = null,
 

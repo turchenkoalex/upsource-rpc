@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param label Review label being added or removed. See LabelDTO parameters
  */
+@Suppress("unused")
 data class UpdateReviewLabelRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,21 +17,23 @@ data class UpdateReviewLabelRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
 	/**
 	 * Review label being added or removed. See LabelDTO parameters (required)
-	 * 
-	 * @see LabelDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val label: LabelDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		reviewId = null,
 		label = LabelDTO()
 	)
 }
+

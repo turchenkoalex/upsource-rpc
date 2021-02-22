@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param name Group name
  * @param usersCount Number of users participating in this group
  */
+@Suppress("unused")
 data class UserGroupDTO(
 	/**
 	 * Group ID (required)
@@ -24,9 +25,11 @@ data class UserGroupDTO(
 	 */
 	val usersCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		name = "",
 		usersCount = 0
 	)
 }
+

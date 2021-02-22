@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.projects
  * @param oldState See ReviewStateEnum parameters
  * @param newState See ReviewStateEnum parameters
  */
+@Suppress("unused")
 data class ReviewStateChangedDTO(
 	/**
 	 * See ReviewStateEnum parameters (required)
-	 * 
-	 * @see ReviewStateEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ReviewStateEnum
 	 */
 	val oldState: ReviewStateEnum,
 
 	/**
 	 * See ReviewStateEnum parameters (required)
-	 * 
-	 * @see ReviewStateEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ReviewStateEnum
 	 */
 	val newState: ReviewStateEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldState = ReviewStateEnum.OPEN,
 		newState = ReviewStateEnum.OPEN
 	)
 }
+

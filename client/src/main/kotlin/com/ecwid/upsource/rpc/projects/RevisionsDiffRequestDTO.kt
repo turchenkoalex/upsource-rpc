@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param baseRevision ID of the base revision
  * @param secondRevision ID of the revision that should be compared to the base revision
  */
+@Suppress("unused")
 data class RevisionsDiffRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class RevisionsDiffRequestDTO(
 	 */
 	val secondRevision: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		baseRevision = "",
 		secondRevision = ""
 	)
 }
+

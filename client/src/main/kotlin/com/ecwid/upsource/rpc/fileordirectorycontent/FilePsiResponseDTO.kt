@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param inspections See CodeInspectionsDTO parameters
  * @param externalInspections External inspections
  */
+@Suppress("unused")
 data class FilePsiResponseDTO(
 	/**
 	 * Whether the code model is available for a file (optional)
@@ -25,29 +26,29 @@ data class FilePsiResponseDTO(
 
 	/**
 	 * See FileReferenceCodeMarkupDTO parameters (optional)
-	 * 
-	 * @see FileReferenceCodeMarkupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileReferenceCodeMarkupDTO
 	 */
 	val referenceMarkup: FileReferenceCodeMarkupDTO? = null,
 
 	/**
 	 * See FileTextMarkupDTO parameters (optional)
-	 * 
-	 * @see FileTextMarkupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileTextMarkupDTO
 	 */
 	val textMarkup: FileTextMarkupDTO? = null,
 
 	/**
 	 * See GutterCodeMarkupsDTO parameters (optional)
-	 * 
-	 * @see GutterCodeMarkupsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterCodeMarkupsDTO
 	 */
 	val gutterMarks: GutterCodeMarkupsDTO? = null,
 
 	/**
 	 * See CodeInspectionsDTO parameters (optional)
-	 * 
-	 * @see CodeInspectionsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.CodeInspectionsDTO
 	 */
 	val inspections: CodeInspectionsDTO? = null,
 

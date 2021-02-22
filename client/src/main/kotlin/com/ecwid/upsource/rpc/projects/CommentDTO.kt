@@ -17,6 +17,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isRead Whether the comment has been read by the requester
  * @param reactions Reactions added to the comment
  */
+@Suppress("unused")
 data class CommentDTO(
 	/**
 	 * ID of the discussion (required)
@@ -65,8 +66,8 @@ data class CommentDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
-	 * 
-	 * @see SyncResultEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null,
 
@@ -80,6 +81,7 @@ data class CommentDTO(
 	 */
 	val reactions: List<ReactionDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		commentId = "",
@@ -95,3 +97,4 @@ data class CommentDTO(
 		reactions = emptyList()
 	)
 }
+

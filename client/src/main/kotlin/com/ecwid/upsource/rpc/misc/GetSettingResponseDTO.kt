@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param value User setting value
  */
+@Suppress("unused")
 data class GetSettingResponseDTO(
 	/**
 	 * User setting value (optional)

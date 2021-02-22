@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionInfoDTO parameters
  * @param graph See RevisionListGraphDTO parameters
  */
+@Suppress("unused")
 data class BranchGraphDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revisions: List<RevisionInfoDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (required)
-	 * 
-	 * @see RevisionListGraphDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisions = emptyList(),
 		graph = RevisionListGraphDTO()
 	)
 }
+

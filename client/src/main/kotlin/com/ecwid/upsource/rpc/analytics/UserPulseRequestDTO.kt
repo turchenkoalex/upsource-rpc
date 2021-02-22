@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param toTime Unix timestamp
  * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
  */
+@Suppress("unused")
 data class UserPulseRequestDTO(
 	/**
 	 * Upsource user ID (required)
@@ -30,6 +31,7 @@ data class UserPulseRequestDTO(
 	 */
 	val timePoints: List<Long> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		fromTime = 0L,
@@ -37,3 +39,4 @@ data class UserPulseRequestDTO(
 		timePoints = emptyList()
 	)
 }
+

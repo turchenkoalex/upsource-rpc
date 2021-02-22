@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param deadline Review due date (Unix timestamp)
  */
+@Suppress("unused")
 data class ReviewDeadlineRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -20,8 +21,10 @@ data class ReviewDeadlineRequestDTO(
 	 */
 	val deadline: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		deadline = null
 	)
 }
+

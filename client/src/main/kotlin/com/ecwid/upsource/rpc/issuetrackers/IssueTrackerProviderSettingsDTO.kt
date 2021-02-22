@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param providerKey Issue tracker provider key ("YouTrack", "JIRA")
  * @param settings Settings used to set up the integration (e.g server URL, login credentials, project ID in the issue tracker)
  */
+@Suppress("unused")
 data class IssueTrackerProviderSettingsDTO(
 	/**
 	 * Issue tracker provider key ("YouTrack", "JIRA") (required)
@@ -18,8 +19,10 @@ data class IssueTrackerProviderSettingsDTO(
 	 */
 	val settings: List<IssueTrackerProviderSettingDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		providerKey = "",
 		settings = emptyList()
 	)
 }
+

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.misc
 /**
  * Describes connection status
  */
+@Suppress("unused")
 enum class TestPOP3MailboxStatusEnum(val value: Byte, val originalName: String) {
 	OK(value = 1, originalName = "OK"),
 	LOGIN_FAILED(value = 2, originalName = "LoginFailed"),

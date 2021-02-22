@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isRead Whether the diff has been viewed by the user. When returned by the findCommits method, isRead is always set to 'true'.
  * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
  */
+@Suppress("unused")
 data class RevisionDiffItemDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -20,22 +21,22 @@ data class RevisionDiffItemDTO(
 
 	/**
 	 * See DiffTypeEnum parameters (required)
-	 * 
-	 * @see DiffTypeEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.DiffTypeEnum
 	 */
 	val diffType: DiffTypeEnum,
 
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
@@ -54,6 +55,7 @@ data class RevisionDiffItemDTO(
 	 */
 	val conflictType: ConflictTypeEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		diffType = DiffTypeEnum.ADDED,
@@ -64,3 +66,4 @@ data class RevisionDiffItemDTO(
 		conflictType = null
 	)
 }
+

@@ -17,6 +17,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isResolved Whether the discussion is resolved
  * @param resolvedBy If the discussion is resolved, contains the ID of the user who resolved it
  */
+@Suppress("unused")
 data class DiscussionInFeedDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -30,29 +31,29 @@ data class DiscussionInFeedDTO(
 
 	/**
 	 * See AnchorDTO parameters (required)
-	 * 
-	 * @see AnchorDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See CommentDTO parameters (repeated)
-	 * 
-	 * @see CommentDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.CommentDTO
 	 */
 	val comments: List<CommentDTO> = emptyList(),
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
-	 * 
-	 * @see ShortReviewInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val review: ShortReviewInfoDTO? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
-	 * 
-	 * @see LabelDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList(),
 
@@ -86,6 +87,7 @@ data class DiscussionInFeedDTO(
 	 */
 	val resolvedBy: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",
@@ -101,3 +103,4 @@ data class DiscussionInFeedDTO(
 		resolvedBy = null
 	)
 }
+

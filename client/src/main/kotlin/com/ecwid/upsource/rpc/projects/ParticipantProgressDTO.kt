@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param readFilesCount Number of files that were viewed by the participant
  * @param lastSeenTimestamp Unix timestamp of the last viewing
  */
+@Suppress("unused")
 data class ParticipantProgressDTO(
 	/**
 	 * User ID of the review participant (required)
@@ -24,9 +25,11 @@ data class ParticipantProgressDTO(
 	 */
 	val lastSeenTimestamp: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		readFilesCount = 0,
 		lastSeenTimestamp = 0L
 	)
 }
+

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param reviewKey Review ID
  * @param fieldValue See IssueFieldValueIdDTO parameters
  */
+@Suppress("unused")
 data class CreateIssueFromReviewRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -21,14 +22,16 @@ data class CreateIssueFromReviewRequestDTO(
 
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
-	 * 
-	 * @see IssueFieldValueIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldValueIdDTO
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		reviewKey = "",
 		fieldValue = emptyList()
 	)
 }
+

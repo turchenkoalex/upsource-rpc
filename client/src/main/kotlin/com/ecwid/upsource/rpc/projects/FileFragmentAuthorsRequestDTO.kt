@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.projects
  * @param startLine Line number the fragment starts with
  * @param endLine Line number the fragment ends with
  */
+@Suppress("unused")
 data class FileFragmentAuthorsRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -26,9 +27,11 @@ data class FileFragmentAuthorsRequestDTO(
 	 */
 	val endLine: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		startLine = 0,
 		endLine = 0
 	)
 }
+

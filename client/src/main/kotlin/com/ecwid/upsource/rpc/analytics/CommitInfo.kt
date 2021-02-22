@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param time Unix timestamp of commit time
  * @param shortRevisionId Short revision ID
  */
+@Suppress("unused")
 data class CommitInfo(
 	/**
 	 * Revision ID (required)
@@ -30,6 +31,7 @@ data class CommitInfo(
 	 */
 	val shortRevisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		description = "",
@@ -37,3 +39,4 @@ data class CommitInfo(
 		shortRevisionId = ""
 	)
 }
+

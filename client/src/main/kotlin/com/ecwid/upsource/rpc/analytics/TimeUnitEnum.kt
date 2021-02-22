@@ -3,6 +3,7 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+@Suppress("unused")
 enum class TimeUnitEnum(val value: Byte, val originalName: String) {
 	HOUR(value = 1, originalName = "HOUR"),
 	DAY(value = 2, originalName = "DAY"),

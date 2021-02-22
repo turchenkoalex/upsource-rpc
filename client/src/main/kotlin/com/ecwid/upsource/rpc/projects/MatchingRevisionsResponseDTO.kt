@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param revision See RevisionInfoDTO parameters
  */
+@Suppress("unused")
 data class MatchingRevisionsResponseDTO(
 	/**
 	 * See RevisionInfoDTO parameters (repeated)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: List<RevisionInfoDTO> = emptyList()
 )

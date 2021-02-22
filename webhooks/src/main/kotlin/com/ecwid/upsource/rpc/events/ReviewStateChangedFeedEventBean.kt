@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.events
  * @param oldState Old state
  * @param newState New state
  */
+@Suppress("unused")
 data class ReviewStateChangedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -24,9 +25,11 @@ data class ReviewStateChangedFeedEventBean(
 	 */
 	val newState: ReviewState
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		oldState = ReviewState.OPEN,
 		newState = ReviewState.OPEN
 	)
 }
+

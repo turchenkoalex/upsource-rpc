@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.issuetrackers
 /**
  * @param providers See IssueTrackerProviderDTO parameters
  */
+@Suppress("unused")
 data class IssueTrackerProvidersListDTO(
 	/**
 	 * See IssueTrackerProviderDTO parameters (repeated)
-	 * 
-	 * @see IssueTrackerProviderDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderDTO
 	 */
 	val providers: List<IssueTrackerProviderDTO> = emptyList()
 )

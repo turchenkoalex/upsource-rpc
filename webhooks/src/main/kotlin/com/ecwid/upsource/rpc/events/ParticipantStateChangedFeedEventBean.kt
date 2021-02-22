@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.events
  * @param oldState Old state
  * @param newState New state
  */
+@Suppress("unused")
 data class ParticipantStateChangedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -30,6 +31,7 @@ data class ParticipantStateChangedFeedEventBean(
 	 */
 	val newState: ParticipantState
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		participant = UserIdBean(),
@@ -37,3 +39,4 @@ data class ParticipantStateChangedFeedEventBean(
 		newState = ParticipantState.UNREAD
 	)
 }
+

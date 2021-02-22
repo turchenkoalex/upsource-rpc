@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param field See IssueFieldDTO parameters
  * @param fieldType Field type
  */
+@Suppress("unused")
 data class IssueRequiredFieldDTO(
 	/**
 	 * Issue type ID (required)
@@ -16,8 +17,8 @@ data class IssueRequiredFieldDTO(
 
 	/**
 	 * See IssueFieldDTO parameters (required)
-	 * 
-	 * @see IssueFieldDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldDTO
 	 */
 	val field: IssueFieldDTO,
 
@@ -26,9 +27,11 @@ data class IssueRequiredFieldDTO(
 	 */
 	val fieldType: IssueRequiredFieldTypeEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		issueTypeId = "",
 		field = IssueFieldDTO(),
 		fieldType = IssueRequiredFieldTypeEnum.TEXT
 	)
 }
+

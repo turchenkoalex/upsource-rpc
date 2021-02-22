@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param roleDetails See RoleDetailsDTO parameters
  */
+@Suppress("unused")
 data class AllRolesResponseDTO(
 	/**
 	 * See RoleDetailsDTO parameters (repeated)
-	 * 
-	 * @see RoleDetailsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RoleDetailsDTO
 	 */
 	val roleDetails: List<RoleDetailsDTO> = emptyList()
 )

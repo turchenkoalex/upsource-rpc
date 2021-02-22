@@ -10,11 +10,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param stubIndex Stub index ID
  * @param targetDescription See TargetDescriptionDTO parameters
  */
+@Suppress("unused")
 data class NavigationTargetItemDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -35,11 +36,12 @@ data class NavigationTargetItemDTO(
 
 	/**
 	 * See TargetDescriptionDTO parameters (optional)
-	 * 
-	 * @see TargetDescriptionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.TargetDescriptionDTO
 	 */
 	val targetDescription: TargetDescriptionDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		startOffset = 0,
@@ -48,3 +50,4 @@ data class NavigationTargetItemDTO(
 		targetDescription = null
 	)
 }
+

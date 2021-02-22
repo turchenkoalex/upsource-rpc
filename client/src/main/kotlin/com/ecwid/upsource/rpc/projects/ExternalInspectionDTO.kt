@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param severity Inspection severity
  * @param message Inspection message
  */
+@Suppress("unused")
 data class ExternalInspectionDTO(
 	/**
 	 * VCS revision ID (required)
@@ -36,6 +37,7 @@ data class ExternalInspectionDTO(
 	 */
 	val message: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		fileName = "",
@@ -44,3 +46,4 @@ data class ExternalInspectionDTO(
 		message = ""
 	)
 }
+

@@ -5,12 +5,12 @@ name: Gradle Check
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: [ "master" ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2

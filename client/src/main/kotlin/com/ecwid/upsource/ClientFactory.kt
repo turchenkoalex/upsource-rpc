@@ -10,13 +10,12 @@ import com.ecwid.upsource.transport.RpcTransport
 /**
  * Service RPC builders
  */
-class ClientFactory {
-	companion object {
-		fun newUpsourceRPC(transport: RpcTransport, serializer: Serializer): UpsourceRPC {
-			return UpsourceRPC.newBuilder()
-				.withTransport(transport)
-				.withSerializer(serializer)
-				.build()
-		}
+@Suppress("unused")
+object ClientFactory {
+	fun newUpsourceRPC(transport: RpcTransport, serializer: Serializer): UpsourceRPC {
+		return UpsourceRPC.newBuilder()
+			.withTransport(transport)
+			.withSerializer(serializer)
+			.build()
 	}
 }

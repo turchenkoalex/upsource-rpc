@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param relevantUser All relevant users
  * @param userRelevance Users' relevance [0..100]
  */
+@Suppress("unused")
 data class UsersForReviewDTO(
 	/**
 	 * Suggested reviewers for a given review (required)
@@ -24,9 +25,11 @@ data class UsersForReviewDTO(
 	 */
 	val userRelevance: List<Int> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		result = UsersListDTO(),
 		relevantUser = emptyList(),
 		userRelevance = emptyList()
 	)
 }
+

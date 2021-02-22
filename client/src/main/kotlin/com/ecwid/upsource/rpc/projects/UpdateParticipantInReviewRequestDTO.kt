@@ -8,18 +8,19 @@ package com.ecwid.upsource.rpc.projects
  * @param state State of the participant. See ParticipantStateEnum parameters
  * @param userId User ID. When set, this user's participant state will be changed.
  */
+@Suppress("unused")
 data class UpdateParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * State of the participant. See ParticipantStateEnum parameters (required)
-	 * 
-	 * @see ParticipantStateEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val state: ParticipantStateEnum,
 
@@ -28,9 +29,11 @@ data class UpdateParticipantInReviewRequestDTO(
 	 */
 	val userId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		state = ParticipantStateEnum.UNREAD,
 		userId = null
 	)
 }
+

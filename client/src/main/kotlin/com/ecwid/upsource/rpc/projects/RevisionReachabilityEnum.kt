@@ -3,6 +3,7 @@
 
 package com.ecwid.upsource.rpc.projects
 
+@Suppress("unused")
 enum class RevisionReachabilityEnum(val value: Byte, val originalName: String) {
 	REACHABLE(value = 1, originalName = "Reachable"),
 	UNKNOWN(value = 2, originalName = "Unknown"),

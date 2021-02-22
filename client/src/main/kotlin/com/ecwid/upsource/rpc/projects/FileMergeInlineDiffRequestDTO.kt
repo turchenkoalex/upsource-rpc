@@ -11,11 +11,12 @@ package com.ecwid.upsource.rpc.projects
  * @param ignoreWhitespace Whether to ignore whitespace changes
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileMergeInlineDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -44,6 +45,7 @@ data class FileMergeInlineDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		sourceRevisionId = "",
@@ -53,3 +55,4 @@ data class FileMergeInlineDiffRequestDTO(
 		contextLines = null
 	)
 }
+

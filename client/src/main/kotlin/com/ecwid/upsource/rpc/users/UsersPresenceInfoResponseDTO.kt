@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.users
 /**
  * @param presences See UserPresenceInfoDTO parameters
  */
+@Suppress("unused")
 data class UsersPresenceInfoResponseDTO(
 	/**
 	 * See UserPresenceInfoDTO parameters (repeated)
-	 * 
-	 * @see UserPresenceInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.users.UserPresenceInfoDTO
 	 */
 	val presences: List<UserPresenceInfoDTO> = emptyList()
 )

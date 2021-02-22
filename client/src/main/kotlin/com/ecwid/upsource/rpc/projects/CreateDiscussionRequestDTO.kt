@@ -11,18 +11,19 @@ package com.ecwid.upsource.rpc.projects
  * @param markupType Currently not in use
  * @param labels Discussion labels. See LabelDTO parameters
  */
+@Suppress("unused")
 data class CreateDiscussionRequestDTO(
 	/**
 	 * See AnchorDTO parameters (required)
-	 * 
-	 * @see AnchorDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.AnchorDTO
 	 */
 	val anchor: AnchorDTO,
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
@@ -43,11 +44,12 @@ data class CreateDiscussionRequestDTO(
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
-	 * 
-	 * @see LabelDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		anchor = AnchorDTO(),
 		reviewId = null,
@@ -57,3 +59,4 @@ data class CreateDiscussionRequestDTO(
 		labels = emptyList()
 	)
 }
+

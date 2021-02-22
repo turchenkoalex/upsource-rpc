@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isHosted Whether the branch is from a hosted repository
  * @param reviewId ID of the branch review, if one exists
  */
+@Suppress("unused")
 data class BranchDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -25,8 +26,8 @@ data class BranchDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val lastRevision: RevisionInfoDTO,
 
@@ -37,8 +38,8 @@ data class BranchDTO(
 
 	/**
 	 * See BranchStatsDTO parameters (required)
-	 * 
-	 * @see BranchStatsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.BranchStatsDTO
 	 */
 	val stats: BranchStatsDTO,
 
@@ -52,6 +53,7 @@ data class BranchDTO(
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		name = "",
@@ -62,3 +64,4 @@ data class BranchDTO(
 		reviewId = null
 	)
 }
+

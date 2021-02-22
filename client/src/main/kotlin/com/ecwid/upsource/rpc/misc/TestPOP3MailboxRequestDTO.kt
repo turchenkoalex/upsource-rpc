@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.misc
  * @param login Email login
  * @param password Email password
  */
+@Suppress("unused")
 data class TestPOP3MailboxRequestDTO(
 	/**
 	 * Protocol type ("POP3", "POP3+SSL", "POP3+TLS") (required)
@@ -36,6 +37,7 @@ data class TestPOP3MailboxRequestDTO(
 	 */
 	val password: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		protocol = "",
 		host = "",
@@ -44,3 +46,4 @@ data class TestPOP3MailboxRequestDTO(
 		password = ""
 	)
 }
+

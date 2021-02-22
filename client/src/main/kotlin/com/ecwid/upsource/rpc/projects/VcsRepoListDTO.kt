@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param repo See VcsRepoDTO parameters
  */
+@Suppress("unused")
 data class VcsRepoListDTO(
 	/**
 	 * See VcsRepoDTO parameters (repeated)
-	 * 
-	 * @see VcsRepoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.VcsRepoDTO
 	 */
 	val repo: List<VcsRepoDTO> = emptyList()
 )

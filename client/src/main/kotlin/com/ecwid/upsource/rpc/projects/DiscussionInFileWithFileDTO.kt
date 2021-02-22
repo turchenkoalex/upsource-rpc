@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param fileName A full path of the file starting with a slash (e.g. /folder/subfolder/file.txt )
  * @param discussionInFile See DiscussionInFileDTO parameters
  */
+@Suppress("unused")
 data class DiscussionInFileWithFileDTO(
 	/**
 	 * VCS revision ID (optional)
@@ -21,14 +22,16 @@ data class DiscussionInFileWithFileDTO(
 
 	/**
 	 * See DiscussionInFileDTO parameters (required)
-	 * 
-	 * @see DiscussionInFileDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFileDTO
 	 */
 	val discussionInFile: DiscussionInFileDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = null,
 		fileName = "",
 		discussionInFile = DiscussionInFileDTO()
 	)
 }
+

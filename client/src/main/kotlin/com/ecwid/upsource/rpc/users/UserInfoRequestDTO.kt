@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * @param ids A list of user IDs to request the full user info for
  */
+@Suppress("unused")
 data class UserInfoRequestDTO(
 	/**
 	 * A list of user IDs to request the full user info for (repeated)

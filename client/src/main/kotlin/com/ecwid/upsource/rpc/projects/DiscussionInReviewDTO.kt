@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param discussionId ID of the discussion
  * @param reviewId See ReviewIdDTO parameters
  */
+@Suppress("unused")
 data class DiscussionInReviewDTO(
 	/**
 	 * ID of the discussion (required)
@@ -15,13 +16,15 @@ data class DiscussionInReviewDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO()
 	)
 }
+

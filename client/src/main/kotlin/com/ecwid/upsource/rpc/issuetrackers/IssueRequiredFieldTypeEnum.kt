@@ -3,6 +3,7 @@
 
 package com.ecwid.upsource.rpc.issuetrackers
 
+@Suppress("unused")
 enum class IssueRequiredFieldTypeEnum(val value: Byte, val originalName: String) {
 	TEXT(value = 1, originalName = "Text"),
 	DATE(value = 2, originalName = "Date"),

@@ -15,6 +15,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param reviewerStatsByRevisions Review revisions counts per reviewer
  * @param commentsStats Discussion comments statistics. See CommentsStatisticsDTO parameters
  */
+@Suppress("unused")
 data class ReviewStatisticsDTO(
 	/**
 	 * Number of open reviews (required)
@@ -63,11 +64,12 @@ data class ReviewStatisticsDTO(
 
 	/**
 	 * Discussion comments statistics. See CommentsStatisticsDTO parameters (required)
-	 * 
-	 * @see CommentsStatisticsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.CommentsStatisticsDTO
 	 */
 	val commentsStats: CommentsStatisticsDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		openReviews = 0,
 		closedReviews = 0,
@@ -81,3 +83,4 @@ data class ReviewStatisticsDTO(
 		commentsStats = CommentsStatisticsDTO()
 	)
 }
+

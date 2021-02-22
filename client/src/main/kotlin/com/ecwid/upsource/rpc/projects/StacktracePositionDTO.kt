@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param vcsCommitId Revision ID
  * @param interpolatedRange See RangeDTO parameters
  */
+@Suppress("unused")
 data class StacktracePositionDTO(
 	/**
 	 * Line number that corresponds to the given stacktrace (required)
@@ -27,11 +28,12 @@ data class StacktracePositionDTO(
 
 	/**
 	 * See RangeDTO parameters (optional)
-	 * 
-	 * @see RangeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val interpolatedRange: com.ecwid.upsource.rpc.ids.RangeDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		lineNumber = 0,
 		fullPath = "",
@@ -39,3 +41,4 @@ data class StacktracePositionDTO(
 		interpolatedRange = null
 	)
 }
+

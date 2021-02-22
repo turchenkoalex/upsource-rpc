@@ -25,6 +25,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hasUnrelatedChanges Some changes were filtered out (in the review diff)
  * @param conflictType When the diff relates to the merge result, holds the conflict type (see ConflictTypeEnum)
  */
+@Suppress("unused")
 data class FileInlineDiffResponseDTO(
 	/**
 	 * Whether file contents are identical in both revisions (required)
@@ -38,22 +39,22 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val oldFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val newFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileContentTypeDTO parameters (required)
-	 * 
-	 * @see FileContentTypeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO
 	 */
 	val contentType: com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO,
 
@@ -94,8 +95,8 @@ data class FileInlineDiffResponseDTO(
 
 	/**
 	 * See TextMarkupDTO parameters (repeated)
-	 * 
-	 * @see TextMarkupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO
 	 */
 	val syntaxMarkup: List<com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO> = emptyList(),
 
@@ -134,6 +135,7 @@ data class FileInlineDiffResponseDTO(
 	 */
 	val conflictType: ConflictTypeEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isIdentical = false,
 		text = "",
@@ -157,3 +159,4 @@ data class FileInlineDiffResponseDTO(
 		conflictType = null
 	)
 }
+

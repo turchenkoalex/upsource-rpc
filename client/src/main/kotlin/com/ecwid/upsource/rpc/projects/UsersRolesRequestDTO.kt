@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param pageSize Page size
  * @param query Search query
  */
+@Suppress("unused")
 data class UsersRolesRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -30,6 +31,7 @@ data class UsersRolesRequestDTO(
 	 */
 	val query: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		offset = 0,
@@ -37,3 +39,4 @@ data class UsersRolesRequestDTO(
 		query = null
 	)
 }
+

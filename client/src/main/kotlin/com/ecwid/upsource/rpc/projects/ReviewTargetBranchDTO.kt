@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param targetBranch Branch to merge into
  */
+@Suppress("unused")
 data class ReviewTargetBranchDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -20,8 +21,10 @@ data class ReviewTargetBranchDTO(
 	 */
 	val targetBranch: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		targetBranch = ""
 	)
 }
+

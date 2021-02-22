@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param branchName Branches containing the given revision
  */
+@Suppress("unused")
 data class RevisionBranchesResponseDTO(
 	/**
 	 * Branches containing the given revision (repeated)

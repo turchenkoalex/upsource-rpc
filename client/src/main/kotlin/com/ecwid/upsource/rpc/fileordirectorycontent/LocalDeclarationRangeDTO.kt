@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param startOffset Start offset
  * @param endOffset End offset
  */
+@Suppress("unused")
 data class LocalDeclarationRangeDTO(
 	/**
 	 * ID of the target element (required)
@@ -24,9 +25,11 @@ data class LocalDeclarationRangeDTO(
 	 */
 	val endOffset: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		targetId = 0,
 		startOffset = 0,
 		endOffset = 0
 	)
 }
+

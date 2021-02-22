@@ -11,11 +11,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param lineNumber Line number
  * @param isImportant Identifies if this usage is semantic-sensitive or not
  */
+@Suppress("unused")
 data class FindUsagesItemDTO(
 	/**
 	 * See NavigationTargetItemDTO parameters (required)
-	 * 
-	 * @see NavigationTargetItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.NavigationTargetItemDTO
 	 */
 	val navigationTarget: NavigationTargetItemDTO,
 
@@ -44,6 +45,7 @@ data class FindUsagesItemDTO(
 	 */
 	val isImportant: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		navigationTarget = NavigationTargetItemDTO(),
 		previewText = "",
@@ -53,3 +55,4 @@ data class FindUsagesItemDTO(
 		isImportant = false
 	)
 }
+

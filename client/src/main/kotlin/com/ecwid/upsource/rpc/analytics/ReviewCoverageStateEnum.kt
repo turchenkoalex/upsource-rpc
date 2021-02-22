@@ -3,6 +3,7 @@
 
 package com.ecwid.upsource.rpc.analytics
 
+@Suppress("unused")
 enum class ReviewCoverageStateEnum(val value: Byte, val originalName: String) {
 	CLOSED(value = 1, originalName = "CLOSED"),
 	OPEN(value = 2, originalName = "OPEN"),

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param projectId Project ID in Upsource
  * @param triggers List of webhook triggers
  */
+@Suppress("unused")
 data class SetProjectWebhooksRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class SetProjectWebhooksRequestDTO(
 	 */
 	val triggers: List<ProjectWebhookTriggerDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		triggers = emptyList()
 	)
 }
+

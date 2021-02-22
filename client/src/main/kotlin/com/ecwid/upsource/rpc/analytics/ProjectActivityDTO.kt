@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.analytics
  * @param modules Names of project modules
  * @param stats See AnalyzerStats parameters
  */
+@Suppress("unused")
 data class ProjectActivityDTO(
 	/**
 	 * See TimeValue parameters (repeated)
-	 * 
-	 * @see TimeValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList(),
 
@@ -23,14 +24,16 @@ data class ProjectActivityDTO(
 
 	/**
 	 * See AnalyzerStats parameters (required)
-	 * 
-	 * @see AnalyzerStats
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.AnalyzerStats
 	 */
 	val stats: AnalyzerStats
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		modules = emptyList(),
 		stats = AnalyzerStats()
 	)
 }
+

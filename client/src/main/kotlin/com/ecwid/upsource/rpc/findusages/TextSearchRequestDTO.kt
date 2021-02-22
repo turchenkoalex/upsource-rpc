@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param ignoreDeleted Ignore matches in deleted files
  * @param ignoreArchived Whether to search in archived projects
  */
+@Suppress("unused")
 data class TextSearchRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
@@ -36,6 +37,7 @@ data class TextSearchRequestDTO(
 	 */
 	val ignoreArchived: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		query = "",
@@ -44,3 +46,4 @@ data class TextSearchRequestDTO(
 		ignoreArchived = false
 	)
 }
+

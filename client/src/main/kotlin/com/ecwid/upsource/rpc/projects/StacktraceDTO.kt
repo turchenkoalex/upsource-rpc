@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param stacktrace Stacktrace text to be analyzed
  * @param revisionId VCS revision ID
  */
+@Suppress("unused")
 data class StacktraceDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class StacktraceDTO(
 	 */
 	val revisionId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		stacktrace = "",
 		revisionId = null
 	)
 }
+

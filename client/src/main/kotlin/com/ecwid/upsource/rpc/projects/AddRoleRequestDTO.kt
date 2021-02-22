@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param userId ID of the Upsource user
  * @param roleKey Role key
  */
+@Suppress("unused")
 data class AddRoleRequestDTO(
 	/**
 	 * ID of the Upsource project (required)
@@ -24,9 +25,11 @@ data class AddRoleRequestDTO(
 	 */
 	val roleKey: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		userId = "",
 		roleKey = ""
 	)
 }
+

@@ -16,6 +16,7 @@ package com.ecwid.upsource.rpc.events
  * @param revisionId Anchor data for event
  * @param fileName Anchor data for event
  */
+@Suppress("unused")
 data class DiscussionFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -72,6 +73,7 @@ data class DiscussionFeedEventBean(
 	 */
 	val fileName: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		notificationReason = NotificationReason.UNKNOWN,
@@ -86,3 +88,4 @@ data class DiscussionFeedEventBean(
 		fileName = null
 	)
 }
+

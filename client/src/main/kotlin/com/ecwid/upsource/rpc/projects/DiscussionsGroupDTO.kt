@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param fileId Path to file
  * @param discussions Discussions contained in the file. See DiscussionsInFileDTO parameters
  */
+@Suppress("unused")
 data class DiscussionsGroupDTO(
 	/**
 	 * Path to file (optional)
@@ -15,13 +16,15 @@ data class DiscussionsGroupDTO(
 
 	/**
 	 * Discussions contained in the file. See DiscussionsInFileDTO parameters (required)
-	 * 
-	 * @see DiscussionsInFileDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionsInFileDTO
 	 */
 	val discussions: DiscussionsInFileDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = null,
 		discussions = DiscussionsInFileDTO()
 	)
 }
+

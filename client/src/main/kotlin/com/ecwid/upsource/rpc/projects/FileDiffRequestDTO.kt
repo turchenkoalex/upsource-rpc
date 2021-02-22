@@ -10,18 +10,19 @@ package com.ecwid.upsource.rpc.projects
  * @param isLeftFileDefinedAsNull Whether the left file for comparison is 'no-file' (for internal use only)
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileDiffRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val leftFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
 	/**
 	 * See FileInRevisionDTO parameters (optional)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val rightFile: com.ecwid.upsource.rpc.ids.FileInRevisionDTO? = null,
 
@@ -40,6 +41,7 @@ data class FileDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftFile = null,
 		rightFile = null,
@@ -48,3 +50,4 @@ data class FileDiffRequestDTO(
 		contextLines = null
 	)
 }
+

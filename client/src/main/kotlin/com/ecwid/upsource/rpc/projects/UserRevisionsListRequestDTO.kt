@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param limit Number of revisions to return
  * @param query Search query (e.g. "branch: master") and/or part of the commit message
  */
+@Suppress("unused")
 data class UserRevisionsListRequestDTO(
 	/**
 	 * ID of the specified Upsource user (required)
@@ -24,9 +25,11 @@ data class UserRevisionsListRequestDTO(
 	 */
 	val query: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		limit = 0,
 		query = null
 	)
 }
+

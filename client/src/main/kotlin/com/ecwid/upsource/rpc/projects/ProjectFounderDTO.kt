@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param userId User ID of the person who created the project
  * @param date Unix timestamp of project creation
  */
+@Suppress("unused")
 data class ProjectFounderDTO(
 	/**
 	 * User ID of the person who created the project (required)
@@ -18,8 +19,10 @@ data class ProjectFounderDTO(
 	 */
 	val date: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		date = 0L
 	)
 }
+

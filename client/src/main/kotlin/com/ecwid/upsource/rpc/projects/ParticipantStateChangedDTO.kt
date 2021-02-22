@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param oldState See ParticipantStateEnum parameters
  * @param newState See ParticipantStateEnum parameters
  */
+@Suppress("unused")
 data class ParticipantStateChangedDTO(
 	/**
 	 * An Upsource user ID of the participant (required)
@@ -16,21 +17,23 @@ data class ParticipantStateChangedDTO(
 
 	/**
 	 * See ParticipantStateEnum parameters (required)
-	 * 
-	 * @see ParticipantStateEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val oldState: ParticipantStateEnum,
 
 	/**
 	 * See ParticipantStateEnum parameters (required)
-	 * 
-	 * @see ParticipantStateEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantStateEnum
 	 */
 	val newState: ParticipantStateEnum
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		participant = "",
 		oldState = ParticipantStateEnum.UNREAD,
 		newState = ParticipantStateEnum.UNREAD
 	)
 }
+

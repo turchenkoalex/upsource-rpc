@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.findusages
  * @param oldUsage Old usage of the element. See FindUsagesItemDTO parameters
  * @param newUsage New usage of the element. See FindUsagesItemDTO parameters
  */
+@Suppress("unused")
 data class SameUsagesDTO(
 	/**
 	 * Old usage of the element. See FindUsagesItemDTO parameters (required)
-	 * 
-	 * @see FindUsagesItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.FindUsagesItemDTO
 	 */
 	val oldUsage: FindUsagesItemDTO,
 
 	/**
 	 * New usage of the element. See FindUsagesItemDTO parameters (required)
-	 * 
-	 * @see FindUsagesItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.FindUsagesItemDTO
 	 */
 	val newUsage: FindUsagesItemDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		oldUsage = FindUsagesItemDTO(),
 		newUsage = FindUsagesItemDTO()
 	)
 }
+

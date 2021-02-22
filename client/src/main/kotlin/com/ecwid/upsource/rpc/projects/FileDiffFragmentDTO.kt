@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.projects
  * @param addedRanges Ranges of text that were added
  * @param deletedRanges Ranges of text that were deleted
  */
+@Suppress("unused")
 data class FileDiffFragmentDTO(
 	/**
 	 * Line number to start with (required)
@@ -48,6 +49,7 @@ data class FileDiffFragmentDTO(
 	 */
 	val deletedRanges: List<com.ecwid.upsource.rpc.ids.RangeDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftFileStartLine = 0,
 		leftFileLineCount = 0,
@@ -58,3 +60,4 @@ data class FileDiffFragmentDTO(
 		deletedRanges = emptyList()
 	)
 }
+

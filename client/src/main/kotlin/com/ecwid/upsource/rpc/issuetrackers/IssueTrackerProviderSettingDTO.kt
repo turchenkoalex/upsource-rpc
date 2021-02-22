@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param name Setting key
  * @param value Setting value
  */
+@Suppress("unused")
 data class IssueTrackerProviderSettingDTO(
 	/**
 	 * Setting key (required)
@@ -18,8 +19,10 @@ data class IssueTrackerProviderSettingDTO(
 	 */
 	val value: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = "",
 		value = ""
 	)
 }
+

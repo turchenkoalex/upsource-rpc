@@ -37,6 +37,7 @@ package com.ecwid.upsource.rpc.projects
  * @param addMergeCommitsToBranchReview Sets whether merge commits should be added to branch reviews
  * @param isArchived Whether the project is archived
  */
+@Suppress("unused")
 data class ProjectSettingsDTO(
 	/**
 	 * Project name (required)
@@ -55,8 +56,8 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ProjectModel parameters (required)
-	 * 
-	 * @see ProjectModel
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectModel
 	 */
 	val projectModel: ProjectModel,
 
@@ -107,15 +108,15 @@ data class ProjectSettingsDTO(
 
 	/**
 	 * See ExternalLinkDTO parameters (repeated)
-	 * 
-	 * @see ExternalLinkDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
 	/**
 	 * See IssueTrackerProviderSettingsDTO parameters (optional)
-	 * 
-	 * @see IssueTrackerProviderSettingsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderSettingsDTO
 	 */
 	val issueTrackerProviderSettings: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProviderSettingsDTO? = null,
 
@@ -204,6 +205,7 @@ data class ProjectSettingsDTO(
 	 */
 	val isArchived: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectName = "",
 		vcsSettings = null,
@@ -239,3 +241,4 @@ data class ProjectSettingsDTO(
 		isArchived = null
 	)
 }
+

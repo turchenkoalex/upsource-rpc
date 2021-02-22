@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param userId ID of the Upsource user
  * @param roles See RoleDTO parameters
  */
+@Suppress("unused")
 data class UserRolesDTO(
 	/**
 	 * ID of the Upsource user (required)
@@ -15,13 +16,15 @@ data class UserRolesDTO(
 
 	/**
 	 * See RoleDTO parameters (repeated)
-	 * 
-	 * @see RoleDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RoleDTO
 	 */
 	val roles: List<RoleDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		roles = emptyList()
 	)
 }
+

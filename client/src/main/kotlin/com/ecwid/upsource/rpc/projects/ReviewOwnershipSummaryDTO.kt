@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param files See FileOwnershipSummaryDTO parameters
  */
+@Suppress("unused")
 data class ReviewOwnershipSummaryDTO(
 	/**
 	 * See FileOwnershipSummaryDTO parameters (repeated)
-	 * 
-	 * @see FileOwnershipSummaryDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileOwnershipSummaryDTO
 	 */
 	val files: List<FileOwnershipSummaryDTO> = emptyList()
 )

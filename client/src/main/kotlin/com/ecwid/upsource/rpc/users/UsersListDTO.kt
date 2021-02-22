@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.users
  * @param others User IDs of other suggested participants
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class UsersListDTO(
 	/**
 	 * User ID of the logged-in user (optional)
@@ -48,6 +49,7 @@ data class UsersListDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		me = null,
 		suggestedUsers = emptyList(),
@@ -58,3 +60,4 @@ data class UsersListDTO(
 		hasMore = false
 	)
 }
+

@@ -31,4 +31,4 @@ internal class ${service.name}Impl(
 		return invokeMethod("${method.name}", request)
 	}
 </#list>
-}
+${"}"}

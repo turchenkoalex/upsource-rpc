@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param module Name of the project module
  * @param items See TimeValue parameters
  */
+@Suppress("unused")
 data class ModuleTimeValue(
 	/**
 	 * Name of the project module (required)
@@ -15,13 +16,15 @@ data class ModuleTimeValue(
 
 	/**
 	 * See TimeValue parameters (repeated)
-	 * 
-	 * @see TimeValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		module = "",
 		items = emptyList()
 	)
 }
+

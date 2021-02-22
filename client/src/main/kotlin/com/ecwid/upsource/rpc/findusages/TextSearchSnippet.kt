@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param rangeInSnippet Matching range in the snippet
  * @param rangeInFile Matching range in the file
  */
+@Suppress("unused")
 data class TextSearchSnippet(
 	/**
 	 * Snippet text (required)
@@ -30,6 +31,7 @@ data class TextSearchSnippet(
 	 */
 	val rangeInFile: com.ecwid.upsource.rpc.ids.RangeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		startLineNumber = 0,
@@ -37,3 +39,4 @@ data class TextSearchSnippet(
 		rangeInFile = com.ecwid.upsource.rpc.ids.RangeDTO()
 	)
 }
+

@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param snippets Code snippets
  * @param totalMatches Total number of matches in the file
  */
+@Suppress("unused")
 data class TextSearchItem(
 	/**
 	 * The file in a particular project and revision (required)
@@ -20,8 +21,8 @@ data class TextSearchItem(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revisionInfo: com.ecwid.upsource.rpc.projects.RevisionInfoDTO,
 
@@ -50,6 +51,7 @@ data class TextSearchItem(
 	 */
 	val totalMatches: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		revisionInfo = com.ecwid.upsource.rpc.projects.RevisionInfoDTO(),
@@ -60,3 +62,4 @@ data class TextSearchItem(
 		totalMatches = 0
 	)
 }
+

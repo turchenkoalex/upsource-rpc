@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param fileId Path to file
  * @param hasChildren Whether an item has children and can be expanded
  */
+@Suppress("unused")
 data class ProjectTreeItemDTO(
 	/**
 	 * Display name of a project tree item (required)
@@ -42,6 +43,7 @@ data class ProjectTreeItemDTO(
 	 */
 	val hasChildren: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		displayName = "",
 		displayType = "",
@@ -51,3 +53,4 @@ data class ProjectTreeItemDTO(
 		hasChildren = false
 	)
 }
+

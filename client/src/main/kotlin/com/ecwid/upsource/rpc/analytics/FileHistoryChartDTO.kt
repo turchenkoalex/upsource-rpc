@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param firstEdits Unix timestamps of first edits
  * @param frames See FileHistoryFrameDTO parameters
  */
+@Suppress("unused")
 data class FileHistoryChartDTO(
 	/**
 	 * Age of the oldest file on the chart (Unix timestamp) (required)
@@ -33,11 +34,12 @@ data class FileHistoryChartDTO(
 
 	/**
 	 * See FileHistoryFrameDTO parameters (repeated)
-	 * 
-	 * @see FileHistoryFrameDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.FileHistoryFrameDTO
 	 */
 	val frames: List<FileHistoryFrameDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		maxAge = 0L,
 		maxEdits = 0,
@@ -46,3 +48,4 @@ data class FileHistoryChartDTO(
 		frames = emptyList()
 	)
 }
+

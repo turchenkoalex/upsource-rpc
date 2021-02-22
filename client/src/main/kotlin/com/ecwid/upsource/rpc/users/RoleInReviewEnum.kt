@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * Describes roles in a review
  */
+@Suppress("unused")
 enum class RoleInReviewEnum(val value: Byte, val originalName: String) {
 	AUTHOR(value = 1, originalName = "Author"),
 	REVIEWER(value = 2, originalName = "Reviewer"),

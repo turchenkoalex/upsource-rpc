@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param user See UserRolesDTO parameters
  * @param isInvited Whether the user is already invited
  */
+@Suppress("unused")
 data class InviteUserResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (optional)
-	 * 
-	 * @see UserRolesDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.UserRolesDTO
 	 */
 	val user: UserRolesDTO? = null,
 
@@ -20,8 +21,10 @@ data class InviteUserResponseDTO(
 	 */
 	val isInvited: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		user = null,
 		isInvited = false
 	)
 }
+

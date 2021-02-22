@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param module Name of the project module
  * @param referenceTime Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.
  */
+@Suppress("unused")
 data class ProjectActivityRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class ProjectActivityRequestDTO(
 	 */
 	val referenceTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		module = null,
 		referenceTime = 0L
 	)
 }
+

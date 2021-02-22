@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.users
  * @param isOnline Whether the user is online
  * @param absentUntil Absence end date, if the user is currently on leave
  */
+@Suppress("unused")
 data class UserPresenceInfoDTO(
 	/**
 	 * Upsource user ID (required)
@@ -24,9 +25,11 @@ data class UserPresenceInfoDTO(
 	 */
 	val absentUntil: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		isOnline = false,
 		absentUntil = null
 	)
 }
+

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param branches The list of matched branches
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class FindBranchResponseDTO(
 	/**
 	 * The list of matched branches (repeated)
@@ -18,8 +19,10 @@ data class FindBranchResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		branches = emptyList(),
 		hasMore = false
 	)
 }
+

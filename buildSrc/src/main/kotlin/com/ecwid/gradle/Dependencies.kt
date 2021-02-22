@@ -8,6 +8,7 @@ object Versions {
 	const val jackson = "2.12.1"
 	const val commonsCli = "1.4"
 	const val freemarker = "2.3.31"
+	const val mockk = "1.10.6"
 }
 
 object Dependencies {
@@ -26,4 +27,5 @@ object Dependencies {
 
 	const val commonsCli = "commons-cli:commons-cli:${Versions.commonsCli}"
 	const val freemarker = "org.freemarker:freemarker:${Versions.freemarker}"
+	const val mockk = "io.mockk:mockk:${Versions.mockk}"
 }

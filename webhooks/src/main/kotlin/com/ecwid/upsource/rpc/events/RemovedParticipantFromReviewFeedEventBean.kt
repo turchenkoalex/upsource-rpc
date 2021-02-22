@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.events
  * @param participant Participant user info
  * @param formerRole The role participant had before being removed from review
  */
+@Suppress("unused")
 data class RemovedParticipantFromReviewFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -24,9 +25,11 @@ data class RemovedParticipantFromReviewFeedEventBean(
 	 */
 	val formerRole: ParticipantRole
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		participant = UserIdBean(),
 		formerRole = ParticipantRole.AUTHOR
 	)
 }
+

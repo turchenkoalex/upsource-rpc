@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param contentType See FileContentTypeDTO parameters
  * @param fileContent See FileContentDTO parameters
  */
+@Suppress("unused")
 data class FileContentResponseDTO(
 	/**
 	 * See FileContentTypeDTO parameters (required)
-	 * 
-	 * @see FileContentTypeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileContentTypeDTO
 	 */
 	val contentType: FileContentTypeDTO,
 
 	/**
 	 * See FileContentDTO parameters (optional)
-	 * 
-	 * @see FileContentDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FileContentDTO
 	 */
 	val fileContent: FileContentDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		contentType = FileContentTypeDTO(),
 		fileContent = null
 	)
 }
+

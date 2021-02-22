@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param url Build URL (e.g. "http://teamcity-server/build-url")
  * @param description Build description (e.g. "120 of 1500 tests failed")
  */
+@Suppress("unused")
 data class RevisionBuildStatusKeyDTO(
 	/**
 	 * Build status: Success(1), Failed(2), InProgress(3) (required)
@@ -30,6 +31,7 @@ data class RevisionBuildStatusKeyDTO(
 	 */
 	val description: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		status = BuildStatusEnum.SUCCESS,
 		name = null,
@@ -37,3 +39,4 @@ data class RevisionBuildStatusKeyDTO(
 		description = null
 	)
 }
+

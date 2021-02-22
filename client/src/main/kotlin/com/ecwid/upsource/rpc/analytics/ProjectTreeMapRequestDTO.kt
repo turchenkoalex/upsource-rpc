@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param projectId Project ID in Upsource
  * @param revisionId Revision ID
  */
+@Suppress("unused")
 data class ProjectTreeMapRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class ProjectTreeMapRequestDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = ""
 	)
 }
+

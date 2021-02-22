@@ -8,18 +8,19 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param gutterMark See GutterMarkEnum parameters
  * @param relatedSemanticMarkup Index in 'referenceMarkup' list this gutter mark corresponds to
  */
+@Suppress("unused")
 data class GutterCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
-	 * 
-	 * @see RangeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 
 	/**
 	 * See GutterMarkEnum parameters (repeated)
-	 * 
-	 * @see GutterMarkEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.GutterMarkEnum
 	 */
 	val gutterMark: List<GutterMarkEnum> = emptyList(),
 
@@ -28,9 +29,11 @@ data class GutterCodeMarkupItemDTO(
 	 */
 	val relatedSemanticMarkup: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		gutterMark = emptyList(),
 		relatedSemanticMarkup = 0
 	)
 }
+

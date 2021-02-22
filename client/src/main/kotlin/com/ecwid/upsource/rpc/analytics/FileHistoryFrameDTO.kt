@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param timestamp Unix timestamp of the frame
  * @param deltas Counts of file edits since the previous frame
  */
+@Suppress("unused")
 data class FileHistoryFrameDTO(
 	/**
 	 * Unix timestamp of the frame (required)
@@ -18,8 +19,10 @@ data class FileHistoryFrameDTO(
 	 */
 	val deltas: List<Int> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		timestamp = 0L,
 		deltas = emptyList()
 	)
 }
+

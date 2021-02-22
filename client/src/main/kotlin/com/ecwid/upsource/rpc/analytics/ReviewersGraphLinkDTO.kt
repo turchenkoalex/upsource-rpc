@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param totalReviewsCount Total reviews count
  * @param recentReviewsCount Recent reviews count
  */
+@Suppress("unused")
 data class ReviewersGraphLinkDTO(
 	/**
 	 * Index of link source user (required)
@@ -36,6 +37,7 @@ data class ReviewersGraphLinkDTO(
 	 */
 	val recentReviewsCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		from = 0,
 		to = 0,
@@ -44,3 +46,4 @@ data class ReviewersGraphLinkDTO(
 		recentReviewsCount = 0
 	)
 }
+

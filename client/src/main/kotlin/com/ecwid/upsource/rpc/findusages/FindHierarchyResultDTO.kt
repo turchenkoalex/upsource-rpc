@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param ancestors The list of element's ancestors
  * @param inheritors The list of element's inheritors
  */
+@Suppress("unused")
 data class FindHierarchyResultDTO(
 	/**
 	 * The list of element's ancestors (repeated)

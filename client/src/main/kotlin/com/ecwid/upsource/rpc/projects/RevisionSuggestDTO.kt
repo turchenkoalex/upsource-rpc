@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId Revision info
  * @param score The confidence score
  */
+@Suppress("unused")
 data class RevisionSuggestDTO(
 	/**
 	 * Revision info (required)
@@ -18,8 +19,10 @@ data class RevisionSuggestDTO(
 	 */
 	val score: Double
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisionId = "",
 		score = 0.0
 	)
 }
+

@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes read status of a feed item
  */
+@Suppress("unused")
 enum class ReadEnum(val value: Byte, val originalName: String) {
 	READ(value = 1, originalName = "Read"),
 	UNREAD(value = 2, originalName = "Unread"),

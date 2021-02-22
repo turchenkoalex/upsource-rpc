@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.users
  * @param codeContributePermissionsInProjects The list of projects where the user has permission to create/merge pull requests
  * @param isEULAAccepted Checks if EULA is accepted by the current user. Returns 'null' if EULA is not set up in Hub
  */
+@Suppress("unused")
 data class CurrentUserResponseDTO(
 	/**
 	 * Upsource user ID (required)
@@ -56,8 +57,8 @@ data class CurrentUserResponseDTO(
 
 	/**
 	 * See EmailStatusEnum parameters (required)
-	 * 
-	 * @see EmailStatusEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.users.EmailStatusEnum
 	 */
 	val emailStatus: EmailStatusEnum,
 
@@ -86,6 +87,7 @@ data class CurrentUserResponseDTO(
 	 */
 	val isEULAAccepted: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		login = "",
@@ -102,3 +104,4 @@ data class CurrentUserResponseDTO(
 		isEULAAccepted = null
 	)
 }
+

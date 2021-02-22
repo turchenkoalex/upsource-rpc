@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param isBinary Whether a file is binary
  * @param timeSinceLastChange Time elapsed since last change (milliseconds)
  */
+@Suppress("unused")
 data class ProjectTreeMapEntryDTO(
 	/**
 	 * File path (required)
@@ -36,6 +37,7 @@ data class ProjectTreeMapEntryDTO(
 	 */
 	val timeSinceLastChange: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		path = "",
 		size = 0,
@@ -44,3 +46,4 @@ data class ProjectTreeMapEntryDTO(
 		timeSinceLastChange = 0L
 	)
 }
+

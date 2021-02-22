@@ -6,13 +6,16 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param sanitizedHTML Sanitized HTML string
  */
+@Suppress("unused")
 data class SanitizeHTMLResponseDTO(
 	/**
 	 * Sanitized HTML string (required)
 	 */
 	val sanitizedHTML: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		sanitizedHTML = ""
 	)
 }
+

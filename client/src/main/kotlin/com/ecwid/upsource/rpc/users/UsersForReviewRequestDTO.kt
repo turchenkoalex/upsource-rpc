@@ -10,18 +10,19 @@ package com.ecwid.upsource.rpc.users
  * @param limit Number of results to return
  * @param timeout Timeout(ms) to calculate smart users suggestion, by default - 1 minute
  */
+@Suppress("unused")
 data class UsersForReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * See RoleInReviewEnum parameters (required)
-	 * 
-	 * @see RoleInReviewEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.users.RoleInReviewEnum
 	 */
 	val role: RoleInReviewEnum,
 
@@ -40,6 +41,7 @@ data class UsersForReviewRequestDTO(
 	 */
 	val timeout: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		role = RoleInReviewEnum.AUTHOR,
@@ -48,3 +50,4 @@ data class UsersForReviewRequestDTO(
 		timeout = null
 	)
 }
+

@@ -8,18 +8,19 @@ package com.ecwid.upsource.rpc.projects
  * @param graph See RevisionListGraphDTO parameters
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class FileHistoryResponseDTO(
 	/**
 	 * See FileHistoryItemDTO parameters (repeated)
-	 * 
-	 * @see FileHistoryItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileHistoryItemDTO
 	 */
 	val history: List<FileHistoryItemDTO> = emptyList(),
 
 	/**
 	 * See RevisionListGraphDTO parameters (optional)
-	 * 
-	 * @see RevisionListGraphDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphDTO
 	 */
 	val graph: RevisionListGraphDTO? = null,
 
@@ -28,9 +29,11 @@ data class FileHistoryResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		history = emptyList(),
 		graph = null,
 		hasMore = false
 	)
 }
+

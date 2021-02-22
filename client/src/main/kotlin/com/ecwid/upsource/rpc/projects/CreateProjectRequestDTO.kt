@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param settings See ProjectSettingsDTO parameters
  * @param custom Optional custom settings
  */
+@Suppress("unused")
 data class CreateProjectRequestDTO(
 	/**
 	 * An ID of the new Upsource project (required)
@@ -16,8 +17,8 @@ data class CreateProjectRequestDTO(
 
 	/**
 	 * See ProjectSettingsDTO parameters (required)
-	 * 
-	 * @see ProjectSettingsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectSettingsDTO
 	 */
 	val settings: ProjectSettingsDTO,
 
@@ -26,9 +27,11 @@ data class CreateProjectRequestDTO(
 	 */
 	val custom: List<com.ecwid.upsource.rpc.misc.SetSettingRequestDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		newProjectId = "",
 		settings = ProjectSettingsDTO(),
 		custom = emptyList()
 	)
 }
+

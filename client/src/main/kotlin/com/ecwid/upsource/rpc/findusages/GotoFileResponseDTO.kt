@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param items See GotoFileItemDTO parameters
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class GotoFileResponseDTO(
 	/**
 	 * See GotoFileItemDTO parameters (repeated)
-	 * 
-	 * @see GotoFileItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.GotoFileItemDTO
 	 */
 	val items: List<GotoFileItemDTO> = emptyList(),
 
@@ -20,8 +21,10 @@ data class GotoFileResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		hasMore = false
 	)
 }
+

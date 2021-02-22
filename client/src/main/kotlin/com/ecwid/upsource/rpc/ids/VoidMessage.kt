@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.ids
 /**
  * @param voidField No value required/returned
  */
+@Suppress("unused")
 data class VoidMessage(
 	/**
 	 * No value required/returned (optional)

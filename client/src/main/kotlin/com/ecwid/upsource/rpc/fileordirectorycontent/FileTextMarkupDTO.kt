@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param markup See TextMarkupDTO parameters
  */
+@Suppress("unused")
 data class FileTextMarkupDTO(
 	/**
 	 * See TextMarkupDTO parameters (repeated)
-	 * 
-	 * @see TextMarkupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO
 	 */
 	val markup: List<TextMarkupDTO> = emptyList()
 )

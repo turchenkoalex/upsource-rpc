@@ -16,6 +16,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isResolved Whether the discussion is resolved
  * @param syncResult GitHub sync result. See SyncResultEnum parameters
  */
+@Suppress("unused")
 data class DiscussionInFileDTO(
 	/**
 	 * ID of the discussion (required)
@@ -34,15 +35,15 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * See CommentDTO parameters (repeated)
-	 * 
-	 * @see CommentDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.CommentDTO
 	 */
 	val comments: List<CommentDTO> = emptyList(),
 
 	/**
 	 * See ReadEnum parameters (optional)
-	 * 
-	 * @see ReadEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ReadEnum
 	 */
 	val read: ReadEnum? = null,
 
@@ -53,15 +54,15 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * See ShortReviewInfoDTO parameters (optional)
-	 * 
-	 * @see ShortReviewInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val review: ShortReviewInfoDTO? = null,
 
 	/**
 	 * Discussion labels. See LabelDTO parameters (repeated)
-	 * 
-	 * @see LabelDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.LabelDTO
 	 */
 	val labels: List<LabelDTO> = emptyList(),
 
@@ -77,11 +78,12 @@ data class DiscussionInFileDTO(
 
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
-	 * 
-	 * @see SyncResultEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		discussionId = "",
 		anchor = AnchorDTO(),
@@ -96,3 +98,4 @@ data class DiscussionInFileDTO(
 		syncResult = null
 	)
 }
+

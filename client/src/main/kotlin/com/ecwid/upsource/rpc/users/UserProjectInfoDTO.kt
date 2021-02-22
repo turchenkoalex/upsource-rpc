@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.users
  * @param projectId Project ID in Upsource
  * @param lastCommitTime Unix timestamp of the last commit
  */
+@Suppress("unused")
 data class UserProjectInfoDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class UserProjectInfoDTO(
 	 */
 	val lastCommitTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		lastCommitTime = 0L
 	)
 }
+

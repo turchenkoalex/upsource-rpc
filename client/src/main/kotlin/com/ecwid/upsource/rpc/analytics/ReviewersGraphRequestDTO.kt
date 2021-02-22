@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param projectId Project ID in Upsource
  * @param fromTime Unix timestamp, only reviews that were updated later are considered
  */
+@Suppress("unused")
 data class ReviewersGraphRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class ReviewersGraphRequestDTO(
 	 */
 	val fromTime: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = null
 	)
 }
+

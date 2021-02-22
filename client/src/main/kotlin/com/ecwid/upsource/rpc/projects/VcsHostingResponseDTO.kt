@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param service See VcsHostingServiceDTO parameters
  */
+@Suppress("unused")
 data class VcsHostingResponseDTO(
 	/**
 	 * See VcsHostingServiceDTO parameters (repeated)
-	 * 
-	 * @see VcsHostingServiceDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.VcsHostingServiceDTO
 	 */
 	val service: List<VcsHostingServiceDTO> = emptyList()
 )

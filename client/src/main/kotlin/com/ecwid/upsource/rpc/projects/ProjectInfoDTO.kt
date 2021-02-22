@@ -18,9 +18,10 @@ package com.ecwid.upsource.rpc.projects
  * @param isConnectedToGitlab Whether the project is connected to GitLab
  * @param iconUrl URL of the project icon
  * @param group See ProjectGroupDTO parameters
- * @param isArchived 
+ * @param isArchived
  * @param issueTrackerProjectDetails See IssueTrackerProjectDetailsDTO parameters
  */
+@Suppress("unused")
 data class ProjectInfoDTO(
 	/**
 	 * Project name (required)
@@ -44,8 +45,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * External links. See ExternalLinkDTO parameters (repeated)
-	 * 
-	 * @see ExternalLinkDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ExternalLinkDTO
 	 */
 	val externalLinks: List<ExternalLinkDTO> = emptyList(),
 
@@ -71,8 +72,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (optional)
-	 * 
-	 * @see IssueTrackerProjectDetailsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO
 	 */
 	val issueTrackerDetails: com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO? = null,
 
@@ -93,8 +94,8 @@ data class ProjectInfoDTO(
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
-	 * 
-	 * @see ProjectGroupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 
@@ -102,11 +103,12 @@ data class ProjectInfoDTO(
 
 	/**
 	 * See IssueTrackerProjectDetailsDTO parameters (repeated)
-	 * 
-	 * @see IssueTrackerProjectDetailsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO
 	 */
 	val issueTrackerProjectDetails: List<com.ecwid.upsource.rpc.issuetrackers.IssueTrackerProjectDetailsDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectName = "",
 		projectId = "",
@@ -126,3 +128,4 @@ data class ProjectInfoDTO(
 		issueTrackerProjectDetails = emptyList()
 	)
 }
+

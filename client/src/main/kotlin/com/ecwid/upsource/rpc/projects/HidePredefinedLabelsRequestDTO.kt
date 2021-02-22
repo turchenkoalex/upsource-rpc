@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param doHide Whether to show or hide predefined labels
  */
+@Suppress("unused")
 data class HidePredefinedLabelsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class HidePredefinedLabelsRequestDTO(
 	 */
 	val doHide: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		doHide = false
 	)
 }
+

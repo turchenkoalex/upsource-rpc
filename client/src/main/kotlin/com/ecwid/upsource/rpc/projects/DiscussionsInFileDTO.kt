@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param discussions See DiscussionInFileDTO parameters
  */
+@Suppress("unused")
 data class DiscussionsInFileDTO(
 	/**
 	 * See DiscussionInFileDTO parameters (repeated)
-	 * 
-	 * @see DiscussionInFileDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.DiscussionInFileDTO
 	 */
 	val discussions: List<DiscussionInFileDTO> = emptyList()
 )

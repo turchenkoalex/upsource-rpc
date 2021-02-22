@@ -4,6 +4,7 @@ import com.ecwid.upsource.codegen.schema.EnumType
 import com.ecwid.upsource.codegen.schema.Message
 import com.ecwid.upsource.codegen.schema.Service
 
+@Suppress("unused")
 sealed class Template(val filename: String) {
 	data class EnumTemplate(
 		val filePackage: String,

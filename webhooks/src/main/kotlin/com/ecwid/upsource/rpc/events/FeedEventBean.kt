@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.events
  * @param actor User that initiated the event
  * @param feedEventId Event ID
  */
+@Suppress("unused")
 data class FeedEventBean(
 	/**
 	 * User that initiated the event (optional)
@@ -48,6 +49,7 @@ data class FeedEventBean(
 	 */
 	val feedEventId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = null,
 		userIds = emptyList(),
@@ -58,3 +60,4 @@ data class FeedEventBean(
 		feedEventId = null
 	)
 }
+

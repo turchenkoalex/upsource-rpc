@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.projects
  * @param branchHeadLabel Branch head labels, if any
  * @param parentRevisionIds List of parent revisions IDs
  */
+@Suppress("unused")
 data class RevisionInfoDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -66,8 +67,8 @@ data class RevisionInfoDTO(
 
 	/**
 	 * See RevisionReachabilityEnum parameters (required)
-	 * 
-	 * @see RevisionReachabilityEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionReachabilityEnum
 	 */
 	val reachability: RevisionReachabilityEnum,
 
@@ -86,6 +87,7 @@ data class RevisionInfoDTO(
 	 */
 	val parentRevisionIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",
@@ -102,3 +104,4 @@ data class RevisionInfoDTO(
 		parentRevisionIds = emptyList()
 	)
 }
+

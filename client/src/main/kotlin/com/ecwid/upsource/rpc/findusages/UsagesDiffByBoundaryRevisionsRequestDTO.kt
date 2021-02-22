@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param newRevisionId ID of the new revision
  * @param boundaryRevisionId ID of the boundary revision
  */
+@Suppress("unused")
 data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
-	 * 
-	 * @see PsiElementIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,
 
@@ -26,9 +27,11 @@ data class UsagesDiffByBoundaryRevisionsRequestDTO(
 	 */
 	val boundaryRevisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		originElement = PsiElementIdDTO(),
 		newRevisionId = "",
 		boundaryRevisionId = ""
 	)
 }
+

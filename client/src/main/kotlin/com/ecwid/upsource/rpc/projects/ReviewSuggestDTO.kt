@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewInfo See ShortReviewInfoDTO parameter
  * @param score The confidence score
  */
+@Suppress("unused")
 data class ReviewSuggestDTO(
 	/**
 	 * See ShortReviewInfoDTO parameter (optional)
-	 * 
-	 * @see ShortReviewInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ShortReviewInfoDTO
 	 */
 	val reviewInfo: ShortReviewInfoDTO? = null,
 

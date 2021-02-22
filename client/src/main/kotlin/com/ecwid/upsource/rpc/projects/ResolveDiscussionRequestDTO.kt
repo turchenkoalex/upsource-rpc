@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isResolved Whether the discussion is resolved
  * @param revision ID of the revision the discussion is linked to
  */
+@Suppress("unused")
 data class ResolveDiscussionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -30,6 +31,7 @@ data class ResolveDiscussionRequestDTO(
 	 */
 	val revision: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",
@@ -37,3 +39,4 @@ data class ResolveDiscussionRequestDTO(
 		revision = null
 	)
 }
+

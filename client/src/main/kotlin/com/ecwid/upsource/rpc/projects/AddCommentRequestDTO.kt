@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param parentId An ID of the comment you are replying to
  * @param markupType Currently not in use
  */
+@Suppress("unused")
 data class AddCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -36,6 +37,7 @@ data class AddCommentRequestDTO(
 	 */
 	val markupType: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",
@@ -44,3 +46,4 @@ data class AddCommentRequestDTO(
 		markupType = null
 	)
 }
+

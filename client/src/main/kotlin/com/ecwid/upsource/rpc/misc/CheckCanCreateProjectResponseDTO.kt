@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param isAllowed Whether the user has the right to create projects
  * @param message Optional text message
  */
+@Suppress("unused")
 data class CheckCanCreateProjectResponseDTO(
 	/**
 	 * Whether the user has the right to create projects (required)
@@ -18,8 +19,10 @@ data class CheckCanCreateProjectResponseDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isAllowed = false,
 		message = null
 	)
 }
+

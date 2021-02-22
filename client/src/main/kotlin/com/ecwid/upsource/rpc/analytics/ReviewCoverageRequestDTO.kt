@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param period See TimeUnitEnum parameters
  * @param referenceTime Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.
  */
+@Suppress("unused")
 data class ReviewCoverageRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -16,8 +17,8 @@ data class ReviewCoverageRequestDTO(
 
 	/**
 	 * See TimeUnitEnum parameters (required)
-	 * 
-	 * @see TimeUnitEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.TimeUnitEnum
 	 */
 	val period: TimeUnitEnum,
 
@@ -26,9 +27,11 @@ data class ReviewCoverageRequestDTO(
 	 */
 	val referenceTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		period = TimeUnitEnum.HOUR,
 		referenceTime = 0L
 	)
 }
+

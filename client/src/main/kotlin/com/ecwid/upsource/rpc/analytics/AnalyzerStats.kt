@@ -12,6 +12,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param totalIndexedCommits Total number of indexed commits
  * @param isProjectModelKnown Whether project model is known
  */
+@Suppress("unused")
 data class AnalyzerStats(
 	/**
 	 * Unix timestamp of the earliest commit (required)
@@ -48,6 +49,7 @@ data class AnalyzerStats(
 	 */
 	val isProjectModelKnown: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		minCommitTime = 0L,
 		maxCommitTime = 0L,
@@ -58,3 +60,4 @@ data class AnalyzerStats(
 		isProjectModelKnown = false
 	)
 }
+

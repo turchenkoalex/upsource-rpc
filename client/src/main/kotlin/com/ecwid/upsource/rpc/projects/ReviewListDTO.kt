@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.projects
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  * @param totalCount Total number of reviews
  */
+@Suppress("unused")
 data class ReviewListDTO(
 	/**
 	 * See ReviewDescriptorDTO parameters (repeated)
-	 * 
-	 * @see ReviewDescriptorDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ReviewDescriptorDTO
 	 */
 	val reviews: List<ReviewDescriptorDTO> = emptyList(),
 
@@ -26,9 +27,11 @@ data class ReviewListDTO(
 	 */
 	val totalCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviews = emptyList(),
 		hasMore = false,
 		totalCount = 0
 	)
 }
+

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param module Name of the project module
  * @param value The value associated with the module
  */
+@Suppress("unused")
 data class ModuleValue(
 	/**
 	 * Name of the project module (required)
@@ -18,8 +19,10 @@ data class ModuleValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		module = "",
 		value = 0
 	)
 }
+

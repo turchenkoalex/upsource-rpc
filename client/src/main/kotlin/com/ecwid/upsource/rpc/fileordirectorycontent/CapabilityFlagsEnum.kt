@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * Describes "capabilities" of a PSI element
  */
+@Suppress("unused")
 enum class CapabilityFlagsEnum(val value: Byte, val originalName: String) {
 	CAN_GOTO_DECLARATION(value = 1, originalName = "canGotoDeclaration"),
 	CAN_FIND_USAGES(value = 2, originalName = "canFindUsages"),

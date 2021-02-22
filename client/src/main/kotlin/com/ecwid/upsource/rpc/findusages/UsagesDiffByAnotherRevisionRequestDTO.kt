@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param anotherRevisionId ID of the other revision
  * @param isAnotherOld Whether the other revision is older
  */
+@Suppress("unused")
 data class UsagesDiffByAnotherRevisionRequestDTO(
 	/**
 	 * Original element. See PsiElementIdDTO parameters (required)
-	 * 
-	 * @see PsiElementIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.findusages.PsiElementIdDTO
 	 */
 	val originElement: PsiElementIdDTO,
 
@@ -26,9 +27,11 @@ data class UsagesDiffByAnotherRevisionRequestDTO(
 	 */
 	val isAnotherOld: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		originElement = PsiElementIdDTO(),
 		anotherRevisionId = "",
 		isAnotherOld = false
 	)
 }
+

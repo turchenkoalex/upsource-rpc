@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.users
  * @param userId Upsource user ID
  * @param commitTimestampFilter Project update timestamp to limit the returned projects by
  */
+@Suppress("unused")
 data class UserProjectsRequestDTO(
 	/**
 	 * Upsource user ID (required)
@@ -18,8 +19,10 @@ data class UserProjectsRequestDTO(
 	 */
 	val commitTimestampFilter: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		commitTimestampFilter = 0L
 	)
 }
+

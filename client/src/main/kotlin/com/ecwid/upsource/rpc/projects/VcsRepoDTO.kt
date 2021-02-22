@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param id Repository ID
  * @param url Repository URL
  */
+@Suppress("unused")
 data class VcsRepoDTO(
 	/**
 	 * Repository ID (required)
@@ -18,8 +19,10 @@ data class VcsRepoDTO(
 	 */
 	val url: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		url = emptyList()
 	)
 }
+

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param discussionId ID of the discussion
  * @param fieldValue See IssueFieldValueIdDTO parameters
  */
+@Suppress("unused")
 data class CreateIssueFromDiscussionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -21,14 +22,16 @@ data class CreateIssueFromDiscussionRequestDTO(
 
 	/**
 	 * See IssueFieldValueIdDTO parameters (repeated)
-	 * 
-	 * @see IssueFieldValueIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.issuetrackers.IssueFieldValueIdDTO
 	 */
 	val fieldValue: List<IssueFieldValueIdDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",
 		fieldValue = emptyList()
 	)
 }
+

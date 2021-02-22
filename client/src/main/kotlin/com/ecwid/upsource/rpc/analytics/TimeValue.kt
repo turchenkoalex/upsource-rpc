@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param time Unix timestamp
  * @param value The value associated with the timestamp
  */
+@Suppress("unused")
 data class TimeValue(
 	/**
 	 * Unix timestamp (required)
@@ -18,8 +19,10 @@ data class TimeValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		time = 0L,
 		value = 0
 	)
 }
+

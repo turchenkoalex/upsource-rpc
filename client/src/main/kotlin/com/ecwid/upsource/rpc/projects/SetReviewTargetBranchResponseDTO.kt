@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param syncResult GitHub sync result. See SyncResultEnum parameters
  */
+@Suppress("unused")
 data class SetReviewTargetBranchResponseDTO(
 	/**
 	 * GitHub sync result. See SyncResultEnum parameters (optional)
-	 * 
-	 * @see SyncResultEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.SyncResultEnum
 	 */
 	val syncResult: SyncResultEnum? = null
 )

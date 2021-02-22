@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId ID of the Upsource project
  * @param email Email address of the Upsource user
  */
+@Suppress("unused")
 data class InviteUserRequestDTO(
 	/**
 	 * ID of the Upsource project (required)
@@ -18,8 +19,10 @@ data class InviteUserRequestDTO(
 	 */
 	val email: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		email = ""
 	)
 }
+

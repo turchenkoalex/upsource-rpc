@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param pattern Search query, e.g. part of the name
  * @param limit Number of results to return
  */
+@Suppress("unused")
 data class GotoFileRequestDTO(
 	/**
 	 * Project ID in Upsource (optional)
@@ -23,8 +24,8 @@ data class GotoFileRequestDTO(
 
 	/**
 	 * See ReviewIdDTO parameters (optional)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO? = null,
 
@@ -38,6 +39,7 @@ data class GotoFileRequestDTO(
 	 */
 	val limit: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = null,
 		revisionId = null,
@@ -46,3 +48,4 @@ data class GotoFileRequestDTO(
 		limit = 0
 	)
 }
+

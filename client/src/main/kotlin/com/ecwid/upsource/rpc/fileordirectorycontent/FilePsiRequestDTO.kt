@@ -9,11 +9,12 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param requestGutterMarks Whether to request gutter marks
  * @param requestInspections Whether to request inspections
  */
+@Suppress("unused")
 data class FilePsiRequestDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val file: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -32,6 +33,7 @@ data class FilePsiRequestDTO(
 	 */
 	val requestInspections: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		requestReferences = null,
@@ -39,3 +41,4 @@ data class FilePsiRequestDTO(
 		requestInspections = null
 	)
 }
+

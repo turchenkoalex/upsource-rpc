@@ -4,11 +4,12 @@
 package com.ecwid.upsource.rpc.projects
 
 /**
- * @param errors 
- * @param warnings 
- * @param weakWarnings 
- * @param infos 
+ * @param errors
+ * @param warnings
+ * @param weakWarnings
+ * @param infos
  */
+@Suppress("unused")
 data class InspectionsCountDTO(
 	val errors: Int,
 
@@ -18,6 +19,7 @@ data class InspectionsCountDTO(
 
 	val infos: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		errors = 0,
 		warnings = 0,
@@ -25,3 +27,4 @@ data class InspectionsCountDTO(
 		infos = 0
 	)
 }
+

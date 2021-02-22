@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.ids
  * @param startOffset Start offset of the text range
  * @param endOffset End offset of the text range
  */
+@Suppress("unused")
 data class RangeDTO(
 	/**
 	 * Start offset of the text range (required)
@@ -18,8 +19,10 @@ data class RangeDTO(
 	 */
 	val endOffset: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		startOffset = 0,
 		endOffset = 0
 	)
 }
+

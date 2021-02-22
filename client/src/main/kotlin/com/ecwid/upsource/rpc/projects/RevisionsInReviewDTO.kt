@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param revisionId IDs of the revisions attached to the review
  */
+@Suppress("unused")
 data class RevisionsInReviewDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -20,8 +21,10 @@ data class RevisionsInReviewDTO(
 	 */
 	val revisionId: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		revisionId = emptyList()
 	)
 }
+

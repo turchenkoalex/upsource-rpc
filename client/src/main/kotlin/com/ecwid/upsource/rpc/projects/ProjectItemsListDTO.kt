@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param items See ProjectTreeItemDTO parameters
  */
+@Suppress("unused")
 data class ProjectItemsListDTO(
 	/**
 	 * See ProjectTreeItemDTO parameters (repeated)
-	 * 
-	 * @see ProjectTreeItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectTreeItemDTO
 	 */
 	val items: List<ProjectTreeItemDTO> = emptyList()
 )

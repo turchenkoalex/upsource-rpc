@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param isAllowed A branch review can be created
  * @param message A message explaining the reason why a review can't be created
  */
+@Suppress("unused")
 data class CanCreateBranchReviewDTO(
 	/**
 	 * A branch review can be created (required)
@@ -18,8 +19,10 @@ data class CanCreateBranchReviewDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isAllowed = false,
 		message = null
 	)
 }
+

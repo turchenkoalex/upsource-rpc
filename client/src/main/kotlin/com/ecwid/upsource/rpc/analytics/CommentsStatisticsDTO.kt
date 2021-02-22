@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param unlabeledCounts See UserValue parameters
  * @param statsPerLabel See LabelStats parameters
  */
+@Suppress("unused")
 data class CommentsStatisticsDTO(
 	/**
 	 * Number of review comments (required)
@@ -23,25 +24,26 @@ data class CommentsStatisticsDTO(
 
 	/**
 	 * See UserValue parameters (repeated)
-	 * 
-	 * @see UserValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.UserValue
 	 */
 	val totalCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See UserValue parameters (repeated)
-	 * 
-	 * @see UserValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.UserValue
 	 */
 	val unlabeledCounts: List<UserValue> = emptyList(),
 
 	/**
 	 * See LabelStats parameters (repeated)
-	 * 
-	 * @see LabelStats
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.LabelStats
 	 */
 	val statsPerLabel: List<LabelStats> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewComments = 0,
 		totalComments = 0,
@@ -50,3 +52,4 @@ data class CommentsStatisticsDTO(
 		statsPerLabel = emptyList()
 	)
 }
+

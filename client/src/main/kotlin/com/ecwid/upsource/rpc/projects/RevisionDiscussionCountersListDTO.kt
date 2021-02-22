@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param counter A discussion counter for a revision (number of discussions)
  */
+@Suppress("unused")
 data class RevisionDiscussionCountersListDTO(
 	/**
 	 * A discussion counter for a revision (number of discussions) (repeated)

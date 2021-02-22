@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param isSyntaxSupported Whether syntax markup is available for this file type
  * @param syntax See TextMarkupDTO parameters
  */
+@Suppress("unused")
 data class FileContentDTO(
 	/**
 	 * File text (required)
@@ -17,8 +18,8 @@ data class FileContentDTO(
 
 	/**
 	 * See FoldingInfoDTO parameters (repeated)
-	 * 
-	 * @see FoldingInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.FoldingInfoDTO
 	 */
 	val foldings: List<FoldingInfoDTO> = emptyList(),
 
@@ -29,11 +30,12 @@ data class FileContentDTO(
 
 	/**
 	 * See TextMarkupDTO parameters (repeated)
-	 * 
-	 * @see TextMarkupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextMarkupDTO
 	 */
 	val syntax: List<TextMarkupDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		foldings = emptyList(),
@@ -41,3 +43,4 @@ data class FileContentDTO(
 		syntax = emptyList()
 	)
 }
+

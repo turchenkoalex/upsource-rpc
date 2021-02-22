@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * Describes PSI inspections level
  */
+@Suppress("unused")
 enum class FileWarningLevelEnum(val value: Byte, val originalName: String) {
 	NONE(value = 1, originalName = "none"),
 	OK(value = 2, originalName = "ok"),

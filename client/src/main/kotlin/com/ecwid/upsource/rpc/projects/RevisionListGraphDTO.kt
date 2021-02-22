@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param width "Width" of a graph, i.e. how many branches running in parallel does it have
  * @param rows See RevisionListGraphRowDTO parameters
  */
+@Suppress("unused")
 data class RevisionListGraphDTO(
 	/**
 	 * "Width" of a graph, i.e. how many branches running in parallel does it have (required)
@@ -15,13 +16,15 @@ data class RevisionListGraphDTO(
 
 	/**
 	 * See RevisionListGraphRowDTO parameters (repeated)
-	 * 
-	 * @see RevisionListGraphRowDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListGraphRowDTO
 	 */
 	val rows: List<RevisionListGraphRowDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		width = 0,
 		rows = emptyList()
 	)
 }
+

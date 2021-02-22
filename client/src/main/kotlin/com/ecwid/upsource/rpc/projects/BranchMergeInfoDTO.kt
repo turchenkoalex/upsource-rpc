@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param mergeFiles The list of files that are changed in both: given branch and base branch
  */
+@Suppress("unused")
 data class BranchMergeInfoDTO(
 	/**
 	 * The list of files that are changed in both: given branch and base branch (repeated)

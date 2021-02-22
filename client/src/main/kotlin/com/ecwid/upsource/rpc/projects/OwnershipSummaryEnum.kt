@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.projects
 /**
  * Describes file ownership
  */
+@Suppress("unused")
 enum class OwnershipSummaryEnum(val value: Byte, val originalName: String) {
 	OK(value = 1, originalName = "OK"),
 	ONE_MAJOR(value = 2, originalName = "ONE_MAJOR"),

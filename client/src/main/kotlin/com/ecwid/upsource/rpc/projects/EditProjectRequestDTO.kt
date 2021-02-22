@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param settings See ProjectSettingsDTO parameters
  */
+@Suppress("unused")
 data class EditProjectRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -15,13 +16,15 @@ data class EditProjectRequestDTO(
 
 	/**
 	 * See ProjectSettingsDTO parameters (required)
-	 * 
-	 * @see ProjectSettingsDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectSettingsDTO
 	 */
 	val settings: ProjectSettingsDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		settings = ProjectSettingsDTO()
 	)
 }
+

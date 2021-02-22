@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.users
 /**
  * @param ids IDs of user groups
  */
+@Suppress("unused")
 data class UserGroupsIdsListDTO(
 	/**
 	 * IDs of user groups (repeated)

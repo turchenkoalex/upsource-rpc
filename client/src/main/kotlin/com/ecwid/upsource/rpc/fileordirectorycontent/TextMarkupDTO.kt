@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param range Text range
  * @param textAttribute See TextAttributeDTO parameters
  */
+@Suppress("unused")
 data class TextMarkupDTO(
 	/**
 	 * Text range (required)
@@ -15,13 +16,15 @@ data class TextMarkupDTO(
 
 	/**
 	 * See TextAttributeDTO parameters (required)
-	 * 
-	 * @see TextAttributeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.TextAttributeDTO
 	 */
 	val textAttribute: TextAttributeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		textAttribute = TextAttributeDTO()
 	)
 }
+

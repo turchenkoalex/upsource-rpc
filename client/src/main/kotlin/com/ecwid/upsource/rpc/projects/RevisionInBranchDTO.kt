@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param revision See RevisionInfoDTO parameters
  * @param branch Branch name
  */
+@Suppress("unused")
 data class RevisionInBranchDTO(
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 
@@ -20,8 +21,10 @@ data class RevisionInBranchDTO(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revision = RevisionInfoDTO(),
 		branch = null
 	)
 }
+

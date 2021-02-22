@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param referenceTime Unix timestamp used to calculate the distribution. This timestamp encapsulates the time set on the client and makes the server generate even days, months, etc. for the particular client.
  * @param committers User IDs of committers
  */
+@Suppress("unused")
 data class UserActivityRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -17,8 +18,8 @@ data class UserActivityRequestDTO(
 
 	/**
 	 * User activity period. See TimeUnitEnum parameters (required)
-	 * 
-	 * @see TimeUnitEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.TimeUnitEnum
 	 */
 	val period: TimeUnitEnum,
 
@@ -32,6 +33,7 @@ data class UserActivityRequestDTO(
 	 */
 	val committers: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		period = TimeUnitEnum.HOUR,
@@ -39,3 +41,4 @@ data class UserActivityRequestDTO(
 		committers = emptyList()
 	)
 }
+

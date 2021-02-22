@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param name Discussion label name (e.g. bug, code style, enhancement, help wanted)
  * @param colorId Discussion label color
  */
+@Suppress("unused")
 data class LabelDTO(
 	/**
 	 * Discussion label ID (optional)
@@ -24,9 +25,11 @@ data class LabelDTO(
 	 */
 	val colorId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = null,
 		name = "",
 		colorId = null
 	)
 }
+

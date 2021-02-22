@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param feedItems See FeedItemDTO parameters
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class FeedDTO(
 	/**
 	 * See FeedItemDTO parameters (repeated)
-	 * 
-	 * @see FeedItemDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FeedItemDTO
 	 */
 	val feedItems: List<FeedItemDTO> = emptyList(),
 
@@ -20,8 +21,10 @@ data class FeedDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		feedItems = emptyList(),
 		hasMore = false
 	)
 }
+

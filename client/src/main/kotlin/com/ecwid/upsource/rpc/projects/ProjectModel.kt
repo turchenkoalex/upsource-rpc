@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param pathToModel Path to project model
  * @param defaultJdkId Default project JDK
  */
+@Suppress("unused")
 data class ProjectModel(
 	/**
 	 * Build system type ("none" to disable code intelligence, "maven" for Maven, "gradle" for Gradle, "idea" for IntelliJ IDEA) (required)
@@ -24,9 +25,11 @@ data class ProjectModel(
 	 */
 	val defaultJdkId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		type = "",
 		pathToModel = null,
 		defaultJdkId = null
 	)
 }
+

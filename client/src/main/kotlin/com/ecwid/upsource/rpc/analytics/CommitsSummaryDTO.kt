@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param offsiteCommits Number of commits that didn't affect any module
  * @param modulesTouched Number of modules affected
  */
+@Suppress("unused")
 data class CommitsSummaryDTO(
 	/**
 	 * Total number of commits (required)
@@ -24,9 +25,11 @@ data class CommitsSummaryDTO(
 	 */
 	val modulesTouched: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		totalCommits = 0,
 		offsiteCommits = 0,
 		modulesTouched = 0
 	)
 }
+

@@ -10,11 +10,12 @@ package com.ecwid.upsource.rpc.projects
  * @param defaultBranch Name of the default branch
  * @param isDefaultBranchExists Whether the project has the default branch
  */
+@Suppress("unused")
 data class BranchListDTO(
 	/**
 	 * See BranchDTO parameters (repeated)
-	 * 
-	 * @see BranchDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.BranchDTO
 	 */
 	val branch: List<BranchDTO> = emptyList(),
 
@@ -38,6 +39,7 @@ data class BranchListDTO(
 	 */
 	val isDefaultBranchExists: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		branch = emptyList(),
 		hasMore = false,
@@ -46,3 +48,4 @@ data class BranchListDTO(
 		isDefaultBranchExists = null
 	)
 }
+

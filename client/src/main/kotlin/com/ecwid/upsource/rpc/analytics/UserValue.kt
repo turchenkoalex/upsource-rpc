@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param userId Upsource user ID
  * @param value The value associated with the user ID
  */
+@Suppress("unused")
 data class UserValue(
 	/**
 	 * Upsource user ID (required)
@@ -18,8 +19,10 @@ data class UserValue(
 	 */
 	val value: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userId = "",
 		value = 0
 	)
 }
+

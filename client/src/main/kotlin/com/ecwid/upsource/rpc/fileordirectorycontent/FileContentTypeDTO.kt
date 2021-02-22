@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param canDownload Whether the file can be downloaded
  * @param fileType File extension
  */
+@Suppress("unused")
 data class FileContentTypeDTO(
 	/**
 	 * Whether the file is presentable as text (required)
@@ -36,6 +37,7 @@ data class FileContentTypeDTO(
 	 */
 	val fileType: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		isText = false,
 		isDirectory = false,
@@ -44,3 +46,4 @@ data class FileContentTypeDTO(
 		fileType = ""
 	)
 }
+

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revision See RevisionInfoDTO parameters
  * @param changes See RevisionsDiffDTO parameters
  */
+@Suppress("unused")
 data class FindCommitsResponseCommitDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -22,18 +23,19 @@ data class FindCommitsResponseCommitDTO(
 
 	/**
 	 * See RevisionInfoDTO parameters (required)
-	 * 
-	 * @see RevisionInfoDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionInfoDTO
 	 */
 	val revision: RevisionInfoDTO,
 
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
-	 * 
-	 * @see RevisionsDiffDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsDiffDTO
 	 */
 	val changes: RevisionsDiffDTO? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		projectName = "",
@@ -41,3 +43,4 @@ data class FindCommitsResponseCommitDTO(
 		changes = null
 	)
 }
+

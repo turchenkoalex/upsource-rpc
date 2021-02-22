@@ -9,11 +9,12 @@ package com.ecwid.upsource.rpc.projects
  * @param ignoredFiles The list of files that were omitted in a review according to project settings
  * @param fileDiffSummary See FileDiffSummaryDTO parameters
  */
+@Suppress("unused")
 data class ReviewSummaryChangesResponseDTO(
 	/**
 	 * See RevisionsDiffDTO parameters (optional)
-	 * 
-	 * @see RevisionsDiffDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsDiffDTO
 	 */
 	val diff: RevisionsDiffDTO? = null,
 
@@ -29,8 +30,8 @@ data class ReviewSummaryChangesResponseDTO(
 
 	/**
 	 * See FileDiffSummaryDTO parameters (repeated)
-	 * 
-	 * @see FileDiffSummaryDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileDiffSummaryDTO
 	 */
 	val fileDiffSummary: List<FileDiffSummaryDTO> = emptyList()
 )

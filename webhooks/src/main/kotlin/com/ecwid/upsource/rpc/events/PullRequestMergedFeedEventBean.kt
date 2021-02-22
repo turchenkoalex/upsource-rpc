@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param pullRequest Branch name
  */
+@Suppress("unused")
 data class PullRequestMergedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -18,8 +19,10 @@ data class PullRequestMergedFeedEventBean(
 	 */
 	val pullRequest: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		pullRequest = ""
 	)
 }
+

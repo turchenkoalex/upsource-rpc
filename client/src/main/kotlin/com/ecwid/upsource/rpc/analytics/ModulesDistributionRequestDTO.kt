@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param committers User IDs of committers
  * @param timePoints The specific time intervals that define the distribution (Unix timestamps)
  */
+@Suppress("unused")
 data class ModulesDistributionRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -36,6 +37,7 @@ data class ModulesDistributionRequestDTO(
 	 */
 	val timePoints: List<Long> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		fromTime = 0L,
@@ -44,3 +46,4 @@ data class ModulesDistributionRequestDTO(
 		timePoints = emptyList()
 	)
 }
+

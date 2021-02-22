@@ -12,18 +12,19 @@ package com.ecwid.upsource.rpc.projects
  * @param canTrackBranch An optional field denoting that review can be converted to branch review
  * @param canCherryPickWithTeamCity Internal
  */
+@Suppress("unused")
 data class RevisionsInReviewResponseDTO(
 	/**
 	 * See RevisionDescriptorListDTO parameters (required)
-	 * 
-	 * @see RevisionDescriptorListDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionDescriptorListDTO
 	 */
 	val allRevisions: RevisionDescriptorListDTO,
 
 	/**
 	 * See RevisionsSetDTO parameters (required)
-	 * 
-	 * @see RevisionsSetDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val newRevisions: RevisionsSetDTO,
 
@@ -52,6 +53,7 @@ data class RevisionsInReviewResponseDTO(
 	 */
 	val canCherryPickWithTeamCity: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		allRevisions = RevisionDescriptorListDTO(),
 		newRevisions = RevisionsSetDTO(),
@@ -62,3 +64,4 @@ data class RevisionsInReviewResponseDTO(
 		canCherryPickWithTeamCity = null
 	)
 }
+

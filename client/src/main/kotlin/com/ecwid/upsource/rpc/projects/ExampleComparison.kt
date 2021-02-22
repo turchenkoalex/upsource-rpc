@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param rightLocator The right location in the example (usually a default branch)
  * @param lastCommitTime The last commit time
  */
+@Suppress("unused")
 data class ExampleComparison(
 	/**
 	 * The left location in the example (required)
@@ -24,9 +25,11 @@ data class ExampleComparison(
 	 */
 	val lastCommitTime: Long
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		leftLocator = "",
 		rightLocator = "",
 		lastCommitTime = 0L
 	)
 }
+

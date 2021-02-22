@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.analytics
  * @param committer User ID of the committer
  * @param items See TimeValue parameters
  */
+@Suppress("unused")
 data class CommitterTimeValue(
 	/**
 	 * User ID of the committer (required)
@@ -15,13 +16,15 @@ data class CommitterTimeValue(
 
 	/**
 	 * See TimeValue parameters (repeated)
-	 * 
-	 * @see TimeValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.TimeValue
 	 */
 	val items: List<TimeValue> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		committer = "",
 		items = emptyList()
 	)
 }
+

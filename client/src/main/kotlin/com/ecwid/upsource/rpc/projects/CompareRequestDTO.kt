@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param leftLocator Name of a branch or a revision ID to be used in a comparison
  * @param rightLocator Name of a branch or a revision ID to be used in a comparison
  */
+@Suppress("unused")
 data class CompareRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class CompareRequestDTO(
 	 */
 	val rightLocator: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		leftLocator = "",
 		rightLocator = ""
 	)
 }
+

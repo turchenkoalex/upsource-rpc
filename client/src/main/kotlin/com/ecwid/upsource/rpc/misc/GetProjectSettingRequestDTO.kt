@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.misc
  * @param projectId Project ID in Upsource
  * @param request See GetSettingRequestDTO parameters
  */
+@Suppress("unused")
 data class GetProjectSettingRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -15,13 +16,15 @@ data class GetProjectSettingRequestDTO(
 
 	/**
 	 * See GetSettingRequestDTO parameters (required)
-	 * 
-	 * @see GetSettingRequestDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.misc.GetSettingRequestDTO
 	 */
 	val request: GetSettingRequestDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		request = GetSettingRequestDTO()
 	)
 }
+

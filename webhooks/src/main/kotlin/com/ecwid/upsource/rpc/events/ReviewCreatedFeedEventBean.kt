@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.events
  * @param revisions List of revisions that were added to review at time of creation
  * @param branch Name of the branch being tracked by the review
  */
+@Suppress("unused")
 data class ReviewCreatedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -24,9 +25,11 @@ data class ReviewCreatedFeedEventBean(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		revisions = emptyList(),
 		branch = null
 	)
 }
+

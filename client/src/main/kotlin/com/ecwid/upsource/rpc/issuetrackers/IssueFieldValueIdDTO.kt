@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param fieldId Field ID (see IssueFieldDTO)
  * @param valueId Value ID (see IssueFieldValueDTO)
  */
+@Suppress("unused")
 data class IssueFieldValueIdDTO(
 	/**
 	 * Field ID (see IssueFieldDTO) (required)
@@ -18,8 +19,10 @@ data class IssueFieldValueIdDTO(
 	 */
 	val valueId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fieldId = "",
 		valueId = ""
 	)
 }
+

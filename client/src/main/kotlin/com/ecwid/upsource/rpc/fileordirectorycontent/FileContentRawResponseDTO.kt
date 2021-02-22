@@ -6,13 +6,16 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param base64 Base64-encoded contents of a file
  */
+@Suppress("unused")
 data class FileContentRawResponseDTO(
 	/**
 	 * Base64-encoded contents of a file (required)
 	 */
 	val base64: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base64 = ""
 	)
 }
+

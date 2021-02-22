@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param commits See FindCommitsResponseCommitDTO parameters
  */
+@Suppress("unused")
 data class FindCommitsResponseCommitsDTO(
 	/**
 	 * See FindCommitsResponseCommitDTO parameters (repeated)
-	 * 
-	 * @see FindCommitsResponseCommitDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FindCommitsResponseCommitDTO
 	 */
 	val commits: List<FindCommitsResponseCommitDTO> = emptyList()
 )

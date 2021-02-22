@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param deadline Review due date (Unix timestamp)
  */
+@Suppress("unused")
 data class ReviewDeadlineUpdatedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -18,8 +19,10 @@ data class ReviewDeadlineUpdatedFeedEventBean(
 	 */
 	val deadline: Long? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		deadline = null
 	)
 }
+

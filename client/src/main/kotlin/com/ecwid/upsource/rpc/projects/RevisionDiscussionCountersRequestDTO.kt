@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param revisions See RevisionListDTO parameters
  * @param fileNameFilter Additional revisions filter
  */
+@Suppress("unused")
 data class RevisionDiscussionCountersRequestDTO(
 	/**
 	 * See RevisionListDTO parameters (required)
-	 * 
-	 * @see RevisionListDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionListDTO
 	 */
 	val revisions: RevisionListDTO,
 
@@ -20,8 +21,10 @@ data class RevisionDiscussionCountersRequestDTO(
 	 */
 	val fileNameFilter: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revisions = RevisionListDTO(),
 		fileNameFilter = null
 	)
 }
+

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.ids
  * @param projectId Project ID in Upsource
  * @param revisionId VCS revision ID
  */
+@Suppress("unused")
 data class RevisionInProjectDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class RevisionInProjectDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = ""
 	)
 }
+

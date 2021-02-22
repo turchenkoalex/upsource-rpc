@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param from Starting line number
  * @param to Ending line number
  */
+@Suppress("unused")
 data class RangeMappingDTO(
 	/**
 	 * Starting line number (required)
@@ -18,8 +19,10 @@ data class RangeMappingDTO(
 	 */
 	val to: com.ecwid.upsource.rpc.ids.RangeDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		from = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		to = com.ecwid.upsource.rpc.ids.RangeDTO()
 	)
 }
+

@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param repoIds IDs of the VCS repositories
  * @param canCreateRepository Whether the requester has permission to create repositories in the VCS service
  */
+@Suppress("unused")
 data class VcsHostingServiceDTO(
 	/**
 	 * VCS hosting service ID (required)
@@ -30,6 +31,7 @@ data class VcsHostingServiceDTO(
 	 */
 	val canCreateRepository: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		serviceId = "",
 		serviceUrl = "",
@@ -37,3 +39,4 @@ data class VcsHostingServiceDTO(
 		canCreateRepository = false
 	)
 }
+

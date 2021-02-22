@@ -17,22 +17,31 @@ internal class JacksonWebhookParser : WebhookParser {
 		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 		.registerModule(buildUpsourceModule())
 		.registerKotlinModule()
-	private val types = ConcurrentHashMap<Class<*>, JavaType>()
+	private val types = ConcurrentHashMap${"<Class<*>, JavaType>"}()
+	private val parseMapping: ${"Map<String, (WebhookMetadata, String) -> Webhook>"} = mapOf(
+		<#list types as type>
+		"${type}" to ::parse${type},
+		</#list>
+	)
 
 	override fun parse(data: String): Webhook {
 		val metadata = objectMapper.readValue(data, WebhookMetadata::class.java)
-		return when (metadata.dataType) {
-			<#list types as type>
-			"${type}" -> {
-				val type = types.computeIfAbsent(${type}::class.java) {
-					objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
-				}
-				val webhookData = objectMapper.readValue<WebhookData<${type}>>(data, type)
-				Webhook.${type}Webhook(metadata, webhookData.data)
-			}
-
-			</#list>
-			else -> Webhook.Unknown
-		}
+		val parser = parseMapping[metadata.dataType]
+			?: return Webhook.Unknown
+		return parser(metadata, data)
 	}
+
+<#list types as type>
+	private fun parse${type}(
+		metadata: WebhookMetadata,
+		data: String
+	): Webhook.${type}Webhook {
+		val type = types.computeIfAbsent(${type}::class.java) {
+			objectMapper.typeFactory.constructParametricType(WebhookData::class.java, it)
+		}
+		val webhookData = objectMapper.readValue${"<WebhookData<${type}>>"}(data, type)
+		return Webhook.${type}Webhook(metadata, webhookData.data)
+	}
+
+</#list>
 }

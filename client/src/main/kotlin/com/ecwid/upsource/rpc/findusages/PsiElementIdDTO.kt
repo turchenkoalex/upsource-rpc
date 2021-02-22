@@ -8,11 +8,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param range Text range of the given PSI element
  * @param localIndex Copy of the localIndex from 'ReferenceCodeMarkupItemDTO' to identify the exact PSI element
  */
+@Suppress("unused")
 data class PsiElementIdDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -26,9 +27,11 @@ data class PsiElementIdDTO(
 	 */
 	val localIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		localIndex = 0
 	)
 }
+

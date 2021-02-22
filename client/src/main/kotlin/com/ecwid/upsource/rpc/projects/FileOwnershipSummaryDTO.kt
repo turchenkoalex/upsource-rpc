@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param state See OwnershipSummaryEnum parameters
  * @param userId Upsource user ID
  */
+@Suppress("unused")
 data class FileOwnershipSummaryDTO(
 	/**
 	 * A full path to the file starting with a slash (e.g. /directory/file.txt) (required)
@@ -16,8 +17,8 @@ data class FileOwnershipSummaryDTO(
 
 	/**
 	 * See OwnershipSummaryEnum parameters (required)
-	 * 
-	 * @see OwnershipSummaryEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.OwnershipSummaryEnum
 	 */
 	val state: OwnershipSummaryEnum,
 
@@ -26,9 +27,11 @@ data class FileOwnershipSummaryDTO(
 	 */
 	val userId: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		filePath = "",
 		state = OwnershipSummaryEnum.OK,
 		userId = null
 	)
 }
+

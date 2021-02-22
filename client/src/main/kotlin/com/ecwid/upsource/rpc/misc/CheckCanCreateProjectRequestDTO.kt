@@ -6,13 +6,16 @@ package com.ecwid.upsource.rpc.misc
 /**
  * @param hubProjectId Hub project ID
  */
+@Suppress("unused")
 data class CheckCanCreateProjectRequestDTO(
 	/**
 	 * Hub project ID (required)
 	 */
 	val hubProjectId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		hubProjectId = ""
 	)
 }
+

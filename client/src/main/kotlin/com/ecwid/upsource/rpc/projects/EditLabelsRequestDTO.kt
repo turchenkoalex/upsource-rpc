@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param labelId Discussion labels IDs
  */
+@Suppress("unused")
 data class EditLabelsRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class EditLabelsRequestDTO(
 	 */
 	val labelId: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		labelId = emptyList()
 	)
 }
+

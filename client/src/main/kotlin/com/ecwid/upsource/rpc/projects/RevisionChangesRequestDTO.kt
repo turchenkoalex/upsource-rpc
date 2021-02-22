@@ -9,11 +9,12 @@ package com.ecwid.upsource.rpc.projects
  * @param limit How many files to return
  * @param skip Number of files to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class RevisionChangesRequestDTO(
 	/**
 	 * See RevisionInProjectDTO parameters (required)
-	 * 
-	 * @see RevisionInProjectDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.RevisionInProjectDTO
 	 */
 	val revision: com.ecwid.upsource.rpc.ids.RevisionInProjectDTO,
 
@@ -32,6 +33,7 @@ data class RevisionChangesRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		revision = com.ecwid.upsource.rpc.ids.RevisionInProjectDTO(),
 		compareToRevisionId = null,
@@ -39,3 +41,4 @@ data class RevisionChangesRequestDTO(
 		skip = null
 	)
 }
+

@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param revisionId IDs of the requested revisions
  */
+@Suppress("unused")
 data class RevisionListDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class RevisionListDTO(
 	 */
 	val revisionId: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = emptyList()
 	)
 }
+

@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.findusages
  * @param fileId See FileInRevisionDTO parameters
  * @param stubIndex Stub index ID
  */
+@Suppress("unused")
 data class StubIdDTO(
 	/**
 	 * See FileInRevisionDTO parameters (required)
-	 * 
-	 * @see FileInRevisionDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.FileInRevisionDTO
 	 */
 	val fileId: com.ecwid.upsource.rpc.ids.FileInRevisionDTO,
 
@@ -20,8 +21,10 @@ data class StubIdDTO(
 	 */
 	val stubIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		fileId = com.ecwid.upsource.rpc.ids.FileInRevisionDTO(),
 		stubIndex = 0
 	)
 }
+

@@ -71,7 +71,7 @@ class MessagesGenerator(
 				typeMapping = typeMapping
 			)
 			val normalizedDescription = it.description?.let { description ->
-				"$description (${it.label})".addSeeAnnotationsIfRequired()
+				"$description (${it.label})".addSeeAnnotationsIfRequired(typeMapping)
 			}
 			it.copy(
 				type = normalizedType,

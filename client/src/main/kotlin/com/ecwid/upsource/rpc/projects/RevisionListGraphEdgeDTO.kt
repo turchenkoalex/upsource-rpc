@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.projects
  * @param hasArrow Whether a line ends with an arrow
  * @param color Edge color
  */
+@Suppress("unused")
 data class RevisionListGraphEdgeDTO(
 	/**
 	 * Edge position index (required)
@@ -42,6 +43,7 @@ data class RevisionListGraphEdgeDTO(
 	 */
 	val color: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		position = 0,
 		toPosition = 0,
@@ -51,3 +53,4 @@ data class RevisionListGraphEdgeDTO(
 		color = 0
 	)
 }
+

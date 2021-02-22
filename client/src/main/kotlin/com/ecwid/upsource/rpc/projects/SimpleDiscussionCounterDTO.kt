@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param unresolvedCount Number of unresolved discussions
  * @param resolvedCount Number of resolved discussions
  */
+@Suppress("unused")
 data class SimpleDiscussionCounterDTO(
 	/**
 	 * Total number of discussions (required)
@@ -30,6 +31,7 @@ data class SimpleDiscussionCounterDTO(
 	 */
 	val resolvedCount: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		count = 0,
 		hasUnresolved = false,
@@ -37,3 +39,4 @@ data class SimpleDiscussionCounterDTO(
 		resolvedCount = 0
 	)
 }
+

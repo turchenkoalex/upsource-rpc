@@ -9,18 +9,19 @@ package com.ecwid.upsource.rpc.analytics
  * @param modules Names of the project modules
  * @param stats See AnalyzerStats parameters
  */
+@Suppress("unused")
 data class ResponsibilityDistributionDTO(
 	/**
 	 * See CommitterModuleValue parameters (repeated)
-	 * 
-	 * @see CommitterModuleValue
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.CommitterModuleValue
 	 */
 	val items: List<CommitterModuleValue> = emptyList(),
 
 	/**
 	 * See CommitterUserInfo parameters (repeated)
-	 * 
-	 * @see CommitterUserInfo
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.CommitterUserInfo
 	 */
 	val users: List<CommitterUserInfo> = emptyList(),
 
@@ -31,11 +32,12 @@ data class ResponsibilityDistributionDTO(
 
 	/**
 	 * See AnalyzerStats parameters (required)
-	 * 
-	 * @see AnalyzerStats
+	 *
+	 * @see com.ecwid.upsource.rpc.analytics.AnalyzerStats
 	 */
 	val stats: AnalyzerStats
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		items = emptyList(),
 		users = emptyList(),
@@ -43,3 +45,4 @@ data class ResponsibilityDistributionDTO(
 		stats = AnalyzerStats()
 	)
 }
+

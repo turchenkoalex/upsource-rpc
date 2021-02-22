@@ -25,11 +25,12 @@ package com.ecwid.upsource.rpc.projects
  * @param mergeFromBranch Merge review: branch to merge from
  * @param mergeToBranch Merge review: branch to merge into
  */
+@Suppress("unused")
 data class ReviewDescriptorDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
@@ -45,8 +46,8 @@ data class ReviewDescriptorDTO(
 
 	/**
 	 * See ParticipantInReviewDTO parameters (repeated)
-	 * 
-	 * @see ParticipantInReviewDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantInReviewDTO
 	 */
 	val participants: List<ParticipantInReviewDTO> = emptyList(),
 
@@ -97,15 +98,15 @@ data class ReviewDescriptorDTO(
 
 	/**
 	 * Review completion rate (e.g. accepted by 1 out of 3 reviewers). See CompletionRateDTO parameters (optional)
-	 * 
-	 * @see CompletionRateDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.CompletionRateDTO
 	 */
 	val completionRate: CompletionRateDTO? = null,
 
 	/**
 	 * A list of discussion counters. See SimpleDiscussionCounterDTO parameters (optional)
-	 * 
-	 * @see SimpleDiscussionCounterDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.SimpleDiscussionCounterDTO
 	 */
 	val discussionCounter: SimpleDiscussionCounterDTO? = null,
 
@@ -134,6 +135,7 @@ data class ReviewDescriptorDTO(
 	 */
 	val mergeToBranch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		title = "",
@@ -157,3 +159,4 @@ data class ReviewDescriptorDTO(
 		mergeToBranch = null
 	)
 }
+

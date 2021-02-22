@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param url External link URL
  * @param prefix External link prefix
  */
+@Suppress("unused")
 data class ExternalLinkDTO(
 	/**
 	 * External link URL (required)
@@ -18,8 +19,10 @@ data class ExternalLinkDTO(
 	 */
 	val prefix: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		url = "",
 		prefix = ""
 	)
 }
+

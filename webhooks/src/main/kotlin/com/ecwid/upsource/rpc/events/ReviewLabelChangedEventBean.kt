@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.events
  * @param wasAdded Whether the label was added or removed
  * @param actor User who changed label
  */
+@Suppress("unused")
 data class ReviewLabelChangedEventBean(
 	/**
 	 * Review ID (required)
@@ -36,6 +37,7 @@ data class ReviewLabelChangedEventBean(
 	 */
 	val actor: UserIdBean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = "",
 		labelId = "",
@@ -44,3 +46,4 @@ data class ReviewLabelChangedEventBean(
 		actor = UserIdBean()
 	)
 }
+

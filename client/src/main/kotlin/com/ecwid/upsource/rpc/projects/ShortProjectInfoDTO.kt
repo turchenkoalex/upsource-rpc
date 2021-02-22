@@ -18,6 +18,7 @@ package com.ecwid.upsource.rpc.projects
  * @param totalCommits Total number of commits in the project
  * @param isArchived Whether the project is archived
  */
+@Suppress("unused")
 data class ShortProjectInfoDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -56,8 +57,8 @@ data class ShortProjectInfoDTO(
 
 	/**
 	 * See ProjectGroupDTO parameters (optional)
-	 * 
-	 * @see ProjectGroupDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ProjectGroupDTO
 	 */
 	val group: ProjectGroupDTO? = null,
 
@@ -86,6 +87,7 @@ data class ShortProjectInfoDTO(
 	 */
 	val isArchived: Boolean? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		projectName = "",
@@ -102,3 +104,4 @@ data class ShortProjectInfoDTO(
 		isArchived = null
 	)
 }
+

@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param fileName A full path to the README file starting with a slash (e.g. /directory/readme.txt)
  * @param revisionId Revision ID
  */
+@Suppress("unused")
 data class ProjectReadmeResponseDTO(
 	/**
 	 * Text of the README file (required)
@@ -24,9 +25,11 @@ data class ProjectReadmeResponseDTO(
 	 */
 	val revisionId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		text = "",
 		fileName = "",
 		revisionId = ""
 	)
 }
+

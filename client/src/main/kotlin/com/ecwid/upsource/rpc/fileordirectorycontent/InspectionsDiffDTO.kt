@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
 /**
  * @param diffForFile See InspectionsDiffForFileDTO parameters
  */
+@Suppress("unused")
 data class InspectionsDiffDTO(
 	/**
 	 * See InspectionsDiffForFileDTO parameters (repeated)
-	 * 
-	 * @see InspectionsDiffForFileDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.fileordirectorycontent.InspectionsDiffForFileDTO
 	 */
 	val diffForFile: List<InspectionsDiffForFileDTO> = emptyList()
 )

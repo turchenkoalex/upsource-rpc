@@ -10,11 +10,12 @@ package com.ecwid.upsource.rpc.projects
  * @param showUnrelatedChanges Whether to show the changes that were filtered out in the review diff. 'false' by default.
  * @param contextLines Number of context lines around the modified fragment
  */
+@Suppress("unused")
 data class FileInReviewDiffRequestDTO(
 	/**
 	 * See FileInReviewDTO parameters (required)
-	 * 
-	 * @see FileInReviewDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.FileInReviewDTO
 	 */
 	val file: FileInReviewDTO,
 
@@ -25,8 +26,8 @@ data class FileInReviewDiffRequestDTO(
 
 	/**
 	 * See RevisionsSetDTO parameters (optional)
-	 * 
-	 * @see RevisionsSetDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.RevisionsSetDTO
 	 */
 	val revisions: RevisionsSetDTO? = null,
 
@@ -40,6 +41,7 @@ data class FileInReviewDiffRequestDTO(
 	 */
 	val contextLines: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		file = FileInReviewDTO(),
 		ignoreWhitespace = false,
@@ -48,3 +50,4 @@ data class FileInReviewDiffRequestDTO(
 		contextLines = null
 	)
 }
+

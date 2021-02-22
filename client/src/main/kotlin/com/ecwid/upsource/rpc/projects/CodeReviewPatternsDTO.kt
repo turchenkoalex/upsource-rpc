@@ -6,11 +6,12 @@ package com.ecwid.upsource.rpc.projects
 /**
  * @param patterns See CodeReviewPattern
  */
+@Suppress("unused")
 data class CodeReviewPatternsDTO(
 	/**
 	 * See CodeReviewPattern (repeated)
-	 * 
-	 * @see CodeReviewPattern
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.CodeReviewPattern
 	 */
 	val patterns: List<CodeReviewPattern> = emptyList()
 )

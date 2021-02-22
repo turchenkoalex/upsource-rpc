@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param participants Individual progress for each participant
  * @param totalFiles Total number of files in review
  */
+@Suppress("unused")
 data class ReviewProgressDTO(
 	/**
 	 * Individual progress for each participant (repeated)
@@ -18,8 +19,10 @@ data class ReviewProgressDTO(
 	 */
 	val totalFiles: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		participants = emptyList(),
 		totalFiles = 0
 	)
 }
+

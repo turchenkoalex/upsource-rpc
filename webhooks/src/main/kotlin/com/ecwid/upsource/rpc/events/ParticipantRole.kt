@@ -6,6 +6,7 @@ package com.ecwid.upsource.rpc.events
 /**
  * Review participant role
  */
+@Suppress("unused")
 enum class ParticipantRole(val value: Byte, val originalName: String) {
 	AUTHOR(value = 1, originalName = "Author"),
 	REVIEWER(value = 2, originalName = "Reviewer"),

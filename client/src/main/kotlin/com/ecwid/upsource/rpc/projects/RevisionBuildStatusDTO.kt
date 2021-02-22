@@ -8,6 +8,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId VCS revision ID
  * @param keys A unique build identifier (e.g. PROJECT-VERSION-1234)
  */
+@Suppress("unused")
 data class RevisionBuildStatusDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -24,9 +25,11 @@ data class RevisionBuildStatusDTO(
 	 */
 	val keys: List<RevisionBuildStatusKeyDTO> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",
 		keys = emptyList()
 	)
 }
+

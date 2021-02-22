@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param reviewId Review ID
  */
+@Suppress("unused")
 data class ReviewRemovedFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -18,8 +19,10 @@ data class ReviewRemovedFeedEventBean(
 	 */
 	val reviewId: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		reviewId = ""
 	)
 }
+

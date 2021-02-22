@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param text New text of the comment being updated
  * @param markupType Currently not in use
  */
+@Suppress("unused")
 data class UpdateCommentRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -36,6 +37,7 @@ data class UpdateCommentRequestDTO(
 	 */
 	val markupType: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		discussionId = "",
@@ -44,3 +46,4 @@ data class UpdateCommentRequestDTO(
 		markupType = null
 	)
 }
+

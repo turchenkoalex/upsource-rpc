@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.events
  * @param base Base feed event
  * @param revisionIds List of revision IDs
  */
+@Suppress("unused")
 data class RevisionRemovedFromReviewFeedEventBean(
 	/**
 	 * Base feed event (required)
@@ -18,8 +19,10 @@ data class RevisionRemovedFromReviewFeedEventBean(
 	 */
 	val revisionIds: List<String> = emptyList()
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		base = FeedEventBean(),
 		revisionIds = emptyList()
 	)
 }
+

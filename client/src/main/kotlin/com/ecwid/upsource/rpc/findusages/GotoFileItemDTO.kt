@@ -11,6 +11,7 @@ package com.ecwid.upsource.rpc.findusages
  * @param lastModified Unix timestamp of the last modification
  * @param branch Branch name
  */
+@Suppress("unused")
 data class GotoFileItemDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -42,6 +43,7 @@ data class GotoFileItemDTO(
 	 */
 	val branch: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		revisionId = "",
@@ -51,3 +53,4 @@ data class GotoFileItemDTO(
 		branch = null
 	)
 }
+

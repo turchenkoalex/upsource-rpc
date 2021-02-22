@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.projects
  * @param name Name of the Hub group
  * @param description Description of the Hub group
  */
+@Suppress("unused")
 data class ProjectGroupDTO(
 	/**
 	 * Name of the Hub group (required)
@@ -18,8 +19,10 @@ data class ProjectGroupDTO(
 	 */
 	val description: String
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		name = "",
 		description = ""
 	)
 }
+

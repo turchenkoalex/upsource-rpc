@@ -11,11 +11,12 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param localIndex Used to identify the exact reference when references overlap
  * @param hash Hash of the PSI element (if any), used to test PSI elements for equality
  */
+@Suppress("unused")
 data class ReferenceCodeMarkupItemDTO(
 	/**
 	 * See RangeDTO parameters (required)
-	 * 
-	 * @see RangeDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.RangeDTO
 	 */
 	val range: com.ecwid.upsource.rpc.ids.RangeDTO,
 
@@ -44,6 +45,7 @@ data class ReferenceCodeMarkupItemDTO(
 	 */
 	val hash: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		range = com.ecwid.upsource.rpc.ids.RangeDTO(),
 		markupId = 0,
@@ -53,3 +55,4 @@ data class ReferenceCodeMarkupItemDTO(
 		hash = null
 	)
 }
+

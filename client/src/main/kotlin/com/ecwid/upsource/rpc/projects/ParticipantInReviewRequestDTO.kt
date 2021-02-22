@@ -7,23 +7,26 @@ package com.ecwid.upsource.rpc.projects
  * @param reviewId See ReviewIdDTO parameters
  * @param participant See ParticipantInReviewDTO parameters
  */
+@Suppress("unused")
 data class ParticipantInReviewRequestDTO(
 	/**
 	 * See ReviewIdDTO parameters (required)
-	 * 
-	 * @see ReviewIdDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.ids.ReviewIdDTO
 	 */
 	val reviewId: com.ecwid.upsource.rpc.ids.ReviewIdDTO,
 
 	/**
 	 * See ParticipantInReviewDTO parameters (required)
-	 * 
-	 * @see ParticipantInReviewDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.ParticipantInReviewDTO
 	 */
 	val participant: ParticipantInReviewDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		reviewId = com.ecwid.upsource.rpc.ids.ReviewIdDTO(),
 		participant = ParticipantInReviewDTO()
 	)
 }
+

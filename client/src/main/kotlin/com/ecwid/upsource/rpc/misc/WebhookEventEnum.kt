@@ -3,6 +3,7 @@
 
 package com.ecwid.upsource.rpc.misc
 
+@Suppress("unused")
 enum class WebhookEventEnum(val value: Byte, val originalName: String) {
 	COMMENT_ADDED(value = 1, originalName = "CommentAdded"),
 	REVIEW_CREATED(value = 2, originalName = "ReviewCreated"),

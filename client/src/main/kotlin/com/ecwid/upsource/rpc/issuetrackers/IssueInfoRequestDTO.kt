@@ -7,6 +7,7 @@ package com.ecwid.upsource.rpc.issuetrackers
  * @param projectId Project ID in Upsource
  * @param issueId Issue ID
  */
+@Suppress("unused")
 data class IssueInfoRequestDTO(
 	/**
 	 * Project ID in Upsource (required)
@@ -18,8 +19,10 @@ data class IssueInfoRequestDTO(
 	 */
 	val issueId: IssueIdDTO
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		projectId = "",
 		issueId = IssueIdDTO()
 	)
 }
+

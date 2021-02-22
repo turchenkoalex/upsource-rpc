@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param name Role name (e.g. Project admin)
  * @param description Role description
  */
+@Suppress("unused")
 data class RoleDetailsDTO(
 	/**
 	 * Role ID (required)
@@ -30,6 +31,7 @@ data class RoleDetailsDTO(
 	 */
 	val description: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		id = "",
 		key = "",
@@ -37,3 +39,4 @@ data class RoleDetailsDTO(
 		description = null
 	)
 }
+

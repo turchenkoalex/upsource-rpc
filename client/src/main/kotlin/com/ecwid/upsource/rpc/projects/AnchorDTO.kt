@@ -9,6 +9,7 @@ package com.ecwid.upsource.rpc.projects
  * @param revisionId VCS revision ID
  * @param inlineInRevision Whether a comment was left in the inline diff
  */
+@Suppress("unused")
 data class AnchorDTO(
 	/**
 	 * Text range associated with an anchor (optional)

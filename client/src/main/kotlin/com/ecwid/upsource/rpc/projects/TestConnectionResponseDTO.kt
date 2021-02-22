@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param status See TestConnectionStatusEnum parameters
  * @param message Response message
  */
+@Suppress("unused")
 data class TestConnectionResponseDTO(
 	/**
 	 * See TestConnectionStatusEnum parameters (required)
-	 * 
-	 * @see TestConnectionStatusEnum
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.TestConnectionStatusEnum
 	 */
 	val status: TestConnectionStatusEnum,
 
@@ -20,8 +21,10 @@ data class TestConnectionResponseDTO(
 	 */
 	val message: String? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		status = TestConnectionStatusEnum.SUCCESS,
 		message = null
 	)
 }
+

@@ -7,11 +7,12 @@ package com.ecwid.upsource.rpc.projects
  * @param userRoles See UserRolesDTO parameters
  * @param hasMore Whether all available items have been returned or more can be requested by passing the corresponding 'limit' value in the subsequent request
  */
+@Suppress("unused")
 data class UsersRolesResponseDTO(
 	/**
 	 * See UserRolesDTO parameters (repeated)
-	 * 
-	 * @see UserRolesDTO
+	 *
+	 * @see com.ecwid.upsource.rpc.projects.UserRolesDTO
 	 */
 	val userRoles: List<UserRolesDTO> = emptyList(),
 
@@ -20,8 +21,10 @@ data class UsersRolesResponseDTO(
 	 */
 	val hasMore: Boolean
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		userRoles = emptyList(),
 		hasMore = false
 	)
 }
+

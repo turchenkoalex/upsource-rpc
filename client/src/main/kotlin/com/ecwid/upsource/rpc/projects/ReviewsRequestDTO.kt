@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.projects
  * @param projectId Project ID in Upsource
  * @param skip Number of reviews to skip from the top (for pagination)
  */
+@Suppress("unused")
 data class ReviewsRequestDTO(
 	/**
 	 * Number of reviews to return (required)
@@ -36,6 +37,7 @@ data class ReviewsRequestDTO(
 	 */
 	val skip: Int? = null
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		limit = 0,
 		query = null,
@@ -44,3 +46,4 @@ data class ReviewsRequestDTO(
 		skip = null
 	)
 }
+

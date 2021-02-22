@@ -10,6 +10,7 @@ package com.ecwid.upsource.rpc.fileordirectorycontent
  * @param endOffset End offset
  * @param stubIndex Stub index ID
  */
+@Suppress("unused")
 data class MarkupNavigationPointDTO(
 	/**
 	 * ID of the target element (required)
@@ -36,6 +37,7 @@ data class MarkupNavigationPointDTO(
 	 */
 	val stubIndex: Int
 ) {
+	@Suppress("unused")
 	internal constructor() : this(
 		targetId = 0,
 		fileId = 0,
@@ -44,3 +46,4 @@ data class MarkupNavigationPointDTO(
 		stubIndex = 0
 	)
 }
+
