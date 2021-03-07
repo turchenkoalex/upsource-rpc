@@ -3,23 +3,26 @@
 ## Libraries
 
 Core libraries:
+
 * `client` - Core library. Contains RPC client class and DTO classes
 * `webhooks` - Webhooks parser (based on jackson deserializer)
 
 Serializers (required for `client`). Please use one of:
+
 * `gson-serializer` - Gson TypeAdapters for core DTO classes
 * `jackson-serializer` - Jackson Serializers and Deserializers for core DTO classes
 
 Transports (required for `client`). Please use one of:
+
 * `httpclient` - JDK 11 HttpClient wrapper
 * `apache-httpclient` - Apache Commons Http Client wrapper
-
 
 ## Usage
 
 ### Upsource client
 
 Add build dependencies (gradle)
+
 ```groovy
 repositories {
     maven {
@@ -43,10 +46,11 @@ dependencies {
     implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.10")
 }
 ```
+
 [How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 
-
 Create connection settings
+
 ```kotlin
 val upsourceConnection = com.ecwid.upsource.transport.UpsourceConnection(
     serverUrl = "https://upsource.example.com",
@@ -56,6 +60,7 @@ val upsourceConnection = com.ecwid.upsource.transport.UpsourceConnection(
 ```
 
 Create client with default configuration (gson + JDK11 HttpClient)
+
 ```kotlin
 import com.ecwid.upsource.serializer.gson.withGsonSerializer
 import com.ecwid.upsource.transport.httpclient.withHttpClient
@@ -65,7 +70,9 @@ val client = com.ecwid.upsource.rpc.UpsourceRPC.newBuilder()
     .withGsonSerializer() // or .withJacksonSerializer()
     .build()
 ```
+
 Or use Apache Commons httpclient and jackson (or mix them)
+
 ```kotlin
 import com.ecwid.upsource.serializer.jackson.withJacksonSerializer
 import com.ecwid.upsource.transport.apache.withApacheHttpClient
@@ -77,6 +84,7 @@ val client = UpsourceRPC.newBuilder()
 ```
 
 You can configure httpclient
+
 ```kotlin
 val httpClient = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(5))
@@ -91,7 +99,8 @@ val client = UpsourceRPC.newBuilder()
     .build()
 ```
 
-Non fluent client factory method 
+Non fluent client factory method
+
 ```kotlin
 val transport = HttpRpcTransport(upsourceConnection) // or ApacheHttpRpcTransport(upsourceConnection)
 val serializer = GsonSerializer() // or JacksonSerializer()
@@ -99,6 +108,7 @@ val client = ClientFactory.newUpsourceRPC(transport, serializer)
 ```
 
 Client usage:
+
 ```kotlin
 val closeRequest = CloseReviewRequestDTO(
     reviewId = ReviewIdDTO(projectId = "project", reviewId = "REVIEW-ID-101"),
@@ -110,6 +120,7 @@ println(closeResponse)
 ```
 
 Result of rpc call is RpcResponse sealed class
+
 ```kotlin
 val revisionList = client.getRevisionReviewInfo(
     RevisionListDTO(
@@ -131,6 +142,7 @@ when (revisionList) {
 #### Custom transport
 
 Implement transport interface and use it with `.withTransport` method
+
 ```kotlin
 class SampleTransport : com.ecwid.upsource.transport.RpcTransport {
     override fun makeRequest(methodPath: String, request: String): RpcTransportResponse {
@@ -147,6 +159,7 @@ val client = UpsourceRPC.newBuilder()
 #### Custom serializer
 
 Implement serializer interface and use it with `.withSerializer` method
+
 ```kotlin
 class SampleSerializer : com.ecwid.upsource.serializer.Serializer {
     override fun serialize(request: Any): String {
@@ -169,6 +182,7 @@ val client = UpsourceRPC.newBuilder()
 #### Usage
 
 Add build dependencies (gradle)
+
 ```groovy
 repositories {
     maven {
@@ -184,14 +198,17 @@ dependencies {
     implementation("com.ecwid.upsource-rpc:webhooks:0.9.10")
 }
 ```
+
 [How to create personal access token in github?](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 
 Create parser
+
 ```kotlin
 val parser = WebhookParser.newParser()
 ```
 
 Parse http request
+
 ```kotlin
 val request: String = myReq.readRequestBody() // read input from http
 val webhook: Webhook = parser.parse(response)
@@ -208,6 +225,7 @@ when (webhook) {
 ```
 
 #### Supported webhook types
+
 * DeleteBranchEventBean
 * DiscussionFeedEventBean
 * FeedEventBean
@@ -230,7 +248,6 @@ when (webhook) {
 * RevisionRemovedFromReviewFeedEventBean
 * UserIdBean
 
-
 ## Compatibility Matrix
 
 |  Client  |  Upsource   |
@@ -250,15 +267,16 @@ when (webhook) {
 |  0.9.5   | 2019.1.1717 |
 |  0.9.4   | 2019.1.1644 | 
 
-
 ## Code generation
 
 ### Update upsource schema for code generation
+
 ```shell script
 UPSOURCE_URL=https://upsource.example.com ./codegen/download-schema-jsons.sh
 ```
 
 ### Start client code generation
+
 ```shell script
 ./gradlew codegen:generate
 ```
