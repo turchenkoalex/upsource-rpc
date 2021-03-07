@@ -1,7 +1,7 @@
 package com.ecwid.gradle
 
 object Versions {
-	const val kotlin = "1.4.30"
+	const val kotlin = "1.4.31"
 	const val junit = "5.7.1"
 	const val apacheHttpClient = "4.5.13"
 	const val gson = "2.8.6"
