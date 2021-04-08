@@ -8,7 +8,7 @@ object Versions {
 	const val jackson = "2.12.1"
 	const val commonsCli = "1.4"
 	const val freemarker = "2.3.31"
-	const val mockk = "1.10.6"
+	const val mockk = "1.11.0"
 }
 
 object Dependencies {
