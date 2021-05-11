@@ -2,7 +2,7 @@ plugins {
 	kotlin("jvm") version com.ecwid.gradle.Versions.kotlin apply false
 }
 
-allprojects {
+subprojects {
 	group = "com.ecwid.upsource-rpc"
 	version = "0.9.10"
 
