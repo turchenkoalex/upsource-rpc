@@ -4,7 +4,9 @@ import com.ecwid.upsource.serializer.Serializer
 import com.ecwid.upsource.transport.RpcResponse
 import com.ecwid.upsource.transport.RpcTransportResponse
 import com.google.gson.Gson
+import com.google.gson.internal.`$Gson$Types`
 import com.google.gson.reflect.TypeToken
+import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.util.concurrent.ConcurrentHashMap
 import java.util.logging.Level
@@ -26,9 +28,9 @@ class GsonSerializer : Serializer {
 			try {
 				val (gson, typeToken) = gsonMap.computeIfAbsent(clazz) {
 					val gson = typedGsonBuilder(it).create()
-					val typeToken = object : TypeToken<RpcResponse<T>>() {}.type
+					val type = `$Gson$Types`.newParameterizedTypeWithOwner(null, RpcResponse::class.java, clazz)
 
-					return@computeIfAbsent gson to typeToken
+					return@computeIfAbsent gson to type
 				}
 
 				return gson.fromJson(response.content, typeToken)
