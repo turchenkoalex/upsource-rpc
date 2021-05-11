@@ -1,5 +1,7 @@
 package com.ecwid.upsource.codegen
 
+import java.util.*
+
 private val PATTERN = Regex("[a-z][A-Z]")
 
 fun snakeCase(value: String): String {
@@ -9,5 +11,5 @@ fun snakeCase(value: String): String {
 		} else {
 			it.value
 		}
-	}.toLowerCase()
+	}.lowercase(Locale.US)
 }

@@ -2,9 +2,9 @@ plugins {
 	kotlin("jvm") version com.ecwid.gradle.Versions.kotlin apply false
 }
 
-allprojects {
+subprojects {
 	group = "com.ecwid.upsource-rpc"
-	version = "0.9.10"
+	version = "0.9.11"
 
 	repositories {
 		mavenCentral()
@@ -22,7 +22,7 @@ allprojects {
 	// kotlin
 
 	dependencies {
-		"implementation"(kotlin("stdlib-jdk8", com.ecwid.gradle.Versions.kotlin))
+		"implementation"(kotlin("stdlib", com.ecwid.gradle.Versions.kotlin))
 		"implementation"(kotlin("reflect", com.ecwid.gradle.Versions.kotlin))
 	}
 

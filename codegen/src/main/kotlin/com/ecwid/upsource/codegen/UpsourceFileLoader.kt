@@ -6,6 +6,7 @@ import com.ecwid.upsource.codegen.schema.EnumValue
 import com.ecwid.upsource.codegen.schema.Schema
 import com.ecwid.upsource.codegen.schema.UpsourceFile
 import com.google.gson.Gson
+import java.util.*
 import java.util.logging.Logger
 
 private val log = Logger.getLogger(UpsourceFileLoader::class.qualifiedName)
@@ -14,7 +15,7 @@ class UpsourceFileLoader(
 	private val resources: Resources
 ) {
 	fun loadUpsourceFile(fileName: String): UpsourceFile {
-		val subpackage = fileName.toLowerCase().removeSuffix(".json")
+		val subpackage = fileName.lowercase(Locale.US).removeSuffix(".json")
 		val fullPackage = "$RPC_PACKAGE.$subpackage".removeSuffix(".")
 
 		val content = resources.readResource(fileName)
@@ -49,7 +50,7 @@ class UpsourceFileLoader(
 	private fun normalizeEnumValue(enumValue: EnumValue): EnumValue {
 		return enumValue.copy(
 			originalName = enumValue.name,
-			name = snakeCase(enumValue.name).toUpperCase()
+			name = snakeCase(enumValue.name).uppercase(Locale.US)
 		)
 	}
 }
