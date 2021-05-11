@@ -22,7 +22,7 @@ subprojects {
 	// kotlin
 
 	dependencies {
-		"implementation"(kotlin("stdlib-jdk8", com.ecwid.gradle.Versions.kotlin))
+		"implementation"(kotlin("stdlib", com.ecwid.gradle.Versions.kotlin))
 		"implementation"(kotlin("reflect", com.ecwid.gradle.Versions.kotlin))
 	}
 
