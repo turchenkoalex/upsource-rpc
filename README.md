@@ -35,15 +35,15 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:client:0.9.13")
+    implementation("com.ecwid.upsource-rpc:client:0.9.14")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.13")
-    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.13")
+    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.14")
+    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.14")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:httpclient:0.9.13")
-    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.13")
+    implementation("com.ecwid.upsource-rpc:httpclient:0.9.14")
+    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.14")
 }
 ```
 
@@ -195,7 +195,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:webhooks:0.9.13")
+    implementation("com.ecwid.upsource-rpc:webhooks:0.9.14")
 }
 ```
 
@@ -252,8 +252,9 @@ when (webhook) {
 
 |  Client  |  Upsource   |
 |----------|:-----------:|
-|  0.9.13  | 2020.1.1883 |
+|  0.9.14  | 2020.1.1883 |
 |          | 2020.1.1836 |
+|  0.9.13  | 2020.1.1836 |
 |  0.9.12  | 2020.1.1836 |
 |  0.9.11  | 2020.1.1836 |
 |  0.9.10  | 2020.1.1836 |
