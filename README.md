@@ -35,15 +35,15 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:client:0.9.14")
+    implementation("com.ecwid.upsource-rpc:client:0.9.15")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.14")
-    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.14")
+    implementation("com.ecwid.upsource-rpc:gson-serializer:0.9.15")
+    implementation("com.ecwid.upsource-rpc:jackson-serializer:0.9.15")
 
     // use one of:
-    implementation("com.ecwid.upsource-rpc:httpclient:0.9.14")
-    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.14")
+    implementation("com.ecwid.upsource-rpc:httpclient:0.9.15")
+    implementation("com.ecwid.upsource-rpc:apache-httpclient:0.9.15")
 }
 ```
 
@@ -195,7 +195,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.ecwid.upsource-rpc:webhooks:0.9.14")
+    implementation("com.ecwid.upsource-rpc:webhooks:0.9.15")
 }
 ```
 
@@ -250,27 +250,28 @@ when (webhook) {
 
 ## Compatibility Matrix
 
-|  Client  |  Upsource   |
-|----------|:-----------:|
-|  0.9.14  | 2020.1.1883 |
-|          | 2020.1.1836 |
-|  0.9.13  | 2020.1.1836 |
-|  0.9.12  | 2020.1.1836 |
-|  0.9.11  | 2020.1.1836 |
-|  0.9.10  | 2020.1.1836 |
-|  0.9.9   | 2020.1.1836 |
-|  0.9.8   | 2020.1.1815 |
-|          | 2020.1.1802 |
-|          | 2020.1.1782 |
-|          | 2020.1.1774 |
-|          | 2020.1.1759 |
-|  0.9.7   | 2020.1.1793 |
-|          | 2020.1.1782 |
-|          | 2020.1.1774 |
-|          | 2020.1.1759 |
-|  0.9.6   | 2019.1.1717 |
-|  0.9.5   | 2019.1.1717 |
-|  0.9.4   | 2019.1.1644 | 
+| Client |  Upsource   |
+|--------|:-----------:|
+| 0.9.15 | 2020.1.1883 |
+|        | 2020.1.1836 |
+| 0.9.14 | 2020.1.1836 |
+| 0.9.13 | 2020.1.1836 |
+| 0.9.12 | 2020.1.1836 |
+| 0.9.11 | 2020.1.1836 |
+| 0.9.10 | 2020.1.1836 |
+| 0.9.9  | 2020.1.1836 |
+| 0.9.8  | 2020.1.1815 |
+|        | 2020.1.1802 |
+|        | 2020.1.1782 |
+|        | 2020.1.1774 |
+|        | 2020.1.1759 |
+| 0.9.7  | 2020.1.1793 |
+|        | 2020.1.1782 |
+|        | 2020.1.1774 |
+|        | 2020.1.1759 |
+| 0.9.6  | 2019.1.1717 |
+| 0.9.5  | 2019.1.1717 |
+| 0.9.4  | 2019.1.1644 | 
 
 ## Code generation
 
