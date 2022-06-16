@@ -4,7 +4,7 @@ plugins {
 
 subprojects {
 	group = "com.ecwid.upsource-rpc"
-	version = "0.9.15"
+	version = "0.9.16"
 
 	repositories {
 		mavenCentral()
@@ -15,8 +15,8 @@ subprojects {
 	apply(plugin = "maven-publish")
 
 	configure<JavaPluginExtension> {
-		@Suppress("UnstableApiUsage") withJavadocJar()
-		@Suppress("UnstableApiUsage") withSourcesJar()
+		withJavadocJar()
+		withSourcesJar()
 	}
 
 	// kotlin
@@ -27,9 +27,7 @@ subprojects {
 	}
 
 	tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-		sourceCompatibility = JavaVersion.VERSION_11.toString()
-		targetCompatibility = JavaVersion.VERSION_11.toString()
-		kotlinOptions.jvmTarget = "11"
+		kotlinOptions.jvmTarget = "17"
 	}
 
 	// junit
