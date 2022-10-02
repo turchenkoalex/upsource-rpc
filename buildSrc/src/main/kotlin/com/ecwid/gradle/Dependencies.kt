@@ -1,14 +1,14 @@
 package com.ecwid.gradle
 
 object Versions {
-	const val kotlin = "1.7.10"
-	const val junit = "5.9.0"
+	const val kotlin = "1.7.20"
+	const val junit = "5.9.1"
 	const val apacheHttpClient = "4.5.13"
-	const val gson = "2.9.0"
-	const val jackson = "2.13.3"
+	const val gson = "2.9.1"
+	const val jackson = "2.13.4"
 	const val commonsCli = "1.5.0"
 	const val freemarker = "2.3.31"
-	const val mockk = "1.12.5"
+	const val mockk = "1.13.2"
 }
 
 object Dependencies {
