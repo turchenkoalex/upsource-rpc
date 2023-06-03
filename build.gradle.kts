@@ -30,6 +30,11 @@ subprojects {
 		kotlinOptions.jvmTarget = "17"
 	}
 
+	tasks.withType<JavaCompile> {
+		sourceCompatibility = "17"
+		targetCompatibility = "17"
+	}
+
 	// junit
 
 	dependencies {
