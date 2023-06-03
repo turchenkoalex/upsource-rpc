@@ -22,4 +22,4 @@ jobs:
           settings-path: ${{ github.workspace }}
 
       - name: Build with Gradle
-        run: gradle check
+        run: ./gradlew check
