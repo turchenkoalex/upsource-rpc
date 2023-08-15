@@ -4,7 +4,7 @@ plugins {
 
 subprojects {
 	group = "com.ecwid.upsource-rpc"
-	version = "0.9.20"
+	version = "0.9.21"
 
 	repositories {
 		mavenCentral()
